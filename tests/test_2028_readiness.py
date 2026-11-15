@@ -11,7 +11,7 @@ class ReadinessTests(unittest.TestCase):
     def test_calendar_rule_and_unresolved_conflict(self):
         data=json.loads((ROOT/"evidence/2028_calendar.json").read_text())
         self.assertTrue(verify_calendar(data))
-        self.assertEqual(data["contradictions"][0]["disposition"],"UNRESOLVED")
+        self.assertEqual(data["contradictions"][0]["disposition"],"SOURCE_CONTRADICTION_RETAINED_LEGAL_RULE_ADJUDICATED")
     def test_silent_resolution_fails(self):
         data=json.loads((ROOT/"evidence/2028_calendar.json").read_text())
         data["events"][1]["legal_status"]="RESOLVED"
