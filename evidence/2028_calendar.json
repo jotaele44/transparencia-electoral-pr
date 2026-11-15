@@ -1,0 +1,60 @@
+{
+  "version": "rc3",
+  "scope": "Puerto Rico 2028 electoral cycle",
+  "source_manifestations_frozen": 0,
+  "publication_snapshot_utc": null,
+  "certification": "PROVISIONAL",
+  "events": [
+    {
+      "id": "pr-2028-general",
+      "date": "2028-11-07",
+      "date_type": "ELECTION_DAY",
+      "evidence_state": "OFFICIAL_RFP_STATED",
+      "source_id": "cee_2028_rfp",
+      "legal_status": "SCHEDULED"
+    },
+    {
+      "id": "pr-2028-primary-rfp-stated",
+      "date": "2028-06-06",
+      "date_type": "SOURCE_STATED_PRIMARY_DATE",
+      "evidence_state": "CONTRADICTED_BY_WEEKDAY_RULE",
+      "source_id": "cee_2028_rfp",
+      "legal_status": "UNRESOLVED"
+    },
+    {
+      "id": "pr-2028-primary-rule-derived",
+      "date": "2028-06-04",
+      "date_type": "COMPUTED_FIRST_SUNDAY_OF_JUNE",
+      "evidence_state": "COMPUTED_NOT_CALENDAR_CERTIFIED",
+      "source_id": "cee_2028_rfp",
+      "legal_status": "CANDIDATE"
+    },
+    {
+      "id": "pr-2028-early-mail-begin",
+      "date": "2028-09-20",
+      "date_type": "LATEST_START_OF_MAILING",
+      "evidence_state": "SIGNED_RESOLUTION",
+      "source_id": "cee_rs_26_010",
+      "legal_status": "RESOLVED"
+    },
+    {
+      "id": "pr-2028-early-mail-end",
+      "date": "2028-10-03",
+      "date_type": "LATEST_END_OF_MAILING",
+      "evidence_state": "SIGNED_RESOLUTION",
+      "source_id": "cee_rs_26_010",
+      "legal_status": "RESOLVED"
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "primary-rfp-weekday",
+      "type": "DATE_RULE_CONTRADICTION",
+      "source_id": "cee_2028_rfp",
+      "source_stated_date": "2028-06-06",
+      "derived_first_sunday": "2028-06-04",
+      "disposition": "UNRESOLVED",
+      "effect": "DO_NOT_PUBLISH_PRIMARY_DATE_AS_CERTIFIED"
+    }
+  ]
+}
