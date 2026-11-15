@@ -1,0 +1,52 @@
+{
+  "release_id": "transparencia-electoral-pr-rc6",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_release_authorized": false,
+  "main_merge_authorized": false,
+  "branch": "dev/rc6-security-integrity",
+  "source_baseline_rc5": "bf235988df3401424aee374a013fc18b631c9d74",
+  "tested_source_commit": "73188524e8149bb43f3f0a32c34d4c5b34820e64",
+  "hub_consumer_commit": "b7a60e613fecb36448c719651625892b2bded565",
+  "test_evidence": {
+    "unit_tests": {
+      "state": "PASS",
+      "count": 99,
+      "workflow_run_id": 43710075838,
+      "scope": "synthetic local Python tests"
+    },
+    "pinned_hub_validator": {
+      "state": "PASS",
+      "workflow_run_id": 43710075928,
+      "scope": "real Hub manifest and package validation on synthetic sources; tamper/count negatives"
+    },
+    "identity_test_fixture": {
+      "state": "PASS",
+      "scope": "HMAC fixture only, no actual IdP"
+    },
+    "evidence_chain_local": {
+      "state": "PASS",
+      "scope": "O_EXCL fsync demo only; no independently anchored immutable persistence"
+    }
+  },
+  "critical_gates": {
+    "actual_identity_provider": "BLOCKED",
+    "immutable_external_storage": "BLOCKED",
+    "law_jurisdiction_independent_review": "OPEN",
+    "real_2024_source_payload_freeze": "OPEN",
+    "real_2024_results_reconciliation": "OPEN",
+    "full_2028_simulation": "PROVISIONAL",
+    "real_election_data_production_pipeline": "BLOCKED",
+    "privacy_and_penetration_independent_qa": "OPEN",
+    "production_certification": "BLOCKED"
+  },
+  "source_manifestations_frozen": 0,
+  "real_election_case_records_processed": 0,
+  "alerts_sent": 0,
+  "external_referrals_sent": 0,
+  "rollback": {
+    "rc5_commit": "bf235988df3401424aee374a013fc18b631c9d74",
+    "procedure": "Return isolated RC6 ref to RC5 commit only with explicit approval, branch-head compare-and-swap and independent backup; do not touch main."
+  },
+  "limitation": "Passing test signatures cannot certify authentication, jurisdiction, independent integrity or public findings."
+}
