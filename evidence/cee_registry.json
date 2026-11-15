@@ -1,23 +1,72 @@
 {
-  "registry_version": "rc1",
-  "scope": "CEE Puerto Rico source discovery only",
-  "certification": "CANDIDATE_NOT_IDENTITY",
+  "registry_version": "rc2",
+  "scope": "CEE 2024 election authoritative URL discovery; source manifestation bytes not acquired",
+  "certification": "PROVISIONAL",
+  "coverage_status": "NONEXHAUSTIVE",
   "sources": [
     {
-      "source_id": "cee_procurement_portal",
-      "url": "https://www.ceepur.org/subastas/",
+      "source_id": "cee_2024_election_index",
+      "url": "https://www.ceepur.org/eventoscee/",
       "authority": "Comisión Estatal de Elecciones",
-      "source_kind": "procurement_index",
-      "acquisition_status": "DISCOVERY_ONLY",
+      "source_kind": "official_election_index",
+      "acquisition_status": "URL_VERIFIED_METADATA_ONLY",
+      "source_date": null,
+      "verification_date": "2026-11-15",
       "retrieved_utc": null,
       "sha256": null
     },
     {
-      "source_id": "cee_2024_results",
-      "url": null,
+      "source_id": "cee_2024_result_portal",
+      "url": "https://elecciones2024.ceepur.org/",
       "authority": "Comisión Estatal de Elecciones",
-      "source_kind": "official_results_2024",
-      "acquisition_status": "PENDING_AUTHORITATIVE_BINDING",
+      "source_kind": "results_portal",
+      "acquisition_status": "LINK_VERIFIED_TARGET_INACCESSIBLE",
+      "source_date": null,
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null
+    },
+    {
+      "source_id": "cee_2024_house_certification",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Certificaci%C3%B3n%20de%20resultados%20finales%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20C%C3%A1mara%20de%20Representantes.pdf",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "certified_results_house",
+      "acquisition_status": "PDF_METADATA_AND_FIRST_PAGE_INSPECTED_UNFROZEN",
+      "source_date": "2024-12-31",
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null
+    },
+    {
+      "source_id": "cee_2024_canvass_press_release",
+      "url": "https://www.ceepur.org/comunicados-de-prensa/31%20diciembre%202024%20Comunicado%20de%20Prensa%20CEE.pdf",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "canvass_announcement",
+      "acquisition_status": "METADATA_ONLY_UNFROZEN",
+      "source_date": "2024-12-31",
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null
+    },
+    {
+      "source_id": "cee_2024_dominion_press_release",
+      "url": "https://www.ceepur.org/comunicados-de-prensa/29%20junio%202024%20Comunicado%20de%20Prensa%20CEE%20%20Medidas%20previo%20evento%20electoral%20noviembre.pdf",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "machine_incident_announcement",
+      "acquisition_status": "METADATA_ONLY_UNFROZEN",
+      "source_date": "2024-06-29",
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null
+    },
+    {
+      "source_id": "cee_2024_procedures_manual",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Manuales/Manual%20de%20Procedimientos%20para%20las%20Elecciones%20Generales%20y%20Escrutinio%202024.pdf",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "procedures_manual",
+      "acquisition_status": "METADATA_ONLY_UNFROZEN",
+      "source_date": null,
+      "verification_date": "2026-11-15",
       "retrieved_utc": null,
       "sha256": null
     }
