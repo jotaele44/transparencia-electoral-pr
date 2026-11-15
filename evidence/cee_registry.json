@@ -1,6 +1,6 @@
 {
   "registry_version": "rc2",
-  "scope": "CEE 2024 election authoritative URL discovery; source manifestation bytes not acquired",
+  "scope": "CEE primary URL registry 2024 and 2028; all document payloads remain unfrozen",
   "certification": "PROVISIONAL",
   "coverage_status": "NONEXHAUSTIVE",
   "sources": [
@@ -69,6 +69,66 @@
       "verification_date": "2026-11-15",
       "retrieved_utc": null,
       "sha256": null
+    },
+    {
+      "source_id": "cee_2028_rfp",
+      "url": "https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/es/SOLICITUD-DE-PROPUESTAS-ESCRUTINIO-ELECTRONICO-2028-%28final%29.pdf",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "2028_voting_system_rfp",
+      "acquisition_status": "PRIMARY_METADATA_VERIFIED_PAYLOAD_UNFROZEN",
+      "source_date": null,
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null,
+      "qualification": "MATERIAL_DATE_CONTRADICTION_FIRST_SUNDAY_VS_JUNE_6"
+    },
+    {
+      "source_id": "cee_ac_26_149",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-149.pdf",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "electoral_calendar_disagreement",
+      "acquisition_status": "PRIMARY_METADATA_VERIFIED_PAYLOAD_UNFROZEN",
+      "source_date": "2026-08-27",
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null,
+      "qualification": "DISAGREEMENT_NOT_FINAL_ORDER"
+    },
+    {
+      "source_id": "cee_rs_26_010",
+      "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "electoral_calendar_resolution",
+      "acquisition_status": "PRIMARY_METADATA_VERIFIED_PAYLOAD_UNFROZEN",
+      "source_date": "2026-09-08",
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null,
+      "qualification": "SIGNED_RESOLUTION_DATED"
+    },
+    {
+      "source_id": "cee_ac_26_157",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-157.pdf",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "2024_statistical_report_approval",
+      "acquisition_status": "PRIMARY_METADATA_VERIFIED_PAYLOAD_UNFROZEN",
+      "source_date": "2026-09-03",
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null,
+      "qualification": "APPROVAL_ONLY_REPORT_PAYLOAD_NOT_FROZEN"
+    },
+    {
+      "source_id": "cee_2024_statistical_report",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "2024_statistical_report",
+      "acquisition_status": "PRIMARY_METADATA_VERIFIED_PAYLOAD_UNFROZEN",
+      "source_date": "2026-09-03",
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null,
+      "qualification": "LINK_FROM_OFFICIAL_APPROVAL_REPORT_UNFETCHED"
     }
   ]
 }
