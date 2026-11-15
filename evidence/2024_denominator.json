@@ -1,0 +1,37 @@
+{
+  "election_id": "pr-general-2024",
+  "event_date": "2024-11-05",
+  "denominator_status": "OPEN",
+  "scope": "Certified 2024 general-election results vs source reporting units",
+  "claims": [
+    {
+      "source_id": "cee_2024_house_certification",
+      "statement": "CEE certified 100% of colegios reported for general canvass",
+      "claim_type": "SOURCE_REPORTED",
+      "percent_reported": 100,
+      "scope": "general_canvass_reporting",
+      "count": null
+    }
+  ],
+  "denominators": {
+    "municipalities": null,
+    "precincts": null,
+    "electoral_units": null,
+    "polling_colleges": null,
+    "tabulation_machines": null,
+    "reporting_rows": null,
+    "contests": null
+  },
+  "reconciliation": {
+    "original_rows": null,
+    "corrected_rows": null,
+    "intersection": null,
+    "left_only": null,
+    "right_only": null,
+    "union": null,
+    "symmetric_difference": null
+  },
+  "source_manifestations_frozen": 0,
+  "source_bytes_sha256_verified": 0,
+  "certification": "UNRESOLVED"
+}
