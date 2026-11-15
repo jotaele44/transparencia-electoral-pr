@@ -56,6 +56,10 @@ def transition(case,to_status,*,actor,timestamp,reason,sources=(),reviewer=None,
     if not isinstance(case,dict) or case.get("synthetic") is not True:raise PermissionError("synthetic-only RC5")
     _check_privacy(case)
     prev=case.get("status")
+    if prev in ("EVIDENCE_VERIFIED","HUMAN_REVIEWED","REFERRAL_READY","REFERRED","OFFICIAL_DISPOSITION"):
+        expected=case.get("evidence_digest")
+        actual=hashlib.sha256(_canonical(case.get("evidence",[]))).hexdigest()
+        if not expected or expected!=actual:raise ValueError("verified evidence changed")
     if to_status not in ALLOWED.get(prev,set()):raise ValueError("illegal lifecycle transition")
     if not isinstance(actor,str) or not actor.strip() or not isinstance(reason,str) or not reason.strip():raise ValueError("actor and reason required")
     when=_timestamp(timestamp)
@@ -68,6 +72,7 @@ def transition(case,to_status,*,actor,timestamp,reason,sources=(),reviewer=None,
             if v["source_id"] in ids:raise ValueError("duplicate evidence id")
             ids.add(v["source_id"])
         case["evidence"]=[dict(s) for s in sources]
+        case["evidence_digest"]=hashlib.sha256(_canonical(case["evidence"])).hexdigest()
     if to_status=="HUMAN_REVIEWED":
         if not isinstance(reviewer,str) or not reviewer.strip() or reviewer==actor:raise PermissionError("separate identified reviewer required")
         if not case["evidence"]:raise ValueError("missing verified evidence")
@@ -79,7 +84,9 @@ def transition(case,to_status,*,actor,timestamp,reason,sources=(),reviewer=None,
         if not isinstance(authorized_by,str) or not authorized_by.strip() or authorized_by in (actor,case.get("reviewed_by")):raise PermissionError("separate authorization required")
         if not isinstance(receipt,str) or not receipt.strip():raise PermissionError("external receipt required; tool does not submit")
         case["referral_receipt"]=receipt
-    if to_status=="OFFICIAL_DISPOSITION" and not sources:raise ValueError("official disposition reference required")
+    if to_status=="OFFICIAL_DISPOSITION":
+        if not sources:raise ValueError("official disposition reference required")
+        for s in sources:evidence(**s)
     if to_status=="HUMAN_REVIEWED":case["reviewed_by"]=reviewer
     previous_hash=case["events"][-1]["event_sha256"] if case["events"] else None
     event={"sequence":len(case["events"])+1,"from":prev,"to":to_status,"timestamp":timestamp,"actor":actor,"reason":reason,"source_ids":sorted(s["source_id"] for s in sources),"previous_hash":previous_hash}
