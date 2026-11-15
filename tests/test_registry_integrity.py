@@ -18,7 +18,7 @@ class RegistryIntegrityTests(unittest.TestCase):
         self.assertTrue(all(s["url"].startswith("https://") for s in self.registry["sources"]))
     def test_registry_explicitly_nonexhaustive(self):
         self.assertEqual(self.registry["coverage_status"],"NONEXHAUSTIVE")
-        self.assertEqual(self.registry["registry_version"],"rc2")
+        self.assertEqual(self.registry["registry_version"],"rc4")
     def test_100_percent_not_a_count(self):
         self.assertEqual(self.denominator["claims"][0]["percent_reported"],100)
         self.assertTrue(all(v is None for v in self.denominator["denominators"].values()))
