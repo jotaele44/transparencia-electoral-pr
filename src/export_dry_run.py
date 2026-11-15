@@ -15,9 +15,7 @@ def generate(rows, output_dir, *, test_only=True):
         if row.get("synthetic") is not True: raise ValueError("RC3 test export requires synthetic rows")
         seen.add(row["id"]);normalized.append(dict(row))
     target=Path(output_dir);target.mkdir(parents=True,exist_ok=True)
-    payload="".join(json.dumps(x,sort_keys=True,ensure_ascii=False,separators=(",",":"))+"\\n" for x in sorted(normalized,key=lambda x:x["id"]))
-    # prevent malformed escape regressions: each row on its own LF line
-    payload=payload.replace("\\n","\n")
+    payload="".join(json.dumps(x,sort_keys=True,ensure_ascii=False,separators=(",",":"))+"\n" for x in sorted(normalized,key=lambda x:x["id"]))
     raw=payload.encode("utf-8")
     digest=hashlib.sha256(raw).hexdigest()
     (target/"sources.jsonl").write_bytes(raw)
