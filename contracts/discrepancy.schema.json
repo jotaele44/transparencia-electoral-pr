@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Provisional election discrepancy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "discrepancy_id",
+    "left_source_id",
+    "right_source_id",
+    "classification",
+    "review_status"
+  ],
+  "properties": {
+    "discrepancy_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "left_source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "right_source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "ARITHMETIC",
+        "PUBLICATION",
+        "TRANSCRIPTION",
+        "SOURCE_VERSION",
+        "IDENTITY",
+        "UNEXPLAINED",
+        "RESOLVED"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "PROVISIONAL",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED"
+      ]
+    },
+    "evidence_note": {
+      "type": "string"
+    }
+  }
+}
