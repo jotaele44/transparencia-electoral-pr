@@ -1,0 +1,15 @@
+{
+  "reference_id": "2024-dom-pr-incident-reference",
+  "classification": "HISTORICAL_DOCUMENT_REFERENCE_NOT_FINDING",
+  "case_instantiated": false,
+  "document_source_id": "cee_2024_dominion_press_release",
+  "document_date": "2024-06-29",
+  "claim_summary": "CEE announcement about a primary-election transmission-file issue and testing measures; technical cause, scope and remedies require original-record validation.",
+  "observed_impact_denominator": null,
+  "certified_results_impact": null,
+  "affected_ballot_count": null,
+  "culpability": "UNDETERMINED",
+  "source_payload_frozen": false,
+  "reporting_unit_identity": "UNRESOLVED",
+  "disposition": "EVIDENCE_ONLY_NOT_REFERRED"
+}
