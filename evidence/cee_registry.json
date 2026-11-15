@@ -1,6 +1,6 @@
 {
-  "registry_version": "rc2",
-  "scope": "CEE primary URL registry 2024 and 2028; all document payloads remain unfrozen",
+  "registry_version": "rc4",
+  "scope": "CEE election source index, CEE mirror distinction, and OGP legal rule",
   "certification": "PROVISIONAL",
   "coverage_status": "NONEXHAUSTIVE",
   "sources": [
@@ -129,6 +129,42 @@
       "retrieved_utc": null,
       "sha256": null,
       "qualification": "CEE-AC-26-157_APPROVAL_DATE_2026-09-03_IS_NOT_REPORT_PUBLICATION_DATE"
+    },
+    {
+      "source_id": "ogp_electoral_code_2026_11_04",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632",
+      "authority": "Oficina de Gerencia y Presupuesto de Puerto Rico",
+      "source_kind": "statutory_consolidation",
+      "acquisition_status": "TEXT_AND_PAGE110_VISUALLY_VERIFIED_PAYLOAD_UNFROZEN",
+      "source_date": "2026-11-04",
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null,
+      "qualification": "ARTICLE_7_12_FIRST_SUNDAY_JUNE; VERSION_CORRECTS_2026_10_13_CONSOLIDATION"
+    },
+    {
+      "source_id": "cee_2028_calendar_rev_2026_09_29_mirror",
+      "url": "https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf",
+      "authority": "CEE document mirrored by party electoral commissioner's website; host is not CEE",
+      "source_kind": "2028_calendar_revision_mirror",
+      "acquisition_status": "INDEXED_TEXT_VERIFIED_FILE_TOO_LARGE_FOR_SCREENSHOT_UNFROZEN",
+      "source_date": "2026-09-29",
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null,
+      "qualification": "SAYS_SUNDAY_JUNE_4; NOT_A_CANONICAL_CEE_HOST_OR_FROZEN_FILE"
+    },
+    {
+      "source_id": "cee_official_2024_statistics_index",
+      "url": "https://ww2.ceepur.org/Home/Estadisticas",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "statistics_index",
+      "acquisition_status": "INDEX_LINK_VERIFIED_UNFROZEN",
+      "source_date": null,
+      "verification_date": "2026-11-15",
+      "retrieved_utc": null,
+      "sha256": null,
+      "qualification": "LINK_26_POINTS_TO_2024_REPORT; CONTENT_OVER_33MB_UNINSPECTED"
     }
   ]
 }
