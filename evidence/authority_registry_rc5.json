@@ -1,0 +1,36 @@
+{
+  "version": "rc5",
+  "certification": "PROVISIONAL",
+  "source_payloads_frozen": false,
+  "authorities": [
+    {
+      "authority_id": "CEE",
+      "name": "Comisión Estatal de Elecciones",
+      "jurisdiction": "SPECIFICALLY_ELECTORAL_COMPLAINTS_AND_CONTROVERSIES",
+      "law": "Ley 58-2020",
+      "article": "3.5",
+      "source_url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/LeyesOrganicas/pdf/58-2020.pdf",
+      "source_sha256": null,
+      "review_required": true,
+      "automatic_filing": false
+    },
+    {
+      "authority_id": "OCE",
+      "name": "Oficina del Contralor Electoral",
+      "jurisdiction": "CAMPAIGN_FINANCE_DISCLOSURES_AUDITS_AND_COMPLAINTS",
+      "law": "Ley 222-2011",
+      "article": "3.003A and other relevant provisions",
+      "source_url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/LeyesOrganicas/pdf/222-2011.pdf",
+      "source_sha256": null,
+      "review_required": true,
+      "automatic_filing": false
+    }
+  ],
+  "procedural_standing": "CASE_SPECIFIC_LEGAL_REVIEW_REQUIRED",
+  "limitations": [
+    "NO_AUTONOMOUS_ENFORCEMENT",
+    "NO_LEGAL_ADVICE",
+    "NO_AUTO_SUBMISSION",
+    "NO_INFERRED_GUILT"
+  ]
+}
