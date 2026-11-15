@@ -73,6 +73,18 @@ class IntegrityLifecycle(unittest.TestCase):
     def test_duplicate_source_ids(self):
         c=case();transition(c,"TRIAGED",actor="analyst",timestamp=T,reason="Triaged")
         with self.assertRaises(ValueError):transition(c,"EVIDENCE_VERIFIED",actor="analyst",timestamp=T,reason="Duplicate",sources=EVID*2)
+    def test_verified_evidence_mutation_blocks_review(self):
+        c=case()
+        transition(c,"TRIAGED",actor="analyst",timestamp=T,reason="Triaged")
+        transition(c,"EVIDENCE_VERIFIED",actor="analyst",timestamp=T,reason="Verified",sources=EVID)
+        c["evidence"][0]["sha256"]="b"*64
+        with self.assertRaises(ValueError):transition(c,"HUMAN_REVIEWED",actor="analyst",timestamp=T,reason="Mutated evidence",reviewer="independent-reviewer")
+    def test_official_disposition_requires_valid_hash(self):
+        c=reviewed()
+        transition(c,"REFERRAL_READY",actor="analyst",timestamp=T,reason="Ready")
+        transition(c,"REFERRED",actor="analyst",timestamp=T,reason="Sent by human",authorized_by="officer",receipt="synthetic")
+        with self.assertRaises(ValueError):transition(c,"OFFICIAL_DISPOSITION",actor="analyst",timestamp=T,reason="Invalid source",sources=[{"source_id":"fake","sha256":"missing"}])
+        self.assertEqual(c["status"],"REFERRED")
     def test_event_tampering_detected(self):
         c=reviewed();c["events"][0]["reason"]="altered"
         self.assertFalse(verify_event_chain(c))
