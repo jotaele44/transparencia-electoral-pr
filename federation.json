@@ -1,0 +1,26 @@
+{
+  "schema_version": "repo_federation_manifest_v1",
+  "program_id": "transparencia-electoral-pr",
+  "repository_full_name": "jotaele44/transparencia-electoral-pr",
+  "federation_role": "electoral-evidence-producer",
+  "hub_parent": "thehub-pr",
+  "jurisdiction": "Puerto Rico",
+  "production_status": "ISOLATED_DEVELOPMENT",
+  "hub_callable_commands": {
+    "setup": "python3 -m pip --version",
+    "test_suite": "python3 -m unittest discover -s tests -v"
+  },
+  "canonical_outputs": {
+    "source_registry": "evidence/cee_registry.json"
+  },
+  "federation_readiness_gate": {
+    "ready_for_hub_discovery": false,
+    "ready_for_hub_live_execution": false,
+    "blocking_conditions": [
+      "Independent evidence QA not complete",
+      "No validated real election results",
+      "No canonical federation export package",
+      "No authorized production integration"
+    ]
+  }
+}
