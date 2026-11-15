@@ -124,11 +124,11 @@
       "authority": "Comisión Estatal de Elecciones",
       "source_kind": "2024_statistical_report",
       "acquisition_status": "PRIMARY_METADATA_VERIFIED_PAYLOAD_UNFROZEN",
-      "source_date": "2026-09-03",
+      "source_date": null,
       "verification_date": "2026-11-15",
       "retrieved_utc": null,
       "sha256": null,
-      "qualification": "LINK_FROM_OFFICIAL_APPROVAL_REPORT_UNFETCHED"
+      "qualification": "CEE-AC-26-157_APPROVAL_DATE_2026-09-03_IS_NOT_REPORT_PUBLICATION_DATE"
     }
   ]
 }
