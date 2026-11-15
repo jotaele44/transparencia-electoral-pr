@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Provisional 2024 election result record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "election_id",
+    "contest_id",
+    "reporting_unit_id",
+    "candidate_id",
+    "vote_method",
+    "votes"
+  ],
+  "properties": {
+    "election_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contest_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reporting_unit_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "vote_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "votes": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}
