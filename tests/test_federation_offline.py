@@ -14,6 +14,18 @@ class FederationOfflineTests(unittest.TestCase):
             self.assertEqual(m["federation"]["hub_parent"],"thehub-pr")
             self.assertEqual(m["mode"],"test")
             self.assertRegex(m["package_id"],r"^pkg_[a-f0-9]{32}$")
+    def test_escaped_newline_does_not_corrupt_jsonl(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            payload = {"id":"a","synthetic":True,"note":"line 1\\nline 2","literal":"\\\\n"}
+            generate([payload],tmp)
+            lines=(Path(tmp)/"sources.jsonl").read_text().splitlines()
+            self.assertEqual(len(lines),1)
+            self.assertEqual(json.loads(lines[0]),payload)
+    def test_empty_package_count_closure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest=generate([],tmp)
+            self.assertEqual(manifest["files"][0]["record_count"],0)
+            self.assertEqual((Path(tmp)/"sources.jsonl").read_bytes(),b"")
     def test_order_independent_manifest(self):
         with tempfile.TemporaryDirectory() as a,tempfile.TemporaryDirectory() as b:
             x={"id":"a","synthetic":True};y={"id":"b","synthetic":True}
