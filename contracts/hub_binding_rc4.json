@@ -1,0 +1,30 @@
+{
+  "status": "CONTRACT_SHAPE_ONLY_NOT_CONSUMER_INTEGRATION",
+  "hub_repository": "jotaele44/thehub-pr",
+  "hub_commit": "b7a60e613fecb36448c719651625892b2bded565",
+  "hub_federation_manifest_blob_sha": "a03f2ddbd2051fc48a5211883d9034479d4db1f6",
+  "hub_export_manifest_blob_sha": "074401f30cf05b578c396e704d8fe225e78f95cc",
+  "hub_federation_manifest_required": [
+    "schema_version",
+    "program_id",
+    "repository_full_name",
+    "federation_role",
+    "hub_parent",
+    "hub_callable_commands",
+    "canonical_outputs",
+    "federation_readiness_gate"
+  ],
+  "hub_export_manifest_required": [
+    "package_id",
+    "producer",
+    "export_contract_version",
+    "mode",
+    "created_at",
+    "federation",
+    "files"
+  ],
+  "validated_consumers": [],
+  "live_federation_enabled": false,
+  "certification": "OPEN",
+  "next_gate": "RUN_FROZEN_HUB_VALIDATOR_AGAINST_SYNTHETIC_EXPORT_IN_ISOLATION"
+}
