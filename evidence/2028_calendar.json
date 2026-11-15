@@ -1,5 +1,5 @@
 {
-  "version": "rc3",
+  "version": "rc4",
   "scope": "Puerto Rico 2028 electoral cycle",
   "source_manifestations_frozen": 0,
   "publication_snapshot_utc": null,
@@ -24,10 +24,11 @@
     {
       "id": "pr-2028-primary-rule-derived",
       "date": "2028-06-04",
-      "date_type": "COMPUTED_FIRST_SUNDAY_OF_JUNE",
-      "evidence_state": "COMPUTED_NOT_CALENDAR_CERTIFIED",
-      "source_id": "cee_2028_rfp",
-      "legal_status": "CANDIDATE"
+      "date_type": "STATUTORY_FIRST_SUNDAY_OF_JUNE",
+      "evidence_state": "OFFICIAL_LAW_ARTICLE_7_12_AND_CEE_CALENDAR_COPY_CORROBORATED",
+      "source_id": "ogp_electoral_code_2026_11_04",
+      "legal_status": "STATUTORY_DATE_VERIFIED",
+      "corrob_source_id": "cee_2028_calendar_rev_2026_09_29_mirror"
     },
     {
       "id": "pr-2028-early-mail-begin",
@@ -53,8 +54,14 @@
       "source_id": "cee_2028_rfp",
       "source_stated_date": "2028-06-06",
       "derived_first_sunday": "2028-06-04",
-      "disposition": "UNRESOLVED",
-      "effect": "DO_NOT_PUBLISH_PRIMARY_DATE_AS_CERTIFIED"
+      "disposition": "SOURCE_CONTRADICTION_RETAINED_LEGAL_RULE_ADJUDICATED",
+      "effect": "PUBLISH_2028_06_04_AS_STATUTORY_DATE_WITH_RFP_DISCREPANCY_DISCLOSED",
+      "adjudication_basis": [
+        "ogp_electoral_code_2026_11_04",
+        "cee_2028_calendar_rev_2026_09_29_mirror"
+      ]
     }
-  ]
+  ],
+  "calendar_coverage": "PARTIAL_ELECTORAL_CALENDAR_ONLY",
+  "signed_approved_complete_calendar_sha256": null
 }
