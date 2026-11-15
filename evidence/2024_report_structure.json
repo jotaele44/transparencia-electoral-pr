@@ -1,0 +1,22 @@
+{
+  "record_id": "cee_2024_statistical_report",
+  "title": "Informe Estadístico de las Elecciones Generales 2024",
+  "official_index_url": "https://ww2.ceepur.org/Home/Estadisticas",
+  "official_document_url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf",
+  "discovery_status": "LINK_CONFIRMED_BY_OFFICIAL_CEE_INDEX",
+  "inspection_status": "REPORT_TOO_LARGE_FOR_BROWSER_CONTENT_INSPECTION",
+  "report_manifestation_sha256": null,
+  "report_publication_date": null,
+  "reported_approval_document": "CEE-AC-26-157",
+  "approval_date": "2026-09-03",
+  "approval_date_is_publication_date": false,
+  "pages": null,
+  "sections": null,
+  "tables": null,
+  "reporting_units": null,
+  "reporting_unit_identifier_schema": null,
+  "candidate_identifier_schema": null,
+  "original_vs_certified_pair": null,
+  "exhaustiveness": "UNKNOWN",
+  "certification": "UNRESOLVED"
+}
