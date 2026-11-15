@@ -1,0 +1,25 @@
+{
+  "registry_version": "rc1",
+  "scope": "CEE Puerto Rico source discovery only",
+  "certification": "CANDIDATE_NOT_IDENTITY",
+  "sources": [
+    {
+      "source_id": "cee_procurement_portal",
+      "url": "https://www.ceepur.org/subastas/",
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "procurement_index",
+      "acquisition_status": "DISCOVERY_ONLY",
+      "retrieved_utc": null,
+      "sha256": null
+    },
+    {
+      "source_id": "cee_2024_results",
+      "url": null,
+      "authority": "Comisión Estatal de Elecciones",
+      "source_kind": "official_results_2024",
+      "acquisition_status": "PENDING_AUTHORITATIVE_BINDING",
+      "retrieved_utc": null,
+      "sha256": null
+    }
+  ]
+}
