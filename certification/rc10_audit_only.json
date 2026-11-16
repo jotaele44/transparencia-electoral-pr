@@ -1,0 +1,33 @@
+{
+  "release": "RC10",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_approved": false,
+  "rc6": "4fcadb41ac1523cf2348e3889627f2e481744f08",
+  "rc9": "faa24424aa9a61fe6d6bfbe139f9a826511e6e48",
+  "software": {
+    "test_state": "PENDING_EXACT_HEAD_CI",
+    "hub_state": "PENDING_EXACT_HEAD_CI",
+    "real_idp": "BLOCKED",
+    "external_worm": "BLOCKED"
+  },
+  "evidence": {
+    "cee_original_payload_hashes": 0,
+    "reporting_unit_denominator": null,
+    "authoritative_paired_sources": 0,
+    "real_vote_comparisons": 0,
+    "third_party_binding": "UNRESOLVED"
+  },
+  "production": {
+    "federation_live": false,
+    "external_referrals": 0,
+    "public_allegations": 0
+  },
+  "gates": {
+    "independent_security": "OPEN",
+    "independent_evidence": "OPEN",
+    "legal_qa": "OPEN",
+    "production": "BLOCKED"
+  },
+  "rollback": "To RC9 exact HEAD only after explicit authorization and lease-checked branch ref update"
+}
