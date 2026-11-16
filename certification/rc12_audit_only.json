@@ -1,0 +1,54 @@
+{
+  "release": "RC12",
+  "state": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "scope": "Puerto Rico 2024 official report manifestation adjudication and 2028 advance-voting ballot mailing resolution",
+  "baseline": {
+    "rc11": "e6772035f625a6534f9f00306911c51a41a33769",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "branch": "dev/rc12-cee-version-calendar"
+  },
+  "source_findings": {
+    "cee_rs_26_010": {
+      "state": "SIGNED_PRESIDENTIAL_DETERMINATION_VISUALLY_VERIFIED",
+      "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "signed_date": "2026-09-08",
+      "original_sha256": null,
+      "content_scope": "Mailing starts as soon as ballots available but not later than 2028-09-20 and finishes no later than 2028-10-03",
+      "relationship_to_cee_ac_26_149": "RESOLVES_MAILING_DATE_DISAGREEMENT"
+    },
+    "cee_sip_2025_006": {
+      "state": "COMPLETED_REQUEST_REGISTERED",
+      "date": "2025-03-28",
+      "delivered_original_payload": false,
+      "sha256": null
+    },
+    "cee_2026_approved_statistical_report": {
+      "state": "OFFICIAL_URL_IDENTIFIED_PAYLOAD_UNACQUIRED",
+      "sha256": null,
+      "document_structure": null
+    },
+    "complete_2024_reporting_unit_denominator": null,
+    "preliminary_to_certified_authoritative_pairs": 0,
+    "real_vote_comparisons": 0
+  },
+  "test_evidence": {
+    "unit_tests": "CHECK_EXACT_HEAD_CI",
+    "hub_validator": "CHECK_EXACT_HEAD_CI",
+    "real_original_payload_hashes_verified": 0,
+    "synthetic_reconciliation_only": true
+  },
+  "blockers": [
+    "2025 delivered statistical report PDF bytes unavailable",
+    "2026 approved official statistical report PDF bytes unavailable",
+    "2024 source denominator and original/final row bindings unresolved",
+    "independent legal/evidence/security QA not completed",
+    "real identity provider and WORM storage not provisioned"
+  ],
+  "rollback": {
+    "target": "e6772035f625a6534f9f00306911c51a41a33769",
+    "authorization_required": true,
+    "main_must_remain": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  }
+}
