@@ -14,6 +14,7 @@ on:
       - dev/rc14-cee-report-acquisition
       - dev/rc15-custody-legal-provenance
       - dev/rc16-meta2028-pilot
+      - dev/rc16-meta2028-pilot
   workflow_dispatch:
 permissions:
   contents: read
