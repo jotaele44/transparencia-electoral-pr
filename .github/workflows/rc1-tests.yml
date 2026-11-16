@@ -1,4 +1,4 @@
-name: RC8 isolated tests
+name: RC9 isolated tests
 on:
   push:
     branches:
@@ -6,6 +6,7 @@ on:
       - dev/rc6-security-integrity
       - dev/rc7-security-evidence
       - dev/rc8-replay-provenance
+      - dev/rc9-cee-identity-audit
   workflow_dispatch:
 permissions:
   contents: read
