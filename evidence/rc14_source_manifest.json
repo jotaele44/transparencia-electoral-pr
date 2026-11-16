@@ -131,6 +131,18 @@
       "source_states_100_percent_colleges_reported": true,
       "numeric_college_denominator": null,
       "sha256": null
+    },
+    {
+      "id": "cee_2024_event_results_portal",
+      "authority": "CEE",
+      "type": "OFFICIAL_ELECTION_EVENT_INDEX_AND_RESULTS_PORTAL",
+      "index_url": "https://ww2.ceepur.org/home/eventoselectorales",
+      "results_url": "https://elecciones2024.ceepur.org/",
+      "index_status": "2024_RESULTS_LINK_CONFIRMED",
+      "results_fetch": "WEB_READER_FAILED_UNKNOWN_STATUS_999",
+      "raw_result_payloads_acquired": 0,
+      "sha256": null,
+      "note": "Official link is discoverable, but the results portal was not retrievable through the current reader; no result rows or unit-level identities are inferred."
     }
   ],
   "version_relation": {
@@ -147,6 +159,7 @@
     "complete_2024_reporting_unit_denominator": null,
     "authentic_preliminary_certified_pairs": 0,
     "real_vote_rows_reconciled": 0,
-    "certification": "AUDIT_ONLY"
+    "certification": "AUDIT_ONLY",
+    "source_records": 11
   }
 }
