@@ -121,6 +121,18 @@
       "observed_content": "Documents PREKEY/UNIKEY/COLKEY as precinct/unit/college column descriptions.",
       "identity_binding": "UNRESOLVED_CANDIDATE_NOT_IDENTITY",
       "byte_sha256": null
+    },
+    {
+      "id": "cee_ac_26_149",
+      "authority": "CEE",
+      "document_type": "CERTIFICACION_DE_DESACUERDO_2028_ELECTORAL_CALENDAR",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-149.pdf",
+      "document_date": "2026-08-27",
+      "pages": 3,
+      "observed_content": "No unanimity on early/absentee mail transmission date; matter referred to CEE Presidency under Electoral Code Art. 3.4(2),(4).",
+      "retrieval_state": "ALL_3_PAGES_VISUALLY_REVIEWED",
+      "byte_sha256": null,
+      "original_bytes_frozen": false
     }
   ],
   "version_conflicts": [
@@ -134,7 +146,7 @@
     }
   ],
   "closure": {
-    "primary_source_entries": 9,
+    "primary_source_entries": 11,
     "original_source_byte_hashes": 0,
     "original_bytes_frozen": 0,
     "complete_reporting_unit_denominator": null,
