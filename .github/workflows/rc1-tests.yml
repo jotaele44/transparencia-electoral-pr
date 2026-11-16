@@ -8,6 +8,7 @@ on:
       - dev/rc8-replay-provenance
       - dev/rc9-cee-identity-audit
       - dev/rc10-evidence-proof-gates
+      - dev/rc11-cee-primary-source-audit
   workflow_dispatch:
 permissions:
   contents: read
