@@ -1,4 +1,4 @@
-name: RC9 pinned Hub integration
+name: RC10 pinned Hub integration
 on:
   push:
     branches:
@@ -6,6 +6,7 @@ on:
       - dev/rc7-security-evidence
       - dev/rc8-replay-provenance
       - dev/rc9-cee-identity-audit
+      - dev/rc10-evidence-proof-gates
   workflow_dispatch:
 permissions:
   contents: read
