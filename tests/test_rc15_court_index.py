@@ -21,8 +21,10 @@ class RC15CourtCase(unittest.TestCase):
   self.assertEqual(self.c["related_case"]["identity"],"DISTINCT_CASE_NOT_ISABELA")
  def test_custody_sources_not_promoted(self):
   a={x["id"]:x for x in self.s["sources"]}
-  self.assertEqual(a["cee_ac_25_006"]["observed_state"],"TABLED_AS_LISTED")
-  self.assertIsNone(a["cee_ac_25_006"]["approved"])
+  self.assertEqual(a["cee_ac_25_006"]["observed_state"],"UNANIMOUS_APPROVAL_WITH_RETENTION_REQUIREMENT")
+  self.assertIs(a["cee_ac_25_006"]["approved"],True)
+  self.assertIn("Representative District 16",a["cee_ac_25_006"]["retained_material"])
+  self.assertIs(a["cee_ac_25_047"]["disposition_authorized"],True)
   self.assertIsNone(a["cee_ac_25_047"]["executed"])
  def test_ledger_count_and_unknown_denominator(self):
   self.assertEqual(len(self.s["sources"]),self.s["closure"]["registered_source_rows"])
