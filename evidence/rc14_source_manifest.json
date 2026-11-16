@@ -1,0 +1,152 @@
+{
+  "release": "RC14",
+  "classification": "PRIMARY_SOURCE_DISCOVERY_AND_SCOPE_ADJUDICATION_NOT_BYTE_FREEZE",
+  "baseline": {
+    "rc13": "cdf6079ff3b5e22b5e60eb606dd0b37cb099374a",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "records": [
+    {
+      "id": "cee_sip_2025_006",
+      "authority": "CEE",
+      "type": "PUBLIC_INFORMATION_REQUEST_COMPLETION_ENTRY",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Ley141/informe-de-transparencia-202503.pdf",
+      "date": "2025-03",
+      "completion_date": "2025-03-28",
+      "page": 1,
+      "status": "COMPLETED",
+      "delivered_report_payload_url": null,
+      "delivered_report_bytes": false,
+      "sha256": null,
+      "interpretation": "Completion is confirmed; delivered payload and its identity are not."
+    },
+    {
+      "id": "cee_2024_statistics_index",
+      "authority": "CEE",
+      "type": "OFFICIAL_STATISTICS_INDEX",
+      "url": "https://ww2.ceepur.org/Home/Estadisticas",
+      "link_label": "Elecciones 2024",
+      "linked_pdf": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf",
+      "status": "LINK_CONFIRMED",
+      "pdf_fetch": "REJECTED_BY_WEB_READER_CONTENT_LENGTH_TOO_LARGE",
+      "reader_reported_content_length": 33580272,
+      "source_reported_file_size": null,
+      "bytes_acquired": false,
+      "sha256": null
+    },
+    {
+      "id": "cee_ac_26_157",
+      "authority": "CEE",
+      "type": "APPROVAL_WITH_AMENDMENTS",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-157.pdf",
+      "date": "2026-09-03",
+      "status": "APPROVAL_RECORDED",
+      "report_bytes_bound": false,
+      "sha256": null
+    },
+    {
+      "id": "cee_relation_precincts_2024_10_05",
+      "authority": "CEE_OFICINA_PLANIFICACION",
+      "type": "RELACION_DE_PRECINTOS",
+      "url": "https://ww2.ceepur.org/sites/comisionee/es-pr/planificacion/documents/relacionprecintos.pdf",
+      "revision_date": "2024-10-05",
+      "municipality_raw": "Isabela",
+      "precinct_raw": "032",
+      "senatorial_district": 4,
+      "representative_district": 16,
+      "units_value": 22,
+      "units_interpretation": "CEE table count for Isabela precinct 032; no unit IDs or college count in row; special-unit inclusion/exclusion not stated in this table",
+      "sha256": null
+    },
+    {
+      "id": "cee_general_manual_2024",
+      "authority": "CEE",
+      "type": "MANUAL_PROCEDIMIENTOS_ELECCIONES_GENERALES_Y_ESCRUTINIO_2024",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Manuales/Manual%20de%20Procedimientos%20para%20las%20Elecciones%20Generales%20y%20Escrutinio%202024.pdf",
+      "approved_date": "2024-10-11",
+      "pages": 66,
+      "reviewed_sections": [
+        "1.3",
+        "3.5",
+        "5.1",
+        "envelopes 6/9"
+      ],
+      "finding": "Section 5.1 states certified college acts for special modalities 72,73,74,76,77 are aggregated into corresponding precinct results. Unit 73 is Voto Fácil Acceso en Domicilio. Section 3.5 refers to the separate modality manual.",
+      "sha256": null
+    },
+    {
+      "id": "cee_absentee_advance_regulation_2024",
+      "authority": "CEE",
+      "type": "REGLAMENTO_VOTO_AUSENTE_Y_VOTO_ADELANTADO_2024",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Documents/REGLAMENTO%20DE%20VOTO%20AUSENTE%20Y%20VOTO%20ADELANTADO%20DE%20PRIMARIAS%20Y%20ELECCIONES%20GENERALES%202024.pdf",
+      "finding": "Section 6.5 nomenclature: Colegio de Fácil Acceso en Domicilio is Unit 73, Colegio 01.",
+      "sha256": null
+    },
+    {
+      "id": "cee_rs_24_038_lares_053_unit_073",
+      "authority": "CEE_PRESIDENCY",
+      "type": "SIGNED_RESOLUTION_SEPARATE_PRECINCT_COMPARATOR",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/ResolucionesSecretaria/PAPELETAS%20CON%20SITUACIONES%20SOBRE%20LAS%20INICIALES%20-%20LARES%20053%20UNIDAD%2073%20%28DESACUERDO%20CEE-AC-24-177%29.pdf",
+      "date": "2024-12-21",
+      "precinct": "053",
+      "municipality": "Lares",
+      "unit": "73",
+      "pages": 4,
+      "findings": "Separate Lares domicile-vote Unit 73 matter; resolution describes initialing dispute and cites minimum two officials' initials under 2024 domicile manual. Not Isabela evidence.",
+      "sha256": null
+    },
+    {
+      "id": "cee_ac_25_005_isabela_032_unit_073",
+      "authority": "CEE",
+      "type": "DISAGREEMENT_RESOLUTION",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-005.pdf",
+      "date": "2025-01-29",
+      "municipality": "Isabela",
+      "precinct": "032",
+      "unit": "73",
+      "pages": 12,
+      "reviewed_all_pages_in_prior_RC11": "YES",
+      "underlying_original_actas_acquired": false,
+      "sha256": null
+    },
+    {
+      "id": "cee_2024_partial_mayoral_results",
+      "authority": "CEE",
+      "type": "PARTIAL_RESULTS_NIGHT_OF_ELECTION",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Segundo%20anuncio%20de%20resultado%20parcial%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20Alcaldes.pdf",
+      "generated": "2024-11-06T06:00:11",
+      "pages": 256,
+      "geographic_level": "MUNICIPALITY",
+      "status": "PARTIAL_MUNICIPAL_RESULTS",
+      "use_for_isabela_unit_073": "NO; scope is municipality-level, not unit/college domicile acta",
+      "sha256": null
+    },
+    {
+      "id": "cee_2024_final_house_certification",
+      "authority": "CEE",
+      "type": "FINAL_HOUSE_CERTIFICATION",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Certificaci%C3%B3n%20de%20resultados%20finales%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20C%C3%A1mara%20de%20Representantes.pdf",
+      "date": "2024-12-31",
+      "status": "CERTIFICATION_IDENTIFIED",
+      "source_states_100_percent_colleges_reported": true,
+      "numeric_college_denominator": null,
+      "sha256": null
+    }
+  ],
+  "version_relation": {
+    "2025_delivered_report": "UNRECOVERED",
+    "2026_approved_report": "OFFICIAL_LINK_CONFIRMED_BUT_BYTES_UNAVAILABLE",
+    "relationship": "UNRESOLVED"
+  },
+  "closure": {
+    "original_report_payloads": 0,
+    "verified_sha256": 0,
+    "isabela_unit_73_original_actas": 0,
+    "official_standard_unit_count_for_isabela_032": 22,
+    "official_college_denominator_isabela_032": null,
+    "complete_2024_reporting_unit_denominator": null,
+    "authentic_preliminary_certified_pairs": 0,
+    "real_vote_rows_reconciled": 0,
+    "certification": "AUDIT_ONLY"
+  }
+}
