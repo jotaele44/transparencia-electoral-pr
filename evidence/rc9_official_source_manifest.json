@@ -1,0 +1,61 @@
+{
+  "release": "RC9",
+  "classification": "DISCOVERY_NOT_BYTE_VERIFIED",
+  "official_manifests": [
+    {
+      "id": "cee_2024_mayoral_night_partial_2",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Segundo%20anuncio%20de%20resultado%20parcial%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20Alcaldes.pdf",
+      "authority": "CEE",
+      "document_type": "PARTIAL_MUNICIPAL_MAYORAL_RESULTS",
+      "generated_local": "2024-11-06T06:00:11",
+      "source_epoch": "NIGHT_OF_ELECTION",
+      "geographic_level": "MUNICIPALITY",
+      "report_pages_source_reported": 256,
+      "byte_sha256": null,
+      "retrieved_utc": null,
+      "verified_original_bytes": false,
+      "notes": "Source reports municipal reported/total colleges; these are municipal snapshots, not a full islandwide certified inventory."
+    },
+    {
+      "id": "cee_2024_certification_final_house",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Certificaci%C3%B3n%20de%20resultados%20finales%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20C%C3%A1mara%20de%20Representantes.pdf",
+      "authority": "CEE",
+      "document_type": "FINAL_HOUSE_CERTIFICATION",
+      "generated_local": null,
+      "source_epoch": "FINAL_CEE_CERTIFICATION",
+      "document_date": "2024-12-31",
+      "geographic_level": "CONTEST_AND_ANNEX",
+      "byte_sha256": null,
+      "retrieved_utc": null,
+      "verified_original_bytes": false,
+      "notes": "Official 100%-reported statement does not prove a numeric denominator or a one-to-one binding to mirrored college CSVs."
+    },
+    {
+      "id": "cee_2024_procedural_manual",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Manuales/Manual%20de%20Procedimientos%20para%20las%20Elecciones%20Generales%20y%20Escrutinio%202024.pdf",
+      "authority": "CEE",
+      "document_type": "ELECTION_AND_CANVASS_PROCEDURES",
+      "document_date": "2024-10-11",
+      "geographic_level": "PROCEDURAL",
+      "byte_sha256": null,
+      "retrieved_utc": null,
+      "verified_original_bytes": false,
+      "special_units": {
+        "72": "EARLY_MAIL",
+        "73": "ACCESSIBLE_HOME",
+        "74": "JAVAA_SPECIAL_COLLEGE",
+        "76": "INCARCERATED",
+        "77": "ABSENTEE"
+      },
+      "notes": "Special units identify voting modalities, not proof of one-to-one normal college spatial correspondence."
+    }
+  ],
+  "third_party_index": {
+    "url": "https://electionspuertorico.org/datos/2024/",
+    "host": "THIRD_PARTY",
+    "binding_to_official_cee_original": "UNRESOLVED"
+  },
+  "source_snapshot_bytes_recovered": 0,
+  "downloaded_large_datasets": 0,
+  "certification": "UNRESOLVED"
+}
