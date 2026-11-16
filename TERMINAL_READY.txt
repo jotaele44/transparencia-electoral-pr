@@ -1,23 +1,30 @@
-STATUS: RC10_AUDIT_ONLY; NO_CERTIFICATION
+STATUS: RC11_AUDIT_ONLY; NO_CERTIFICATION
 REPOSITORY: jotaele44/transparencia-electoral-pr
-BRANCH: dev/rc10-evidence-proof-gates
+BRANCH: dev/rc11-cee-primary-source-audit
+PRESERVED_RC10: d343a39349de85a0d3c4e0aba5a00c65e65774c8
 PRESERVED_RC6: 4fcadb41ac1523cf2348e3889627f2e481744f08
-REUSED_RC9: faa24424aa9a61fe6d6bfbe139f9a826511e6e48
 MAIN_BASELINE: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
 TEST: python3 -m unittest discover -s tests -v
-HUB_TEST: GitHub Actions pinned TheHub b7a60e613fecb36448c719651625892b2bded565
-AUDIT: certification/rc10_audit_only.json
-NEW_VECTOR: synthetic byte-integrity and row-identity proof gates; no real vote processing
-ORIGINAL_CEE_SOURCE_SHA256: ZERO
-ISLANDWIDE_REPORTING_UNIT_DENOMINATOR: UNKNOWN
-SOURCE_ORIGINAL_TO_CERTIFIED_BINDINGS: ZERO
-REAL_ELECTION_FINDINGS: ZERO
-SECURITY_IDP: DESIGN_ONLY; NOT_DEPLOYED
-WORM_EVIDENCE_STORE: DESIGN_ONLY; NOT_PROVISIONED
+HUB_TEST: pinned TheHub b7a60e613fecb36448c719651625892b2bded565; synthetic only
+NEW_PRIMARY_SOURCE: CEE-AC-26-157 dated 2026-09-03 unanimously approves 2024 Statistical Report with amendments
+STATISTICAL_REPORT_URL: https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf
+REPORT_BYTES: NOT_ACQUIRED; web reader rejected oversized response; SHA256 NULL
+VERSION_HISTORY: CEE transparency report lists CEE-SIP-2025-006 completed 2025-03-28; relationship to amended 2026 report UNRESOLVED
+UNIT_NAMESPACE: MUNICIPALITY/PRECINCT/UNIT/COLLEGE official administrative locator vocabulary; NOT stable canonical identity
+CEE-AC-25-013: missing voter lists procedure by precinct/unit/college
+CEE-AC-25-038: Electoral Units Program update procedure
+ISABELA_CASE: CEE-AC-25-005; Isabela 032 Unit 73; all 12 pages visually reviewed; NO HA LUGAR
+CASE_FINDING: no proven uncounted-vote number or fraud; affidavit and administrative ruling procedural contradiction preserved
+REPORTING_UNIT_DENOMINATOR: UNKNOWN
+AUTHENTIC_PRELIMINARY_FINAL_PAIRS: ZERO
+REAL_VOTE_COMPARISONS: ZERO
+IDP: DESIGN ONLY; NOT DEPLOYED
+EXTERNAL_WORM: DESIGN ONLY; NOT PROVISIONED
 FEDERATION_DISCOVERY: OFF
 FEDERATION_LIVE: OFF
 MAIN_MERGE: BLOCKED
 PRODUCTION: BLOCKED
 EXTERNAL_REFERRALS: ZERO
-NEXT: Acquire verified primary source bytes selectively -> exact identities -> complete denominator -> independent QA -> certification only on full pass
-ROLLBACK: RC9 HEAD only with explicit authorization and lease-checked reference update
+AUDIT: evidence/rc11_source_manifest.json; evidence/rc11_reporting_unit_namespace.json; evidence/rc11_case_registry.json
+NEXT: acquire both 2025 delivered and 2026 amended CEE report manifestations -> hash -> inspect report structure -> close denominator -> bind source versions -> reconcile real results -> independent QA
+ROLLBACK: RC10 exact HEAD d343a39349de85a0d3c4e0aba5a00c65e65774c8 ONLY with explicit authorization and lease-checked reference update
