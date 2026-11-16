@@ -1,0 +1,33 @@
+{
+  "scope": "CEE 2024 mayoral partial results, November 6 morning report, first two municipality sections only",
+  "source_id": "cee_2024_mayoral_night_partial_2",
+  "source_generation_local": "2024-11-06T06:00:11",
+  "record_state": "SOURCE_TEXT_EXCERPT_UNVERIFIED_BYTES",
+  "rows": [
+    {
+      "municipality_raw": "ADJUNTAS",
+      "municipality_canonical_id": null,
+      "reported_colleges": 40,
+      "total_colleges": 46,
+      "computed_unreported": 6,
+      "source_page_label": "1 de 256",
+      "vote_data_recorded": false
+    },
+    {
+      "municipality_raw": "AGUADA",
+      "municipality_canonical_id": null,
+      "reported_colleges": 63,
+      "total_colleges": 66,
+      "computed_unreported": 3,
+      "source_page_label": "2 de 256",
+      "vote_data_recorded": false
+    }
+  ],
+  "source_total_municipal_sections": null,
+  "all_in_scope_municipalities_reviewed": false,
+  "raw_pdf_sha256": null,
+  "pdf_visual_review": "BLOCKED_OVERSIZE_WEB_SCREENSHOT",
+  "source_count_closure": "BOUNDED_TWO_EXCERPTS_ONLY",
+  "islandwide_reporting_unit_denominator": null,
+  "certification": "AUDIT_ONLY"
+}
