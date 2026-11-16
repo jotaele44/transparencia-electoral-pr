@@ -1,0 +1,133 @@
+{
+  "schema_version": "meta2028_event_registry_v1",
+  "classification": "METADATA_ONLY_MONITOR_NOT_ENABLED",
+  "jurisdiction": "Puerto Rico",
+  "production_monitor_enabled": false,
+  "source_evidence_has_original_bytes": false,
+  "events": [
+    {
+      "id": "evt-2028-general",
+      "event_type": "ELECTION_DAY",
+      "date": "2028-11-07",
+      "date_semantics": "ELECTION_DAY",
+      "source_id": "cee_2028_rfp",
+      "legal_state": "OFFICIAL_SOURCE_STATED",
+      "source_url": "https://ww2.ceepur.org/Home/Estadisticas",
+      "source_sha256": null,
+      "monitor_state": "NOT_ENABLED"
+    },
+    {
+      "id": "evt-2028-primary",
+      "event_type": "PRIMARY",
+      "date": "2028-06-04",
+      "date_semantics": "STATUTORY_DERIVED",
+      "source_id": "ogp_electoral_code_2026_11_04",
+      "legal_state": "STATUTORY_DATE_VERIFIED_WITH_CONTRADICTORY_RFP",
+      "source_url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/Elecciones/58-2020.pdf",
+      "source_sha256": null,
+      "monitor_state": "NOT_ENABLED"
+    },
+    {
+      "id": "evt-2028-mail-start-limit",
+      "event_type": "ADVANCE_MAIL",
+      "date": "2028-09-20",
+      "date_semantics": "LATEST_START",
+      "source_id": "cee_rs_26_010",
+      "legal_state": "SIGNED_RESOLUTION",
+      "source_url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "source_sha256": null,
+      "monitor_state": "NOT_ENABLED"
+    },
+    {
+      "id": "evt-2028-mail-end-limit",
+      "event_type": "ADVANCE_MAIL",
+      "date": "2028-10-03",
+      "date_semantics": "LATEST_END",
+      "source_id": "cee_rs_26_010",
+      "legal_state": "SIGNED_RESOLUTION",
+      "source_url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "source_sha256": null,
+      "monitor_state": "NOT_ENABLED"
+    }
+  ],
+  "source_registry": [
+    {
+      "source_id": "cee_rs_26_010",
+      "authority": "CEE",
+      "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "domain": "ELECTORAL_CALENDAR",
+      "retrieval_utc": null,
+      "original_sha256": null,
+      "state": "VISUALLY_REVIEWED_NOT_BYTES_FROZEN"
+    },
+    {
+      "source_id": "cee_ac_25_006",
+      "authority": "CEE",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-006.pdf",
+      "domain": "ELECTORAL_CUSTODY",
+      "retrieval_utc": null,
+      "original_sha256": null,
+      "state": "VISUALLY_REVIEWED_NOT_BYTES_FROZEN"
+    },
+    {
+      "source_id": "cee_ac_25_047",
+      "authority": "CEE",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-047.pdf",
+      "domain": "ELECTORAL_CUSTODY",
+      "retrieval_utc": null,
+      "original_sha256": null,
+      "state": "VISUALLY_REVIEWED_NOT_BYTES_FROZEN"
+    },
+    {
+      "source_id": "cee_2024_statistics_report",
+      "authority": "CEE",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf",
+      "domain": "ELECTION_RESULTS",
+      "retrieval_utc": null,
+      "original_sha256": null,
+      "state": "IDENTIFIED_BYTES_UNAVAILABLE"
+    },
+    {
+      "source_id": "cee_sip_2025_006",
+      "authority": "CEE",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Ley141/informe-de-transparencia-202503.pdf",
+      "domain": "PUBLIC_INFORMATION",
+      "retrieval_utc": null,
+      "original_sha256": null,
+      "state": "COMPLETION_EVENT_CONFIRMED_ATTACHMENT_UNKNOWN"
+    },
+    {
+      "source_id": "cee_ac_25_001",
+      "authority": "CEE",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-01.pdf",
+      "domain": "REPORTING_UNIT_CLASSIFICATION",
+      "retrieval_utc": null,
+      "original_sha256": null,
+      "state": "IDENTIFIED_NOT_BYTES_FROZEN"
+    },
+    {
+      "source_id": "klan202500306",
+      "authority": "PODER_JUDICIAL_PR",
+      "url": "https://dts.poderjudicial.pr/ta/2025/KLAN202500306-22052025.PDF",
+      "domain": "ELECTORAL_LITIGATION",
+      "retrieval_utc": null,
+      "original_sha256": null,
+      "state": "VISUALLY_REVIEWED_NOT_BYTES_FROZEN"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "primary-rfp-conflict",
+      "state": "PRESERVED_STATUTORY_PRIORITY",
+      "raw_source_date": "2028-06-06",
+      "statutory_date": "2028-06-04",
+      "basis": "evidence/2028_calendar.json"
+    },
+    {
+      "id": "mailing-proposals",
+      "state": "SUPERSEDED_FOR_MAILING_DEADLINES",
+      "superseding_source_id": "cee_rs_26_010",
+      "basis": "evidence/rc11_2028_calendar_status.json"
+    }
+  ]
+}
