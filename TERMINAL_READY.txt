@@ -3,9 +3,9 @@ REPOSITORY: jotaele44/transparencia-electoral-pr
 BRANCH: dev/rc15-custody-legal-provenance
 PRESERVED_RC14: 7506d46a6d78e7a68450c28677bee6384f2d5786
 PRESERVED_MAIN: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
-SOURCE_NEW_CEE_AC_25_006: indexed as SOBRE MESA; approval/implementation NOT PROVEN
+SOURCE_NEW_CEE_AC_25_006: signed original visually reviewed, 2025-01-30; unanimously approved depuration with explicit retention for Representative Districts 16/40, Mayaguez IV and House at-large; physical execution NOT PROVEN
 SOURCE_NEW_CEE_AC_25_046: depuration project OSIPE/RGE status; ORIGINAL MISSING
-SOURCE_NEW_CEE_AC_25_047: disposition associated with 25-006; ORIGINAL INVENTORY MISSING
+SOURCE_NEW_CEE_AC_25_047: signed original visually reviewed, 2025-06-12; authorized disposition of previously retained material and plebiscite ballots; actual execution and Isabela 032 identity NOT PROVEN
 SOURCE_NEW_APPELLATE: official KLAN202500306 2025-05-22, https://dts.poderjudicial.pr/ta/2025/KLAN202500306-22052025.PDF
 TPI_CASE: SJ2025CV01115 bound by appellate; original judgment/appendices NOT ACQUIRED
 SOURCE_DATE_CONTRADICTION: court states 24 de febrero de 2024 for a motion in 2025 appeal timeline; NOT CORRECTED WITHOUT ORIGINAL
