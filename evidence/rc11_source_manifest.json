@@ -108,8 +108,8 @@
       "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-005.pdf",
       "document_date": "2025-01-29",
       "pages": 12,
-      "observed_content": "PPD request regarding alleged unadjudicated ballots and correction of summary acts for Isabela precinct 032 unit 73; includes attached sworn statement and incident forms; Commission denied petition No Ha Lugar.",
-      "retrieval_state": "SCREENSHOT_REVIEWED_PARTIAL_PAGES",
+      "observed_content": "PPD petition, attached sworn statement and incident forms, and CEE No Ha Lugar resolution reviewed across all 12 PDF pages; no original bytes or SHA-256 obtained.",
+      "retrieval_state": "ALL_12_PAGES_VISUALLY_REVIEWED",
       "byte_sha256": null,
       "original_bytes_frozen": false
     },
