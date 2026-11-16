@@ -1,0 +1,76 @@
+{
+  "release": "RC16",
+  "status": "DEFINITION_ONLY_NO_REAL_SCORES",
+  "metrics": [
+    {
+      "id": "M01",
+      "name": "Primary record accessibility",
+      "numerator": "In-scope required original manifestations retrievable with verified sha256",
+      "denominator": "Authoritatively enumerated in-scope required manifestations",
+      "unknown_rule": "NULL_IF_DENOMINATOR_UNVERIFIED",
+      "target": "100% for certified findings"
+    },
+    {
+      "id": "M02",
+      "name": "Publication latency",
+      "numerator": "UTC publication timestamp minus event UTC",
+      "denominator": "Each event with independently evidenced timestamps",
+      "unknown_rule": "NULL_IF_EITHER_TIMESTAMP_MISSING",
+      "target": "Alert on material delay based on law-specific deadlines"
+    },
+    {
+      "id": "M03",
+      "name": "Reporting unit identity coverage",
+      "numerator": "Authoritatively bound in-scope units",
+      "denominator": "Complete authoritative CEE epoch-specific unit inventory",
+      "unknown_rule": "NULL_IF_DENOMINATOR_UNVERIFIED",
+      "target": "100% classified; preserve unresolved"
+    },
+    {
+      "id": "M04",
+      "name": "Result row conservation",
+      "numerator": "Classified real source rows including unresolved",
+      "denominator": "Original verified source rows",
+      "unknown_rule": "NULL_IF_SOURCE_PAYLOAD_UNAVAILABLE",
+      "target": "100% row conservation"
+    },
+    {
+      "id": "M05",
+      "name": "Result reproducibility",
+      "numerator": "Certified totals reproduced from original bound actas",
+      "denominator": "In-scope authorized certified totals",
+      "unknown_rule": "NULL_IF_IDENTITIES_OR_INPUTS_UNVERIFIED",
+      "target": "100% for published certified comparisons"
+    },
+    {
+      "id": "M06",
+      "name": "Custody chain closure",
+      "numerator": "Source-verified recorded transitions",
+      "denominator": "All required transitions for actual item IDs",
+      "unknown_rule": "NULL_IF_ITEM_MANIFEST_MISSING",
+      "target": "100% or classify gap"
+    },
+    {
+      "id": "M07",
+      "name": "Disposition traceability",
+      "numerator": "Cases with official final disposition and legal stage",
+      "denominator": "In-scope cases with authoritative case IDs",
+      "unknown_rule": "NULL_IF_COMPLETE_CASE_DENOMINATOR_UNKNOWN",
+      "target": "100% classified"
+    },
+    {
+      "id": "M08",
+      "name": "Detector quality",
+      "numerator": "TP, FP, FN from blinded labeled historical/synthetic examples",
+      "denominator": "Independently labeled scoped candidate set",
+      "unknown_rule": "NULL_IF_BLIND_GROUND_TRUTH_MISSING",
+      "target": "Defined after independent baseline; do not invent"
+    }
+  ],
+  "proposed_sla": {
+    "source_change_detection": "24h from verified official publication if source accessible",
+    "critical_review": "4h from detection",
+    "production_status": "NOT_ACTIVE"
+  },
+  "certification": "AUDIT_ONLY"
+}
