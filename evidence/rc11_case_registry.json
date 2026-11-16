@@ -1,0 +1,39 @@
+{
+  "classification": "DOCUMENTED_ADMINISTRATIVE_CASES_NOT_FINDINGS",
+  "cases": [
+    {
+      "case_id": "cee_2024_isabela_032_unit_073",
+      "municipality_raw": "Isabela",
+      "precinct_raw": "032",
+      "unit_raw": "73",
+      "special_modality": "ACCESSIBLE_HOME / VOTO ADELANTADO A DOMICILIO (reported in attached motion)",
+      "source": "cee_ac_25_005",
+      "date_of_resolution": "2025-01-29",
+      "claims": {
+        "party_motion": "PPD requested counting/adjudication of ballots with one or no initials and correction of summary acts.",
+        "sworn_statement": "PPD alternate commissioner states issue was referred to alternate commissioners' table on 2024-12-06; attached affidavit reports more than 100 ballots awaiting adjudication.",
+        "scope_context": "The motion references 930 electors in the accessible-home unit; this is not a verified count of disputed ballots."
+      },
+      "official_disposition": {
+        "state": "NO_HA_LUGAR",
+        "meaning": "petition denied",
+        "reason_summary": "CEE resolution says the matter had not been referred to the President as alleged, certification had occurred, and the Commission lacked jurisdiction at that stage; it references prior judicial/legislative handling.",
+        "not_established": [
+          "that all ballots in Unit 73 were uncounted",
+          "that 930 ballots were unadjudicated",
+          "fraud or intentional manipulation",
+          "final judicial adjudication of the specific ballot claim"
+        ]
+      },
+      "contradictions": [
+        {
+          "type": "PROCEDURAL_HISTORY",
+          "a": "attached sworn statement says referred to alternate commissioners on 2024-12-06",
+          "b": "CEE resolution states it was never elevated to the Commission plenary/President for decision",
+          "state": "PRESERVE_UNRESOLVED; source pages and procedural distinction require legal review"
+        }
+      ],
+      "qa": "PARTIAL_DOCUMENT_REVIEW; no original byte hash; no underlying ballot totals or individual records acquired."
+    }
+  ]
+}
