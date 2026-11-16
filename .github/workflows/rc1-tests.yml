@@ -1,9 +1,10 @@
-name: RC6 isolated tests
+name: RC7 isolated tests
 on:
   push:
     branches:
       - dev/evidence-pilot-rc1
       - dev/rc6-security-integrity
+      - dev/rc7-security-evidence
   workflow_dispatch:
 permissions:
   contents: read
