@@ -6,6 +6,7 @@ election integrity. External providers require separate review and authorization
 from __future__ import annotations
 from datetime import date
 from hashlib import sha256
+import re
 from rc6_security import VerifiedPrincipal,require_distinct_principals,canonical
 from rc14_reporting_units import can_compare_result_pair
 from rc15_custody_gates import custody_relation
@@ -14,6 +15,7 @@ ALLOWED_EVENT_TYPES=frozenset(("PRIMARY","ELECTION_DAY","ADVANCE_MAIL","CEE_DECI
 KNOWN_STATES=frozenset(("OFFICIAL_SOURCE_STATED","STATUTORY_DATE_VERIFIED_WITH_CONTRADICTORY_RFP","SIGNED_RESOLUTION","UNRESOLVED"))
 ALLOWED_SOURCE_STATES=frozenset(("VISUALLY_REVIEWED_NOT_BYTES_FROZEN","IDENTIFIED_BYTES_UNAVAILABLE","COMPLETION_EVENT_CONFIRMED_ATTACHMENT_UNKNOWN","IDENTIFIED_NOT_BYTES_FROZEN"))
 HEX=frozenset("0123456789abcdef")
+PUBLIC_CASE_ID=re.compile(r"^synthetic-[a-z0-9][a-z0-9_.-]{0,65}$")
 
 def validate_registry(registry):
     """Schema gate, not a live monitor or a claim of source authenticity."""
@@ -23,7 +25,7 @@ def validate_registry(registry):
     if registry.get("source_evidence_has_original_bytes") is not False:raise PermissionError("unverified byte claims")
     events=registry.get("events"); sources=registry.get("source_registry")
     if not isinstance(events,list) or not isinstance(sources,list):raise ValueError("lists required")
-    event_ids=set();source_ids=set()
+    event_ids=set();source_ids=set();missing_source_bindings=set()
     for s in sources:
         if not isinstance(s,dict) or not isinstance(s.get("source_id"),str) or not s["source_id"]:
             raise ValueError("bad source id")
@@ -44,9 +46,17 @@ def validate_registry(registry):
             raise PermissionError("monitor or source bytes unexpectedly enabled")
         if not isinstance(e.get("source_url"),str) or not e["source_url"].startswith("https://"):
             raise ValueError("event url missing")
+        if e.get("source_id") not in source_ids:
+            missing_source_bindings.add(e.get("source_id", "<MISSING>"))
+        else:
+            linked=next(x for x in sources if x["source_id"]==e["source_id"])
+            if e["source_url"]!=linked["url"]:
+                raise ValueError("conflicting event source URL for same ID")
         try:date.fromisoformat(e["date"])
         except (TypeError,ValueError,KeyError) as exc:raise ValueError("invalid event date") from exc
-    return {"events":len(events),"sources":len(sources),"monitor":"OFF","certification":"AUDIT_ONLY"}
+    return {"events":len(events),"sources":len(sources),"monitor":"OFF",
+            "unbound_event_source_ids":sorted(missing_source_bindings),
+            "certification":"AUDIT_ONLY"}
 
 def observe_snapshot(old,new,*,source_id,now_utc):
     """Compare actual synthetic bytes. No external source claim or autonomous alert."""
@@ -105,7 +115,7 @@ def public_preview(payload):
     fields={"case_id","synthetic","status","source_count","classification"}
     if not isinstance(payload,dict) or set(payload)!=fields:raise ValueError("unexpected public fields")
     if payload["synthetic"] is not True:raise PermissionError("real data cannot enter preview")
-    if not isinstance(payload["case_id"],str) or not payload["case_id"].startswith("synthetic-") or len(payload["case_id"])>80:
+    if not isinstance(payload["case_id"],str) or not PUBLIC_CASE_ID.fullmatch(payload["case_id"]):
         raise ValueError("case id invalid")
     if payload["status"] not in ("OPEN","REVIEWED","WITHDRAWN"):raise ValueError("invalid status")
     if type(payload["source_count"]) is not int or not 0<=payload["source_count"]<=10000:raise ValueError("invalid count")
