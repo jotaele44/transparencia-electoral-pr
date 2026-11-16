@@ -41,8 +41,17 @@
     "real_vote_rows_reconciled": 0
   },
   "software": {
-    "rc14_regression_tests": "PENDING_FINAL_CI",
-    "pinned_hub": "PENDING_FINAL_CI"
+    "unit_tests": "PASS",
+    "unit_test_count": 262,
+    "unit_test_head": "611f680f718addcecb8c3ca47d442e1bf15b6c3c",
+    "unit_test_run": 43929038219,
+    "pinned_hub": "PASS",
+    "hub_test_head": "611f680f718addcecb8c3ca47d442e1bf15b6c3c",
+    "hub_test_run": 43929038010,
+    "hub_commit": "b7a60e613fecb36448c719651625892b2bded565",
+    "hub_scope": "SYNTHETIC_ONLY",
+    "external_authentication": "DESIGN_ONLY",
+    "object_lock": "NOT_PROVISIONED"
   },
   "gates": {
     "independent_evidence_qa": "OPEN",
