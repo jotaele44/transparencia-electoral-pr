@@ -4,11 +4,17 @@
 RC14: `7506d46a6d78e7a68450c28677bee6384f2d5786`; main: `b90b4e78f3e6cd66f5e78d508ad590a15e569eb0`. Isolated branch `dev/rc15-custody-legal-provenance`.
 
 ## New binding leads and limits
-Official CEE commission index lists `CEE-AC-25-006 — Acuerdo depuración de maletines de material electoral 2024 (sobre mesa)`, and `CEE-AC-25-047 — Disposición de material electoral relacionado con acuerdo CEE-AC-25-006`. The listing does not independently establish the first proposal's approval, the scope of any physical material retained, or actual destruction. The associated CEE-AC-25-046 lists status of the depuration project and OSIPE/RGE updates. All original signed record payloads, annexes, inventories and destruction/retention receipts remain missing.
+Primary CEE-AC-25-006 (dated 2025-01-30, meeting 2025-01-29) was visually inspected from the official CEE one-page signed agreement. Although the heading retains `SOBRE MESA`, its operative text expressly records *unanimous approval* of the 2024 maletín depuration project for Electoral Operations and JAVAA, with a **retention requirement** for material concerning Representative Districts 16 and 40, Mayagüez Senatorial District IV, and House at-large contests. The raw heading is preserved as a semantic source-label contradiction; it is not proof the agreement was rejected or tabled at final disposition.
 
-Official index: https://www.ceepur.org/acuerdos-de-comision/
+Source: https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-006.pdf
 
-The index status `SOBRE MESA` cannot be promoted to `APPROVED`. A district-level disposition reference cannot establish a specific Isabela 032/Unit73/College identity, physical custody transfer, execution, or a litigation hold.
+CEE-AC-25-047 (dated 2025-06-12, meeting 2025-06-11) was likewise visually inspected from the official one-page agreement. It expressly **authorized disposition** of the specified previously retained District 16, District 40, Mayagüez IV and House-at-large material following depuration, and of the 2024 plebiscite ballot. The PPD abstained. This is an authorization, not an execution receipt and not evidence that the specific Isabela 032/Unit73 maletín was destroyed.
+
+Source: https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-047.pdf
+
+CEE-AC-25-046 remains an index lead regarding depuration project status and RGE/OSIPE updates. No original-bytes SHA-256 was obtained for these official documents; the original signed PDF content was inspected through the web reader and screenshots.
+
+**Custody status:** approved retention (January) and subsequent authorized disposal (June) are established at the stated category/district level. Actual physical destruction, exact material inventory, timing, precinct/unit/college identity and litigation-hold exceptions remain UNRESOLVED.
 
 ## Judicial sources
 The Tribunal de Apelaciones publicly hosts original `KLAN202500306`, decided 2025-05-22, concerning `SJ2025CV01115`. The PDF was accessed through the official web reader, and page 1 and page 4 screenshots were inspected. The court affirmed the TPI's 2025-03-21 dismissal and fee award; the record discusses appellant claims about ePoll Book signatures and ballot adjudication but does not perform a ballot reconciliation or prove fraud.
