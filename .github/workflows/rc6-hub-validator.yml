@@ -1,4 +1,4 @@
-name: RC13 pinned Hub integration
+name: RC14 pinned Hub integration
 on:
   push:
     branches:
@@ -10,6 +10,7 @@ on:
       - dev/rc11-cee-primary-source-audit
       - dev/rc12-cee-version-calendar
       - dev/rc13-primary-evidence-gates
+      - dev/rc14-cee-report-acquisition
   workflow_dispatch:
 permissions:
   contents: read
