@@ -37,6 +37,13 @@ class DurableReplayTests(unittest.TestCase):
             changed=VerifiedPrincipal(PRINCIPAL.subject,"reviewer",PRINCIPAL.issuer,5000)
             with self.assertRaises(PermissionError):
                 consume(db,changed,action="review",case_id="case1",nonce=NONCE,now=4000)
+    def test_nonce_reuse_across_different_cases(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            db=Path(tmp)/"nonce.db"
+            consume(db,PRINCIPAL,action="triage",case_id="case1",nonce=NONCE,now=4000)
+            with self.assertRaises(PermissionError):
+                consume(db,PRINCIPAL,action="triage",case_id="case2",nonce=NONCE,now=4000)
+            self.assertEqual(count(db),1)
     def test_expired_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(PermissionError):
