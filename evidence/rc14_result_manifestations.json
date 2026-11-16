@@ -1,0 +1,56 @@
+{
+  "release": "RC14",
+  "classification": "SOURCE_MANIFESTATIONS_NOT_BYTE_FROZEN",
+  "records": [
+    {
+      "id": "cee_2024_election_event_index",
+      "authority": "CEE",
+      "url": "https://ww2.ceepur.org/home/eventoselectorales",
+      "finding": "Official 2024 General Election Results and Documents links are present."
+    },
+    {
+      "id": "cee_2024_results_portal",
+      "authority": "CEE",
+      "url": "https://elecciones2024.ceepur.org/",
+      "retrieval": "WEB_READER_FAILED_UNKNOWN_STATUS_999",
+      "bytes_acquired": false,
+      "sha256": null
+    },
+    {
+      "id": "cee_2024_partial_mayoral_results",
+      "authority": "CEE",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Segundo%20anuncio%20de%20resultado%20parcial%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20Alcaldes.pdf",
+      "source_epoch": "2024-11-06T06:00:11",
+      "geographic_level": "MUNICIPALITY",
+      "pages": 256,
+      "classification": "PARTIAL_NIGHT_OF_ELECTION_RESULTS",
+      "can_bind_isabela_unit_073": false,
+      "sha256": null
+    },
+    {
+      "id": "cee_2024_final_house_certification",
+      "authority": "CEE",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Certificaci%C3%B3n%20de%20resultados%20finales%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20C%C3%A1mara%20de%20Representantes.pdf",
+      "source_epoch": "2024-12-31",
+      "geographic_level": "COLLEGE_COVERAGE_STATEMENT_AND_HOUSE_RESULT",
+      "statement": "100% colleges reported for general canvass",
+      "numeric_denominator": null,
+      "sha256": null,
+      "can_bind_isabela_unit_073": false
+    }
+  ],
+  "required_pair": {
+    "preliminary": "CEE election-night source with Isabela 032 Unit73 College01 scope",
+    "certified": "CEE-certified acta/result for same scope",
+    "pair_count": 0,
+    "status": "BLOCKED"
+  },
+  "conservation": {
+    "source_rows": null,
+    "matched_rows": 0,
+    "preliminary_only": null,
+    "certified_only": null,
+    "union": null,
+    "counts_closed": false
+  }
+}
