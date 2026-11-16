@@ -1,4 +1,4 @@
-name: RC11 isolated tests
+name: RC12 isolated tests
 on:
   push:
     branches:
@@ -9,6 +9,7 @@ on:
       - dev/rc9-cee-identity-audit
       - dev/rc10-evidence-proof-gates
       - dev/rc11-cee-primary-source-audit
+      - dev/rc12-cee-version-calendar
   workflow_dispatch:
 permissions:
   contents: read
