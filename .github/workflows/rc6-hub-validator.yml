@@ -1,4 +1,4 @@
-name: RC11 pinned Hub integration
+name: RC12 pinned Hub integration
 on:
   push:
     branches:
@@ -8,6 +8,7 @@ on:
       - dev/rc9-cee-identity-audit
       - dev/rc10-evidence-proof-gates
       - dev/rc11-cee-primary-source-audit
+      - dev/rc12-cee-version-calendar
   workflow_dispatch:
 permissions:
   contents: read
