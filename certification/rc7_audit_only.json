@@ -1,0 +1,43 @@
+{
+  "release_id": "transparencia-electoral-pr-RC7",
+  "state": "AUDIT_ONLY",
+  "software_certification": "PROVISIONAL",
+  "evidence_certification": "BLOCKED",
+  "production_certification": "BLOCKED",
+  "federation_activated": false,
+  "production_deployment": false,
+  "main_merge_authorized": false,
+  "base_rc6_sha": "4fcadb41ac1523cf2348e3889627f2e481744f08",
+  "branch": "dev/rc7-security-evidence",
+  "scopes": {
+    "identity_provider": "DESIGN_OPTIONS_ONLY_NO_LIVE_IDP",
+    "anti_replay": "IN_MEMORY_SYNTHETIC_ONLY",
+    "external_checkpoint": "PURE_VERIFIER_NO_EXTERNAL_ANCHOR_OR_STORAGE",
+    "storage": "AWS_S3_OBJECT_LOCK_CANDIDATE_NOT_PROVISIONED",
+    "legal_eligibility": "CASE_SPECIFIC_REVIEW_OPEN",
+    "historical_2024": "THIRD_PARTY_CSV_INDEX_DISCOVERED_NO_DATA_INGEST",
+    "denominator": "UNRESOLVED",
+    "actual_vote_reconciliation": "NOT_ATTEMPTED",
+    "full_2028_lifecycle": "SIMULATED_BOUNDED_NOT_EXHAUSTIVE",
+    "hub": "PRIOR_RC6_PINNED_CONSUMER_PASS_RC7_CHECK_PENDING",
+    "independent_review": "NOT_COMPLETED"
+  },
+  "source_payloads_frozen": 0,
+  "real_cases_processed": 0,
+  "external_referrals": 0,
+  "public_accusations": 0,
+  "alerts_sent": 0,
+  "critical_release_blockers": [
+    "IDP_ISSUER_SIGNATURE_KEYS_MFA_REVOCATION",
+    "TRANSACTIONAL_NONCE_REPLAY_CONTROL",
+    "EXTERNALLY_ANCHORED_IMMUTABLE_EVIDENCE",
+    "PRIMARY_CEE_RESULTS_IDENTITIES_AND_COUNTS",
+    "EVIDENCE_AND_SECURITY_INDEPENDENT_QA",
+    "FULL_REAL_HUB_CONSUMER_AND_ROLLBACK",
+    "EXPLICIT_RELEASE_AUTHORIZATION"
+  ],
+  "rollback": {
+    "exact_base_commit": "4fcadb41ac1523cf2348e3889627f2e481744f08",
+    "method": "verify compare and restore isolated RC7 ref only on authorization; main must not move"
+  }
+}
