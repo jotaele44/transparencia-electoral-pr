@@ -1,0 +1,123 @@
+{
+  "release": "RC15",
+  "classification": "DISCOVERY_AUDIT_ONLY",
+  "baseline": {
+    "rc14": "7506d46a6d78e7a68450c28677bee6384f2d5786",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "sources": [
+    {
+      "id": "cee_ac_25_006",
+      "kind": "COMMISSION_AGREEMENT_INDEX_ENTRY",
+      "authority": "CEE",
+      "index_url": "https://www.ceepur.org/acuerdos-de-comision/",
+      "raw_title": "ACUERDO DEPURACIÓN DE MALETINES DE MATERIAL ELECTORAL 2024 (SOBRE MESA)",
+      "observed_state": "TABLED_AS_LISTED",
+      "approved": null,
+      "executed": null,
+      "original_bytes_sha256": null,
+      "original_bytes_acquired": false
+    },
+    {
+      "id": "cee_ac_25_046",
+      "kind": "COMMISSION_AGREEMENT_INDEX_ENTRY",
+      "authority": "CEE",
+      "index_url": "https://www.ceepur.org/acuerdos-de-comision/",
+      "raw_title": "ESTATUS SOBRE PROYECTO DEPURACIÓN 2024 Y ACTUALIZACIÓN DEL RGE-OSIPE",
+      "observed_state": "INDEX_ONLY",
+      "approved": null,
+      "executed": null,
+      "original_bytes_sha256": null,
+      "original_bytes_acquired": false
+    },
+    {
+      "id": "cee_ac_25_047",
+      "kind": "COMMISSION_AGREEMENT_INDEX_ENTRY",
+      "authority": "CEE",
+      "index_url": "https://www.ceepur.org/acuerdos-de-comision/",
+      "raw_title": "DISPOSICIÓN DE MATERIAL ELECTORAL RELACIONADO CON ACUERDO CEE-AC-25-006",
+      "observed_state": "INDEX_ONLY_WITH_REFERENCE",
+      "approved": null,
+      "executed": null,
+      "original_bytes_sha256": null,
+      "original_bytes_acquired": false
+    },
+    {
+      "id": "KLAN202500306-22052025",
+      "kind": "OFFICIAL_APPELLATE_JUDGMENT",
+      "authority": "PODER_JUDICIAL_PUERTO_RICO",
+      "url": "https://dts.poderjudicial.pr/ta/2025/KLAN202500306-22052025.PDF",
+      "decision_date": "2025-05-22",
+      "case_number": "KLAN202500306",
+      "lower_case_number": "SJ2025CV01115",
+      "review_state": "OFFICIAL_WEB_PDF_AND_PAGE_1_4_SCREENSHOTS",
+      "finding": "Affirms TPI dismissal; records requested opening of Isabela ballot case and competing party submissions. Not a ballot count or an original TPI case docket.",
+      "original_bytes_sha256": null,
+      "original_bytes_acquired": false
+    },
+    {
+      "id": "SJ2025CV01115",
+      "kind": "TRIAL_COURT_CASE_REFERENCE",
+      "authority": "TRIBUNAL_PRIMERA_INSTANCIA",
+      "source_parent": "KLAN202500306-22052025",
+      "judgment_date": "2025-03-21",
+      "original_judgment_url": null,
+      "original_docket_url": null,
+      "source_state": "REFERRED_TO_IN_OFFICIAL_APPELLATE_DECISION",
+      "original_bytes_sha256": null,
+      "original_bytes_acquired": false
+    },
+    {
+      "id": "cee_sip_2025_006",
+      "kind": "PUBLIC_INFORMATION_REQUEST_STATUS",
+      "authority": "CEE",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Ley141/informe-de-transparencia-202503.pdf",
+      "completion_date": "2025-03-28",
+      "delivered_attachment_url": null,
+      "delivered_attachment_sha256": null,
+      "original_bytes_acquired": false
+    },
+    {
+      "id": "cee_2024_2026_approved_statistics_report",
+      "kind": "STATISTICAL_REPORT",
+      "authority": "CEE",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf",
+      "linked_by_approval": "CEE-AC-26-157",
+      "original_bytes_acquired": false,
+      "original_bytes_sha256": null
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "court_motion_date_in_text",
+      "type": "TIME",
+      "source": "KLAN202500306-22052025",
+      "raw_reference": "24 de febrero de 2024",
+      "context": "Court describes motion after 2025-02-10 filing in 2025 judicial review",
+      "corrected_date": null,
+      "status": "SOURCE_TEXT_CONTRADICTION_UNRESOLVED"
+    },
+    {
+      "id": "tabled_vs_related_material",
+      "type": "PROCEDURE",
+      "a": "CEE-AC-25-006 indexed as SOBRE MESA",
+      "b": "CEE-AC-25-047 indexed as disposition related to CEE-AC-25-006",
+      "resolution": "OPEN; signed full records and amendments needed; index title is not evidence of actual destruction"
+    }
+  ],
+  "closure": {
+    "registered_source_rows": 7,
+    "registered_unique_source_ids": 7,
+    "original_source_bytes_sha256_verified": 0,
+    "original_2025_delivered_attachments": 0,
+    "original_2026_approved_reports": 0,
+    "original_tpi_dockets": 0,
+    "original_isabela_unit73_actas": 0,
+    "verified_maletin_destruction_records": 0,
+    "authoritative_college_method_crosswalks": 0,
+    "complete_reporting_unit_denominator": null,
+    "real_vote_pairs": 0,
+    "real_vote_rows": 0,
+    "certification": "AUDIT_ONLY"
+  }
+}
