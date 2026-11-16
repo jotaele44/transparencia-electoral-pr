@@ -28,3 +28,6 @@ The 2024 statistical report itself has not been downloaded or hashed. No officia
 
 ## Release
 AUDIT_ONLY. No allegations, referrals, live Hub, production writes, main merge or certification authorized.
+
+## 2028 calendar dependency
+CEE-AC-26-149 is a three-page certification of disagreement dated 2026-08-27. Its website listing labels it a 2028 electoral calendar, while the PDF's raw subject line reads “CALENDARIO ELECTORAL 2026” and the discussion concerns the 2028 election. The circulated calendar proposes 2028-09-27 for transmission of early/absentee ballots; the PNP commissioner proposes 2028-09-20; the PPD argues against a date before 2028-09-23 based on UOCAVA/federal-law priority and mentions 2028-09-24 as an alternative; the PIP opposes the amendment. The document says no unanimity existed and refers the matter to the CEE Presidency under Electoral Code Art. 3.4(2),(4). A final presidential determination was not located in this bounded search. Do not use any of these alternatives as the certified final date. Keep all alternatives in the 2028 lifecycle simulation until the binding decision is recovered.
