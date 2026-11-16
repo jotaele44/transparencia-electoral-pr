@@ -1,31 +1,33 @@
-STATUS: RC14_AUDIT_ONLY; CERTIFICATION_BLOCKED
+STATUS: RC15_AUDIT_ONLY; NOT_CERTIFIED
 REPOSITORY: jotaele44/transparencia-electoral-pr
-ISOLATED_BRANCH: dev/rc14-cee-report-acquisition
-PRESERVED_RC13: cdf6079ff3b5e22b5e60eb606dd0b37cb099374a
+BRANCH: dev/rc15-custody-legal-provenance
+PRESERVED_RC14: 7506d46a6d78e7a68450c28677bee6384f2d5786
 PRESERVED_MAIN: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
-CEE_SIP_2025_006: completed 2025-03-28; delivered report payload URL and bytes NOT RECOVERED
-CEE_2026_APPROVED_REPORT: official statistics index link confirmed; reader rejected 33,580,272 reported bytes; original bytes NOT RECOVERED
-REPORT_SHA256: ZERO VERIFIED
-REPORT_VERSION_RELATION: UNRESOLVED
-ISABELA_032_PRECINCT_RELATION: CEE 2024-10-05 source reports 22 units; no unit IDs or college denominator
-UNIT_73: VOTO_FACIL_ACCESO_EN_DOMICILIO; CEE regulation identifies College 01
-UNIT_73_AGGREGATION: certified college acts for special modalities are aggregated into precinct result per CEE 2024 manual §5.1
-ISABELA_032_UNIT_73_ORIGINAL_ACTAS: NOT ACQUIRED
-ISABELA_032_UNIT_73_PRELIMINARY_CERTIFIED_PAIRS: ZERO
-LARES_053_UNIT_73_COMPARATOR: CEE-RS-24-038; separate case; arithmetic regressions added; NO CROSS-CASE INFERENCE
-2024_RESULTS_PORTAL: official event index link; web reader fetch failed status 999
-PARTIAL_MAYORAL_RESULTS: 256-page municipal-grain report; NOT SUITABLE FOR UNIT_73 COMPARISON
-FINAL_HOUSE_CERTIFICATION: says 100% colleges reported; numeric denominator UNKNOWN
-COMPLETE_2024_REPORTING_UNIT_DENOMINATOR: UNKNOWN
-REAL_VOTE_COMPARISONS: ZERO
-CI: GitHub Actions exact-HEAD unit + pinned TheHub workflows; require both PASS on current branch head before release; pinned Hub b7a60e613fecb36448c719651625892b2bded565
-IDP_AND_WORM: NOT_DEPLOYED
-FEDERATION_DISCOVERY_AND_LIVE: DISABLED
-PRODUCTION_AND_MAIN_MERGE: BLOCKED
-AUDIT: certification/rc14_audit_only.json
-SOURCE_MANIFEST: evidence/rc14_source_manifest.json
-UNIT_NAMESPACE: evidence/rc14_reporting_unit_namespace.json
-ISABELA_CASE: evidence/rc14_isabela_unit_073_case.json
-RESULT_MANIFEST: evidence/rc14_result_manifestations.json
-ROLLBACK: RC13 exact SHA cdf6079ff3b5e22b5e60eb606dd0b37cb099374a only with explicit authorization and lease-checked branch ref
-NEXT: obtain exact CEE-SIP delivered report payload; acquire approved report through authorized source-byte path; recover Isabela Unit73 College01 original actas and matching preliminary/certified records; close source and reporting-unit denominators; independent QA
+SOURCE_NEW_CEE_AC_25_006: indexed as SOBRE MESA; approval/implementation NOT PROVEN
+SOURCE_NEW_CEE_AC_25_046: depuration project OSIPE/RGE status; ORIGINAL MISSING
+SOURCE_NEW_CEE_AC_25_047: disposition associated with 25-006; ORIGINAL INVENTORY MISSING
+SOURCE_NEW_APPELLATE: official KLAN202500306 2025-05-22, https://dts.poderjudicial.pr/ta/2025/KLAN202500306-22052025.PDF
+TPI_CASE: SJ2025CV01115 bound by appellate; original judgment/appendices NOT ACQUIRED
+SOURCE_DATE_CONTRADICTION: court states 24 de febrero de 2024 for a motion in 2025 appeal timeline; NOT CORRECTED WITHOUT ORIGINAL
+PDF_BYTES_AND_SHA256: no new source original bytes recovered or verified
+CEE_SIP_2025_006_DELIVERED_ATTACHMENT: NOT RECOVERED
+2026_APPROVED_CEE_REPORT_BYTES: NOT RECOVERED
+OSIPE_2024_FULL_COLLEGE_METHOD_REGISTER: NOT RECOVERED
+ISABELA_032_UNIT73_ACTAS: NOT RECOVERED
+ISABELA_MALETIN_CUSTODY_OR_DESTRUCTION: NOT PROVEN
+REPORTING_UNIT_DENOMINATOR: UNKNOWN
+VERIFIED_PRELIMINARY_CERTIFIED_PAIRS: ZERO
+REAL_VOTE_ROW_COMPARISONS: ZERO
+LA_RES_ISABELA_CASE_IDENTITY: DISTINCT; NO AUTO_MERGE
+SIMULATED_CUSTODY_GATES: tested via GitHub Actions (verify exact-head run before trust)
+PINNED_HUB: synthetic consumer only, pinned b7a60e613fecb36448c719651625892b2bded565
+EVIDENCE_LEDGER: evidence/rc15_primary_discovery.json
+COURT_LEDGER: evidence/rc15_court_record_index.json
+CERTIFICATION_LEDGER: certification/rc15_audit_only.json
+FEDERATION_DISCOVERY: DISABLED
+FEDERATION_LIVE: DISABLED
+MAIN_MERGE: BLOCKED
+PRODUCTION: BLOCKED
+EXTERNAL_REFERRALS: NONE
+NEXT: selectively recover signed CEE 25-006/046/047, custody inventory, authoritative OSIPE college/method export, redacted SJ2025CV01115 original docket and actas; verify SHA256 and source identities then independent QA.
+ROLLBACK: RC14 exact SHA only with explicit authorization, current-ref lease, preserved backup, no main updates.
