@@ -1,0 +1,107 @@
+{
+  "release": "RC15",
+  "disposition": "SOURCE_REFERENCED_DOCUMENTS_NOT_ACQUIRED",
+  "canonical_authority": "PODER_JUDICIAL_PUERTO_RICO",
+  "judgment_url": "https://dts.poderjudicial.pr/ta/2025/KLAN202500306-22052025.PDF",
+  "appeal_case": "KLAN202500306",
+  "trial_case": "SJ2025CV01115",
+  "appeal_date": "2025-05-22",
+  "trial_judgment_date": "2025-03-21",
+  "appellate_disposition": "CERTIORARI_GRANTED_TRIAL_JUDGMENT_AFFIRMED",
+  "appellate_notes": "Affirmed trial court dismissal and attorney fees. No ballot recount, physical maletin disposition or vote-count determination certified by this source.",
+  "judgment_original_bytes_sha256": null,
+  "document_references": [
+    {
+      "record": "TPI trial judgment",
+      "source_note": "Appellate opinion footnote 3",
+      "appendix": 5,
+      "pages": "161-180",
+      "original_obtained": false,
+      "sha256": null
+    },
+    {
+      "record": "Judicial review initial filing",
+      "source_note": "Appellate footnote 4",
+      "appendix": 1,
+      "pages": "1-15",
+      "original_obtained": false,
+      "sha256": null
+    },
+    {
+      "record": "Sworn declaration",
+      "source_note": "Appellate footnote 9",
+      "appendix": 1,
+      "pages": "23",
+      "original_obtained": false,
+      "sha256": null
+    },
+    {
+      "record": "CEE 2025 January decision",
+      "source_note": "Appellate footnote 10",
+      "appendix": 1,
+      "pages": "17-19",
+      "original_obtained": false,
+      "sha256": null
+    },
+    {
+      "record": "CEE dismissal motion",
+      "source_note": "Appellate footnote 13",
+      "appendix": 2,
+      "pages": "60-75",
+      "original_obtained": false,
+      "sha256": null,
+      "date_as_printed_in_appellate_text": "2024-02-24",
+      "temporal_validity": "CONTRADICTION_WITH_FEB_2025_JUDICIAL_REVIEW; MUST_VERIFY_ORIGINAL"
+    },
+    {
+      "record": "PNP motion and brief",
+      "source_note": "Appellate footnote 15",
+      "appendix": 3,
+      "pages": "78-105",
+      "original_obtained": false,
+      "sha256": null
+    },
+    {
+      "record": "Petitioner reply",
+      "source_note": "Appellate footnote 17",
+      "appendix": 4,
+      "pages": "149-160",
+      "original_obtained": false,
+      "sha256": null
+    },
+    {
+      "record": "Reconsideration motion",
+      "source_note": "Appellate footnote 18",
+      "appendix": 6,
+      "pages": "181-191",
+      "original_obtained": false,
+      "sha256": null
+    },
+    {
+      "record": "TPI reconsideration denial",
+      "source_note": "Appellate footnote 19",
+      "appendix": 7,
+      "pages": "192-193",
+      "original_obtained": false,
+      "sha256": null
+    }
+  ],
+  "related_case": {
+    "id": "SJ2024CV11760",
+    "case_subject": "Separate Lares 053 ballot initial proceeding",
+    "identity": "DISTINCT_CASE_NOT_ISABELA",
+    "source": "Appellate footnote 14",
+    "original_trial_record": false
+  },
+  "ballot_evidence": {
+    "epoll_book_signatures": null,
+    "ballot_initials_counts": null,
+    "valid_uncounted_ballots": null,
+    "maletin_ever_opened": null,
+    "maletin_destroyed": null,
+    "actual_source_rows": 0,
+    "disposition": "UNKNOWN"
+  },
+  "privacy": "Do not acquire or publish voter-level epoll-book identifiers. Request authorized aggregate counts and redacted court appendices only.",
+  "independent_legal_review": "OPEN"
+}
