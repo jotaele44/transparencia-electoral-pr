@@ -1,0 +1,44 @@
+{
+  "release": "RC14",
+  "target": {
+    "case_id": "cee_2024_isabela_032_unit_073",
+    "municipality_raw": "Isabela",
+    "precinct_raw": "032",
+    "special_unit_raw": "73",
+    "special_modality": "VOTO_FACIL_ACCESO_EN_DOMICILIO",
+    "college_raw": "01"
+  },
+  "target_evidence": {
+    "cee_ac_25_005": "Administrative disagreement resolution; 12 pages visually reviewed in RC11; underlying actas not acquired.",
+    "original_actas": [],
+    "sha256": [],
+    "verified_acta_pairs": 0
+  },
+  "required_primary_records": [
+    "Acta de Votación del Colegio de Fácil Acceso en el Domicilio, Precinto 032, Unidad 73, Colegio 01",
+    "Acta de Incidencias de la Junta de Colegio de Fácil Acceso en el Domicilio",
+    "Acta de Cuadre de Papeletas / ballot inventory for Unit 73",
+    "Route lists and summary of voting by domicile route, with voter-level personal data protected",
+    "Certified CEE college act(s) for special modality Unit 73 and the corresponding precinct aggregation",
+    "Precinct-level certified result and matching election-night preliminary result with source epochs and signed provenance",
+    "CEE local commission/precinct acta and any relevant CEE canvass resolution or court disposition"
+  ],
+  "separate_comparator": {
+    "case_id": "cee_lares_053_unit_073_cee_rs_24_038",
+    "municipality": "Lares",
+    "precinct": "053",
+    "unit": "73",
+    "date": "2024-12-21",
+    "same_modality": true,
+    "similar_issue_category": "ballot initials",
+    "identity_relation": "DISTINCT_CASE_NOT_IDENTITY",
+    "transfer_of_counts_or_findings": "PROHIBITED"
+  },
+  "adjudication": {
+    "claims_are_findings": false,
+    "ballot_discrepancy_proven": false,
+    "fraud_proven": false,
+    "procedural_contradictions": "PRESERVE",
+    "status": "OPEN"
+  }
+}
