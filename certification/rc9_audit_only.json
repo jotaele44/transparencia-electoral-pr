@@ -1,0 +1,45 @@
+{
+  "release": "RC9",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "software_state": "AWAITING_EXACT_HEAD_TESTS",
+  "evidence_state": "PARTIAL_DISCOVERY",
+  "production_state": "BLOCKED",
+  "base_commit": "ca90e4fc6d9369fbf27575912687d1fe452555b2",
+  "branch": "dev/rc9-cee-identity-audit",
+  "primary_documents_identified": 3,
+  "primary_source_payload_sha256_verified": 0,
+  "certified_paired_results": 0,
+  "record_count_denominator": null,
+  "spatial_identity_proof": "UNRESOLVED",
+  "special_unit_modalities_verified_from_procedures": [
+    "72",
+    "73",
+    "74",
+    "76",
+    "77"
+  ],
+  "third_party_csv_bound_to_cee_original": false,
+  "real_vote_discrepancies_proven": 0,
+  "real_vote_comparisons_performed": 0,
+  "real_election_cases_processed": 0,
+  "disclosures_or_alerts": 0,
+  "legal_qa": "OPEN",
+  "security_qa": "OPEN",
+  "independent_evidence_qa": "OPEN",
+  "real_idp": "NOT_CONFIGURED",
+  "external_worm": "NOT_CONFIGURED",
+  "live_hub_integration": false,
+  "rollback": {
+    "preserve_rc8": "ca90e4fc6d9369fbf27575912687d1fe452555b2",
+    "requires_explicit_authorization": true
+  },
+  "release_blockers": [
+    "CEE original source byte hash and complete source denominator",
+    "Stable precinct/unit/college identifier bindings",
+    "Genuinely paired preliminary and final data",
+    "Independent evidence and legal review",
+    "Actual identity provider and protected evidence storage",
+    "Full 2028 operational simulation and production consumer authorization"
+  ]
+}
