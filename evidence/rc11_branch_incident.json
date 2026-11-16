@@ -1,0 +1,30 @@
+{
+  "incident_id": "RC11-GIT-REF-001",
+  "classification": "RECOVERED_BRANCH_TARGETING_ERROR",
+  "operation": "GitHub contents update without explicit branch parameter",
+  "unintended_commit": "b1dcca570372138eecffaf03ba75637a4fedcd5e",
+  "created_at_utc": "2026-11-16T16:40:01Z",
+  "intended_branch": "dev/rc11-cee-primary-source-audit",
+  "actual_target": "main",
+  "scope": {
+    "files": [
+      {
+        "path": "evidence/rc11_source_manifest.json",
+        "change": "added"
+      }
+    ],
+    "other_files_changed": 0
+  },
+  "baseline_main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+  "recovery": {
+    "method": "force-with-lease ref update",
+    "expected_head": "b1dcca570372138eecffaf03ba75637a4fedcd5e",
+    "restored_head": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "api_result": "success",
+    "verified_main_head": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "verification_time_utc": "2026-11-16T16:42:49Z"
+  },
+  "impact": "Main branch ref was temporarily moved by one unintended metadata-only commit and then restored to the exact pre-incident SHA. The commit object remains retrievable by SHA but is not on main. RC11 changes were separately written to the intended isolated branch.",
+  "prevention": "Always pass explicit branch on every GitHub create/update/delete operation; after each write verify target branch and main ref; use expected SHA compare-and-swap; add preflight wrapper or tool argument check.",
+  "release_effect": "No certification. Incident is disclosed and preserved; independent repository audit should confirm ref history and no downstream consumer observed the transient head."
+}
