@@ -1,0 +1,54 @@
+{
+  "release": "RC12",
+  "status": "PARTIAL",
+  "frozen_original_payloads": 0,
+  "classification": "SOURCE_DISCOVERY_NOT_BYTE_FREEZE",
+  "sources": [
+    {
+      "source_id": "cee_sip_2025_006_delivery",
+      "type": "PUBLIC_INFORMATION_DELIVERY_EVENT",
+      "date": "2025-03-28",
+      "authority": "CEE",
+      "locator": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Ley141/informe-de-transparencia-202503.pdf",
+      "delivery_record_status": "CONFIRMED_IN_CEE_TRANSPARENCY_REPORT",
+      "delivered_report_url": null,
+      "delivered_report_sha256": null,
+      "logical_link_to_2026": "UNRESOLVED"
+    },
+    {
+      "source_id": "cee_2024_report_approved_2026",
+      "type": "STATISTICAL_REPORT_APPROVED_WITH_AMENDMENTS",
+      "date": "2026-09-03",
+      "authority": "CEE",
+      "approval": "CEE-AC-26-157",
+      "locator": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf",
+      "original_payload_sha256": null,
+      "content_inspected": false,
+      "retrieval_failure": "WEB_READER_INACCESSIBLE_OVERSIZE_PREVIOUS_ATTEMPTS"
+    },
+    {
+      "source_id": "cee_rs_26_010",
+      "type": "SIGNED_PRESIDENTIAL_RESOLUTION",
+      "date": "2026-09-08",
+      "authority": "CEE",
+      "locator": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "pages": 8,
+      "page_8_visually_reviewed": true,
+      "resolution": "START_AS_SOON_AS_AVAILABLE_NOT_LATER_2028_09_20; END_NOT_LATER_2028_10_03",
+      "original_payload_sha256": null,
+      "attempted_selective_byte_retrieval": "FAILED",
+      "source_relation": "SUPERSEDES_CEE_AC_26_149_DATE_DISAGREEMENT"
+    }
+  ],
+  "denominators": {
+    "reported_municipalities": null,
+    "precincts": null,
+    "units": null,
+    "colleges": null,
+    "candidate_result_rows": null
+  },
+  "actual_preliminary_final_pairs": 0,
+  "real_result_comparisons": 0,
+  "identity_bindings": 0,
+  "certification": "AUDIT_ONLY"
+}
