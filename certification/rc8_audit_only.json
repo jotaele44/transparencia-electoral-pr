@@ -1,0 +1,50 @@
+{
+  "release_id": "transparencia-electoral-pr-RC8",
+  "classification": "AUDIT_ONLY",
+  "software_state": "PENDING_EXACT_HEAD_VALIDATION",
+  "evidence_state": "BLOCKED",
+  "production_certification": "BLOCKED",
+  "certified": false,
+  "release_authorized": false,
+  "main_merge_authorized": false,
+  "branch": "dev/rc8-replay-provenance",
+  "base_sha": "a70ea3de37312b340665e9daf578df2ec57a7718",
+  "source_manifestations_frozen": 0,
+  "real_2024_precinct_count": null,
+  "real_2024_unit_count": null,
+  "real_2024_college_count": null,
+  "actual_result_pairs": 0,
+  "source_identifiers_adjudicated": 0,
+  "primary_cee_payload_sha256_verified": 0,
+  "controls": {
+    "transactional_sqlite_replay": "SYNTHETIC_SINGLE_HOST_TEST_ONLY",
+    "external_receipt": "SIMULATED_SEPARATE_DIRECTORY_NOT_EXTERNAL_OR_IMMUTABLE",
+    "idp": "DESIGN_CANDIDATE_NO_AUTHENTICATION_DEPLOYMENT",
+    "object_lock": "DESIGN_CANDIDATE_NO_CLOUD_RESOURCES_PROVISIONED",
+    "legal_routing": "CASE_SPECIFIC_REVIEW_REQUIRED",
+    "reconciliation": "BLOCKED_NO_AUTHENTICATED_PAIRED_RECORDS",
+    "full_2028_lifecycle": "BOUNDED_SYNTHETIC_REGRESSIONS_ONLY",
+    "hub_integration": "PINNED_SANDBOX_TEST_ONLY",
+    "independent_security_qa": "OPEN",
+    "independent_evidence_qa": "OPEN"
+  },
+  "production_changes": 0,
+  "main_mutations": 0,
+  "external_referrals": 0,
+  "public_alerts": 0,
+  "rollback": {
+    "preserve_rc7_sha": "a70ea3de37312b340665e9daf578df2ec57a7718",
+    "requires_authorization": true,
+    "main_untouched": true
+  },
+  "material_unresolved": [
+    "Authoritative CEE source bytes and hashes",
+    "Full official 2024 result manifestations and denominator",
+    "Stable reporting-unit identity binding",
+    "Real OAuth/OIDC identity provider",
+    "Durable multi-instance replay storage",
+    "Protected external WORM and independent anchor",
+    "2028 full-cycle operational rehearsal",
+    "Independent security evidence and legal QA"
+  ]
+}
