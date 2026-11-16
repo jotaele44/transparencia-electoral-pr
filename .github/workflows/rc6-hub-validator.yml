@@ -1,8 +1,9 @@
-name: RC6 pinned Hub integration
+name: RC7 pinned Hub integration
 on:
   push:
     branches:
       - dev/rc6-security-integrity
+      - dev/rc7-security-evidence
   workflow_dispatch:
 permissions:
   contents: read
