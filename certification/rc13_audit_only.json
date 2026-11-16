@@ -1,0 +1,48 @@
+{
+  "release": "RC13",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "baseline": {
+    "rc12": "95cf9f63b689d108f439911d9443d05251ee2d9c",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "branch": "dev/rc13-primary-evidence-gates"
+  },
+  "evidence": {
+    "cee_2025_delivery_request": "CEE-SIP-2025-006",
+    "completed_date": "2025-03-28",
+    "source_document": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Ley141/informe-de-transparencia-202503.pdf",
+    "delivery_payload_recovered": false,
+    "delivery_payload_sha256": null,
+    "approved_2026_report_url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf",
+    "approved_2026_original_recovered": false,
+    "approved_2026_original_sha256": null,
+    "original_report_bytes_verified": 0,
+    "complete_reporting_unit_denominator": null,
+    "authoritative_unit_crosswalks": 0,
+    "authentic_preliminary_certified_pairs": 0,
+    "real_votes_reconciled": 0,
+    "isabela_primary_actas_recovered": 0,
+    "legal_disposition_known": "CEE-AC-25-005 No Ha Lugar; no vote discrepancy proven",
+    "signed_2028_resolution": "CEE-RS-26-010 dates retained"
+  },
+  "software": {
+    "negative_source_manifestation_tests": "UNIT_TESTS_PENDING_FINAL_CI",
+    "noncanonical_reporting_key_tests": "UNIT_TESTS_PENDING_FINAL_CI",
+    "hub_pinned_consumer": "PENDING_FINAL_CI",
+    "external_authentication": "DESIGN_ONLY",
+    "object_lock": "NOT_PROVISIONED"
+  },
+  "gates": {
+    "independent_evidence_qa": "OPEN",
+    "independent_legal_qa": "OPEN",
+    "independent_security_qa": "OPEN",
+    "real_report_comparison": "BLOCKED",
+    "production": "BLOCKED"
+  },
+  "rollback": {
+    "reference": "95cf9f63b689d108f439911d9443d05251ee2d9c",
+    "requires_authorization": true,
+    "expected_main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  }
+}
