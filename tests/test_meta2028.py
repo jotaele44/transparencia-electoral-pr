@@ -28,6 +28,7 @@ class META2028Tests(unittest.TestCase):
   x=validate_registry(self.registry)
   self.assertEqual((x["events"],x["sources"]),(4,7))
   self.assertEqual(x["monitor"],"OFF")
+  self.assertEqual(x["unbound_event_source_ids"],["cee_2028_rfp","ogp_electoral_code_2026_11_04"])
  def test_registry_duplicate_sources_rejected(self):
   d=copy.deepcopy(self.registry);d["source_registry"].append(copy.deepcopy(d["source_registry"][0]))
   with self.assertRaises(ValueError):validate_registry(d)
@@ -39,6 +40,10 @@ class META2028Tests(unittest.TestCase):
   with self.assertRaises(PermissionError):validate_registry(d)
  def test_registry_fabricated_source_hash_denied(self):
   d=copy.deepcopy(self.registry);d["source_registry"][0]["original_sha256"]="f"*64
+  with self.assertRaises(ValueError):validate_registry(d)
+ def test_bound_event_source_url_conflict_rejected(self):
+  d=copy.deepcopy(self.registry)
+  d['events'][2]['source_url']='https://other.example.org/changed.pdf'
   with self.assertRaises(ValueError):validate_registry(d)
  def test_registry_bad_date_rejected(self):
   d=copy.deepcopy(self.registry);d["events"][0]["date"]="2028-02-30"
@@ -107,6 +112,9 @@ class META2028Tests(unittest.TestCase):
   self.assertEqual(public_preview(preview()),preview())
  def test_public_preview_sensitive_field_rejected(self):
   x=preview();x["voter_name"]="private"
+  with self.assertRaises(ValueError):public_preview(x)
+ def test_public_preview_html_injection_rejected(self):
+  x=preview();x['case_id']='synthetic-<script>alert(1)</script>'
   with self.assertRaises(ValueError):public_preview(x)
  def test_public_preview_real_data_denied(self):
   x=preview();x["synthetic"]=False
