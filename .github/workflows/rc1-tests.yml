@@ -1,4 +1,4 @@
-name: RC10 isolated tests
+name: RC11 isolated tests
 on:
   push:
     branches:
