@@ -53,5 +53,25 @@
     "reason": "NO_AUTHENTICATED_SOURCE_BYTES_OR_COMPLETE_MANIFESTATIONS",
     "fraud_inference": false
   },
-  "certification": "UNRESOLVED"
+  "certification": "UNRESOLVED",
+  "authoritative_context": [
+    {
+      "source_id": "cee_2024_final_certification_house",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Certificaci%C3%B3n%20de%20resultados%20finales%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20C%C3%A1mara%20de%20Representantes.pdf",
+      "scope": "CEE reported all colleges included for canvass, but no numeric college count follows from percentage",
+      "manifestation_sha256": null
+    },
+    {
+      "source_id": "cee_2024_canvass_procedure",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Manuales/Manual%20de%20Procedimientos%20para%20el%20Escrutinio%20General%20y%20Recuento%202024.pdf",
+      "scope": "Official process context for municipal precinct electoral unit and college fields; does not certify mirror CSV schema or completeness",
+      "manifestation_sha256": null
+    },
+    {
+      "source_id": "cee_2025_boundary_regulation_index",
+      "url": "https://ww2.ceepur.org/Home/Reglamento",
+      "scope": "Official index lists Apr 3 2025 delimitation regulation; not a validated 2024 geometry or cross-cycle binding",
+      "manifestation_sha256": null
+    }
+  ]
 }
