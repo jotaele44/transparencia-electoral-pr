@@ -1,0 +1,51 @@
+{
+  "case_id": "cee_lares_053_unit_073_cee_rs_24_038",
+  "authority": "CEE_PRESIDENCY",
+  "source_url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/ResolucionesSecretaria/PAPELETAS%20CON%20SITUACIONES%20SOBRE%20LAS%20INICIALES%20-%20LARES%20053%20UNIDAD%2073%20%28DESACUERDO%20CEE-AC-24-177%29.pdf",
+  "signed_date": "2024-12-21",
+  "municipality_raw": "Lares",
+  "precinct_raw": "053",
+  "unit_raw": "73",
+  "modality": "VOTO_FACIL_ACCESO_EN_DOMICILIO",
+  "separate_from_isabela_case": true,
+  "official_facts": {
+    "voter_list": 1714,
+    "voted": 1515,
+    "ballots": {
+      "ESTATAL": {
+        "two_initials": 1489,
+        "one_initial": 36,
+        "none": 73,
+        "total": 1598
+      },
+      "MUNICIPAL": {
+        "two_initials": 1370,
+        "one_initial": 48,
+        "none": 78,
+        "total": 1496
+      },
+      "LEGISLATIVA": {
+        "two_initials": 1474,
+        "one_initial": 33,
+        "none": 72,
+        "total": 1579
+      },
+      "PRESIDENCIAL": {
+        "two_initials": 1394,
+        "one_initial": 49,
+        "none": 69,
+        "total": 1512
+      },
+      "PLEBISCITO": {
+        "two_initials": 1229,
+        "one_initial": 34,
+        "none": 64,
+        "total": 1327
+      }
+    }
+  },
+  "decision": "Resolution states ballots without at least two initials should be treated as null/not adjudicated under the cited 2024 domicile manual; resolution gives reasoning based on Lares-specific counts.",
+  "transfer_rule": "No Lares totals, facts, or disposition may be attributed to Isabela 032 Unit 73.",
+  "evidence_sha256": null,
+  "original_bytes_frozen": false
+}
