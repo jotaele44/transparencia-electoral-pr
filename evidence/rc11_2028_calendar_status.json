@@ -28,12 +28,18 @@
     }
   ],
   "disposition": {
-    "state": "REFERRED_TO_CEE_PRESIDENCY_FOR_RESOLUTION",
+    "state": "RESOLVED_BY_CEE_RS_26_010",
     "reason": "No complete unanimity; agreement cites Art. 3.4(2) and (4) of Puerto Rico Electoral Code 2020.",
-    "final_presidential_determination": "NOT_LOCATED_IN_THIS_BOUNDED_SEARCH"
+    "final_presidential_determination": "CEE-RS-26-010, signed 2026-09-08",
+    "prior_state": "REFERRED_TO_CEE_PRESIDENCY_FOR_RESOLUTION",
+    "final_resolution_url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+    "scope": "advance ballot mailing dates only; not entire calendar",
+    "start_rule": "As soon as ballots available, not later than 2028-09-20",
+    "end_rule": "No later than 2028-10-03",
+    "primary_source_bytes_sha256": null
   },
-  "classification": "DATE_CONTRADICTION_AND_LEGAL_DEPENDENCY_OPEN",
-  "simulation_rule": "Do not freeze mail-ballot date to 2028-09-20 or 2028-09-27 as final. Simulate all stated alternatives and enforce UOCAVA/legal dependencies until binding final determination is recovered.",
+  "classification": "HISTORICAL_DISAGREEMENT_SUPERSEDED_BY_SIGNED_RESOLUTION",
+  "simulation_rule": "Use signed 2026-09-08 CEE-RS-26-010 dates for bound mailing schedule; preserve earlier proposals as historical only, test later amendments or judicial modification separately.",
   "byte_sha256": null,
   "original_bytes_frozen": false
 }
