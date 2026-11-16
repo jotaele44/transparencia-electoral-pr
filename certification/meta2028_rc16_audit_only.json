@@ -1,0 +1,82 @@
+{
+  "release": "RC16_META2028",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_release_authorized": false,
+  "main_merge_authorized": false,
+  "baseline": {
+    "rc15": "cef18ef530049d2e434cc206c7f8a71df17b0777",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "isolated_branch": "dev/rc16-meta2028-pilot"
+  },
+  "scope": {
+    "mission": "2028_FIRST_NONPARTISAN_ELECTORAL_TRANSPARENCY",
+    "historical_cycles": [
+      "2012",
+      "2016",
+      "2020",
+      "2024"
+    ],
+    "current_historical_audit": "2024_BOUNDED_EVIDENCE_LEDGER_ONLY",
+    "historical_weakness_rows": 8,
+    "metric_definitions": 8,
+    "event_registry_events": 4,
+    "source_registry_rows": 7,
+    "unbound_source_identifiers": [
+      "cee_2028_rfp",
+      "ogp_electoral_code_2026_11_04"
+    ],
+    "real_election_results_acquired": 0,
+    "original_new_source_bytes_frozen": 0
+  },
+  "implementation": {
+    "charter": "docs/META2028_CHARTER.md",
+    "inventory": "evidence/meta2028_component_inventory.json",
+    "weakness_ledger": "evidence/meta2028_2024_weakness_ledger.json",
+    "kpi_contract": "evidence/meta2028_kpis.json",
+    "source_event_registry": "evidence/meta2028_event_registry.json",
+    "engine": "src/meta2028.py",
+    "unit_tests": "tests/test_meta2028.py",
+    "public_preview": "public/meta2028/index.html",
+    "public_preview_scope": "STATIC_SYNTHETIC_ONLY_NO_LIVE_SERVER",
+    "legal_date_monitor": "OFFLINE_SYNTHETIC_CEE_RS_26_010_ONLY",
+    "unit_identity_monitor": "EXACT_RAW_EPOCH_KEY_DISCOVERY_NOT_CANONICAL",
+    "result_reconciler": "REUSED_RC14_MANIFEST_GATES_SYNTHETIC",
+    "custody_monitor": "REUSED_RC15_CUSTODY_GATES_SYNTHETIC",
+    "review_lifecycle": "REUSED_RC6_SYNTHETIC_IDENTITIES_NO_PRODUCTION_AUTH",
+    "thehub_consumer": "PINNED_ISOLATED_VALIDATOR_ONLY"
+  },
+  "test_evidence": {
+    "exact_head_ci": "PENDING_FINAL_GITHUB_ACTIONS",
+    "pinned_hub_validator": "PENDING_FINAL_GITHUB_ACTIONS",
+    "independent_security_qa": "NOT_PERFORMED",
+    "independent_legal_qa": "NOT_PERFORMED",
+    "independent_evidence_qa": "NOT_PERFORMED",
+    "external_producer_consumer_runtime": "NOT_TESTED"
+  },
+  "material_blockers": [
+    "no authorized production identity provider",
+    "no independently anchored WORM original evidence archive",
+    "no complete official CEE 2028 calendar frozen",
+    "no full source-event and publication denominator",
+    "no CEE authoritative reporting-unit and college roster for 2028",
+    "no source-backed authenticated original/final results pairs",
+    "no end-to-end external Centinelas/MoneySweep/Spiderweb consumer tests",
+    "no independent legal security privacy evidence QA",
+    "no production rollback authorization or release signoff"
+  ],
+  "safety": {
+    "automated_complaints": false,
+    "external_alerts": false,
+    "real_case_publication": false,
+    "live_federation": false,
+    "real_election_system_access": false,
+    "no_bulk_data_downloads": true
+  },
+  "rollback": {
+    "source_rc15_commit": "cef18ef530049d2e434cc206c7f8a71df17b0777",
+    "main_must_equal": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "requires_explicit_approval": true,
+    "method": "Ref lease verification on isolated branch; no main edits."
+  }
+}
