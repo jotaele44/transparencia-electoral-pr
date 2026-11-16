@@ -1,33 +1,29 @@
-STATUS: RC15_AUDIT_ONLY; NOT_CERTIFIED
+STATUS: RC16_META2028_AUDIT_ONLY; SOFTWARE_QA_PENDING_EXACT_HEAD_CI; NO_PRODUCTION_CERTIFICATION
 REPOSITORY: jotaele44/transparencia-electoral-pr
-BRANCH: dev/rc15-custody-legal-provenance
-PRESERVED_RC14: 7506d46a6d78e7a68450c28677bee6384f2d5786
+BRANCH: dev/rc16-meta2028-pilot
+PRESERVED_RC15: cef18ef530049d2e434cc206c7f8a71df17b0777
 PRESERVED_MAIN: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
-SOURCE_NEW_CEE_AC_25_006: signed original visually reviewed, 2025-01-30; unanimously approved depuration with explicit retention for Representative Districts 16/40, Mayaguez IV and House at-large; physical execution NOT PROVEN
-SOURCE_NEW_CEE_AC_25_046: depuration project OSIPE/RGE status; ORIGINAL MISSING
-SOURCE_NEW_CEE_AC_25_047: signed original visually reviewed, 2025-06-12; authorized disposition of previously retained material and plebiscite ballots; actual execution and Isabela 032 identity NOT PROVEN
-SOURCE_NEW_APPELLATE: official KLAN202500306 2025-05-22, https://dts.poderjudicial.pr/ta/2025/KLAN202500306-22052025.PDF
-TPI_CASE: SJ2025CV01115 bound by appellate; original judgment/appendices NOT ACQUIRED
-SOURCE_DATE_CONTRADICTION: court states 24 de febrero de 2024 for a motion in 2025 appeal timeline; NOT CORRECTED WITHOUT ORIGINAL
-PDF_BYTES_AND_SHA256: no new source original bytes recovered or verified
-CEE_SIP_2025_006_DELIVERED_ATTACHMENT: NOT RECOVERED
-2026_APPROVED_CEE_REPORT_BYTES: NOT RECOVERED
-OSIPE_2024_FULL_COLLEGE_METHOD_REGISTER: NOT RECOVERED
-ISABELA_032_UNIT73_ACTAS: NOT RECOVERED
-ISABELA_MALETIN_CUSTODY_OR_DESTRUCTION: NOT PROVEN
-REPORTING_UNIT_DENOMINATOR: UNKNOWN
-VERIFIED_PRELIMINARY_CERTIFIED_PAIRS: ZERO
-REAL_VOTE_ROW_COMPARISONS: ZERO
-LA_RES_ISABELA_CASE_IDENTITY: DISTINCT; NO AUTO_MERGE
-SIMULATED_CUSTODY_GATES: tested via GitHub Actions (verify exact-head run before trust)
-PINNED_HUB: synthetic consumer only, pinned b7a60e613fecb36448c719651625892b2bded565
-EVIDENCE_LEDGER: evidence/rc15_primary_discovery.json
-COURT_LEDGER: evidence/rc15_court_record_index.json
-CERTIFICATION_LEDGER: certification/rc15_audit_only.json
-FEDERATION_DISCOVERY: DISABLED
-FEDERATION_LIVE: DISABLED
+CHARTER: docs/META2028_CHARTER.md
+COMPONENT_INVENTORY: evidence/meta2028_component_inventory.json
+HISTORICAL_WEAKNESS_LEDGER: evidence/meta2028_2024_weakness_ledger.json (8 bounded candidate cases)
+KPI_CONTRACT: evidence/meta2028_kpis.json (8 definitions, no real scores)
+SOURCE_EVENT_REGISTRY: evidence/meta2028_event_registry.json (4 milestones, 7 sources, 2 unresolved event/source bindings)
+OFFLINE_MONITOR: src/meta2028.py (synthetic only; no network or scheduler)
+PUBLIC_PREVIEW: public/meta2028/index.html (static synthetic HTML, not deployed)
+AUDIT: certification/meta2028_rc16_audit_only.json
+UNIT_TEST: python3 -m unittest discover -s tests -v
+PINNED_HUB_TEST: scripts/validate_pinned_hub.py against b7a60e613fecb36448c719651625892b2bded565
+CROSS_REPO_RUNTIME: Centinelas/MoneySweep/Spiderweb NOT TESTED; TheHub synthetic validator only
+LIVE_CEE_MONITOR: DISABLED
+PUBLIC_REAL_CASE_FINDINGS: ZERO
+EXTERNAL_REFERRALS: ZERO
+ORIGINAL_ELECTION_RESULT_BYTES: NOT RECOVERED
+2028_COMPLETE_CALENDAR: UNKNOWN; signed partial mail deadline only
+UNIT_DENOMINATOR: UNKNOWN
+INDEPENDENT_SECURITY_LEGAL_PRIVACY_EVIDENCE_QA: OPEN
+FEDERATION_DISCOVERY: OFF
+FEDERATION_LIVE: OFF
 MAIN_MERGE: BLOCKED
 PRODUCTION: BLOCKED
-EXTERNAL_REFERRALS: NONE
-NEXT: selectively recover signed CEE 25-006/046/047, custody inventory, authoritative OSIPE college/method export, redacted SJ2025CV01115 original docket and actas; verify SHA256 and source identities then independent QA.
-ROLLBACK: RC14 exact SHA only with explicit authorization, current-ref lease, preserved backup, no main updates.
+ROLLBACK: RC15 exact SHA only following explicit authorization, current-ref lease check, backup and independent verification; NEVER update main.
+NEXT: verify exact head CI -> independently freeze primary CEE originals -> bind complete electoral-unit registry -> test actual producer consumers and review/privacy -> certify only on full PASS.
