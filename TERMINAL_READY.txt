@@ -18,7 +18,7 @@ PARTIAL_MAYORAL_RESULTS: 256-page municipal-grain report; NOT SUITABLE FOR UNIT_
 FINAL_HOUSE_CERTIFICATION: says 100% colleges reported; numeric denominator UNKNOWN
 COMPLETE_2024_REPORTING_UNIT_DENOMINATOR: UNKNOWN
 REAL_VOTE_COMPARISONS: ZERO
-CI: python3 -m unittest discover -s tests -v; pinned TheHub b7a60e613fecb36448c719651625892b2bded565
+CI: GitHub Actions exact-HEAD unit + pinned TheHub workflows; require both PASS on current branch head before release; pinned Hub b7a60e613fecb36448c719651625892b2bded565
 IDP_AND_WORM: NOT_DEPLOYED
 FEDERATION_DISCOVERY_AND_LIVE: DISABLED
 PRODUCTION_AND_MAIN_MERGE: BLOCKED
