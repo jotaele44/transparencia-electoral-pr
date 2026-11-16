@@ -1,25 +1,31 @@
-STATUS: RC13_AUDIT_ONLY; CERTIFICATION_BLOCKED
+STATUS: RC14_AUDIT_ONLY; CERTIFICATION_BLOCKED
 REPOSITORY: jotaele44/transparencia-electoral-pr
-ISOLATED_BRANCH: dev/rc13-primary-evidence-gates
-PRESERVED_RC12: 95cf9f63b689d108f439911d9443d05251ee2d9c
+ISOLATED_BRANCH: dev/rc14-cee-report-acquisition
+PRESERVED_RC13: cdf6079ff3b5e22b5e60eb606dd0b37cb099374a
 PRESERVED_MAIN: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
-SOURCE_CEE_SIP_2025_006: Completed 2025-03-28 per official CEE transparency report
-SOURCE_CEE_2026_REPORT: CEE-AC-26-157 approval with amendments 2026-09-03
-BOTH_REPORT_ORIGINAL_BYTES: NOT_RECOVERED
-ORIGINAL_REPORT_SHA256: NULL
-SOURCE_VERSION_LOGICAL_BINDING: UNRESOLVED
-OFFICIAL_UNIT_IDENTITIES_AND_DENOMINATOR: UNKNOWN
-AUTHENTIC_PRELIMINARY_FINAL_PAIRS: ZERO
+CEE_SIP_2025_006: completed 2025-03-28; delivered report payload URL and bytes NOT RECOVERED
+CEE_2026_APPROVED_REPORT: official statistics index link confirmed; reader rejected 33,580,272 reported bytes; original bytes NOT RECOVERED
+REPORT_SHA256: ZERO VERIFIED
+REPORT_VERSION_RELATION: UNRESOLVED
+ISABELA_032_PRECINCT_RELATION: CEE 2024-10-05 source reports 22 units; no unit IDs or college denominator
+UNIT_73: VOTO_FACIL_ACCESO_EN_DOMICILIO; CEE regulation identifies College 01
+UNIT_73_AGGREGATION: certified college acts for special modalities are aggregated into precinct result per CEE 2024 manual §5.1
+ISABELA_032_UNIT_73_ORIGINAL_ACTAS: NOT ACQUIRED
+ISABELA_032_UNIT_73_PRELIMINARY_CERTIFIED_PAIRS: ZERO
+LARES_053_UNIT_73_COMPARATOR: CEE-RS-24-038; separate case; arithmetic regressions added; NO CROSS-CASE INFERENCE
+2024_RESULTS_PORTAL: official event index link; web reader fetch failed status 999
+PARTIAL_MAYORAL_RESULTS: 256-page municipal-grain report; NOT SUITABLE FOR UNIT_73 COMPARISON
+FINAL_HOUSE_CERTIFICATION: says 100% colleges reported; numeric denominator UNKNOWN
+COMPLETE_2024_REPORTING_UNIT_DENOMINATOR: UNKNOWN
 REAL_VOTE_COMPARISONS: ZERO
-ISABELA_032_UNIT_073_PRIMARY_ACTAS: NOT_ACQUIRED
-SIGNED_CEE_RS_26_010: Mailing by September 20 and concludes by October 3, 2028 (preserved)
-INTEGRATION: Pinned synthetic TheHub consumer only
+CI: python3 -m unittest discover -s tests -v; pinned TheHub b7a60e613fecb36448c719651625892b2bded565
 IDP_AND_WORM: NOT_DEPLOYED
 FEDERATION_DISCOVERY_AND_LIVE: DISABLED
-PUBLIC_FINDINGS_REFERRALS: NONE
-MAIN_MERGE_AND_PRODUCTION: BLOCKED
-EVIDENCE: evidence/rc13_report_discovery.json
-CERTIFICATION: certification/rc13_audit_only.json
-TEST: python3 -m unittest discover -s tests -v
-ROLLBACK: RC12 exact SHA only with explicit authorization and lease-checked isolated branch ref
-NEXT: Acquire source bytes selectively -> hash -> inspect headers -> authoritative denominator -> source/row identities -> reconcile -> independent legal/security/evidence QA
+PRODUCTION_AND_MAIN_MERGE: BLOCKED
+AUDIT: certification/rc14_audit_only.json
+SOURCE_MANIFEST: evidence/rc14_source_manifest.json
+UNIT_NAMESPACE: evidence/rc14_reporting_unit_namespace.json
+ISABELA_CASE: evidence/rc14_isabela_unit_073_case.json
+RESULT_MANIFEST: evidence/rc14_result_manifestations.json
+ROLLBACK: RC13 exact SHA cdf6079ff3b5e22b5e60eb606dd0b37cb099374a only with explicit authorization and lease-checked branch ref
+NEXT: obtain exact CEE-SIP delivered report payload; acquire approved report through authorized source-byte path; recover Isabela Unit73 College01 original actas and matching preliminary/certified records; close source and reporting-unit denominators; independent QA
