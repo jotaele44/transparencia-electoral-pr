@@ -1,0 +1,37 @@
+{
+  "release": "RC14",
+  "scope": "Isabela Precinct 032 and special domicile modality Unit 73",
+  "standard_precinct_record": {
+    "source": "cee_relation_precincts_2024_10_05",
+    "municipality_raw": "Isabela",
+    "precinct_raw": "032",
+    "reported_units": 22,
+    "senatorial_district": 4,
+    "representative_district": 16,
+    "identity_state": "CEE_SOURCE_REPORTED_COUNT",
+    "unit_ids": null,
+    "college_ids": null,
+    "college_count": null
+  },
+  "special_units": {
+    "source": "cee_general_manual_2024",
+    "aggregation_rule": "Certified college acts for special modalities are aggregated into the corresponding precinct results",
+    "codes": {
+      "72": "VOTO_ADELANTADO_POR_CORREO",
+      "73": "VOTO_FACIL_ACCESO_EN_DOMICILIO",
+      "74": "COLEGIO_ESPECIAL_JAVAA",
+      "76": "VOTO_CONFINADO",
+      "77": "VOTO_AUSENTE"
+    },
+    "unit_73_college": "01",
+    "source_for_college": "cee_absentee_advance_regulation_2024",
+    "identity_state": "OFFICIAL_MODALITY_CLASSIFICATION"
+  },
+  "denominator_adjudication": {
+    "reported_22_units": "Do not assume the 22 count includes or excludes special modality 73 without a source that explicitly reconciles the denominator.",
+    "unit_73": "Separate special voting modality in CEE procedure; do not silently add it as regular unit 23 or equate it with one of 22 regular units.",
+    "college_denominator": "UNKNOWN",
+    "complete_reporting_unit_denominator": "UNKNOWN",
+    "rule": "Keep regular unit and special modality namespaces separate until CEE source explicitly reconciles their denominator."
+  }
+}
