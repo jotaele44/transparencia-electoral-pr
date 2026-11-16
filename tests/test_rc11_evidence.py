@@ -22,7 +22,7 @@ class RC11EvidenceGate(unittest.TestCase):
   c=self.c["cases"][0]
   self.assertEqual(c["official_disposition"]["state"],"NO_HA_LUGAR")
   self.assertIn("fraud or intentional manipulation",c["official_disposition"]["not_established"])
-  self.assertEqual(c["qa"],"PARTIAL_DOCUMENT_REVIEW; no original byte hash; no underlying ballot totals or individual records acquired.")
+  self.assertEqual(c["qa"],"FULL_12_PAGE_VISUAL_REVIEW; original bytes and SHA-256 unverified; no underlying ballot totals or individual records acquired.")
  def test_no_930_equals_disputed_ballots(self):
   c=self.c["cases"][0]
   self.assertIn("930 ballots were unadjudicated",c["official_disposition"]["not_established"])
