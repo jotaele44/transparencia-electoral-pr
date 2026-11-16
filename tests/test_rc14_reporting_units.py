@@ -49,7 +49,7 @@ class RC14UnitTests(unittest.TestCase):
   with self.assertRaises(ValueError):isabela_032_denominator(22,special_unit_inclusion="PROBABLY")
  def test_acta_without_hash_blocked(self):
   x=acta();x.pop("original_bytes")
-  self.assertEqual(validate_special_acta_binding(x,municipality_raw="Isabela",precinct_raw="032",unit_raw="73",college_raw="01")["reason"],"ACTA_MANIFEST_INCOMPLETE")
+  self.assertEqual(validate_special_acta_binding(x,municipality_raw="Isabela",precinct_raw="032",unit_raw="73",college_raw="01")["reason"],"ACTA_ORIGINAL_BYTES_OR_HASH_UNVERIFIED")
  def test_acta_wrong_precinct_blocked(self):
   x=acta(municipality="Lares",precinct="053")
   self.assertEqual(validate_special_acta_binding(x,municipality_raw="Isabela",precinct_raw="032",unit_raw="73",college_raw="01")["reason"],"ACTA_SCOPE_IDENTITY_MISMATCH")
