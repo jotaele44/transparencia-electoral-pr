@@ -1,0 +1,99 @@
+{
+  "release": "RC16",
+  "classification": "SOURCE_CODE_INVENTORY_NOT_DEPLOYED",
+  "baseline_rc15": "cef18ef530049d2e434cc206c7f8a71df17b0777",
+  "existing_components": [
+    {
+      "paths": [
+        "src/change_monitor.py",
+        "evidence/cee_registry.json"
+      ],
+      "purpose": "CEE monitoring discovery",
+      "readiness": "REUSE_CANDIDATE; NOT_LIVE"
+    },
+    {
+      "paths": [
+        "src/reconcile.py",
+        "contracts/result_record.schema.json",
+        "contracts/discrepancy.schema.json"
+      ],
+      "purpose": "Synthetic result reconciliation and schemas",
+      "readiness": "REUSE_CANDIDATE; NO_REAL_ELECTION_PAIRS"
+    },
+    {
+      "paths": [
+        "src/integrity_cases.py",
+        "src/rc6_security.py",
+        "src/rc6_legal_route.py"
+      ],
+      "purpose": "Offline case lifecycle, role fixture and conservative routing",
+      "readiness": "SYNTHETIC_ONLY"
+    },
+    {
+      "paths": [
+        "src/rc6_evidence_store.py",
+        "src/rc8_anchor.py",
+        "src/rc8_replay.py"
+      ],
+      "purpose": "Local hash-chain and replay tests",
+      "readiness": "NO_EXTERNAL_WORM_IDP_OR_ANCHOR"
+    },
+    {
+      "paths": [
+        "src/rc8_reporting_units.py",
+        "src/rc13_primary_gates.py",
+        "src/rc14_reporting_units.py"
+      ],
+      "purpose": "Reporting-unit identity and original-byte gates",
+      "readiness": "NO_OFFICIAL_COMPLETE_UNIT_DENOMINATOR"
+    },
+    {
+      "paths": [
+        "src/rc10_evidence_proof.py",
+        "src/rc12_evidence_gate.py",
+        "src/rc9_source_binding.py"
+      ],
+      "purpose": "Historical provenance and version safety",
+      "readiness": "NO_ORIGINAL_2024_REPORT_BYTES"
+    },
+    {
+      "paths": [
+        "src/rc15_custody_gates.py",
+        "evidence/rc15_primary_discovery.json"
+      ],
+      "purpose": "Custody identity and CEE retention/disposition chronology",
+      "readiness": "NO_EXECUTION_INVENTORY"
+    },
+    {
+      "paths": [
+        "src/rc6_hub_export.py",
+        "scripts/validate_pinned_hub.py",
+        "contracts/hub_binding_rc4.json"
+      ],
+      "purpose": "Synthetic real TheHub validator contract",
+      "readiness": "PINNED_ISOLATED_ONLY"
+    },
+    {
+      "paths": [
+        "evidence/2028_calendar.json",
+        "evidence/rc11_2028_calendar_status.json"
+      ],
+      "purpose": "2028 statutory dates and signed mail ballot resolution",
+      "readiness": "PARTIAL_CALENDAR_NOT_COMPLETE_CERTIFIED"
+    },
+    {
+      "paths": [
+        "federation.json"
+      ],
+      "purpose": "Federation registration contract",
+      "readiness": "DISCOVERY_AND_LIVE_FALSE"
+    }
+  ],
+  "cross_repo": {
+    "Centinelas_PR": "CONCEPTUAL_NOT_RUNTIME_TESTED",
+    "MoneySweep": "CONCEPTUAL_NOT_RUNTIME_TESTED",
+    "Spiderweb_PR": "CONCEPTUAL_NOT_RUNTIME_TESTED",
+    "TheHub": "PINNED_REAL_VALIDATOR_TEST_ONLY"
+  },
+  "coverage_statement": "Inventory is bounded to inspected repository paths, not certified exhaustive software/security inventory."
+}
