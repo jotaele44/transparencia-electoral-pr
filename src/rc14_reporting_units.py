@@ -58,7 +58,7 @@ def isabela_032_denominator(source_reported_units, *, college_count=None, specia
             "certification":"OPEN"}
 
 def validate_special_acta_binding(acta, *, municipality_raw, precinct_raw, unit_raw, college_raw):
-    required=("source_id","authority","source_epoch","sha256","original_bytes","signed","municipality_raw","precinct_raw","unit_raw","college_raw","modality")
+    required=("source_id","authority","source_epoch","signed","municipality_raw","precinct_raw","unit_raw","college_raw","modality")
     if not isinstance(acta,dict) or any(k not in acta for k in required):
         return {"eligible":False,"reason":"ACTA_MANIFEST_INCOMPLETE"}
     if not _valid_original_bytes(acta):
@@ -74,7 +74,7 @@ def validate_special_acta_binding(acta, *, municipality_raw, precinct_raw, unit_
 def can_compare_result_pair(preliminary, certified):
     if not isinstance(preliminary,dict) or not isinstance(certified,dict):
         return {"eligible":False,"reason":"MISSING_RESULT_MANIFEST"}
-    required=("source_id","authority","geographic_level","source_epoch","identity_state","ballot_type","sha256","original_bytes","signed")
+    required=("source_id","authority","geographic_level","source_epoch","identity_state","ballot_type","signed")
     if any(k not in preliminary or k not in certified for k in required):
         return {"eligible":False,"reason":"RESULT_MANIFEST_INCOMPLETE"}
     if preliminary["authority"]!="CEE" or certified["authority"]!="CEE":
