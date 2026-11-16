@@ -15,6 +15,7 @@ CEE-AC-25-013: missing voter lists procedure by precinct/unit/college
 CEE-AC-25-038: Electoral Units Program update procedure
 ISABELA_CASE: CEE-AC-25-005; Isabela 032 Unit 73; all 12 pages visually reviewed; NO HA LUGAR
 CASE_FINDING: no proven uncounted-vote number or fraud; affidavit and administrative ruling procedural contradiction preserved
+2028_CALENDAR: CEE-AC-26-149 disagreement; final presidential determination not located; keep 2028-09-20 / 2028-09-24 / 2028-09-27 alternatives in simulation
 REPORTING_UNIT_DENOMINATOR: UNKNOWN
 AUTHENTIC_PRELIMINARY_FINAL_PAIRS: ZERO
 REAL_VOTE_COMPARISONS: ZERO
