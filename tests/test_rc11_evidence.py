@@ -29,5 +29,5 @@ class RC11EvidenceGate(unittest.TestCase):
   self.assertEqual(self.m['closure']['source_manifestation_entries'],11)
  def test_no_930_equals_disputed_ballots(self):
   c=self.c["cases"][0]
-  self.assertIn("930 ballots were unadjudicated",c["official_disposition"]["not_established"])
+  self.assertIn("that 930 ballots were unadjudicated",c["official_disposition"]["not_established"])
 if __name__=="__main__":unittest.main()
