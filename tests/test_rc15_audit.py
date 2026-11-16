@@ -16,9 +16,11 @@ class RC15Audit(unittest.TestCase):
   self.assertEqual(x['new_verified_source_bytes_sha256'],0)
  def test_court_and_disposal_not_overpromoted(self):
   d=json.loads((ROOT/'certification/rc15_audit_only.json').read_text())
-  self.assertEqual(d['new_findings'][0]['classification'],'TABLED_AS_LISTED_NOT_PROVEN_APPROVED')
+  self.assertEqual(d['new_findings'][0]['classification'],'SIGNED_APPROVAL_WITH_DISTRICT_16_40_AND_OTHER_RETENTION')
   self.assertEqual(d['new_findings'][-1]['classification'],'TPI_CASE_NUMBER_BOUND_BY_OFFICIAL_APPEAL; ORIGINAL_DOCKET_MISSING')
   self.assertEqual(len(d['source_contradictions']),2)
+  self.assertEqual(d['actual_evidence']['signed_original_agreements_visually_verified'],2)
+  self.assertEqual(d['actual_evidence']['original_maletin_disposal_execution_inventories'],0)
  def test_federation_still_off(self):
   f=json.loads((ROOT/'federation.json').read_text())['federation_readiness_gate']
   self.assertFalse(f['ready_for_hub_live_execution'])
