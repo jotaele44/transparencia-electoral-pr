@@ -1,0 +1,52 @@
+{
+  "classification": "OFFICIAL_ADMINISTRATIVE_LOCATOR_SCHEMA_NOT_STABLE_IDENTITY",
+  "fields": [
+    {
+      "field": "municipality",
+      "role": "administrative context",
+      "evidence": "2024 CEE manual forms"
+    },
+    {
+      "field": "precinct",
+      "role": "electoral precinct identifier",
+      "evidence": "CEE-AC-25-013 and CEE-AC-25-005"
+    },
+    {
+      "field": "unit",
+      "role": "electoral unit identifier",
+      "evidence": "CEE-AC-25-013 and CEE-AC-25-005"
+    },
+    {
+      "field": "college",
+      "role": "polling college identifier",
+      "evidence": "2024 CEE manual forms and CEE-AC-25-013"
+    }
+  ],
+  "source_provenance": [
+    "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Manuales/Manual%20de%20Procedimientos%20para%20las%20Elecciones%20Generales%20y%20Escrutinio%202024.pdf",
+    "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-013.pdf",
+    "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-038.pdf"
+  ],
+  "identity_policy": "The tuple municipality/precinct/unit/college is an official record locator schema, not proof of stable identity across elections, versions, ballot types, administrative updates, or special voting modalities. Require exact source epoch and authoritative identifier binding.",
+  "third_party_columns": {
+    "PREKEY": "precinct description",
+    "UNIKEY": "unit description",
+    "COLKEY": "college description",
+    "binding": "UNRESOLVED; names and matching counts cannot prove equivalence"
+  },
+  "special_units": {
+    "status": "retain as separate modalities; do not infer normal college spatial equivalence",
+    "codes": [
+      "72",
+      "73",
+      "74",
+      "76",
+      "77"
+    ],
+    "evidence": "CEE 2024 procedural manual, source text previously indexed"
+  },
+  "denominator": {
+    "state": "UNKNOWN",
+    "reason": "No complete official college inventory or numeric denominator has been recovered and reconciled."
+  }
+}
