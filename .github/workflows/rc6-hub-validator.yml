@@ -1,4 +1,4 @@
-name: RC10 pinned Hub integration
+name: RC11 pinned Hub integration
 on:
   push:
     branches:
