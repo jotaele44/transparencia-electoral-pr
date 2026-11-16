@@ -131,6 +131,15 @@
       "operative_decision": "UNANIMOUSLY_APPROVED_WITH_RETENTION_REQUIREMENTS",
       "disposition": "ADJUDICATED_BY_SIGNED_ORIGINAL",
       "note": "Raw heading is not evidence of nonapproval."
+    },
+    {
+      "id": "cee_25_047_unanimity_abstention",
+      "type": "SOURCE_TEXT",
+      "source": "cee_ac_25_047",
+      "statement_a": "Unanimously authorize disposition according to request",
+      "statement_b": "El PPD se abstuvo",
+      "status": "PRESERVED_RAW_INTERNAL_TENSION; DO_NOT_INFER_PPD_AFFIRMATIVE_VOTE",
+      "interpretation": "Unanimity among voting commissioners vs stated abstention is a possible reading, not independently adjudicated."
     }
   ],
   "closure": {
