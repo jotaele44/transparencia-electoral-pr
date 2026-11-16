@@ -1,0 +1,39 @@
+{
+  "source_id": "cee_ac_26_149",
+  "authority": "CEE",
+  "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-149.pdf",
+  "document_date": "2026-08-27",
+  "document_type": "CERTIFICACION_DE_DESACUERDO_CALENDAR_DISCUSSION",
+  "pages": 3,
+  "review": "ALL_3_PAGES_VISUALLY_REVIEWED",
+  "raw_title_on_page": "CALENDARIO ELECTORAL 2026",
+  "website_listing_title": "CALENDARIO ELECTORAL 2028",
+  "election_day_referenced": "2028-11-07",
+  "date_positions": [
+    {
+      "actor": "circulated_calendar",
+      "mail_ballot_transmission_date": "2028-09-27"
+    },
+    {
+      "actor": "PNP_commissioner",
+      "proposed_amendment": "2028-09-20"
+    },
+    {
+      "actor": "PPD_commissioner",
+      "position": "Opposed date earlier than 2028-09-23 based on UOCAVA/federal-law priority; indicated 2028-09-24 as possible alternative"
+    },
+    {
+      "actor": "PIP_commissioner",
+      "position": "Opposed proposed amendment and cited administrative/logistical concerns"
+    }
+  ],
+  "disposition": {
+    "state": "REFERRED_TO_CEE_PRESIDENCY_FOR_RESOLUTION",
+    "reason": "No complete unanimity; agreement cites Art. 3.4(2) and (4) of Puerto Rico Electoral Code 2020.",
+    "final_presidential_determination": "NOT_LOCATED_IN_THIS_BOUNDED_SEARCH"
+  },
+  "classification": "DATE_CONTRADICTION_AND_LEGAL_DEPENDENCY_OPEN",
+  "simulation_rule": "Do not freeze mail-ballot date to 2028-09-20 or 2028-09-27 as final. Simulate all stated alternatives and enforce UOCAVA/legal dependencies until binding final determination is recovered.",
+  "byte_sha256": null,
+  "original_bytes_frozen": false
+}
