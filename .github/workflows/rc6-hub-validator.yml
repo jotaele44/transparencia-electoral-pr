@@ -1,10 +1,11 @@
-name: RC8 pinned Hub integration
+name: RC9 pinned Hub integration
 on:
   push:
     branches:
       - dev/rc6-security-integrity
       - dev/rc7-security-evidence
       - dev/rc8-replay-provenance
+      - dev/rc9-cee-identity-audit
   workflow_dispatch:
 permissions:
   contents: read
