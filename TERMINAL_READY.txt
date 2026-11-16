@@ -4,6 +4,7 @@ BRANCH: dev/rc11-cee-primary-source-audit
 PRESERVED_RC10: d343a39349de85a0d3c4e0aba5a00c65e65774c8
 PRESERVED_RC6: 4fcadb41ac1523cf2348e3889627f2e481744f08
 MAIN_BASELINE: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
+BRANCH_INCIDENT: one unintended metadata commit briefly targeted main; restored with force-with-lease to exact baseline b90b4e78f3e6cd66f5e78d508ad590a15e569eb0; evidence/rc11_branch_incident.json; independent audit still required
 TEST: python3 -m unittest discover -s tests -v
 HUB_TEST: pinned TheHub b7a60e613fecb36448c719651625892b2bded565; synthetic only
 NEW_PRIMARY_SOURCE: CEE-AC-26-157 dated 2026-09-03 unanimously approves 2024 Statistical Report with amendments
