@@ -1,0 +1,94 @@
+{
+  "release": "RC15",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "repository": "jotaele44/transparencia-electoral-pr",
+  "development_branch": "dev/rc15-custody-legal-provenance",
+  "baselines": {
+    "rc14": "7506d46a6d78e7a68450c28677bee6384f2d5786",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "new_findings": [
+    {
+      "kind": "CEE_INDEX",
+      "id": "CEE-AC-25-006",
+      "classification": "TABLED_AS_LISTED_NOT_PROVEN_APPROVED",
+      "source": "https://www.ceepur.org/acuerdos-de-comision/"
+    },
+    {
+      "kind": "CEE_INDEX",
+      "id": "CEE-AC-25-046",
+      "classification": "DEPURATION_PROJECT_STATUS_LEAD",
+      "source": "https://www.ceepur.org/acuerdos-de-comision/"
+    },
+    {
+      "kind": "CEE_INDEX",
+      "id": "CEE-AC-25-047",
+      "classification": "DISPOSITION_RELATED_TO_AC25_006_SOURCE_INDEX_LEAD",
+      "source": "https://www.ceepur.org/acuerdos-de-comision/"
+    },
+    {
+      "kind": "JUDICIAL_PRIMARY",
+      "id": "KLAN202500306",
+      "classification": "OFFICIAL_APPELLATE_JUDGMENT_REVIEWED_TEXT_AND_PAGES_1_4",
+      "url": "https://dts.poderjudicial.pr/ta/2025/KLAN202500306-22052025.PDF",
+      "decision_date": "2025-05-22",
+      "source_byte_sha256": null
+    },
+    {
+      "kind": "CASE_BINDING",
+      "id": "SJ2025CV01115",
+      "classification": "TPI_CASE_NUMBER_BOUND_BY_OFFICIAL_APPEAL; ORIGINAL_DOCKET_MISSING",
+      "reference": "KLAN202500306"
+    }
+  ],
+  "source_contradictions": [
+    {
+      "type": "DATE",
+      "source_id": "KLAN202500306",
+      "raw_text": "24 de febrero de 2024",
+      "chronological_context": "Motion within the 2025 court proceeding",
+      "status": "UNRESOLVED_PENDING_ORIGINAL_APPENDIX_2"
+    },
+    {
+      "type": "PROCEDURAL",
+      "source_id": "CEE-AC-25-006",
+      "raw_text": "SOBRE MESA",
+      "relation_id": "CEE-AC-25-047",
+      "status": "UNRESOLVED_PENDING_SIGNED_INSTRUMENTS_AND_EXECUTION_RECEIPTS"
+    }
+  ],
+  "actual_evidence": {
+    "original_2025_report_delivered_attachment": 0,
+    "original_2026_approved_report": 0,
+    "new_verified_source_bytes_sha256": 0,
+    "complete_isabela_032_unit_73_college_method_roster": null,
+    "full_2024_reporting_unit_denominator": null,
+    "original_isabela_032_unit73_voting_actas": 0,
+    "original_maletin_disposal_execution_inventories": 0,
+    "verified_preliminary_certified_pairs": 0,
+    "actual_voting_result_rows_reconciled": 0,
+    "public_fraud_findings": 0,
+    "external_referrals": 0
+  },
+  "software": {
+    "exact_head_ci": "PENDING_FINAL_VERIFICATION",
+    "pinned_hub_synthetic_consumer": "PENDING_FINAL_VERIFICATION",
+    "new_tests": "Custody source and judicial-reference identity gates"
+  },
+  "gates": {
+    "independent_legal_review": "OPEN",
+    "independent_security_review": "OPEN",
+    "independent_evidence_review": "OPEN",
+    "external_source_byte_freeze": "BLOCKED",
+    "election_result_certification": "BLOCKED",
+    "production": "BLOCKED"
+  },
+  "rollback": {
+    "rc14_exact_head": "7506d46a6d78e7a68450c28677bee6384f2d5786",
+    "requires_explicit_authorization": true,
+    "expected_main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "instruction": "Do not update any ref without checking the current exact branch SHA; do not touch main."
+  }
+}
