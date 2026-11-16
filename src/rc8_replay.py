@@ -19,7 +19,7 @@ _SCHEMA = """CREATE TABLE IF NOT EXISTS used_nonces (
  nonce TEXT NOT NULL,
  action TEXT NOT NULL,
  expires_at INTEGER NOT NULL,
- PRIMARY KEY(issuer, subject, case_id, nonce)
+ PRIMARY KEY(issuer, subject, nonce)
 ) WITHOUT ROWID"""
 
 def consume(db_path, principal, *, action, case_id, nonce, now):
