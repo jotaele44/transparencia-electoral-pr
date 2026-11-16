@@ -1,0 +1,107 @@
+{
+  "release": "RC16",
+  "scope": "BOP 2024 historical audit -> 2028 monitoring controls",
+  "classification": "CANDIDATE_WEAKNESS_LEDGER_WITH_SOURCE_SCOPE",
+  "entries": [
+    {
+      "id": "W01",
+      "process": "Source access and version disclosure",
+      "class": "TRANSPARENCY_GAP",
+      "event": "CEE-SIP-2025-006 completed 2025-03-28 vs 2026 amended report approval",
+      "evidence": [
+        "evidence/rc15_primary_discovery.json",
+        "evidence/rc14_source_manifest.json"
+      ],
+      "gap": "2025 delivered original attachment and 2026 approved original PDF bytes unavailable in bounded research",
+      "not_proven": "absence of records or intentional concealment",
+      "control": "event-published/received/byte-frozen/version-chain separate"
+    },
+    {
+      "id": "W02",
+      "process": "Election reporting-unit denominator",
+      "class": "TRANSPARENCY_GAP",
+      "event": "Isabela 032 22 planning units; Unit 73 home-voting special modality",
+      "evidence": [
+        "evidence/rc14_reporting_unit_namespace.json"
+      ],
+      "gap": "Official college/method roster, special-modality membership and complete numerator/denominator unavailable",
+      "not_proven": "missing votes",
+      "control": "epoch-scoped stable CEE college roster and join cardinality QA"
+    },
+    {
+      "id": "W03",
+      "process": "Custody execution trace",
+      "class": "TRANSPARENCY_GAP",
+      "event": "CEE-AC-25-006 approved retention and CEE-AC-25-047 authorized disposition",
+      "evidence": [
+        "evidence/rc15_primary_discovery.json"
+      ],
+      "gap": "No original execution inventory or item-level Isabela maletin bindings",
+      "not_proven": "material destruction or tampering",
+      "control": "versioned retain-transfer-dispose receipts + legal hold"
+    },
+    {
+      "id": "W04",
+      "process": "Judicial chronology and effect",
+      "class": "SOURCE_CONTRADICTION",
+      "event": "KLAN202500306 motion dated 2024-02-24 in 2025 review chronology",
+      "evidence": [
+        "evidence/rc15_court_record_index.json"
+      ],
+      "gap": "Trial-court original motion and annex text missing",
+      "not_proven": "fraud or court error beyond source text",
+      "control": "original appendix/date chain and correction provenance"
+    },
+    {
+      "id": "W05",
+      "process": "College act/results comparability",
+      "class": "TRANSPARENCY_GAP",
+      "event": "Municipal election-night partial compared to missing home-voting unit actas",
+      "evidence": [
+        "evidence/rc14_result_manifestations.json"
+      ],
+      "gap": "No authenticated unit/college preliminary and certified pairs",
+      "not_proven": "result discrepancy",
+      "control": "grain and modality identity contract with missing-not-zero"
+    },
+    {
+      "id": "W06",
+      "process": "Voting/IT milestones",
+      "class": "DOCUMENTED_FAILURE_CANDIDATE",
+      "event": "Comptroller audit OC-25-40 reportedly documents delayed electronic register implementation",
+      "evidence": [],
+      "gap": "Full exact audit finding text and original SHA not reacquired for RC16; do not promote until verified",
+      "not_proven": "2024 vote results affected",
+      "control": "independent acceptance test and milestone receipt monitor"
+    },
+    {
+      "id": "W07",
+      "process": "Advance-mail calendar",
+      "class": "SOURCE_CONTRADICTION_RESOLVED",
+      "event": "CEE-AC-26-149 different mailing proposals superseded by CEE-RS-26-010",
+      "evidence": [
+        "evidence/rc11_2028_calendar_status.json",
+        "evidence/2028_calendar.json"
+      ],
+      "gap": "Full signed 2028 calendar not byte-frozen",
+      "not_proven": "noncompliance with binding rule",
+      "control": "time-stamped legal authority precedence and supersession"
+    },
+    {
+      "id": "W08",
+      "process": "Isabela ballot-initial dispute",
+      "class": "UNRESOLVED",
+      "event": "CEE-AC-25-005 No Ha Lugar and KLAN202500306 appellate dismissal",
+      "evidence": [
+        "evidence/rc11_case_registry.json",
+        "evidence/rc15_court_record_index.json"
+      ],
+      "gap": "Underlying original actas and ballots and aggregate ePoll Book totals unavailable",
+      "not_proven": "number of valid uncounted ballots",
+      "control": "evidence and disposition chain; no automatic fraud assertion"
+    }
+  ],
+  "nonpartisan": true,
+  "official_denominator": null,
+  "overall_certification": "AUDIT_ONLY"
+}
