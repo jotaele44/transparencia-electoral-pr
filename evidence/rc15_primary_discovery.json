@@ -12,11 +12,23 @@
       "authority": "CEE",
       "index_url": "https://www.ceepur.org/acuerdos-de-comision/",
       "raw_title": "ACUERDO DEPURACIÓN DE MALETINES DE MATERIAL ELECTORAL 2024 (SOBRE MESA)",
-      "observed_state": "TABLED_AS_LISTED",
-      "approved": null,
+      "observed_state": "UNANIMOUS_APPROVAL_WITH_RETENTION_REQUIREMENT",
+      "approved": true,
       "executed": null,
       "original_bytes_sha256": null,
-      "original_bytes_acquired": false
+      "original_bytes_acquired": false,
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-006.pdf",
+      "document_date": "2025-01-30",
+      "meeting_date": "2025-01-29",
+      "scope": "2024 maletín depuration for Electoral Operations and JAVAA",
+      "retained_material": [
+        "Representative District 16",
+        "Representative District 40",
+        "Mayagüez Senatorial District IV",
+        "House at-large contests"
+      ],
+      "review": "ORIGINAL_ONE_PAGE_PDF_TEXT_AND_SCREENSHOT_VERIFIED",
+      "note": "SOBRE MESA is retained in raw title; operative text expressly approves project. No physical disposal evidenced by this approval."
     },
     {
       "id": "cee_ac_25_046",
@@ -36,11 +48,25 @@
       "authority": "CEE",
       "index_url": "https://www.ceepur.org/acuerdos-de-comision/",
       "raw_title": "DISPOSICIÓN DE MATERIAL ELECTORAL RELACIONADO CON ACUERDO CEE-AC-25-006",
-      "observed_state": "INDEX_ONLY_WITH_REFERENCE",
-      "approved": null,
+      "observed_state": "DISPOSITION_AUTHORIZATION_OF_PREVIOUSLY_RETAINED_ELECTORAL_MATERIAL",
+      "approved": true,
       "executed": null,
       "original_bytes_sha256": null,
-      "original_bytes_acquired": false
+      "original_bytes_acquired": false,
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-047.pdf",
+      "document_date": "2025-06-12",
+      "meeting_date": "2025-06-11",
+      "disposition_authorized": true,
+      "retained_groups": [
+        "Representative District 16",
+        "Representative District 40",
+        "Mayagüez Senatorial District IV",
+        "House at-large",
+        "2024 plebiscite ballot"
+      ],
+      "ppd_abstained": true,
+      "review": "ORIGINAL_ONE_PAGE_PDF_SCREENSHOT_VERIFIED",
+      "note": "Authorization established, not proof of physical destruction; exact district-to-precinct/unit/college payload mapping missing."
     },
     {
       "id": "KLAN202500306-22052025",
@@ -98,11 +124,13 @@
       "status": "SOURCE_TEXT_CONTRADICTION_UNRESOLVED"
     },
     {
-      "id": "tabled_vs_related_material",
-      "type": "PROCEDURE",
-      "a": "CEE-AC-25-006 indexed as SOBRE MESA",
-      "b": "CEE-AC-25-047 indexed as disposition related to CEE-AC-25-006",
-      "resolution": "OPEN; signed full records and amendments needed; index title is not evidence of actual destruction"
+      "id": "tabled_label_vs_operative_approval",
+      "type": "SOURCE_TEXT_LABEL",
+      "source": "cee_ac_25_006",
+      "raw_heading": "DEPURACIÓN DE MALETINES / MATERIAL ELECTORAL 2024 - (SOBRE MESA)",
+      "operative_decision": "UNANIMOUSLY_APPROVED_WITH_RETENTION_REQUIREMENTS",
+      "disposition": "ADJUDICATED_BY_SIGNED_ORIGINAL",
+      "note": "Raw heading is not evidence of nonapproval."
     }
   ],
   "closure": {
