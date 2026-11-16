@@ -1,0 +1,68 @@
+{
+  "release": "RC13",
+  "classification": "DISCOVERY_NOT_BYTE_VERIFIED",
+  "scope": "2024 Puerto Rico general election official statistical report 2025 request versus 2026 approved manifestation",
+  "baseline": {
+    "rc12": "95cf9f63b689d108f439911d9443d05251ee2d9c",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "observations": [
+    {
+      "record_id": "cee_sip_2025_006",
+      "authority": "CEE",
+      "document_type": "TRANSPARENCY_REQUEST_STATUS_NOT_DELIVERED_REPORT",
+      "source_url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Ley141/informe-de-transparencia-202503.pdf",
+      "source_period": "2025-03",
+      "completion_date": "2025-03-28",
+      "status": "COMPLETED_IN_OFFICIAL_REPORT",
+      "page": 1,
+      "visual_inspection": "PASS_WEB_PDF_SCREENSHOT",
+      "exact_delivered_payload_url": null,
+      "original_payload_sha256": null,
+      "byte_acquisition": "FAILED_TARGETED_DOWNLOAD",
+      "note": "Completion date is not the publication date or proof of content identity."
+    },
+    {
+      "record_id": "cee_ac_26_157",
+      "authority": "CEE",
+      "document_type": "APPROVAL_WITH_AMENDMENTS",
+      "source_url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-157.pdf",
+      "document_date": "2026-09-03",
+      "status": "APPROVAL_RECORDED",
+      "original_payload_sha256": null
+    },
+    {
+      "record_id": "cee_2024_approved_report",
+      "authority": "CEE",
+      "document_type": "OFFICIAL_STATISTICAL_REPORT",
+      "source_url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf",
+      "status": "INDEXED_OFFICIAL_LINK",
+      "original_payload_sha256": null,
+      "bytes_acquired": false,
+      "report_pages": null,
+      "table_headers": null,
+      "reporting_unit_denominator": null
+    }
+  ],
+  "manifestation_relation": {
+    "left": "cee_sip_2025_006_delivered_report_UNRECOVERED",
+    "right": "cee_2024_approved_report",
+    "status": "UNRESOLVED",
+    "reason": "Neither source's original report payload obtained; no authoritative version crosswalk"
+  },
+  "case_scope": {
+    "isabela": "032 unit 73",
+    "verified_acta_pairs": 0,
+    "underlying_voting_record_count": null,
+    "allegation_is_finding": false
+  },
+  "counts": {
+    "source_observations": 3,
+    "original_report_payloads_recovered": 0,
+    "verified_original_pdf_hashes": 0,
+    "canonical_reporting_units": null,
+    "authenticated_preliminary_final_pairs": 0,
+    "real_vote_rows_reconciled": 0
+  },
+  "status": "AUDIT_ONLY"
+}
