@@ -1,0 +1,58 @@
+{
+  "release": "RC14",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "baseline": {
+    "rc13": "cdf6079ff3b5e22b5e60eb606dd0b37cb099374a",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "branch": "dev/rc14-cee-report-acquisition"
+  },
+  "report_recovery": {
+    "cee_sip_2025_006": "COMPLETED_2025-03-28_DELIVERED_PAYLOAD_UNRECOVERED",
+    "2026_report": "OFFICIAL_INDEX_LINK_CONFIRMED_BUT_BYTES_UNAVAILABLE",
+    "original_payloads": 0,
+    "verified_sha256": 0,
+    "version_relation": "UNRESOLVED"
+  },
+  "reporting_units": {
+    "isabela_032_cee_reported_units": 22,
+    "unit_73_modality": "VOTO_FACIL_ACCESO_EN_DOMICILIO",
+    "unit_73_college": "01",
+    "special_unit_inclusion_in_22": "UNKNOWN",
+    "complete_reporting_unit_denominator": null,
+    "college_denominator": null
+  },
+  "isabela_case": {
+    "cee_ac_25_005_visual_pages": 12,
+    "original_actas": 0,
+    "verified_acta_pairs": 0,
+    "ballot_discrepancy_proven": false,
+    "fraud_proven": false
+  },
+  "separate_comparator": {
+    "cee_rs_24_038": "Lares 053 Unit73; separate case; arithmetic tests included; no cross-case inference"
+  },
+  "results": {
+    "official_results_portal": "FETCH_FAILED_UNKNOWN_STATUS_999",
+    "partial_mayoral_pdf": "MUNICIPALITY_GRAIN_ONLY",
+    "final_house_certification": "100_PERCENT_COLLEGES_REPORTED_NUMERIC_DENOMINATOR_UNKNOWN",
+    "real_result_pairs": 0,
+    "real_vote_rows_reconciled": 0
+  },
+  "software": {
+    "rc14_regression_tests": "PENDING_FINAL_CI",
+    "pinned_hub": "PENDING_FINAL_CI"
+  },
+  "gates": {
+    "independent_evidence_qa": "OPEN",
+    "independent_legal_qa": "OPEN",
+    "independent_security_qa": "OPEN",
+    "production": "BLOCKED"
+  },
+  "rollback": {
+    "target": "cdf6079ff3b5e22b5e60eb606dd0b37cb099374a",
+    "requires_authorization": true,
+    "expected_main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  }
+}
