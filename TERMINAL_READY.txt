@@ -1,32 +1,22 @@
-STATUS: RC11_AUDIT_ONLY; NO_CERTIFICATION
-REPOSITORY: jotaele44/transparencia-electoral-pr
-BRANCH: dev/rc11-cee-primary-source-audit
-PRESERVED_RC10: d343a39349de85a0d3c4e0aba5a00c65e65774c8
-PRESERVED_RC6: 4fcadb41ac1523cf2348e3889627f2e481744f08
-MAIN_BASELINE: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
-BRANCH_INCIDENT: one unintended metadata commit briefly targeted main; restored with force-with-lease to exact baseline b90b4e78f3e6cd66f5e78d508ad590a15e569eb0; evidence/rc11_branch_incident.json; independent audit still required
-TEST: python3 -m unittest discover -s tests -v
-HUB_TEST: pinned TheHub b7a60e613fecb36448c719651625892b2bded565; synthetic only
-NEW_PRIMARY_SOURCE: CEE-AC-26-157 dated 2026-09-03 unanimously approves 2024 Statistical Report with amendments
-STATISTICAL_REPORT_URL: https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf
-REPORT_BYTES: NOT_ACQUIRED; web reader rejected oversized response; SHA256 NULL
-VERSION_HISTORY: CEE transparency report lists CEE-SIP-2025-006 completed 2025-03-28; relationship to amended 2026 report UNRESOLVED
-UNIT_NAMESPACE: MUNICIPALITY/PRECINCT/UNIT/COLLEGE official administrative locator vocabulary; NOT stable canonical identity
-CEE-AC-25-013: missing voter lists procedure by precinct/unit/college
-CEE-AC-25-038: Electoral Units Program update procedure
-ISABELA_CASE: CEE-AC-25-005; Isabela 032 Unit 73; all 12 pages visually reviewed; NO HA LUGAR
-CASE_FINDING: no proven uncounted-vote number or fraud; affidavit and administrative ruling procedural contradiction preserved
-2028_CALENDAR: CEE-AC-26-149 disagreement; final presidential determination not located; keep 2028-09-20 / 2028-09-24 / 2028-09-27 alternatives in simulation
-REPORTING_UNIT_DENOMINATOR: UNKNOWN
-AUTHENTIC_PRELIMINARY_FINAL_PAIRS: ZERO
+STATUS: RC12_AUDIT_ONLY; PRODUCTION CERTIFICATION BLOCKED
+REPO: jotaele44/transparencia-electoral-pr
+BRANCH: dev/rc12-cee-version-calendar
+PRESERVED_RC11: e6772035f625a6534f9f00306911c51a41a33769
+PRESERVED_MAIN: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
+SOURCE_DATE_RESOLUTION: CEE-RS-26-010 signed 2026-09-08, page 8; mail ballot start no later than 2028-09-20, finish no later than 2028-10-03
+PREVIOUS_CONTRADICTION: CEE-AC-26-149 superseded for mailing dates only; preserve its proposals
+2025_STATISTICAL_REPORT_REQUEST: CEE-SIP-2025-006 completed 2025-03-28; original delivered bytes NOT RECOVERED
+2026_STATISTICAL_REPORT: CEE-AC-26-157 approved with amendments 2026-09-03; report original bytes NOT RECOVERED
+SOURCE_SHA256: 0 independently verified original payloads
+SOURCE_VERSION_IDENTITY: UNRESOLVED
+2024_REPORT_TABLE_HEADERS: UNKNOWN
+2024_COMPLETE_REPORTING_UNIT_DENOMINATOR: UNKNOWN
+REAL_PRELIMINARY_CERTIFIED_PAIRS: ZERO
 REAL_VOTE_COMPARISONS: ZERO
-IDP: DESIGN ONLY; NOT DEPLOYED
-EXTERNAL_WORM: DESIGN ONLY; NOT PROVISIONED
-FEDERATION_DISCOVERY: OFF
-FEDERATION_LIVE: OFF
-MAIN_MERGE: BLOCKED
-PRODUCTION: BLOCKED
-EXTERNAL_REFERRALS: ZERO
-AUDIT: evidence/rc11_source_manifest.json; evidence/rc11_reporting_unit_namespace.json; evidence/rc11_case_registry.json
-NEXT: acquire both 2025 delivered and 2026 amended CEE report manifestations -> hash -> inspect report structure -> close denominator -> bind source versions -> reconcile real results -> independent QA
-ROLLBACK: RC10 exact HEAD d343a39349de85a0d3c4e0aba5a00c65e65774c8 ONLY with explicit authorization and lease-checked reference update
+SIMULATED_2028_TESTS: offline only
+PINNED_THEHUB: b7a60e613fecb36448c719651625892b2bded565; test-only
+CI: verify exact branch head using GitHub Actions
+AUDIT: certification/rc12_audit_only.json
+RELEASE: BLOCKED; NO MAIN MERGE; NO LIVE FEDERATION; NO EXTERNAL REFERRALS
+ROLLBACK: RC11 SHA only after explicit authorization and ref-lease check
+NEXT: acquire exact 2025 delivered and 2026 approved reports selectively; freeze bytes and SHA; extract structure; bind authoritative reporting-unit rows; QA independently
