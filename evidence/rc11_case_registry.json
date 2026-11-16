@@ -33,7 +33,7 @@
           "state": "PRESERVE_UNRESOLVED; source pages and procedural distinction require legal review"
         }
       ],
-      "qa": "PARTIAL_DOCUMENT_REVIEW; no original byte hash; no underlying ballot totals or individual records acquired."
+      "qa": "FULL_12_PAGE_VISUAL_REVIEW; original bytes and SHA-256 unverified; no underlying ballot totals or individual records acquired."
     }
   ]
 }
