@@ -13,8 +13,12 @@
     {
       "kind": "CEE_INDEX",
       "id": "CEE-AC-25-006",
-      "classification": "TABLED_AS_LISTED_NOT_PROVEN_APPROVED",
-      "source": "https://www.ceepur.org/acuerdos-de-comision/"
+      "classification": "SIGNED_APPROVAL_WITH_DISTRICT_16_40_AND_OTHER_RETENTION",
+      "source": "https://www.ceepur.org/acuerdos-de-comision/",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-006.pdf",
+      "document_date": "2025-01-30",
+      "review": "WEB_PDF_AND_SCREENSHOT",
+      "original_sha256": null
     },
     {
       "kind": "CEE_INDEX",
@@ -25,8 +29,12 @@
     {
       "kind": "CEE_INDEX",
       "id": "CEE-AC-25-047",
-      "classification": "DISPOSITION_RELATED_TO_AC25_006_SOURCE_INDEX_LEAD",
-      "source": "https://www.ceepur.org/acuerdos-de-comision/"
+      "classification": "SIGNED_DISPOSITION_AUTHORIZATION_NOT_EXECUTION",
+      "source": "https://www.ceepur.org/acuerdos-de-comision/",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-047.pdf",
+      "document_date": "2025-06-12",
+      "review": "WEB_PDF_SCREENSHOT",
+      "original_sha256": null
     },
     {
       "kind": "JUDICIAL_PRIMARY",
@@ -52,11 +60,11 @@
       "status": "UNRESOLVED_PENDING_ORIGINAL_APPENDIX_2"
     },
     {
-      "type": "PROCEDURAL",
+      "type": "SOURCE_LABEL",
       "source_id": "CEE-AC-25-006",
-      "raw_text": "SOBRE MESA",
-      "relation_id": "CEE-AC-25-047",
-      "status": "UNRESOLVED_PENDING_SIGNED_INSTRUMENTS_AND_EXECUTION_RECEIPTS"
+      "raw_heading": "SOBRE MESA",
+      "operative_text": "UNANIMOUS APPROVAL WITH RETENTION",
+      "status": "RESOLVED_BY_PRIMARY_DOCUMENT"
     }
   ],
   "actual_evidence": {
@@ -70,7 +78,8 @@
     "verified_preliminary_certified_pairs": 0,
     "actual_voting_result_rows_reconciled": 0,
     "public_fraud_findings": 0,
-    "external_referrals": 0
+    "external_referrals": 0,
+    "signed_original_agreements_visually_verified": 2
   },
   "software": {
     "exact_head_ci": "PENDING_FINAL_VERIFICATION",
