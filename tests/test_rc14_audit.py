@@ -6,6 +6,11 @@ class RC14AuditTest(unittest.TestCase):
  def test_no_release(self):
   self.assertFalse(self.x['certified']);self.assertFalse(self.x['production_authorized'])
   self.assertEqual(self.x['classification'],'AUDIT_ONLY')
+ def test_software_ci_receipts(self):
+  s=self.x['software'];self.assertEqual(s['unit_tests'],'PASS');self.assertEqual(s['unit_test_count'],262)
+  self.assertEqual(s['unit_test_head'],'611f680f718addcecb8c3ca47d442e1bf15b6c3c')
+  self.assertEqual(s['pinned_hub'],'PASS');self.assertEqual(s['hub_test_head'],s['unit_test_head'])
+  self.assertEqual(s['hub_scope'],'SYNTHETIC_ONLY')
  def test_report_hashes_not_fabricated(self):
   self.assertEqual(self.x['report_recovery']['original_payloads'],0)
   self.assertEqual(self.x['report_recovery']['verified_sha256'],0)
