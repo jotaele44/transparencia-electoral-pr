@@ -1,7 +1,6 @@
 {
   "release": "RC11",
   "classification": "DISCOVERY_METADATA_ONLY",
-  "retrieved_at_utc": "2026-11-16T16:36:36Z",
   "baseline": {
     "rc10": "d343a39349de85a0d3c4e0aba5a00c65e65774c8",
     "rc6": "4fcadb41ac1523cf2348e3889627f2e481744f08",
@@ -146,12 +145,15 @@
     }
   ],
   "closure": {
-    "primary_source_entries": 11,
     "original_source_byte_hashes": 0,
     "original_bytes_frozen": 0,
     "complete_reporting_unit_denominator": null,
     "authoritative_preliminary_final_pair_bindings": 0,
     "real_vote_comparisons": 0,
-    "certification": "OPEN"
-  }
+    "certification": "OPEN",
+    "source_manifestation_entries": 11,
+    "official_cee_source_entries": 10,
+    "third_party_entries": 1
+  },
+  "catalogue_compiled_at_utc": "2026-11-16T16:36:36Z"
 }
