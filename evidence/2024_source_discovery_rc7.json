@@ -1,0 +1,45 @@
+{
+  "classification": "DISCOVERY_ONLY",
+  "canonical_primary_dataset_frozen": false,
+  "source_catalog": [
+    {
+      "id": "cee_2024_official_statistical_report",
+      "type": "OFFICIAL_CEE_PUBLICATION",
+      "url": "https://ww2.ceepur.org/Home/Index",
+      "scope": "2024 statistical report; original PDF not ingested",
+      "sha256": null
+    },
+    {
+      "id": "elections_pr_2024_college_csv_mirror",
+      "type": "THIRD_PARTY_HOSTED_CEE_ATTRIBUTED",
+      "url": "https://electionspuertorico.org/datos/2024/",
+      "scope": "preliminary and canvass CSVs per ballot; third-party hosting",
+      "source_publication_coverage": "CANDIDATE_NONEXHAUSTIVE",
+      "sha256": null,
+      "observed_columns": [
+        "PREKEY",
+        "UNIKEY",
+        "COLKEY",
+        "INSCRITOS",
+        "STATUS"
+      ],
+      "observed_ballots": [
+        "ESTATAL",
+        "LEGISLATIVA",
+        "MUNICIPAL",
+        "PRESIDENCIAL",
+        "PLEBISCITO"
+      ],
+      "caution": "Do not equate CSV host with authenticated official CEE source manifestation"
+    }
+  ],
+  "dataset_downloads": 0,
+  "source_rows_examined": 0,
+  "precincts_count": null,
+  "electoral_units_count": null,
+  "colleges_count": null,
+  "candidate_ids_verified": 0,
+  "official_original_to_certified_bindings": 0,
+  "reconciliation_status": "BLOCKED_MISSING_AUTHORITATIVE_PAIRED_SOURCES",
+  "certification": "UNRESOLVED"
+}
