@@ -1,0 +1,145 @@
+{
+  "release": "RC11",
+  "classification": "DISCOVERY_METADATA_ONLY",
+  "retrieved_at_utc": "2026-11-16T16:36:36Z",
+  "baseline": {
+    "rc10": "d343a39349de85a0d3c4e0aba5a00c65e65774c8",
+    "rc6": "4fcadb41ac1523cf2348e3889627f2e481744f08",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "source_manifestations": [
+    {
+      "id": "cee_ac_26_157",
+      "authority": "CEE",
+      "document_type": "COMMISSION_AGREEMENT_APPROVING_2024_STATISTICAL_REPORT_WITH_AMENDMENTS",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-157.pdf",
+      "document_date": "2026-09-03",
+      "pages": 1,
+      "observed_content": "Unanimous approval with amendments; directs publication at official CEE report URL.",
+      "retrieval_state": "SCREENSHOT_REVIEWED",
+      "byte_sha256": null,
+      "original_bytes_frozen": false
+    },
+    {
+      "id": "cee_2024_statistical_report_2026_approved",
+      "authority": "CEE",
+      "document_type": "2024_GENERAL_ELECTION_STATISTICAL_REPORT",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/INFORME-ESTADISTICO-ELECCIONES-GENERALES-2024.pdf",
+      "approval_binding": "cee_ac_26_157",
+      "retrieval_state": "IDENTIFIED_BUT_FETCH_BLOCKED_SIZE_LIMIT",
+      "reported_content_length_from_fetch_error": 33580272,
+      "byte_sha256": null,
+      "original_bytes_frozen": false,
+      "content_reviewed": false,
+      "notes": "Single PDF retrieval rejected by web reader because payload exceeded its 32 MB extraction limit; no bytes or hash were obtained. This is not a source-reported file-size certification."
+    },
+    {
+      "id": "cee_sip_2025_006",
+      "authority": "CEE",
+      "document_type": "PUBLIC_INFORMATION_REQUEST_COMPLETION_ENTRY",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Ley141/informe-de-transparencia-202503.pdf",
+      "document_date": "2025-03",
+      "observed_content": "CEE transparency report lists CEE-SIP-2025-006, Informe Estadístico Elecciones Noviembre 2024, completed 2025-03-28.",
+      "retrieval_state": "SEARCH_TEXT_REVIEWED",
+      "byte_sha256": null,
+      "original_report_manifestation_not_recovered": true
+    },
+    {
+      "id": "cee_2024_mayoral_night_partial_2",
+      "authority": "CEE",
+      "document_type": "PARTIAL_MUNICIPAL_MAYORAL_RESULTS",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Segundo%20anuncio%20de%20resultado%20parcial%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20Alcaldes.pdf",
+      "generated_local": "2024-11-06T06:00:11",
+      "source_epoch": "NIGHT_OF_ELECTION",
+      "geographic_level": "MUNICIPALITY",
+      "source_reported_pages": 256,
+      "byte_sha256": null,
+      "original_bytes_frozen": false
+    },
+    {
+      "id": "cee_2024_final_house_certification",
+      "authority": "CEE",
+      "document_type": "FINAL_HOUSE_CERTIFICATION",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Certificaciones/Certificaci%C3%B3n%20de%20resultados%20finales%20Elecciones%20Generales%20y%20Plebiscito%202024%20-%20C%C3%A1mara%20de%20Representantes.pdf",
+      "document_date": "2024-12-31",
+      "observed_content": "Certification states 100% of colleges reported for general canvass; this statement alone does not expose numeric denominator.",
+      "byte_sha256": null,
+      "original_bytes_frozen": false
+    },
+    {
+      "id": "cee_2024_procedural_manual",
+      "authority": "CEE",
+      "document_type": "ELECTION_AND_CANVASS_PROCEDURES",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Manuales/Manual%20de%20Procedimientos%20para%20las%20Elecciones%20Generales%20y%20Escrutinio%202024.pdf",
+      "document_date": "2024-10-11",
+      "observed_content": "Official unit records use municipality, precinct, unit, college fields; manual contains Junta de Unidad act forms.",
+      "retrieval_state": "SEARCH_TEXT_REVIEWED",
+      "byte_sha256": null,
+      "original_bytes_frozen": false
+    },
+    {
+      "id": "cee_ac_25_013",
+      "authority": "CEE",
+      "document_type": "AGREEMENT_APPROVING_VOTER_IDENTIFICATION_PROCEDURE",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-013.pdf",
+      "document_date": "2025-02-13",
+      "pages": 1,
+      "observed_content": "Unanimously approves procedure to identify 2024 voters; missing official voter lists are reported by precinct, unit and college.",
+      "retrieval_state": "SCREENSHOT_REVIEWED",
+      "byte_sha256": null,
+      "original_bytes_frozen": false
+    },
+    {
+      "id": "cee_ac_25_038",
+      "authority": "CEE",
+      "document_type": "AGREEMENT_APPROVING_ELECTORAL_UNIT_PROGRAM_UPDATE_MANUAL",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-038.pdf",
+      "document_date": "2025-05-08",
+      "pages": 1,
+      "observed_content": "Unanimously approves manual for updates to Electoral Units Program and related administrative transactions.",
+      "retrieval_state": "SCREENSHOT_REVIEWED",
+      "byte_sha256": null,
+      "original_bytes_frozen": false
+    },
+    {
+      "id": "cee_ac_25_005",
+      "authority": "CEE",
+      "document_type": "DISAGREEMENT_RESOLUTION_ISABELA_PRECINCT_032_UNIT_073",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-005.pdf",
+      "document_date": "2025-01-29",
+      "pages": 12,
+      "observed_content": "PPD request regarding alleged unadjudicated ballots and correction of summary acts for Isabela precinct 032 unit 73; includes attached sworn statement and incident forms; Commission denied petition No Ha Lugar.",
+      "retrieval_state": "SCREENSHOT_REVIEWED_PARTIAL_PAGES",
+      "byte_sha256": null,
+      "original_bytes_frozen": false
+    },
+    {
+      "id": "electionspuertorico_2024_csv_index",
+      "authority": "THIRD_PARTY",
+      "document_type": "THIRD_PARTY_CSV_INDEX",
+      "url": "https://electionspuertorico.org/datos/2024/",
+      "observed_content": "Documents PREKEY/UNIKEY/COLKEY as precinct/unit/college column descriptions.",
+      "identity_binding": "UNRESOLVED_CANDIDATE_NOT_IDENTITY",
+      "byte_sha256": null
+    }
+  ],
+  "version_conflicts": [
+    {
+      "left": "cee_sip_2025_006",
+      "right": "cee_2024_statistical_report_2026_approved",
+      "contradiction": "A 2025 public-information completion entry precedes the September 2026 unanimous approval with amendments.",
+      "classification": "VERSION_AND_TIME",
+      "relationship": "UNRESOLVED; do not assume same bytes or logical content",
+      "required_test": "recover 2025 delivered payload and 2026 approved PDF, hash both, compare page structure/text/tables and amendments"
+    }
+  ],
+  "closure": {
+    "primary_source_entries": 9,
+    "original_source_byte_hashes": 0,
+    "original_bytes_frozen": 0,
+    "complete_reporting_unit_denominator": null,
+    "authoritative_preliminary_final_pair_bindings": 0,
+    "real_vote_comparisons": 0,
+    "certification": "OPEN"
+  }
+}
