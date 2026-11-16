@@ -1,0 +1,57 @@
+{
+  "classification": "CANDIDATE_NOT_IDENTITY",
+  "snapshot_date_utc": null,
+  "official_originals_acquired": 0,
+  "complete_source_denominator": null,
+  "source_index": {
+    "url": "https://electionspuertorico.org/datos/2024/",
+    "host_class": "THIRD_PARTY",
+    "page_last_updated_as_stated": "2026-11-04",
+    "metadata_observed": true,
+    "payload_sha256": null
+  },
+  "observed_manifestations": {
+    "preliminary": [
+      "ESTATAL",
+      "LEGISLATIVA",
+      "MUNICIPAL",
+      "PRESIDENCIAL",
+      "PLEBISCITO"
+    ],
+    "canvass": [
+      "ESTATAL",
+      "LEGISLATIVA",
+      "MUNICIPAL",
+      "PLEBISCITO"
+    ],
+    "not_observed_in_canvass_index": [
+      "PRESIDENCIAL"
+    ]
+  },
+  "reported_column_glossary": {
+    "PREKEY": "Precinto",
+    "UNIKEY": "Unidad",
+    "COLKEY": "Colegio",
+    "INSCRITOS": "Electores Inscritos",
+    "STATUS": "Estatus del Acta"
+  },
+  "identity_findings": {
+    "raw_identifier_types": "UNKNOWN",
+    "precinct_key_uniqueness": "UNVERIFIED",
+    "unit_key_uniqueness": "UNVERIFIED",
+    "college_key_uniqueness": "UNVERIFIED",
+    "composite_key_uniqueness": "UNVERIFIED",
+    "original_to_certified_binding": "UNRESOLVED",
+    "source_row_count": null,
+    "precinct_count": null,
+    "unit_count": null,
+    "college_count": null
+  },
+  "key_policy": "Preserve raw strings including leading zeros; never infer geometry or join equivalence from similar keys without authoritative binding",
+  "reconciliation": {
+    "eligible": false,
+    "reason": "NO_AUTHENTICATED_SOURCE_BYTES_OR_COMPLETE_MANIFESTATIONS",
+    "fraud_inference": false
+  },
+  "certification": "UNRESOLVED"
+}
