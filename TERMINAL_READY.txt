@@ -1,22 +1,25 @@
-STATUS: RC12_AUDIT_ONLY; PRODUCTION CERTIFICATION BLOCKED
-REPO: jotaele44/transparencia-electoral-pr
-BRANCH: dev/rc12-cee-version-calendar
-PRESERVED_RC11: e6772035f625a6534f9f00306911c51a41a33769
+STATUS: RC13_AUDIT_ONLY; CERTIFICATION_BLOCKED
+REPOSITORY: jotaele44/transparencia-electoral-pr
+ISOLATED_BRANCH: dev/rc13-primary-evidence-gates
+PRESERVED_RC12: 95cf9f63b689d108f439911d9443d05251ee2d9c
 PRESERVED_MAIN: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
-SOURCE_DATE_RESOLUTION: CEE-RS-26-010 signed 2026-09-08, page 8; mail ballot start no later than 2028-09-20, finish no later than 2028-10-03
-PREVIOUS_CONTRADICTION: CEE-AC-26-149 superseded for mailing dates only; preserve its proposals
-2025_STATISTICAL_REPORT_REQUEST: CEE-SIP-2025-006 completed 2025-03-28; original delivered bytes NOT RECOVERED
-2026_STATISTICAL_REPORT: CEE-AC-26-157 approved with amendments 2026-09-03; report original bytes NOT RECOVERED
-SOURCE_SHA256: 0 independently verified original payloads
-SOURCE_VERSION_IDENTITY: UNRESOLVED
-2024_REPORT_TABLE_HEADERS: UNKNOWN
-2024_COMPLETE_REPORTING_UNIT_DENOMINATOR: UNKNOWN
-REAL_PRELIMINARY_CERTIFIED_PAIRS: ZERO
+SOURCE_CEE_SIP_2025_006: Completed 2025-03-28 per official CEE transparency report
+SOURCE_CEE_2026_REPORT: CEE-AC-26-157 approval with amendments 2026-09-03
+BOTH_REPORT_ORIGINAL_BYTES: NOT_RECOVERED
+ORIGINAL_REPORT_SHA256: NULL
+SOURCE_VERSION_LOGICAL_BINDING: UNRESOLVED
+OFFICIAL_UNIT_IDENTITIES_AND_DENOMINATOR: UNKNOWN
+AUTHENTIC_PRELIMINARY_FINAL_PAIRS: ZERO
 REAL_VOTE_COMPARISONS: ZERO
-SIMULATED_2028_TESTS: offline only
-PINNED_THEHUB: b7a60e613fecb36448c719651625892b2bded565; test-only
-CI: verify exact branch head using GitHub Actions
-AUDIT: certification/rc12_audit_only.json
-RELEASE: BLOCKED; NO MAIN MERGE; NO LIVE FEDERATION; NO EXTERNAL REFERRALS
-ROLLBACK: RC11 SHA only after explicit authorization and ref-lease check
-NEXT: acquire exact 2025 delivered and 2026 approved reports selectively; freeze bytes and SHA; extract structure; bind authoritative reporting-unit rows; QA independently
+ISABELA_032_UNIT_073_PRIMARY_ACTAS: NOT_ACQUIRED
+SIGNED_CEE_RS_26_010: Mailing by September 20 and concludes by October 3, 2028 (preserved)
+INTEGRATION: Pinned synthetic TheHub consumer only
+IDP_AND_WORM: NOT_DEPLOYED
+FEDERATION_DISCOVERY_AND_LIVE: DISABLED
+PUBLIC_FINDINGS_REFERRALS: NONE
+MAIN_MERGE_AND_PRODUCTION: BLOCKED
+EVIDENCE: evidence/rc13_report_discovery.json
+CERTIFICATION: certification/rc13_audit_only.json
+TEST: python3 -m unittest discover -s tests -v
+ROLLBACK: RC12 exact SHA only with explicit authorization and lease-checked isolated branch ref
+NEXT: Acquire source bytes selectively -> hash -> inspect headers -> authoritative denominator -> source/row identities -> reconcile -> independent legal/security/evidence QA
