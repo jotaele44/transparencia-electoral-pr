@@ -23,6 +23,10 @@ class RC11EvidenceGate(unittest.TestCase):
   self.assertEqual(c["official_disposition"]["state"],"NO_HA_LUGAR")
   self.assertIn("fraud or intentional manipulation",c["official_disposition"]["not_established"])
   self.assertEqual(c["qa"],"FULL_12_PAGE_VISUAL_REVIEW; original bytes and SHA-256 unverified; no underlying ballot totals or individual records acquired.")
+ def test_source_authority_denominator(self):
+  self.assertEqual(self.m['closure']['official_cee_source_entries'],10)
+  self.assertEqual(self.m['closure']['third_party_entries'],1)
+  self.assertEqual(self.m['closure']['source_manifestation_entries'],11)
  def test_no_930_equals_disputed_ballots(self):
   c=self.c["cases"][0]
   self.assertIn("930 ballots were unadjudicated",c["official_disposition"]["not_established"])
