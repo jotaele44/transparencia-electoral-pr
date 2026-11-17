@@ -94,7 +94,7 @@ def main():
       "confidence":0.0,"lineage":LINEAGE,"synthetic":True,"created_at":NOW,"extracted_at":NOW}
     relationship={"relationship_id":"rel_"+hashlib.sha256(b"rc19-rel").hexdigest()[:32],
       "source_id":source_id,"source_entity_id":entity_id,"target_entity_id":agency_entity_id,
-      "relationship_type":"synthetic_self_reference_fixture","evidence_source_id":source_id,"confidence":0.0,
+      "relationship_type":"electoral_calendar_published_by","evidence_source_id":source_id,"confidence":0.0,
       "lineage":LINEAGE,"synthetic":True,"created_at":NOW,"extracted_at":NOW}
     observation={"observation_id":"obs_"+hashlib.sha256(b"rc19-obs").hexdigest()[:32],"source_id":source_id,
       "entity_id":entity_id,"observation_type":"electoral_source_publication","observed_at":NOW,
