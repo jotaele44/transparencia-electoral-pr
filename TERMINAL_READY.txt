@@ -1,35 +1,29 @@
-STATUS: RC17_META2028_AUDIT_ONLY; NO_PRODUCTION_CERTIFICATION
-REPOSITORY: jotaele44/transparencia-electoral-pr
-BRANCH: dev/rc17-authority-snapshots
-PRESERVED_RC16: 79bbb2b9d10bf79d190c7328d16116d654e9ad44
+STATUS: RC18_META2028_AUDIT_ONLY; INDEPENDENT_CERTIFICATION_BLOCKED
+BRANCH: dev/rc18-source-legal-diff
+PRESERVED_RC17: a5346b1668edddd5e5ddc71fb62e936cdcc39367
 PRESERVED_MAIN: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
-SOURCE_BINDINGS_PREVIOUSLY_UNRESOLVED: 2
-SOURCE_BINDINGS_NOW_BOUND_TO_EXACT_PUBLIC_LOCATORS: 2
-CEE_2028_RFP: https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/es/SOLICITUD-DE-PROPUESTAS-ESCRUTINIO-ELECTRONICO-2028-%28final%29.pdf
-OGP_ELECTORAL_CODE_2026_11_04: https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632
-SOURCE_REGISTRY_DISCOVERED_COUNT: 9
-EVENT_REGISTRY_DISCOVERED_COUNT: 4
-EVENT_TO_SOURCE_UNBOUND_IDS: 0 (discovered registry ONLY)
-CALENDAR_CANDIDATES: 10 nonexhaustive discovered milestones; evidence/rc17_calendar_candidates.json
-CALENDAR_CANDIDATE_HOST: https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf
-SIGNED_COMPLETE_CEE_CALENDAR_EXACT_SHA256: UNKNOWN
-COMPLETE_AUTHORITATIVE_EVENT_DENOMINATOR: UNKNOWN
-SOURCE_PDF_ORIGINAL_BYTES_ACQUIRED: 0
-SOURCE_PDF_ORIGINAL_SHA256_VERIFIED: 0
-DATE_CONTRADICTION: CEE RFP June 6 2028 vs OGP Article 7.12 and calendar candidate June 4 2028
-MAIL_SCOPE_CONFLICT: September 23 candidate UOCAVA deadline versus September 20 signed general mailing start -- requires population and legal scope check
-SNAPSHOT_ADAPTER: src/rc17_snapshots.py; only caller-supplied offline synthetic bytes
-ELECTORAL_UNIT_REGISTRY: src/rc17_units.py; synthetic epoch-scoped raw identity; NO authoritative complete CEE roster
-AUTHENTIC_PRELIMINARY_FINAL_RESULT_PAIR: ZERO
-PUBLIC_PREVIEW: STATIC SYNTHETIC; NOT DEPLOYED
-CROSS_REPO_CONSUMERS: pinned TheHub synthetic only; Centinelas/MoneySweep/Spiderweb NOT TESTED
-INDEPENDENT_SECURITY_LEGAL_PRIVACY_EVIDENCE_QA: NOT PERFORMED
-EVIDENCE_REPORT: docs/RC17_META2028_EVIDENCE.md
-CERTIFICATION_AUDIT: certification/rc17_meta2028_audit_only.json
-TEST: python3 -m unittest discover -s tests -v
-FEDERATION_DISCOVERY: OFF
-FEDERATION_LIVE: OFF
-AUTOMATED_REAL_ALERTS: DISABLED
-MAIN_MERGE_AND_DEPLOYMENT: BLOCKED
-ROLLBACK: RC16 exact SHA 79bbb2b9d10bf79d190c7328d16116d654e9ad44 only with explicit authorization and lease check; NEVER alter main.
-NEXT: independently acquire signed official complete CEE calendar original; freeze SHA/metadata; establish authoritative event source denominator; test actual external cross-repo consumers and independent QA before release.
+OFFICIAL_CEE_HOSTED_FULL_SIGNED_2028_CALENDAR: NOT_LOCATED_IN_BOUNDED_SEARCH
+SECONDARY_CEE_TITLED_CALENDAR: 2026-09-29 PIP-hosted candidate; no verified original bytes
+ORIGINAL_PRIMARY_SOURCE_PDFS_ACQUIRED: ZERO
+ORIGINAL_SOURCE_SHA256_VERIFIED: ZERO
+COMPLETE_AUTHORITY_EVENT_DENOMINATOR: UNKNOWN
+COMPLETE_CEE_ELECTORAL_UNIT_ROSTER: UNKNOWN
+PUBLIC_INFO_DIFFERENCE: CEE absentee application page states 45 days, Nov 2026 OGP law compilation Art 9.36 states 50 days
+LEGAL_OR_OPERATIONAL_VIOLATION_PROVEN: NO
+LAW_39_2026_ORIGINAL_SIGNED_MANIFESTATION: NOT ACQUIRED
+MAIL_SCOPE: 2028-09-20 advance-mail and 2028-09-23 absentee-candidate distinct; not automatically contradictory
+READ_ONLY_OFFLINE_ADAPTER: src/rc18_publication.py
+INCIDENT_SOURCE_LEDGER: evidence/rc18_legal_publication_audit.json
+CROSS_REPO_READ_ONLY_MANIFEST_INSPECTION: evidence/rc18_cross_repo_manifest_audit.json
+CROSS_REPO_PINNED_SHA1_BLOBS: Centinelas MoneySweep Spiderweb exact IDs; NOT runtime integration
+ACTUAL_CROSS_REPO_CONSUMER_RUNTIME: NOT EXECUTED
+PINNED_THEHUB: Existing synthetic validator only
+EXTERNAL_ALERTS_AND_REAL_CASE_RELEASE: DISABLED
+FIDUCIARY_ELECTION_FINDINGS: NONE
+INDEPENDENT_LEGAL_SECURITY_EVIDENCE_PRIVACY_QA: OPEN
+AUDIT_LEDGER: certification/rc18_audit_only.json
+MONITOR_CONTRACT: contracts/rc18_readonly_monitor.json
+DEVELOPMENT_TEST: python3 -m unittest discover -s tests -v
+MAIN_MERGE_AND_PRODUCTION: BLOCKED
+ROLLBACK: Authorized only, lease-checked isolated branch reset to RC17 a5346b1668edddd5e5ddc71fb62e936cdcc39367; NEVER MODIFY MAIN.
+NEXT: acquire signed official full CEE calendar original; source byte freeze and full legal revisions; validate real read-only consumer adapters in sandbox; obtain independent QA; certify only full PASS.
