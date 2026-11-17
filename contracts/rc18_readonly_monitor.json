@@ -1,0 +1,40 @@
+{
+  "schema_version": "META2028_PUBLICATION_MONITOR_CANDIDATE_V1",
+  "mode": "READ_ONLY_OFFLINE_ONLY",
+  "source_registry": "evidence/meta2028_event_registry.json",
+  "observed_sources": [
+    "cee_absentee_info_page",
+    "ogp_ley58_nov2026",
+    "ley39_2026",
+    "cee_calendar_mirror_rev20260929",
+    "cee_rs_26_010"
+  ],
+  "event_denominator_authoritative": null,
+  "source_bytes_frozen": 0,
+  "requirements": {
+    "exact_url": true,
+    "utc_retrieval_time": true,
+    "raw_payload_sha256": true,
+    "content_type_check": true,
+    "pdf_magic_check": true,
+    "source_authority_separate_from_hash": true,
+    "source_pagination_discovery": true,
+    "old_and_new_snapshots_preserved": true,
+    "change_categories": [
+      "BYTE_IDENTICAL",
+      "SAME_URL_BYTES_CHANGED",
+      "SOURCE_URL_CHANGED",
+      "SOURCE_UNOBSERVED"
+    ],
+    "legal_effective_date_separate_from_publication": true,
+    "legal_scope_review_required": true
+  },
+  "current_capabilities": {
+    "source_fetch": "DISABLED",
+    "sink": "NONE",
+    "external_alert": "DISABLED",
+    "real_compliance_finding": "PROHIBITED",
+    "federation_consumer": "TEST_ONLY",
+    "independent_qa": "OPEN"
+  }
+}
