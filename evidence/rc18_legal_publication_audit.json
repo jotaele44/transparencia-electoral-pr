@@ -1,0 +1,119 @@
+{
+  "release": "RC18",
+  "classification": "OBSERVED_PUBLIC_SOURCES_UNFROZEN",
+  "baseline": {
+    "rc17": "a5346b1668edddd5e5ddc71fb62e936cdcc39367",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "sources": [
+    {
+      "id": "cee_absentee_info_page",
+      "authority": "CEE",
+      "source_type": "CURRENT_WEBPAGE_OBSERVATION",
+      "url": "https://ww2.ceepur.org/Home/SolicituddeVoto",
+      "observed_text": "Voto ausente solicitar cada votación en o antes de 45 días previos (Art. 9.35(4)); advance vote deadline 50 days (Art. 9.38(4))",
+      "source_publication_date": null,
+      "first_observed_utc": null,
+      "byte_sha256": null,
+      "original_payload_frozen": false,
+      "classification": "OFFICIAL_PUBLIC_INFORMATION_NOT_LEGAL_AUTHORITY"
+    },
+    {
+      "id": "ogp_ley58_nov2026",
+      "authority": "OGP",
+      "source_type": "REVISED_CONSOLIDATED_ELECTORAL_CODE",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632",
+      "revision_date": "2026-11-04",
+      "observed_text": "Art 9.36(5) as amended by Ley 39-2026: absentee application not later than 50 days before election",
+      "byte_sha256": null,
+      "original_payload_frozen": false,
+      "classification": "OFFICIAL_LEGAL_COMPILATION_LINK"
+    },
+    {
+      "id": "ley39_2026",
+      "authority": "LEGISLATURA_ORIGINAL_PENDING",
+      "source_type": "AMENDING_STATUTE",
+      "public_text_locator": "https://www.lexjuris.com/lexlex/Leyes2026/lexl2026039.htm",
+      "law_date": "2026-03-10",
+      "original_published_act_url": null,
+      "byte_sha256": null,
+      "original_payload_frozen": false,
+      "classification": "SECONDARY_TEXT_COPY_NOT_INDEPENDENT_ORIGINAL"
+    },
+    {
+      "id": "cee_calendar_mirror_rev20260929",
+      "authority": "CEE_TITLED_PIP_HOST",
+      "source_type": "SECONDARY_HOSTED_CALENDAR_COPY",
+      "url": "https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf",
+      "revision_date": "2026-09-29",
+      "observed_text": "September 20 advance voting by mail; September 23 absentee voting and overseas absentee transmission; distinct voting modalities",
+      "byte_sha256": null,
+      "original_payload_frozen": false,
+      "classification": "CANDIDATE_NOT_AUTHORITY"
+    },
+    {
+      "id": "cee_rs_26_010",
+      "authority": "CEE",
+      "source_type": "SIGNED_PRESIDENTIAL_RESOLUTION",
+      "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "document_date": "2026-09-08",
+      "observed_text": "Advance vote mailing starts by Sep 20 and concludes by Oct 3 2028",
+      "byte_sha256": null,
+      "original_payload_frozen": false,
+      "classification": "BOUNDED_SIGNED_RESOLUTION"
+    }
+  ],
+  "observations": [
+    {
+      "id": "R18-01",
+      "classification": "OFFICIAL_INFORMATION_VERSUS_LEGAL_COMPILATION_DIFFERENCE",
+      "left": "cee_absentee_info_page",
+      "right": "ogp_ley58_nov2026",
+      "left_claim_days": 45,
+      "right_claim_days": 50,
+      "raw_reference_left": "Art. 9.35(4)",
+      "amended_reference_right": "Art. 9.36(5)",
+      "status": "LEGAL_PUBLICATION_AND_EFFECTIVE_SCOPE_REVIEW_REQUIRED",
+      "not_proven": [
+        "actual administrative denial",
+        "individual elector affected",
+        "intentional public deception",
+        "application deadline officially administered incorrectly"
+      ],
+      "next_decisive_evidence": "Official Ley 39-2026 signed original and effective-clause text, current CEE JAVAA operative 2028 instructions, CEE webpage publication/version timestamps"
+    },
+    {
+      "id": "R18-02",
+      "classification": "MODALITY_SCOPE_SEPARATED",
+      "left": "cee_rs_26_010",
+      "right": "cee_calendar_mirror_rev20260929",
+      "advance_mailing_latest_start": "2028-09-20",
+      "absentee_ballot_transmission_candidate": "2028-09-23",
+      "status": "DISTINCT_MODALITIES_NO_DIRECT_CONTRADICTION_ESTABLISHED",
+      "not_proven": [
+        "same category",
+        "same legal duty",
+        "same geographic voter population"
+      ],
+      "next_decisive_evidence": "Full signed 2028 calendar, operative JAVAA manual and UOCAVA source obligations"
+    }
+  ],
+  "acquisition_attempts": [
+    {
+      "source_id": "cee_rs_26_010",
+      "method": "single_primary_PDF_download",
+      "result": "FAILED",
+      "sha256": null,
+      "notes": "The file could not be retrieved as bytes through the available direct downloader. No original byte verification."
+    }
+  ],
+  "coverage": {
+    "identified_public_sources": 5,
+    "observations": 2,
+    "original_source_byte_sha256_verified": 0,
+    "official_cee_hosted_complete_2028_calendar": null,
+    "full_calendar_event_denominator": null,
+    "unit_college_denominator": null,
+    "certification": "AUDIT_ONLY"
+  }
+}
