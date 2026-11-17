@@ -32,3 +32,21 @@ Network fetch has not been run against CEE or SUTRA sources. The HTTP adapter is
 
 ## Certification
 Source original-byte SHA-256 count remains zero. Full calendar, JAVAA 2028 manual, event and amendment denominators remain open. Pinned cross-repo runtime validation, rollback testing and independent legal/security/privacy/evidence QA remain open. RC19 is AUDIT_ONLY; no production release or main merge.
+
+
+## Exact pinned consumer validation (2026-11-17)
+At exact repository commits, RC19 checked Centinelas, MoneySweep, Spiderweb and TheHub manifests and schemas. Synthetic-only tests validated the Centinelas signal schema; TheHub source, entity, relationship, observation and source-monitor schemas; Spiderweb's source-monitor schema; and producer manifest contracts. Spiderweb's source-monitor schema Git blob matches TheHub's pinned schema. Centinelas' exporter declares the source_monitors stream and uses the source_monitor_row helper. The pinned Centinelas exporter itself was not executed.
+
+The actual TheHub `validate_package` function at pinned commit `b7a60e613fecb36448c719651625892b2bded565` accepted a synthetic package containing sources, observations and source_monitors. Negative regressions corrupted a source row, fabricated a last-success time when basis was NOT_RECORDED, and falsified the monitor row count; TheHub rejected each case.
+
+MoneySweep is an explicit integration boundary: its pinned federation manifest sets `ready_for_hub_live_execution=false`, and its export-manifest schema's stream enum does not include `source_monitors`. RC19 tested that the core manifest passes and the source_monitors stream fails. No bypass or activation was attempted. Spiderweb exporter runtime was not run.
+
+CI receipts:
+- 422/422 unit and negative tests: run 44047443193.
+- Pinned producer schema/manifest compatibility: run 44047443208.
+- Actual pinned TheHub package validator: run 44047443143.
+
+These are software and schema-compatibility PASS results. They do not establish production monitoring, real election data integration, legal compliance, or independent certification.
+
+## RC19 final boundaries
+No CEE/SUTRA live HTTP poll was performed. The adapter is tested with mocked HTTP responses, including 200, 304, redirects, 404, network failure, ETag/Last-Modified, checksum, content-length and size limits. Original source bytes remain 0 acquired and 0 SHA-256 frozen. No producer repository or main branch was modified. Independent QA and cross-repository rollback testing remain open.
