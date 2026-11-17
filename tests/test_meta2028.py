@@ -26,9 +26,13 @@ class META2028Tests(unittest.TestCase):
   cls.inventory=json.loads((ROOT/"evidence/meta2028_component_inventory.json").read_text())
  def test_registry_closed_counts(self):
   x=validate_registry(self.registry)
-  self.assertEqual((x["events"],x["sources"]),(4,7))
+  self.assertEqual((x["events"],x["sources"]),(4,9))
   self.assertEqual(x["monitor"],"OFF")
-  self.assertEqual(x["unbound_event_source_ids"],["cee_2028_rfp","ogp_electoral_code_2026_11_04"])
+  self.assertEqual(x["unbound_event_source_ids"],[])
+ def test_official_rfp_conflicting_primary_date_preserved(self):
+  self.assertEqual(self.registry["conflicts"][0]["raw_source_date"],"2028-06-06")
+  self.assertEqual(self.registry["conflicts"][0]["statutory_date"],"2028-06-04")
+  self.assertIn("cee_2028_rfp",{x["source_id"] for x in self.registry["source_registry"]})
  def test_registry_duplicate_sources_rejected(self):
   d=copy.deepcopy(self.registry);d["source_registry"].append(copy.deepcopy(d["source_registry"][0]))
   with self.assertRaises(ValueError):validate_registry(d)
