@@ -1,0 +1,64 @@
+{
+  "release": "RC18_META2028",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_approved": false,
+  "main_merge_authorized": false,
+  "baseline": {
+    "rc17": "a5346b1668edddd5e5ddc71fb62e936cdcc39367",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "branch": "dev/rc18-source-legal-diff"
+  },
+  "source_recovery": {
+    "official_CEE_hosted_complete_2028_calendar": "NOT_LOCATED_IN_BOUNDED_SEARCH",
+    "latest_calendar_candidate": "PIP-hosted CEE-titled copy revised 2026-09-29",
+    "signed_full_calendar_original_sha256": null,
+    "original_pdf_bytes_acquired": 0,
+    "original_primary_source_sha256_verified": 0,
+    "calendar_full_event_denominator": null,
+    "amendment_exhaustiveness": "NOT_VERIFIED",
+    "electoral_unit_roster": "NOT_RECOVERED",
+    "original_real_vote_pairs": 0
+  },
+  "new_discovery": {
+    "official_information_difference": "CEE absentee information webpage 45 days versus Nov 2026 OGP compilation Art 9.36 50 days",
+    "classification": "DOCUMENTED_PUBLIC_INFO_TEXT_DIFFERENCE_NOT_ENFORCEMENT_FINDING",
+    "actual_administered_deadline": null,
+    "individual_voter_impact": null,
+    "law_39_2026_original_signed_bytes": null,
+    "mailing_scope": "ADVANCE_MAIL_SEP20_DISTINCT_FROM_ABSENTEE_BALLOT_SEP23_CANDIDATE"
+  },
+  "software": {
+    "offline_intake": "src/rc18_publication.py",
+    "incremental_detection": "REUSES_RC17_SNAPSHOT_GATES",
+    "legal_modality_guard": "SYNTHETIC_ONLY",
+    "cross_repo_manifest_inspection": "evidence/rc18_cross_repo_manifest_audit.json",
+    "cross_repo_runtime": "NOT_EXECUTED",
+    "thehub_pinned_validation": "PENDING_FINAL_CI",
+    "unit_test_receipt": "PENDING_FINAL_CI"
+  },
+  "safety": {
+    "external_source_polling": false,
+    "external_public_alerts": false,
+    "public_real_case_release": false,
+    "actual_voter_records_processed": false,
+    "production_federation_activation": false,
+    "repository_main_writes": false
+  },
+  "blockers": [
+    "No CEE-hosted full signed byte-frozen calendar",
+    "No verified original PDF bytes",
+    "Unknown authoritative calendar and unit denominators",
+    "Unknown actual CEE administered absentee application policy",
+    "No live authorized read-only HTTP adapter/scheduler",
+    "No META event consumed by actual Centinelas MoneySweep Spiderweb runtimes",
+    "No independent qualified QA",
+    "No production authorization"
+  ],
+  "rollback": {
+    "source": "a5346b1668edddd5e5ddc71fb62e936cdcc39367",
+    "expected_main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "requires_authorization": true,
+    "lease_check": true
+  }
+}
