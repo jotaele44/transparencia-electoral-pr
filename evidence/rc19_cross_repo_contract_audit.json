@@ -1,0 +1,95 @@
+{
+  "release": "RC19_PINNED_CONSUMER_CONTRACT_AUDIT",
+  "classification": "SCHEMA_COMPATIBILITY_PASS_HUB_RUNTIME_PASS_MONEYSWEEP_BLOCKED",
+  "pins": {
+    "centinelas": {
+      "repository": "jotaele44/centinelas-pr",
+      "commit": "3b80bb5e5bae3df1d1a358ffc250d42887132991",
+      "federation_manifest_blob_sha1": "86f6f1c5c836ef4a8ae1b57d9c68d885756ffdd7",
+      "signal_schema_blob_sha1": "c21290b84e93b6040c186fac832133c0bba6fa64",
+      "export_manifest_schema_blob_sha1": "074401f30cf05b578c396e704d8fe225e78f95cc",
+      "exporter_blob_sha1": "2e9cc945339f35f9ce4471bb3b4709697e5ebe47",
+      "source_monitor_interface": "source_monitors stream via source_monitor_row helper; no local source-monitor schema file in pinned sparse scope",
+      "result": "SIGNAL_SCHEMA_PASS_AND_EXPORT_INTERFACE_PRESENT",
+      "runtime_export_executed": false
+    },
+    "moneysweep": {
+      "repository": "jotaele44/moneysweep-pr",
+      "commit": "c26b5028fd42a653eacb2bca48fd3ec8589d2a0f",
+      "federation_manifest_blob_sha1": "95ef01dd4179c133acd843c7d4858e8fc6a05bd0",
+      "export_manifest_schema_blob_sha1": "7c9b07b393be9fb557403f6c5f375c837b95a5ba",
+      "ready_for_hub_live_execution": false,
+      "source_monitors_stream_supported": false,
+      "result": "BLOCKED_BY_PINNED_READINESS_AND_STREAM_ENUM",
+      "runtime_export_executed": false
+    },
+    "spiderweb": {
+      "repository": "jotaele44/spiderweb-pr",
+      "commit": "9c37b42926e6d401e80598221162a4664f2202d0",
+      "federation_manifest_blob_sha1": "05a30c716da9b9e3120275ab2a2dc938cc2b1edf",
+      "export_manifest_schema_blob_sha1": "074401f30cf05b578c396e704d8fe225e78f95cc",
+      "source_monitor_schema_blob_sha1": "b421906f8fa6e4102da5ee16915736a6fe47f9cc",
+      "result": "SOURCE_MONITOR_SCHEMA_BYTE_IDENTICAL_TO_HUB_SCHEMA_AND_FIXTURE_PASS",
+      "runtime_export_executed": false
+    },
+    "thehub": {
+      "repository": "jotaele44/thehub-pr",
+      "commit": "b7a60e613fecb36448c719651625892b2bded565",
+      "source_schema_blob_sha1": "c515847efd2c11176afa056c2d1b0b467627f7c9",
+      "entity_schema_blob_sha1": "d0a2cd5df39575700ead3f0f7809696168309728",
+      "relationship_schema_blob_sha1": "f7430459798a29dc542ae6cc858a7842671b53cf",
+      "observation_schema_blob_sha1": "074e2e355031487f00250d9c1e1f000c03576624",
+      "source_monitor_schema_blob_sha1": "b421906f8fa6e4102da5ee16915736a6fe47f9cc",
+      "export_manifest_schema_blob_sha1": "074401f30cf05b578c396e704d8fe225e78f95cc",
+      "result": "ACTUAL_PINNED_VALIDATE_PACKAGE_RUNTIME_PASS",
+      "runtime_export_executed": false
+    }
+  },
+  "fixtures": {
+    "all_synthetic": true,
+    "real_voter_data": false,
+    "source_record_claims": false,
+    "validated": [
+      "Centinelas signal positive and confidence>100 negative",
+      "Hub source",
+      "Hub entity",
+      "Hub relationship",
+      "Hub observation",
+      "Hub source_monitor",
+      "Spiderweb source_monitor",
+      "Centinelas and Spiderweb source_monitors export manifests",
+      "MoneySweep core manifest positive",
+      "MoneySweep source_monitors stream negative"
+    ],
+    "hub_package_files": [
+      "sources.jsonl",
+      "observations.jsonl",
+      "source_monitors.jsonl"
+    ],
+    "hub_negative_tests": [
+      "tampered source row/hash",
+      "invalid NOT_RECORDED last_success_at",
+      "source_monitor record_count mismatch"
+    ]
+  },
+  "ci": {
+    "unit_run_id": 44047034963,
+    "unit_result": "417_TESTS_PASS",
+    "consumer_contract_run_id": 44047034932,
+    "consumer_contract_result": "PASS",
+    "pinned_hub_run_id": 44047034915,
+    "pinned_hub_result": "PASS",
+    "receipt": "PINNED_HUB_CONSUMER_PASS: source, observation, source-monitor rows; corruption and count closure"
+  },
+  "boundaries": {
+    "producer_runtime_exports_executed": 0,
+    "moneysweep_activation": 0,
+    "consumer_repositories_modified": 0,
+    "hub_production_activation": 0,
+    "real_external_sources_polled": 0,
+    "real_voter_records_processed": 0,
+    "main_writes": 0,
+    "independent_qa": "NOT_PERFORMED"
+  },
+  "interpretation": "Schema and actual pinned TheHub package-validator compatibility are demonstrated using synthetic fixtures. This is not live election monitoring, producer runtime integration, production authorization, or legal evidence certification."
+}
