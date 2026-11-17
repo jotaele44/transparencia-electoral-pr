@@ -1,0 +1,180 @@
+{
+  "release": "RC19_META2028_LEGAL_AND_SOURCE_RECOVERY",
+  "classification": "PRIMARY_LOCATORS_RECOVERED_ORIGINAL_BYTE_FREEZE_OPEN",
+  "baseline": {
+    "rc18": "cceea9dea0dcb75edbac29d6307293234f719f59",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "retrieval_epoch": {
+    "date_utc": "2026-11-17",
+    "time_utc": null
+  },
+  "sources": [
+    {
+      "id": "sutra_ley39_original",
+      "authority": "Puerto Rico Office of Legislative Services / SUTRA",
+      "type": "OFFICIAL_ENACTED_LAW_PDF_LOCATOR",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.pdf",
+      "record_url": "https://sutra.oslpr.org/prontuarios/leyes-aprobadas/158328",
+      "law_number": "39-2026",
+      "bill": "PS0717",
+      "approval_date": "2026-03-10",
+      "retrieval": "HTTP_403_WEB_AND_DIRECT_DOWNLOAD_FAILED",
+      "bytes_acquired": false,
+      "byte_length": null,
+      "sha256": null,
+      "classification": "OFFICIAL_ORIGINAL_LOCATOR_BYTES_NOT_ACQUIRED"
+    },
+    {
+      "id": "lexjuris_ley39_text",
+      "authority": "LexJuris",
+      "type": "SECONDARY_REPRODUCTION_OF_ENACTED_TEXT",
+      "url": "https://www.lexjuris.com/lexlex/Leyes2026/lexl2026039.htm",
+      "bytes_acquired": false,
+      "sha256": null,
+      "classification": "SECONDARY_TEXT_COPY_NOT_ORIGINAL"
+    },
+    {
+      "id": "ogp_code_rev_20261104",
+      "authority": "Puerto Rico OGP",
+      "type": "OFFICIAL_CONSOLIDATED_CODE",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632",
+      "revision_date": "2026-11-04",
+      "included_amendments": [
+        "Ley 25-2024",
+        "Ley 39-2026",
+        "Ley 96-2026",
+        "Ley 105-2026",
+        "Ley 202-2026"
+      ],
+      "version_warning": "OGP says discard 2026-10-13 version due corrections in Articles 2.3(68) and 9.33(1)",
+      "bytes_acquired": false,
+      "sha256": null,
+      "classification": "OFFICIAL_CURRENT_CONSOLIDATED_TEXT_LINK_INSPECTED"
+    },
+    {
+      "id": "cee_javaa_page",
+      "authority": "CEE",
+      "type": "CURRENT_PUBLIC_INFORMATION_WEBPAGE",
+      "url": "https://ww2.ceepur.org/Home/SolicituddeVoto",
+      "observed_claim": "Absentee application due 45 days before voting; cites Article 9.35(4)",
+      "bytes_acquired": false,
+      "sha256": null,
+      "classification": "OFFICIAL_PUBLIC_GUIDANCE_CONFLICTS_WITH_CURRENT_CONSOLIDATED_STATUTE"
+    },
+    {
+      "id": "cee_regulations_index",
+      "authority": "CEE",
+      "type": "CURRENT_REGULATIONS_INDEX",
+      "url": "https://www.ceepur.org/reglamentos/",
+      "observed_scope": "Displayed 2026 entries include no JAVAA-specific absentee/advance-vote rule; 2028 primary regulation appears",
+      "bytes_acquired": false,
+      "sha256": null,
+      "classification": "BOUNDED_INDEX_OBSERVATION_NOT_PROOF_OF_NONEXISTENCE"
+    },
+    {
+      "id": "cee_javaa_2024_regulation",
+      "authority": "CEE",
+      "type": "HISTORICAL_OPERATIONAL_REGULATION",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Documents/Reglamento%20de%20Voto%20Ausente%20y%20Voto%20Adelantado%20de%20Primarias%202024%20y%20Elecciones%20Generales%202024.pdf",
+      "approval_date": "2024-08-30",
+      "scope": "2024 primaries and 2024 general election",
+      "bytes_acquired": false,
+      "sha256": null,
+      "classification": "HISTORICAL_2024_ONLY_NOT_VERIFIED_AS_2028_OPERATIVE"
+    },
+    {
+      "id": "cee_rs_26_010",
+      "authority": "CEE President",
+      "type": "SIGNED_PRESIDENTIAL_RESOLUTION",
+      "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "date": "2026-09-08",
+      "pages": 8,
+      "observed_effect": "Advance-vote-by-mail dispatch starts as soon as ballots are available, no later than 2028-09-20; ends no later than 2028-10-03",
+      "bytes_acquired": false,
+      "sha256": null,
+      "classification": "OFFICIAL_SIGNED_RESOLUTION_NOT_COMPLETE_CALENDAR"
+    },
+    {
+      "id": "cee_ac_26_149",
+      "authority": "CEE Secretary / Commission record",
+      "type": "CERTIFICATION_OF_COMMISSION_DISAGREEMENT",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-149.pdf",
+      "date": "2026-08-27",
+      "pages": 3,
+      "observed_title_conflict": "Document page says ASUNTO: CALENDARIO ELECTORAL 2026 while record listing and substantive discussion concern 2028",
+      "observed_scope": "Commissioner disagreement on advance-vote-by-mail dispatch date; referred to President",
+      "bytes_acquired": false,
+      "sha256": null,
+      "classification": "OFFICIAL_DISAGREEMENT_RECORD_NAME_SCOPE_CONTRADICTION_PRESERVED"
+    },
+    {
+      "id": "cee_2028_calendar_mirror",
+      "authority": "PIP electoral commissioner's website (not CEE domain)",
+      "type": "SECONDARY_HOSTED_CEE_TITLED_CALENDAR_CANDIDATE",
+      "url": "https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf",
+      "revision_date": "2026-09-29",
+      "reported_pages": 21,
+      "bytes_acquired": false,
+      "sha256": null,
+      "classification": "CANDIDATE_NOT_CEE_ORIGINAL_AUTHORITY"
+    },
+    {
+      "id": "uscode_52_20302",
+      "authority": "United States House Office of Law Revision Counsel",
+      "type": "OFFICIAL_FEDERAL_STATUTE",
+      "url": "https://uscode.house.gov/us/usc/119-120/t52/s20302/",
+      "observed_rule": "52 USC 20302(a)(8): transmit validly requested ballot not later than 45 days before federal election when request received at least 45 days before election",
+      "bytes_acquired": false,
+      "sha256": null,
+      "classification": "FEDERAL_TRANSMISSION_RULE_DISTINCT_FROM_PUERTO_RICO_APPLICATION_DEADLINE"
+    }
+  ],
+  "legal_adjudication": {
+    "law39": {
+      "section45": "Amends former Article 9.35, Solicitud del Voto Ausente; subsection (5) requires application no later than 50 days before election",
+      "section49": "Renumbers former Articles 9.19–9.39 to Articles 9.20–9.40",
+      "current_article": "9.36",
+      "current_subsection": "(5)",
+      "section69": "Law effective 30 days after approval",
+      "computed_effective_date": "2026-04-09",
+      "computation": "30 calendar days after 2026-03-10, excluding approval date; formal date computation remains subject to legal review"
+    },
+    "cee_publication": {
+      "page_claim_days": 45,
+      "page_citation": "Article 9.35(4)",
+      "current_statute_days": 50,
+      "current_statute_citation": "Article 9.36(5)",
+      "classification": "PUBLIC_GUIDANCE_STALE_TEXT_AND_ARTICLE_REFERENCE"
+    },
+    "federal_distinction": {
+      "uocava_transmission_days": 45,
+      "trigger": "Request received at least 45 days before federal election",
+      "not_same_as": "Puerto Rico statutory application deadline of 50 days",
+      "classification": "DISTINCT_LEGAL_OBLIGATIONS"
+    },
+    "javaa_instructions": {
+      "2028_operative_manual": "NOT_LOCATED_IN_BOUNDED_CEE_REGULATIONS_INDEX_AND_TARGETED_SEARCH",
+      "historical_2024_regulation": "LOCATED; scope limited to 2024",
+      "legal_effect_after_law39": "NOT_ADJUDICATED"
+    },
+    "calendar": {
+      "official_resolution_located": true,
+      "complete_official_cee_calendar_located": false,
+      "full_event_denominator": null,
+      "all_amendments_denominator": null,
+      "advance_mail_start_latest": "2028-09-20",
+      "advance_mail_end_latest": "2028-10-03",
+      "uocava_transmission_deadline": "2028-09-23",
+      "dates_are_distinct_modalities": true
+    }
+  },
+  "coverage": {
+    "source_records": 9,
+    "original_bytes_acquired": 0,
+    "sha256_frozen": 0,
+    "complete_calendar_denominator": null,
+    "javaa_2028_instruction_denominator": null,
+    "certification": "AUDIT_ONLY"
+  }
+}
