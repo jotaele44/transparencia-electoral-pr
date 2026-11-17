@@ -1,0 +1,122 @@
+{
+  "release": "RC19_META2028",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_approved": false,
+  "main_merge_authorized": false,
+  "baseline": {
+    "rc18": "cceea9dea0dcb75edbac29d6307293234f719f59",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "branch": "dev/rc19-legal-source-http"
+  },
+  "law39": {
+    "official_sutra_record_found": true,
+    "official_enacted_pdf_url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.pdf",
+    "official_pdf_retrieval": "HTTP_403",
+    "original_bytes_acquired": false,
+    "original_sha256": null,
+    "secondary_lexjuris_text_available": true,
+    "section45_amends_old_article": "9.35",
+    "section45_deadline_subsection": 5,
+    "section45_deadline_days": 50,
+    "section49_renumbers_old_9_35_to": "9.36",
+    "current_deadline_citation": "9.36(5)",
+    "section69_effective_clause": "30 days after approval",
+    "approval_date": "2026-03-10",
+    "computed_effective_date": "2026-04-09",
+    "date_computation_review": "LEGAL_REVIEW_OPEN"
+  },
+  "conflict": {
+    "cee_public_page_days": 45,
+    "cee_public_page_article": "9.35(4)",
+    "current_code_days": 50,
+    "current_code_article": "9.36(5)",
+    "classification": "PUBLIC_GUIDANCE_STALE_TEXT_AND_ARTICLE_REFERENCE",
+    "federal_uocava_transmission_days": 45,
+    "federal_statute": "52 USC 20302(a)(8)",
+    "federal_population": "qualifying absent uniformed services and overseas federal voters",
+    "application_deadline_is_not_transmission_deadline": true,
+    "actual_cee_administered_deadline": null,
+    "affected_voters": null,
+    "statutory_violation_proven": false
+  },
+  "javaa": {
+    "2028_operative_instructions": "NOT_LOCATED_IN_BOUNDED_SEARCH",
+    "current_cee_regulations_index_examined": true,
+    "2024_regulation_found": true,
+    "2024_regulation_scope": "2024 primaries and general election only",
+    "2024_regulation_as_2028_authority": "NOT_ESTABLISHED",
+    "manuals_index_has_no_extracted_documents": true
+  },
+  "calendar": {
+    "official_cee_resolution": "CEE-RS-26-010",
+    "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+    "pages": 8,
+    "official_cee_disagreement_record": "CEE-AC-26-149",
+    "disagreement_url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-149.pdf",
+    "pages_disagreement": 3,
+    "full_official_cee_calendar": false,
+    "complete_event_denominator": null,
+    "amendment_denominator": null,
+    "secondary_mirror_url": "https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf",
+    "mirror_sha256": null,
+    "source_name_contradiction": "CEE-AC-26-149 page says Calendario Electoral 2026 while CEE listing and body refer to 2028",
+    "schedule": {
+      "advance_mail_start_no_later_than": "2028-09-20",
+      "advance_mail_end_no_later_than": "2028-10-03",
+      "UOCAVA_ballot_transmission_deadline_for_qualifying_requests": "2028-09-23",
+      "scopes_distinct": true
+    }
+  },
+  "source_bytes": {
+    "official_original_bytes_acquired": 0,
+    "sha256_verified": 0,
+    "source_locator_records": 9,
+    "web_inspected_pdf_page_images": true,
+    "web_screenshot_is_not_raw_byte_freeze": true
+  },
+  "software": {
+    "adapter": "src/rc19_http.py",
+    "network_mode": "EXPLICIT_PER_CALL_ONLY",
+    "method": "GET_ONLY",
+    "https_only": true,
+    "exact_host_allowlist": true,
+    "redirects": "BLOCKED",
+    "conditional_headers": [
+      "If-None-Match",
+      "If-Modified-Since"
+    ],
+    "max_response_bytes": 10000000,
+    "max_timeout_seconds": 30,
+    "body_persistence": "NONE_IN_ADAPTER",
+    "scheduler": "NONE",
+    "public_alerts": "DISABLED",
+    "legal_adjudication": "HUMAN_ONLY"
+  },
+  "cross_repo": {
+    "pinned_consumer_runtime_validation": "OPEN",
+    "rollback_test": "OPEN",
+    "independent_legal_security_privacy_evidence_qa": "NOT_PERFORMED"
+  },
+  "blockers": [
+    "SUTRA enacted Ley39 PDF original bytes not acquired due HTTP 403; original SHA256 absent",
+    "No current 2028 JAVAA-specific approved regulation/manual found in bounded search",
+    "No complete CEE-hosted full event calendar or complete amendment denominator recovered",
+    "No original bytes/hash for CEE calendar resolution documents",
+    "No runtime synthetic event validation against pinned Centinelas, MoneySweep and Spiderweb consumers",
+    "No independent legal, security, privacy or evidence QA"
+  ],
+  "safety": {
+    "external_polling_not_run": true,
+    "production_activation": false,
+    "external_alerts": false,
+    "public_real_case_publication": false,
+    "main_modified": false
+  },
+  "rollback": {
+    "target_rc18": "cceea9dea0dcb75edbac29d6307293234f719f59",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "requires_explicit_authorization": true,
+    "lease_check": true
+  }
+}
