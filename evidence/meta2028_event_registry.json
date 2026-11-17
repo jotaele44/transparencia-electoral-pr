@@ -12,7 +12,7 @@
       "date_semantics": "ELECTION_DAY",
       "source_id": "cee_2028_rfp",
       "legal_state": "OFFICIAL_SOURCE_STATED",
-      "source_url": "https://ww2.ceepur.org/Home/Estadisticas",
+      "source_url": "https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/es/SOLICITUD-DE-PROPUESTAS-ESCRUTINIO-ELECTRONICO-2028-%28final%29.pdf",
       "source_sha256": null,
       "monitor_state": "NOT_ENABLED"
     },
@@ -23,7 +23,7 @@
       "date_semantics": "STATUTORY_DERIVED",
       "source_id": "ogp_electoral_code_2026_11_04",
       "legal_state": "STATUTORY_DATE_VERIFIED_WITH_CONTRADICTORY_RFP",
-      "source_url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/Elecciones/58-2020.pdf",
+      "source_url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632",
       "source_sha256": null,
       "monitor_state": "NOT_ENABLED"
     },
@@ -113,6 +113,30 @@
       "retrieval_utc": null,
       "original_sha256": null,
       "state": "VISUALLY_REVIEWED_NOT_BYTES_FROZEN"
+    },
+    {
+      "source_id": "cee_2028_rfp",
+      "authority": "CEE",
+      "url": "https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/es/SOLICITUD-DE-PROPUESTAS-ESCRUTINIO-ELECTRONICO-2028-%28final%29.pdf",
+      "domain": "ELECTION_TECH_PROCUREMENT",
+      "retrieval_utc": null,
+      "original_sha256": null,
+      "state": "IDENTIFIED_NOT_BYTES_FROZEN",
+      "source_date": "2026-03-31",
+      "source_locator": "page 47 of 105",
+      "note": "RFP states June 6, 2028 for primary despite first-Sunday-of-June rule; keep contradiction."
+    },
+    {
+      "source_id": "ogp_electoral_code_2026_11_04",
+      "authority": "OGP_PUERTO_RICO",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632",
+      "domain": "ELECTION_LAW",
+      "retrieval_utc": null,
+      "original_sha256": null,
+      "state": "IDENTIFIED_NOT_BYTES_FROZEN",
+      "source_date": "2026-11-04",
+      "source_locator": "Article 7.12; first Sunday of June",
+      "note": "OGP revised compilation warns earlier Oct 13, 2026 version contained errors; source revisions must not be silently treated as same bytes."
     }
   ],
   "conflicts": [
@@ -129,5 +153,24 @@
       "superseding_source_id": "cee_rs_26_010",
       "basis": "evidence/rc11_2028_calendar_status.json"
     }
-  ]
+  ],
+  "monitor_denominator": {
+    "state": "OPEN",
+    "complete_required_source_count": null,
+    "discovered_sources": 9,
+    "discovered_event_count": 4,
+    "missing_required_event_types": "UNKNOWN",
+    "catalogue_incomplete": true,
+    "verified_original_bytes": 0
+  },
+  "discovered_calendar_candidate": {
+    "url": "https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf",
+    "publisher": "CEE as shown on title; hosted by PIP electoral commissioner site",
+    "revision_date": "2026-09-29",
+    "retrieval": "INDEX_TEXT_ONLY_SCREENSHOT_READER_REJECTED_TOO_LARGE",
+    "original_bytes_sha256": null,
+    "official_cee_hosted_copy": "NOT_VERIFIED",
+    "complete_content_validated": false,
+    "certification": "CANDIDATE_NOT_FULL_AUTHORITY"
+  }
 }
