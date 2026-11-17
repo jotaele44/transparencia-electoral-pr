@@ -1,0 +1,142 @@
+{
+  "release": "RC17",
+  "scope": "DISCOVERED_2028_ELECTORAL_CALENDAR_MILESTONES_NOT_EXHAUSTIVE",
+  "completeness": "OPEN",
+  "final_signed_official_cee_hosted_calendar_original_bytes_sha256": null,
+  "authorities": [
+    {
+      "source_id": "ogp_electoral_code_2026_11_04",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632",
+      "evidence": "OGP compiled electoral code revision 2026-11-04, Article 7.12",
+      "review": "WEB_EXTRACTED_TEXT; SCREENSHOT_ATTEMPT_TIMED_OUT",
+      "sha256": null
+    },
+    {
+      "source_id": "cee_rs_26_010",
+      "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "evidence": "Signed CEE presidential determination governing 2028 mail-ballot transmission dates",
+      "review": "PRIOR_RC12_VISUAL_REVIEW",
+      "sha256": null
+    },
+    {
+      "source_id": "cee_2028_rfp",
+      "url": "https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/es/SOLICITUD-DE-PROPUESTAS-ESCRUTINIO-ELECTRONICO-2028-%28final%29.pdf",
+      "evidence": "March 2026 CEE RFP p.47 states general 2028-11-07; incorrectly gives primary 2028-06-06 while describing first Sunday",
+      "sha256": null
+    },
+    {
+      "source_id": "cee_calendar_2028_rev_2026_09_29_candidate",
+      "url": "https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf",
+      "publisher": "PIP electoral commissioner-hosted copy bearing CEE title",
+      "evidence": "21-page CEE-titled calendar revision indexed, full original byte and official CEE-hosted binding unavailable",
+      "review": "WEB_TEXT_INDEXED; PDF_SCREENSHOT_FAILED_TOOL_SIZE_LIMIT",
+      "sha256": null
+    }
+  ],
+  "candidates": [
+    {
+      "id": "C01",
+      "date": "2027-04-02",
+      "event": "Absent ballot form design ready",
+      "authority_source": "cee_calendar_2028_rev_2026_09_29_candidate",
+      "basis": "Calendar page 1 and Code Art 9.36(6)",
+      "status": "CALENDAR_CANDIDATE_REQUIRE_OFFICIAL_COPY"
+    },
+    {
+      "id": "C02",
+      "date": "2027-04-02",
+      "event": "Advance voting application form ready",
+      "authority_source": "cee_calendar_2028_rev_2026_09_29_candidate",
+      "basis": "Calendar page 1 Art 9.39(6)",
+      "status": "CALENDAR_CANDIDATE_REQUIRE_OFFICIAL_COPY"
+    },
+    {
+      "id": "C03",
+      "date": "2027-06-01",
+      "event": "Draft absentee/advance voting regulations",
+      "authority_source": "cee_calendar_2028_rev_2026_09_29_candidate",
+      "basis": "Calendar page 1 Art 9.42(4)",
+      "status": "CALENDAR_CANDIDATE_REQUIRE_OFFICIAL_COPY"
+    },
+    {
+      "id": "C04",
+      "date": "2028-06-04",
+      "event": "Statutory primaries",
+      "authority_source": "ogp_electoral_code_2026_11_04",
+      "basis": "Art 7.12, first Sunday in June",
+      "status": "STATUTORY_DERIVED_CONTRADICTORY_RFP_PRESERVED"
+    },
+    {
+      "id": "C05",
+      "date": "2028-06-08",
+      "event": "Primary preliminary result public notification deadline",
+      "authority_source": "cee_calendar_2028_rev_2026_09_29_candidate",
+      "basis": "Calendar page 9 Art 10.6(3), 96 hours",
+      "status": "CALENDAR_CANDIDATE_REQUIRE_OFFICIAL_COPY"
+    },
+    {
+      "id": "C06",
+      "date": "2028-09-18",
+      "event": "General election voter registration and absentee/advance applications close, per candidate calendar",
+      "authority_source": "cee_calendar_2028_rev_2026_09_29_candidate",
+      "basis": "Calendar pages 1 and 13, dates need applicable statutory crosscheck",
+      "status": "CALENDAR_CANDIDATE_REQUIRE_OFFICIAL_COPY"
+    },
+    {
+      "id": "C07",
+      "date": "2028-09-20",
+      "event": "Latest start date for mailing under presidential resolution",
+      "authority_source": "cee_rs_26_010",
+      "basis": "signed resolution",
+      "status": "SIGNED_RESOLUTION_REVIEWED"
+    },
+    {
+      "id": "C08",
+      "date": "2028-09-23",
+      "event": "Overseas absentee ballot transmission date stated in candidate calendar",
+      "authority_source": "cee_calendar_2028_rev_2026_09_29_candidate",
+      "basis": "Calendar page 14, UOCAVA and MOVE Act; scope overlap with 2028-09-20 CEE-RS-26-010 unresolved",
+      "status": "LEGAL_SCOPE_RECONCILIATION_REQUIRED"
+    },
+    {
+      "id": "C09",
+      "date": "2028-10-03",
+      "event": "Latest end of mailing under presidential resolution",
+      "authority_source": "cee_rs_26_010",
+      "basis": "signed resolution",
+      "status": "SIGNED_RESOLUTION_REVIEWED"
+    },
+    {
+      "id": "C10",
+      "date": "2028-11-07",
+      "event": "General election day",
+      "authority_source": "cee_2028_rfp",
+      "basis": "March 2026 RFP page 47 and Electoral Code Art 9.1",
+      "status": "STATUTORY_AND_CEE_RFP_CORROBORATED"
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "PRIMARY_DATE_RFP",
+      "left": "2028-06-06 (CEE RFP)",
+      "right": "2028-06-04 (Law 58-2020 Art7.12 and calendar candidate)",
+      "adjudication": "STATUTORY_DATE_PREVAILS_SUBJECT_TO_LATER_AMENDMENT",
+      "source_epoch": "2026"
+    },
+    {
+      "id": "CALENDAR_VS_RESOLUTION_MAILING",
+      "left": "September 23 UOCAVA calendar candidate",
+      "right": "September 20 latest general mailing start under signed CEE-RS-26-010",
+      "adjudication": "SCOPE_UNRESOLVED; DO NOT ASSUME SAME_VOTER_GROUP_OR_DEADLINE",
+      "source_epoch": "2026"
+    }
+  ],
+  "closure": {
+    "discovered_source_manifestations": 4,
+    "proposed_milestones": 10,
+    "official_authoritative_denominator": null,
+    "official_cee_hosted_full_calendar_bytes_verified": 0,
+    "original_source_bytes_sha256_frozen": 0,
+    "claims_of_full_calendar_certification": 0
+  }
+}
