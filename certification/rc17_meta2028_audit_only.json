@@ -1,0 +1,78 @@
+{
+  "release": "RC17_META2028",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_release_authorized": false,
+  "merge_to_main_authorized": false,
+  "baseline": {
+    "rc16": "79bbb2b9d10bf79d190c7328d16116d654e9ad44",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "branch": "dev/rc17-authority-snapshots"
+  },
+  "binding": {
+    "previously_unbound_event_source_ids": [
+      "cee_2028_rfp",
+      "ogp_electoral_code_2026_11_04"
+    ],
+    "source_locators_resolved": 2,
+    "discovered_event_source_bindings_open": 0,
+    "source_original_bytes_sha256_verified": 0,
+    "source_authentication": "LINK_AND_EXTRACTED_TEXT_ONLY"
+  },
+  "calendar": {
+    "authoritative_complete_2028_event_denominator": null,
+    "candidate_milestones": 10,
+    "full_signed_cee_calendar_sha256": null,
+    "secondary_hosted_calendar_candidate": "https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf",
+    "copy_original_bytes_acquired": false,
+    "official_cee_hosted_equivalence": "UNVERIFIED",
+    "material_conflicts": [
+      "CEE March RFP 2028-06-06 vs Law 58-2020 Art7.12 first Sunday 2028-06-04",
+      "2028-09-23 overseas mailing candidate vs CEE-RS-26-010 general mailing start limit 2028-09-20: distinguish populations and legal scopes"
+    ],
+    "monitor_scope": "OFFLINE_ONLY"
+  },
+  "implementation": {
+    "snapshot_adapter": "src/rc17_snapshots.py",
+    "source_event_registry": "evidence/meta2028_event_registry.json",
+    "calendar_candidates": "evidence/rc17_calendar_candidates.json",
+    "unit_registry": "src/rc17_units.py",
+    "test_files": [
+      "tests/test_rc17_snapshots.py",
+      "tests/test_rc17_units.py",
+      "tests/test_rc17_calendar.py"
+    ],
+    "reuse": [
+      "src/meta2028.py",
+      "src/rc14_reporting_units.py",
+      "src/rc15_custody_gates.py"
+    ],
+    "source_fetch": "NOT_CONFIGURED",
+    "external_alerts": "DISABLED",
+    "public_real_cases": "DISABLED"
+  },
+  "tests": {
+    "exact_head_unit_tests": "PENDING_FINAL_CI",
+    "pinned_hub_consumer": "PENDING_FINAL_CI",
+    "independent_evidence_qa": "NOT_PERFORMED",
+    "independent_security_qa": "NOT_PERFORMED",
+    "independent_legal_qa": "NOT_PERFORMED",
+    "cross_repo_Centinelas_MoneySweep_Spiderweb": "NOT_TESTED",
+    "real_source_original_final_reconciliation": "BLOCKED"
+  },
+  "blockers": [
+    "Complete CEE official signed 2028 calendar original bytes and authoritative event denominator unknown",
+    "No source bytes or source-file hashes acquired",
+    "No authenticated real-election preliminary and final result source pair",
+    "No authoritatively bound 2028 CEE precinct unit college roster and geometry",
+    "No production IdP, protected evidence storage or authorized monitoring schedule",
+    "No independent QA or actual cross-project live consumer tests",
+    "No authorized public real-case publication or production rollout"
+  ],
+  "rollback": {
+    "commit": "79bbb2b9d10bf79d190c7328d16116d654e9ad44",
+    "requires_separate_approval": true,
+    "lease_check": true,
+    "main_targeted": false
+  }
+}
