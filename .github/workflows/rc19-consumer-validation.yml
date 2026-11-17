@@ -1,0 +1,81 @@
+name: RC19 pinned federation consumer contracts
+on:
+  push:
+    branches:
+      - dev/rc19-legal-source-http
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-pinned-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev/rc19-legal-source-http
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/centinelas-pr
+          ref: 3b80bb5e5bae3df1d1a358ffc250d42887132991
+          path: consumers/centinelas
+          persist-credentials: false
+          sparse-checkout: |
+            federation.json
+            schemas/signal.schema.json
+            schemas/federation_export_manifest.schema.json
+            scripts/federation_export.py
+            scripts/prii_export_utils.py
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/moneysweep-pr
+          ref: c26b5028fd42a653eacb2bca48fd3ec8589d2a0f
+          path: consumers/moneysweep
+          persist-credentials: false
+          sparse-checkout: |
+            federation.json
+            schemas/federation_export_manifest.schema.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/spiderweb-pr
+          ref: 9c37b42926e6d401e80598221162a4664f2202d0
+          path: consumers/spiderweb
+          persist-credentials: false
+          sparse-checkout: |
+            federation.json
+            schemas/federation_export_manifest.schema.json
+            schemas/federation_source_monitor.schema.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/thehub-pr
+          ref: b7a60e613fecb36448c719651625892b2bded565
+          path: hub-reference
+          persist-credentials: false
+          sparse-checkout: |
+            src/hub
+            schemas/federation_source.schema.json
+            schemas/federation_entity.schema.json
+            schemas/federation_relationship.schema.json
+            schemas/federation_observation.schema.json
+            schemas/federation_source_monitor.schema.json
+            schemas/federation_export_manifest.schema.json
+            schemas/repo_federation_manifest.schema.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned schema validator
+        run: python3 -m pip install jsonschema==4.25.1
+      - name: Validate exact pinned producer and consumer contracts
+        run: |
+          python3 scripts/validate_rc19_consumers.py \
+            --centinelas consumers/centinelas \
+            --moneysweep consumers/moneysweep \
+            --spiderweb consumers/spiderweb \
+            --thehub hub-reference
+      - name: Exercise exact pinned TheHub runtime validator
+        run: python3 scripts/validate_pinned_hub.py hub-reference
