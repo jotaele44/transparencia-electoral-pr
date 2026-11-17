@@ -91,10 +91,28 @@
     "body_persistence": "NONE_IN_ADAPTER",
     "scheduler": "NONE",
     "public_alerts": "DISABLED",
-    "legal_adjudication": "HUMAN_ONLY"
+    "legal_adjudication": "HUMAN_ONLY",
+    "unit_tests": {
+      "result": "PASS",
+      "count": 422,
+      "run_id": 44047443193
+    },
+    "consumer_schema_validation": {
+      "result": "PASS",
+      "run_id": 44047443208
+    },
+    "pinned_hub_runtime_validation": {
+      "result": "PASS",
+      "run_id": 44047443143
+    }
   },
   "cross_repo": {
-    "pinned_consumer_runtime_validation": "OPEN",
+    "pinned_consumer_schema_validation": "PASS",
+    "pinned_thehub_package_validator": "PASS",
+    "centinelas_export_runtime": "NOT_EXECUTED",
+    "spiderweb_export_runtime": "NOT_EXECUTED",
+    "moneysweep_live_hub_execution": "BLOCKED_BY_PINNED_MANIFEST_READINESS_FALSE",
+    "moneysweep_source_monitors_stream": "UNSUPPORTED_BY_PINNED_EXPORT_MANIFEST_SCHEMA",
     "rollback_test": "OPEN",
     "independent_legal_security_privacy_evidence_qa": "NOT_PERFORMED"
   },
@@ -103,7 +121,9 @@
     "No current 2028 JAVAA-specific approved regulation/manual found in bounded search",
     "No complete CEE-hosted full event calendar or complete amendment denominator recovered",
     "No original bytes/hash for CEE calendar resolution documents",
-    "No runtime synthetic event validation against pinned Centinelas, MoneySweep and Spiderweb consumers",
+    "Centinelas and Spiderweb producer export runtimes not executed; only pinned schemas/interfaces and actual Hub package validator tested",
+    "MoneySweep remains not ready for live Hub execution and its pinned manifest schema does not declare source_monitors",
+    "No isolated cross-repository rollback test performed",
     "No independent legal, security, privacy or evidence QA"
   ],
   "safety": {
@@ -111,7 +131,9 @@
     "production_activation": false,
     "external_alerts": false,
     "public_real_case_publication": false,
-    "main_modified": false
+    "real_voter_data_processed": false,
+    "main_modified": false,
+    "producer_repositories_modified": false
   },
   "rollback": {
     "target_rc18": "cceea9dea0dcb75edbac29d6307293234f719f59",
