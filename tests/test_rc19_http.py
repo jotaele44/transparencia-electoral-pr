@@ -3,6 +3,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"src"))
 from rc19_http import fetch_publication, compare_observations
+from urllib.error import HTTPError, URLError
 
 class Headers(dict):
     def get(self,k,d=None): return super().get(k,d)
@@ -20,6 +21,10 @@ class Response:
 class Opener:
     def __init__(self,response): self.response=response; self.request=None; self.timeout=None
     def open(self,request,timeout): self.request=request; self.timeout=timeout; return self.response
+
+class RaisingOpener:
+    def __init__(self,error): self.error=error; self.request=None; self.timeout=None
+    def open(self,request,timeout): self.request=request; self.timeout=timeout; raise self.error
 
 URL="https://www.ceepur.org/test.pdf"
 HOSTS={"www.ceepur.org"}
