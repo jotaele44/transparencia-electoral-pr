@@ -1,0 +1,57 @@
+{
+  "release": "RC18",
+  "classification": "REAL_GITHUB_SOURCE_INTERFACE_INSPECTION_NOT_RUNTIME_INTEGRATION",
+  "observed_commit_binding": "GitHub exact main commit and federation.json Git blob SHA-1 at this check",
+  "method": "read-only GitHub fetch_file of real manifests at exact commits",
+  "consumer_count": 3,
+  "consumers": [
+    {
+      "repo": "jotaele44/centinelas-pr",
+      "commit": "3b80bb5e5bae3df1d1a358ffc250d42887132991",
+      "manifest_git_blob_sha1": "86f6f1c5c836ef4a8ae1b57d9c68d885756ffdd7",
+      "federation_role": "pre_officialization_signal_producer",
+      "production_status": "PRODUCTION",
+      "ready_for_hub_discovery": true,
+      "ready_for_hub_live_execution": true,
+      "source_monitor_contract": "Manifest declares canonical source_monitors export; specific electoral RC18 consumer not integrated",
+      "exercised_runtime": false
+    },
+    {
+      "repo": "jotaele44/moneysweep-pr",
+      "commit": "c26b5028fd42a653eacb2bca48fd3ec8589d2a0f",
+      "manifest_git_blob_sha1": "95ef01dd4179c133acd843c7d4858e8fc6a05bd0",
+      "federation_role": "public_money_intelligence_node",
+      "production_status": "NON_PRODUCTION_DIAGNOSTIC",
+      "ready_for_hub_discovery": true,
+      "ready_for_hub_live_execution": false,
+      "source_monitor_contract": "Contract and finance exporter declared; no election-specific consumer executed",
+      "exercised_runtime": false
+    },
+    {
+      "repo": "jotaele44/spiderweb-pr",
+      "commit": "9c37b42926e6d401e80598221162a4664f2202d0",
+      "manifest_git_blob_sha1": "05a30c716da9b9e3120275ab2a2dc938cc2b1edf",
+      "federation_role": "spatial_operational_producer",
+      "production_status": "PRODUCTION",
+      "ready_for_hub_discovery": true,
+      "ready_for_hub_live_execution": true,
+      "source_monitor_contract": "WGS84 spatial producer declared; no verified electoral-unit geodata consumer",
+      "exercised_runtime": false
+    }
+  ],
+  "restrictions": {
+    "consumer_repository_writes": 0,
+    "consumer_activation": 0,
+    "real_external_runtime_calls": 0,
+    "hub_registration": 0,
+    "classification": "SOURCE_INTERFACE_VERIFIED_RUNTIME_INTEGRATION_OPEN",
+    "manifest_sha1_is_not_sha256": true
+  },
+  "next_tests": [
+    "At verified exact commits, inspect approved on-disk source monitor, procurement and spatial consumer schemas",
+    "Prepare minimal synthetic META event envelope compatible with canonical contracts",
+    "Run read-only disposable consumer packages in isolated CI at exact pinned commits",
+    "Test positive and negative schema/adaptor behavior and rollback",
+    "Require qualified independent security/legal/evidence QA before production"
+  ]
+}
