@@ -164,7 +164,7 @@ class RC19HTTP(unittest.TestCase):
         self.assertFalse(r["source_deletion_proven"])
 
     def test_etag_header_injection_rejected(self):
-        previous={"source_id":"cee_test","url":URL,"sha256":"a"*64,"etag":'"ok"\\r\\nX-Evil: yes'}
+        previous={"source_id":"cee_test","url":URL,"sha256":"a"*64,"etag":'"ok"'+chr(13)+chr(10)+'X-Evil: yes'}
         with self.assertRaises(ValueError):
             fetch(previous=previous)
 
