@@ -138,4 +138,34 @@ class RC19HTTP(unittest.TestCase):
         r,_,_=fetch(body=b"%PDF-new",previous=old)
         self.assertEqual(r["comparison"]["state"],"URL_AND_BYTES_CHANGED_CANDIDATE")
 
+    def test_http_error_304_uses_exact_previous_hash(self):
+        headers=Headers({"ETag":'"v1"'})
+        err=HTTPError(URL,304,"Not Modified",headers,None)
+        op=RaisingOpener(err)
+        previous={"source_id":"cee_test","url":URL,"sha256":"b"*64,"byte_length":20}
+        r=fetch_publication(source_id="cee_test",url=URL,observed_utc=TIME,allowed_hosts=HOSTS,previous=previous,opener=op)
+        self.assertEqual(r["state"],"NOT_MODIFIED")
+        self.assertEqual(r["sha256"],"b"*64)
+
+    def test_http_error_redirect_is_blocked(self):
+        err=HTTPError(URL,302,"Found",Headers({"Location":"https://evil.example/"}),None)
+        r=fetch_publication(source_id="cee_test",url=URL,observed_utc=TIME,allowed_hosts=HOSTS,opener=RaisingOpener(err))
+        self.assertEqual(r["state"],"REDIRECT_BLOCKED")
+
+    def test_http_error_404_is_not_deletion(self):
+        err=HTTPError(URL,404,"Not Found",Headers(),None)
+        r=fetch_publication(source_id="cee_test",url=URL,observed_utc=TIME,allowed_hosts=HOSTS,opener=RaisingOpener(err))
+        self.assertEqual(r["state"],"HTTP_STATUS_UNRESOLVED")
+        self.assertFalse(r["source_deletion_proven"])
+
+    def test_network_error_is_open_not_deletion(self):
+        r=fetch_publication(source_id="cee_test",url=URL,observed_utc=TIME,allowed_hosts=HOSTS,opener=RaisingOpener(URLError("offline")))
+        self.assertEqual(r["state"],"FETCH_FAILED")
+        self.assertFalse(r["source_deletion_proven"])
+
+    def test_etag_header_injection_rejected(self):
+        previous={"source_id":"cee_test","url":URL,"sha256":"a"*64,"etag":'"ok"\\r\\nX-Evil: yes'}
+        with self.assertRaises(ValueError):
+            fetch(previous=previous)
+
 if __name__=="__main__": unittest.main()
