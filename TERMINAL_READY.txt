@@ -1,29 +1,35 @@
-STATUS: RC16_META2028_AUDIT_ONLY; SOFTWARE_QA_PENDING_EXACT_HEAD_CI; NO_PRODUCTION_CERTIFICATION
+STATUS: RC17_META2028_AUDIT_ONLY; NO_PRODUCTION_CERTIFICATION
 REPOSITORY: jotaele44/transparencia-electoral-pr
-BRANCH: dev/rc16-meta2028-pilot
-PRESERVED_RC15: cef18ef530049d2e434cc206c7f8a71df17b0777
+BRANCH: dev/rc17-authority-snapshots
+PRESERVED_RC16: 79bbb2b9d10bf79d190c7328d16116d654e9ad44
 PRESERVED_MAIN: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
-CHARTER: docs/META2028_CHARTER.md
-COMPONENT_INVENTORY: evidence/meta2028_component_inventory.json
-HISTORICAL_WEAKNESS_LEDGER: evidence/meta2028_2024_weakness_ledger.json (8 bounded candidate cases)
-KPI_CONTRACT: evidence/meta2028_kpis.json (8 definitions, no real scores)
-SOURCE_EVENT_REGISTRY: evidence/meta2028_event_registry.json (4 milestones, 7 sources, 2 unresolved event/source bindings)
-OFFLINE_MONITOR: src/meta2028.py (synthetic only; no network or scheduler)
-PUBLIC_PREVIEW: public/meta2028/index.html (static synthetic HTML, not deployed)
-AUDIT: certification/meta2028_rc16_audit_only.json
-UNIT_TEST: python3 -m unittest discover -s tests -v
-PINNED_HUB_TEST: scripts/validate_pinned_hub.py against b7a60e613fecb36448c719651625892b2bded565
-CROSS_REPO_RUNTIME: Centinelas/MoneySweep/Spiderweb NOT TESTED; TheHub synthetic validator only
-LIVE_CEE_MONITOR: DISABLED
-PUBLIC_REAL_CASE_FINDINGS: ZERO
-EXTERNAL_REFERRALS: ZERO
-ORIGINAL_ELECTION_RESULT_BYTES: NOT RECOVERED
-2028_COMPLETE_CALENDAR: UNKNOWN; signed partial mail deadline only
-UNIT_DENOMINATOR: UNKNOWN
-INDEPENDENT_SECURITY_LEGAL_PRIVACY_EVIDENCE_QA: OPEN
+SOURCE_BINDINGS_PREVIOUSLY_UNRESOLVED: 2
+SOURCE_BINDINGS_NOW_BOUND_TO_EXACT_PUBLIC_LOCATORS: 2
+CEE_2028_RFP: https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/es/SOLICITUD-DE-PROPUESTAS-ESCRUTINIO-ELECTRONICO-2028-%28final%29.pdf
+OGP_ELECTORAL_CODE_2026_11_04: https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632
+SOURCE_REGISTRY_DISCOVERED_COUNT: 9
+EVENT_REGISTRY_DISCOVERED_COUNT: 4
+EVENT_TO_SOURCE_UNBOUND_IDS: 0 (discovered registry ONLY)
+CALENDAR_CANDIDATES: 10 nonexhaustive discovered milestones; evidence/rc17_calendar_candidates.json
+CALENDAR_CANDIDATE_HOST: https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf
+SIGNED_COMPLETE_CEE_CALENDAR_EXACT_SHA256: UNKNOWN
+COMPLETE_AUTHORITATIVE_EVENT_DENOMINATOR: UNKNOWN
+SOURCE_PDF_ORIGINAL_BYTES_ACQUIRED: 0
+SOURCE_PDF_ORIGINAL_SHA256_VERIFIED: 0
+DATE_CONTRADICTION: CEE RFP June 6 2028 vs OGP Article 7.12 and calendar candidate June 4 2028
+MAIL_SCOPE_CONFLICT: September 23 candidate UOCAVA deadline versus September 20 signed general mailing start -- requires population and legal scope check
+SNAPSHOT_ADAPTER: src/rc17_snapshots.py; only caller-supplied offline synthetic bytes
+ELECTORAL_UNIT_REGISTRY: src/rc17_units.py; synthetic epoch-scoped raw identity; NO authoritative complete CEE roster
+AUTHENTIC_PRELIMINARY_FINAL_RESULT_PAIR: ZERO
+PUBLIC_PREVIEW: STATIC SYNTHETIC; NOT DEPLOYED
+CROSS_REPO_CONSUMERS: pinned TheHub synthetic only; Centinelas/MoneySweep/Spiderweb NOT TESTED
+INDEPENDENT_SECURITY_LEGAL_PRIVACY_EVIDENCE_QA: NOT PERFORMED
+EVIDENCE_REPORT: docs/RC17_META2028_EVIDENCE.md
+CERTIFICATION_AUDIT: certification/rc17_meta2028_audit_only.json
+TEST: python3 -m unittest discover -s tests -v
 FEDERATION_DISCOVERY: OFF
 FEDERATION_LIVE: OFF
-MAIN_MERGE: BLOCKED
-PRODUCTION: BLOCKED
-ROLLBACK: RC15 exact SHA only following explicit authorization, current-ref lease check, backup and independent verification; NEVER update main.
-NEXT: verify exact head CI -> independently freeze primary CEE originals -> bind complete electoral-unit registry -> test actual producer consumers and review/privacy -> certify only on full PASS.
+AUTOMATED_REAL_ALERTS: DISABLED
+MAIN_MERGE_AND_DEPLOYMENT: BLOCKED
+ROLLBACK: RC16 exact SHA 79bbb2b9d10bf79d190c7328d16116d654e9ad44 only with explicit authorization and lease check; NEVER alter main.
+NEXT: independently acquire signed official complete CEE calendar original; freeze SHA/metadata; establish authoritative event source denominator; test actual external cross-repo consumers and independent QA before release.
