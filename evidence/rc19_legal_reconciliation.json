@@ -1,0 +1,154 @@
+{
+  "release": "RC19",
+  "baseline": {
+    "rc18": "cceea9dea0dcb75edbac29d6307293234f719f59",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "election_date": {
+    "date": "2028-11-07",
+    "source": "CEE_2028_ELECTRONIC_COUNTING_RFP",
+    "status": "OFFICIAL_CEE_DOCUMENT_CLAIM"
+  },
+  "computed_deadlines": {
+    "primary_statutory": {
+      "date": "2028-06-04",
+      "method": "first Sunday of June 2028",
+      "source": "OGP_LAW58_REV_2026_11_04_ART_7_12",
+      "classification": "COMPUTED"
+    },
+    "absentee_application": {
+      "date": "2028-09-18",
+      "days_before": 50,
+      "source": "OGP_LAW58_REV_2026_11_04_ART_9_36_5",
+      "classification": "STATUTORY_RULE_COMPUTED"
+    },
+    "advance_application": {
+      "date": "2028-09-18",
+      "days_before": 50,
+      "source": "OGP_LAW58_REV_2026_11_04_ART_9_39_5",
+      "classification": "STATUTORY_RULE_COMPUTED"
+    },
+    "uocava_ballot_transmission": {
+      "date": "2028-09-23",
+      "days_before": 45,
+      "source": "52_USC_20302_A8_A",
+      "scope": "Only covered absent uniformed-services/overseas voters for federal-office elections when a valid request is received at least 45 days before the election",
+      "classification": "FEDERAL_TRANSMISSION_RULE_COMPUTED_NOT_APPLICATION_DEADLINE"
+    },
+    "javaa_processing_latest_start": {
+      "date": "2028-10-08",
+      "days_before": 30,
+      "source": "OGP_LAW58_REV_2026_11_04_ART_9_42_3",
+      "classification": "STATUTORY_LATEST_START_COMPUTED"
+    },
+    "cee_advance_mail_start_latest": "2028-09-20",
+    "cee_advance_mail_completion_latest": "2028-10-03",
+    "cee_advance_mail_authority": "CEE_RS_26_010_SIGNED_RESOLUTION"
+  },
+  "legal_version": {
+    "act": "Ley 39-2026",
+    "signed_date": "2026-03-10",
+    "effective_clause": "30 days after approval",
+    "computed_effective_date": "2026-04-09",
+    "original_signed_act_bytes_acquired": false,
+    "official_current_consolidation": "OGP Rev 2026-11-04",
+    "article_renumbering": {
+      "old_9_35_absentee_application": "new 9.36",
+      "old_9_38_advance_application": "new 9.39",
+      "old_9_40_JAVAA": "new 9.42",
+      "authority": "Act 39 Sections 45,47,49,51 and OGP current consolidated code notes"
+    }
+  },
+  "observations": [
+    {
+      "id": "RC19-LEGAL-001",
+      "classification": "CEE_PUBLIC_GUIDANCE_STALE_VS_CURRENT_STATUTE",
+      "page": {
+        "url": "https://ww2.ceepur.org/Home/SolicituddeVoto",
+        "absentee_days": 45,
+        "absentee_article": "9.35(4)",
+        "advance_days": 50,
+        "advance_article": "9.38(4)"
+      },
+      "current_law": {
+        "absentee_days": 50,
+        "absentee_article": "9.36(5)",
+        "advance_days": 50,
+        "advance_article": "9.39(5)"
+      },
+      "status": "TEXT_LEVEL_DIFFERENCE_VERIFIED",
+      "explanation": "CEE page retains prior article numbering and an old 45-day absentee application statement. Current OGP consolidated code, Rev 2026-11-04, requires 50 days for absentee applications in general elections and primaries; advance applications also 50 days. The 45-day UOCAVA rule concerns transmission of a validly requested federal ballot for covered voters, not the general absentee application deadline.",
+      "not_proven": [
+        "actual JAVAA deadline applied in practice",
+        "individual voter denied or harmed",
+        "intentional deception",
+        "statutory violation in a particular case"
+      ],
+      "required_followup": [
+        "recover signed enrolled Ley 39-2026 original",
+        "recover CEE JAVAA 2028 operative rule/forms and dated web page version",
+        "obtain CEE confirmation/correction of current public page"
+      ]
+    },
+    {
+      "id": "RC19-CALENDAR-001",
+      "classification": "OFFICIAL_REGISTRY_RECORD_NOT_FULL_CALENDAR",
+      "record": "CEE-AC-26-149",
+      "observed": {
+        "registry_title": "CALENDARIO ELECTORAL 2028",
+        "pdf_pages": 3,
+        "pdf_internal_subject": "CALENDARIO ELECTORAL 2026",
+        "document_type": "CERTIFICACIÓN DE DESACUERDO"
+      },
+      "status": "SOURCE_IDENTITY_AND_SCOPE_ADJUDICATED",
+      "conclusion": "The official CEE registry record is a disagreement certificate about the circulated 2028 calendar, not the complete calendar schedule. Preserve 2026/2028 title mismatch; do not count it as full-calendar recovery."
+    },
+    {
+      "id": "RC19-CALENDAR-002",
+      "classification": "SIGNED_CEE_RESOLUTION_BOUNDED_SCOPE",
+      "record": "CEE-RS-26-010",
+      "pages": 8,
+      "dated": "2026-09-08",
+      "scope": "Resolves advance-vote-by-mail mailing window",
+      "dates": {
+        "start_no_later_than": "2028-09-20",
+        "complete_no_later_than": "2028-10-03"
+      },
+      "status": "PRIMARY_SOURCE_TEXT_VERIFIED_FROM_RENDERED_PAGES",
+      "full_calendar": false,
+      "notes": "Resolution expressly references CEE-AC-26-149 and addresses the mailing schedule. It is not a full all-events calendar."
+    },
+    {
+      "id": "RC19-CALENDAR-003",
+      "classification": "PRIMARY_DATE_CONTRADICTION",
+      "statute": {
+        "rule": "first Sunday of June",
+        "article": "7.12",
+        "computed": "2028-06-04"
+      },
+      "cee_rfp": {
+        "date": "2028-06-06"
+      },
+      "status": "UNRESOLVED",
+      "legal_violation_proven": false,
+      "notes": "June 6 is a Tuesday. RFP is an official procurement document, not the signed full electoral calendar. The 2028 approved primary regulation/manual has an official CEE locator but its 20,394,374-byte PDF was not acquired or inspected."
+    },
+    {
+      "id": "RC19-MAIL-001",
+      "classification": "DISTINCT_MODALITIES_AND_POPULATIONS",
+      "advance_mail_start": "2028-09-20",
+      "uocava_transmission_deadline": "2028-09-23",
+      "advance_mail_complete": "2028-10-03",
+      "status": "NO_DIRECT_CONTRADICTION_ESTABLISHED",
+      "notes": "CEE-AC-26-149 records a disagreement over proposed advance-mail start dates; CEE-RS-26-010 resolves the advance-mail start/completion. The September 23 date is the UOCAVA 45-day ballot-transmission rule for covered federal voters, not a universal advance-mail start or general absentee application deadline."
+    }
+  ],
+  "calendar_recovery": {
+    "official_CEE_registry_and_related_instruments_recovered": true,
+    "full_signed_CEE_2028_calendar_original": false,
+    "complete_event_denominator": null,
+    "complete_amendment_chain": null,
+    "reporting_unit_college_roster": null
+  },
+  "certification": "AUDIT_ONLY"
+}
