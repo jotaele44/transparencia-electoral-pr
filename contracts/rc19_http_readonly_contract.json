@@ -1,0 +1,59 @@
+{
+  "schema_version": "META2028_HTTP_READONLY_V1",
+  "mode": "EXPLICIT_CALL_ONLY_NO_SCHEDULER",
+  "method": "GET",
+  "allowlist_mode": "EXACT_HOST",
+  "redirect_policy": "BLOCK",
+  "max_bytes": 10000000,
+  "max_timeout_seconds": 30,
+  "https_only": true,
+  "ip_literals": false,
+  "credentials": false,
+  "headers": [
+    "If-None-Match",
+    "If-Modified-Since"
+  ],
+  "content_types": [
+    "application/pdf",
+    "text/html",
+    "application/json",
+    "text/plain"
+  ],
+  "integrity": [
+    "SHA-256 raw body",
+    "Content-Length exact match if supplied",
+    "PDF magic bytes for PDF"
+  ],
+  "states": [
+    "HTTP_200_OBSERVED",
+    "NOT_MODIFIED",
+    "NOT_MODIFIED_WITHOUT_BASELINE",
+    "REDIRECT_BLOCKED",
+    "HTTP_STATUS_UNRESOLVED",
+    "FETCH_FAILED"
+  ],
+  "comparison": [
+    "BYTE_IDENTICAL",
+    "BYTE_IDENTICAL_AT_CHANGED_URL",
+    "SAME_URL_BYTES_CHANGED_CANDIDATE",
+    "URL_AND_BYTES_CHANGED_CANDIDATE",
+    "SOURCE_NOT_OBSERVED"
+  ],
+  "no_claims": [
+    "source authority",
+    "publication date",
+    "legal effect",
+    "document logical identity",
+    "deletion",
+    "violation",
+    "fraud"
+  ],
+  "side_effects": {
+    "write": false,
+    "alert": false,
+    "enforce": false,
+    "publish": false,
+    "schedule": false
+  },
+  "source_authority_requires_separate_review": true
+}
