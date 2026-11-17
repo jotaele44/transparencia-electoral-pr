@@ -88,8 +88,12 @@ def main():
     entity={"entity_id":entity_id,"source_id":source_id,"name":"2028 electoral calendar fixture",
       "normalized_name":"2028_electoral_calendar_fixture","entity_type":"electoral_event_calendar",
       "jurisdiction":"Puerto Rico","confidence":0.0,"lineage":LINEAGE,"synthetic":True,"created_at":NOW,"extracted_at":NOW}
+    agency_entity_id="ent_"+hashlib.sha256(b"rc19-agency").hexdigest()[:32]
+    agency_entity={"entity_id":agency_entity_id,"source_id":source_id,"name":"Synthetic CEE agency",
+      "normalized_name":"synthetic_cee_agency","entity_type":"agency","jurisdiction":"Puerto Rico",
+      "confidence":0.0,"lineage":LINEAGE,"synthetic":True,"created_at":NOW,"extracted_at":NOW}
     relationship={"relationship_id":"rel_"+hashlib.sha256(b"rc19-rel").hexdigest()[:32],
-      "source_id":source_id,"source_entity_id":entity_id,"target_entity_id":entity_id,
+      "source_id":source_id,"source_entity_id":entity_id,"target_entity_id":agency_entity_id,
       "relationship_type":"synthetic_self_reference_fixture","evidence_source_id":source_id,"confidence":0.0,
       "lineage":LINEAGE,"synthetic":True,"created_at":NOW,"extracted_at":NOW}
     observation={"observation_id":"obs_"+hashlib.sha256(b"rc19-obs").hexdigest()[:32],"source_id":source_id,
@@ -101,7 +105,7 @@ def main():
       "declared_status":"unknown","cadence":"event","last_success_basis":"NOT_RECORDED","last_success_at":None,
       "source_url":"https://www.ceepur.org/fixture.pdf","lineage":LINEAGE,"synthetic":True,
       "created_at":NOW,"extracted_at":NOW}
-    for schema,row,label in ((h_source,source,"Hub source"),(h_entity,entity,"Hub entity"),
+    for schema,row,label in ((h_source,source,"Hub source"),(h_entity,entity,"Hub entity"),(h_entity,agency_entity,"Hub agency entity"),
       (h_relationship,relationship,"Hub relationship"),(h_observation,observation,"Hub observation"),
       (h_monitor,monitor,"Hub source monitor"),(s_monitor,monitor,"Spiderweb source monitor")):
         require_valid(schema,row,label)
