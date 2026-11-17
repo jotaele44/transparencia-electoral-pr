@@ -1,0 +1,149 @@
+{
+  "schema_version": "meta2028_source_manifest_rc19_v1",
+  "release": "RC19",
+  "baseline": {
+    "parent_rc18": "cceea9dea0dcb75edbac29d6307293234f719f59",
+    "main_at_branch_creation": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "capture": {
+    "date_local": "2026-11-17",
+    "exact_retrieval_utc": null,
+    "raw_bytes_acquired": 0,
+    "sha256_verified": 0,
+    "web_pdf_render_inspection": true
+  },
+  "sources": [
+    {
+      "id": "cee_ac_26_149",
+      "publisher": "CEE",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-149.pdf",
+      "registry_url": "https://www.ceepur.org/acuerdos-de-comision/",
+      "registry_label": "CALENDARIO ELECTORAL 2028",
+      "pdf_page_count": 3,
+      "document_date": "2026-08-27",
+      "internal_document_subject": "CALENDARIO ELECTORAL 2026",
+      "internal_document_type": "CERTIFICACIÓN DE DESACUERDO",
+      "authority": "OFFICIAL_CEE_RECORD_OF_DISAGREEMENT",
+      "full_calendar_payload": false,
+      "bytes": "WEB_RENDER_ONLY",
+      "sha256": null,
+      "identity_conflict": "Registry says 2028; PDF subject line says 2026; body certifies disagreement on the circulated 2028 calendar. Preserve raw title conflict."
+    },
+    {
+      "id": "cee_rs_26_010",
+      "publisher": "CEE",
+      "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "registry_url": "https://www.ceepur.org/resoluciones-de-comision/",
+      "registry_label": "CALENDARIO ELECTORAL 2028",
+      "pdf_page_count": 8,
+      "document_date": "2026-09-08",
+      "internal_title": "In Re: Calendario Electoral 2028; CEE-AC-26-149",
+      "authority": "SIGNED_CEE_PRESIDENTIAL_RESOLUTION",
+      "scope": "Resolves mailing-start and completion schedule for advance voting by mail; does not publish a complete all-events calendar",
+      "bytes": "WEB_RENDER_ONLY",
+      "sha256": null
+    },
+    {
+      "id": "cee_2028_calendar_full_candidate",
+      "publisher": "PIP electoral commissioner site",
+      "url": "https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf",
+      "document_date": "2026-09-29",
+      "authority": "SECONDARY_HOSTED_CANDIDATE",
+      "complete_calendar_candidate": true,
+      "official_cee_hosted_equivalence": "NOT_VERIFIED",
+      "bytes": "NOT_ACQUIRED_SIZE_LIMIT",
+      "sha256": null,
+      "reported_pages": 21,
+      "notes": "Not promoted to official CEE calendar; large PDF acquisition/open failed."
+    },
+    {
+      "id": "cee_javaa_public_page",
+      "publisher": "CEE",
+      "url": "https://ww2.ceepur.org/Home/SolicituddeVoto",
+      "authority": "OFFICIAL_PUBLIC_INFORMATION_PAGE",
+      "publication_timestamp": null,
+      "observed_text": "Absentee application 45 days, Art 9.35(4); advance application 50 days, Art 9.38(4)",
+      "content_status": "CURRENTLY_ACCESSIBLE_BUT_LEGAL_REFERENCES_OUTDATED",
+      "bytes": "HTML_NOT_FROZEN",
+      "sha256": null
+    },
+    {
+      "id": "ogp_law58_rev_2026_11_04",
+      "publisher": "OGP Puerto Rico",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632",
+      "authority": "OFFICIAL_CONSOLIDATED_STATUTE",
+      "revision_date": "2026-11-04",
+      "incorporated_amendments": [
+        "Ley 25-2024",
+        "Ley 39-2026",
+        "Ley 96-2026",
+        "Ley 105-2026",
+        "Ley 202-2026"
+      ],
+      "page_count": 193,
+      "important_revision_note": "Cover page says this corrected version supersedes the 2026-10-13 revision; prior copy should be discarded.",
+      "bytes": "WEB_TEXT_EXTRACT_NOT_RAW_BYTES",
+      "sha256": null
+    },
+    {
+      "id": "ley_39_2026_original",
+      "publisher": "Puerto Rico Legislature / Governor",
+      "url": null,
+      "authority": "SIGNED_ENROLLED_ACT_ORIGINAL",
+      "date_signed": "2026-03-10",
+      "original_bytes": "NOT_RECOVERED",
+      "sha256": null,
+      "secondary_text_url": "https://www.lexjuris.com/lexlex/Leyes2026/lexl2026039.htm",
+      "official_confirmation_locator": "https://www.camara.pr.gov/?nonce=4e669e70e6&recursos_download=99262",
+      "official_confirmation": "Cámara Diario de Sesiones reports P.S. 717 was signed by Governor on 2026-03-10 and became Ley 39-2026.",
+      "status": "ORIGINAL_SIGNED_MANIFESTATION_OPEN"
+    },
+    {
+      "id": "cee_2028_electronic_counting_rfp_es",
+      "publisher": "CEE",
+      "url": "https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/es/SOLICITUD-DE-PROPUESTAS-ESCRUTINIO-ELECTRONICO-2028-%28final%29.pdf",
+      "authority": "OFFICIAL_CEE_PROCUREMENT_DOCUMENT",
+      "claims": {
+        "general_election": "2028-11-07",
+        "local_primaries": "2028-06-06"
+      },
+      "sha256": null,
+      "bytes": "WEB_TEXT_EXTRACT_NOT_RAW_BYTES"
+    },
+    {
+      "id": "cee_2028_primary_manual",
+      "publisher": "CEE",
+      "url": "https://www.ceepur.org/reglamentos/docs/2026/REGLAMENTO-Y-MANUAL-DE-PRIMARIAS-Y-METODOS-ALTERNOS-DE-NOMINACION-2028.pdf",
+      "registry_url": "https://www.ceepur.org/reglamentos/",
+      "registry_date": "2026-08-21",
+      "authority": "OFFICIAL_CEE_APPROVED_REGULATION",
+      "fetch_result": "CONTENT_TOO_LARGE_20_394_374_BYTES",
+      "sha256": null
+    },
+    {
+      "id": "cee_ac_26_137_approval",
+      "publisher": "CEE",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-137.pdf",
+      "registry_url": "https://www.ceepur.org/acuerdos-de-comision/",
+      "registry_label": "APROBACIÓN REGLAMENTO Y MANUAL DE PRIMARIAS Y MÉTODOS ALTERNOS DE NOMINACIÓN 2028",
+      "pdf_page_count": 1,
+      "authority": "OFFICIAL_APPROVAL_RECORD",
+      "sha256": null
+    },
+    {
+      "id": "uocava_52usc20302",
+      "publisher": "U.S. House Office of the Law Revision Counsel",
+      "url": "https://uscode.house.gov/uscode-text?req=granuleid:USC-prelim-title52-section20302&num=0&edition=prelim",
+      "authority": "OFFICIAL_US_CODE",
+      "relevant_rule": "52 USC 20302(a)(8)(A): transmit validly requested ballot not later than 45 days before federal election if request received at least 45 days before election",
+      "sha256": null
+    }
+  ],
+  "denominators": {
+    "official_complete_2028_calendar_events": null,
+    "calendar_amendment_versions": null,
+    "source_registry_rows": 10,
+    "original_source_byte_hashes": 0
+  },
+  "classification": "SOURCE_MANIFEST_PARTIAL_AUDIT_ONLY"
+}
