@@ -1,4 +1,4 @@
-name: RC17 META2028 isolated tests
+name: RC18 META2028 isolated tests
 on:
   push:
     branches:
@@ -15,6 +15,7 @@ on:
       - dev/rc15-custody-legal-provenance
       - dev/rc16-meta2028-pilot
       - dev/rc17-authority-snapshots
+      - dev/rc18-source-legal-diff
       - dev/rc16-meta2028-pilot
   workflow_dispatch:
 permissions:
