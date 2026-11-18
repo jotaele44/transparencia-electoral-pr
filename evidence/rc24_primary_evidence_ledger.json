@@ -158,8 +158,12 @@
       "event_id": "PR2028_PRIMARY",
       "date": "2028-06-06",
       "event": "2028 primary election",
-      "basis": "CEE official RFP and statutory first-Sunday-of-June rule",
-      "classification": "FACT"
+      "basis": "CEE March 31 2026 RFP literal June 6 statement; contemporaneous RFP also cites first Sunday rule; conflict with November 2026 OGP consolidated Code Article 7.12",
+      "classification": "RAW_CEE_RFP_STATEMENT_CONFLICTS_WITH_CURRENT_CODE",
+      "raw_source_date": "2028-06-06",
+      "operative_date_verified": false,
+      "current_code_first_sunday_candidate": "2028-06-04",
+      "adjudication": "UNRESOLVED_PENDING_BINDING_CEE_CALENDAR_OR_SUBSEQUENT_LAW"
     },
     {
       "event_id": "PR2028_ADVANCE_APPLICATION_OPEN",
@@ -364,5 +368,30 @@
       "prohibited_fix": "DO_NOT_SYNTHESIZE_CENTROIDS_OR_COORDINATES; DO_NOT_MODIFY_UPSTREAM_REPOS_WITHOUT_AUTHORIZATION",
       "decision_required": "Either define an explicit municipality-only administrative location contract in Hub schemas/consumer, or change producer to emit a separate non-geometric administrative-location field; preserve geospatial coordinates as unknown"
     }
-  ]
+  ],
+  "calendar_primary_date_adjudication": {
+    "id": "PRIMARY_2028_JUNE_6_RFP_VS_FIRST_SUNDAY",
+    "raw_source_statement": {
+      "date": "2028-06-06",
+      "weekday": "TUESDAY",
+      "source_id": "CEE_2028_RFP_SYSTEM_OVERVIEW",
+      "source_url": "https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/es/SOLICITUD-DE-PROPUESTAS-ESCRUTINIO-ELECTRONICO-2028-%28final%29.pdf",
+      "publication_date": "2026-03-31",
+      "page": 47
+    },
+    "current_statutory_rule": {
+      "description": "The applicable primaries must occur first Sunday in June of general-election year, absent later binding change",
+      "source_id": "OGP_2026_11_04_ELECTORAL_CODE",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632",
+      "article": "7.12",
+      "derived_date": "2028-06-04",
+      "weekday": "SUNDAY"
+    },
+    "status": "SOURCE_CONTRADICTION",
+    "operative_date_certified": false,
+    "official_complete_calendar_bound": false,
+    "original_rfp_byte_sha256_claim": "REFER_TO_FROZEN_RC24_ROUND2_MANIFEST",
+    "source_continuity_note": "Preserve literal RFP field; don't overwrite with derived date or claim official calendar authority",
+    "materiality": "P0_CALENDAR_ALERT_FALSE_POSITIVE_RISK"
+  }
 }
