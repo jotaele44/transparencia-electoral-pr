@@ -1,0 +1,51 @@
+name: RC26 pinned admin-only location contract candidate
+on:
+  push:
+    branches:
+      - dev/rc26-source-readback-schema
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  isolated-candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/centinelas-pr
+          ref: 3b80bb5e5bae3df1d1a358ffc250d42887132991
+          path: producers/centinelas
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/federation_export.py
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/thehub-pr
+          ref: b7a60e613fecb36448c719651625892b2bded565
+          path: consumers/thehub
+          persist-credentials: false
+          sparse-checkout: |
+            schemas
+            src/hub
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/thehub-pr
+          ref: 0f62e4bdde10b5ac82787a329d6f15481ab9c7f0
+          path: producers/pinned-helpers
+          persist-credentials: false
+          sparse-checkout: |
+            packages/prii_export_utils/src
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned schema validator
+        run: python3 -m pip install jsonschema==4.25.1
+      - name: Execute real pinned producer and Hub schema/correlator against in-memory candidate
+        run: python3 scripts/validate_rc26_location_candidate.py --centinelas producers/centinelas --hub consumers/thehub --helpers producers/pinned-helpers
