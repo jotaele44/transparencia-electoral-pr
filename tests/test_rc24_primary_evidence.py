@@ -67,6 +67,15 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
   self.assertEqual(self.x["certification"],"AUDIT_ONLY")
   self.assertFalse(self.x["safety"]["real_voter_data_processed"])
   self.assertFalse(self.x["safety"]["autonomous_enforcement"])
+ def test_ere_schedule_vs_later_combined_test_approval_not_a_proven_missed_release(self):
+  x=self.x["schedule_comparison"]
+  from datetime import date
+  a=date.fromisoformat(x["planned_eRE_release"]["date"])
+  b=date.fromisoformat(x["later_test_report_approval"]["date"])
+  self.assertEqual((b-a).days,22)
+  self.assertEqual(x["actual_eRE_release_date"],"UNKNOWN")
+  self.assertEqual(x["actual_eJAVAA_release_date"],"UNKNOWN")
+  self.assertEqual(x["classification"],"POTENTIAL_TIME_AND_SCOPE_VARIANCE")
  def test_acquisition_round_manifests_close(self):
   r1=json.loads((ROOT/"evidence/rc24_acquisition_round1.json").read_text())
   r2=json.loads((ROOT/"evidence/rc24_acquisition_round2.json").read_text())
