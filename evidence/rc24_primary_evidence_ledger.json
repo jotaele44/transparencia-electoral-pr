@@ -137,6 +137,16 @@
       "type": "official_compiled_civil_code",
       "visual_status": "OFFICIAL_OGP_TEXT_INSPECTED",
       "known_fact": "Article 29(a), 31 LPRA 5362, excludes the first day and includes the last when a period is counted in days from a specified date, unless the law provides otherwise"
+    },
+    {
+      "id": "CEE-AC-25-037-APPROVED-MINUTES",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Acuerdos/20250508%20ACUERDO%20CEE-AC-25-037%20MINUTAS%202%20Y%2030%20DE%20ABRIL%20DE%202025.pdf",
+      "type": "approved_commission_minutes_with_annexes",
+      "approval_date": "2025-05-08",
+      "meeting_date": "2025-04-30",
+      "visual_status": "OFFICIAL_WEB_TEXT_INSPECTED_ORIGINAL_BYTES_PENDING_ROUND2",
+      "known_fact": "Approved 2025-04-30 minutes record OSIPE director's explanation of eRE/eJAVAA/SIEN; committee recommendations were discussed with providers; OSIPE stated eRE/eJAVAA platforms remained usable while improvements were developed; new database build and sequential JIP installation were described as taking approximately two weeks after Registry cleanup; Commission unanimously adopted committee reports and requested new developer proposals",
+      "scope_limit": "MINUTES SUMMARIZE COMMITTEE REPORTS BUT DO NOT SUBSTITUTE FOR THE UNDERLYING COMMITTEE REPORTS OR THE 2026 OSIPE TEST REPORT"
     }
   ],
   "calendar_events": [
@@ -233,6 +243,7 @@
     },
     "round2": {
       "official_ogp_civil_code_added": true,
+      "cee_ac_25_037_approved_minutes_added": true,
       "status": "PENDING_CI"
     },
     "retention_note": "Raw originals retained in GitHub Actions artifact with 90-day retention; source hashes and manifest are committed in Git. This is not an indefinite binary archive.",
