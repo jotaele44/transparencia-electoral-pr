@@ -70,15 +70,30 @@ def main():
    wr=csv.DictWriter(fh,fieldnames=["source_id","name","source_family","active","scrape_method"])
    wr.writeheader();wr.writerow({"source_id":signal["source_id"],"name":"Synthetic CEE source",
       "source_family":"official_electoral_source","active":"yes","scrape_method":"manual"})
-  c_out=w/"centinelas-output"
+  c_out=w/"centinelas-municipality-output"
   r=run([sys.executable,"scripts/federation_export.py","--ledger",str(c_ledger),"--sources",str(c_registry),
       "--out",str(c_out),"--mode","test"],c,env,0)
-  validate_package(validate,c_out,"Centinelas full CLI")
+  # The pinned producer emits location={municipality: ...}; pinned Hub schema
+  # requires lat+lon whenever location is present. This is a real schema gap,
+  # not grounds to invent a centroid or coordinates.
+  c_errors=validate(c_out,validate_rows=True)
+  expected=("location: 'lat' is a required property","location: 'lon' is a required property")
+  if not all(any(e.endswith(x) for e in c_errors) for x in expected):
+   raise AssertionError(f"Centinelas municipality schema behavior changed unexpectedly: {c_errors}")
   cm=json.loads((c_out/"manifest.json").read_text())
   cc={x["stream"]:x["record_count"] for x in cm["files"]}
   if cc.get("sources")!=1 or cc.get("observations")!=1 or cc.get("source_monitors")!=1:
    raise AssertionError(f"Centinelas row/stream conservation failed: {cc}")
-  corruption_and_restore(validate,c_out,"centinelas",w)
+  # A separate no-location fixture is compatible; never synthesize geometry.
+  signal_no_location=dict(signal);signal_no_location["signal_id"]="rc24-synthetic-signal-no-location"
+  signal_no_location["matter_id"]="rc24-synthetic-matter-no-location";signal_no_location["municipalities"]=[]
+  c_ledger_no_location=w/"centinelas-signals-no-location.jsonl"
+  c_ledger_no_location.write_text(json.dumps(signal_no_location)+"\\n",encoding="utf-8")
+  c_out_valid=w/"centinelas-output-no-location"
+  run([sys.executable,"scripts/federation_export.py","--ledger",str(c_ledger_no_location),"--sources",str(c_registry),
+      "--out",str(c_out_valid),"--mode","test"],c,env,0)
+  validate_package(validate,c_out_valid,"Centinelas full CLI without unsupported municipality-only location")
+  corruption_and_restore(validate,c_out_valid,"centinelas",w)
   # Production mode must fail closed because the only row is explicitly synthetic.
   prod=run([sys.executable,"scripts/federation_export.py","--ledger",str(c_ledger),"--sources",str(c_registry),
       "--out",str(w/"centinelas-production"),"--mode","production"],c,env,1)
@@ -115,6 +130,6 @@ def main():
       "--mode","production","--no-ppp-geometry"],s_copy,env,1)
   if "synthetic rows are not allowed" not in (prod.stdout+prod.stderr):
    raise AssertionError("Spiderweb production mode did not reject synthetic-only input")
- print("RC24_FULL_EXPORTER_AND_PINNED_HUB_PASS: Centinelas and Spiderweb CLI; synthetic-only fixtures; row conservation; production synthetic rejection; Hub corruption detection and snapshot rollback")
+ print("RC24_FULL_EXPORTER_SCOPE: Centinelas CLI executed; municipality-only location rejected by pinned Hub schema (lat/lon required); no-location fixture passed; Spiderweb CLI + Hub validation tested")\n print("RC24_FAILURE_GATES_PASS: synthetic production rejection; Hub corruption detection and snapshot rollback")
  print("RC24_BOUNDARY: MoneySweep excluded; no live polling, real voter data, production writes, deployment or autonomous enforcement")
 if __name__=="__main__":main()
