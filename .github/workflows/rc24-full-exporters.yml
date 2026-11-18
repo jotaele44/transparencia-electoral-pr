@@ -1,0 +1,68 @@
+name: RC24 full pinned exporter and consumer isolation
+on:
+  push:
+    branches:
+      - dev/rc24-primary-record-recovery
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-pinned-exporters:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/centinelas-pr
+          ref: 3b80bb5e5bae3df1d1a358ffc250d42887132991
+          path: producers/centinelas
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/federation_export.py
+            scripts/prii_export_utils.py
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/spiderweb-pr
+          ref: 9c37b42926e6d401e80598221162a4664f2202d0
+          path: producers/spiderweb
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/federation_export.py
+            manifests/pr_hydrography/source_registry.csv
+            configs/missing_persons_sources.yaml
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/thehub-pr
+          ref: b7a60e613fecb36448c719651625892b2bded565
+          path: consumers/thehub
+          persist-credentials: false
+          sparse-checkout: |
+            src/hub
+            schemas
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/thehub-pr
+          ref: 0f62e4bdde10b5ac82787a329d6f15481ab9c7f0
+          path: producers/pinned-helpers
+          persist-credentials: false
+          sparse-checkout: |
+            packages/prii_export_utils/src
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned schema and YAML validators
+        run: python3 -m pip install jsonschema==4.25.1 PyYAML==6.0.2
+      - name: Run exact pinned full CLI exporters and Hub package validator
+        run: |
+          python3 scripts/validate_rc24_full_exporters.py \
+            --centinelas producers/centinelas \
+            --spiderweb producers/spiderweb \
+            --hub consumers/thehub \
+            --helpers producers/pinned-helpers
