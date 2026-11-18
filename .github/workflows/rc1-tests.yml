@@ -1,4 +1,4 @@
-name: RC22 META2028 isolated tests
+name: RC23 META2028 isolated tests
 on:
   push:
     branches:
@@ -20,6 +20,7 @@ on:
       - dev/rc20-2028-source-hardening
       - dev/rc21-legal-calendar-evidence
       - rc22-election-rollback-isolation
+      - dev/rc23-ejavaa-release-evidence
   workflow_dispatch:
 permissions:
   contents: read
