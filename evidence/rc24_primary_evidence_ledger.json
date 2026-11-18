@@ -272,5 +272,23 @@
     "real_voter_data_processed": false,
     "autonomous_enforcement": false,
     "public_unreviewed_allegations": false
+  },
+  "schedule_comparison": {
+    "planned_eRE_release": {
+      "date": "2026-06-02",
+      "source": "CEE-AC-25-112",
+      "classification": "PROPOSED_SCHEDULE"
+    },
+    "later_test_report_approval": {
+      "date": "2026-06-24",
+      "source": "CEE-AC-26-110",
+      "classification": "COMMISSION_APPROVAL_DATE"
+    },
+    "calendar_days_between": 22,
+    "classification": "POTENTIAL_TIME_AND_SCOPE_VARIANCE",
+    "scope_caution": "CEE-AC-25-112 schedule is for eRE improvements; CEE-AC-26-110 concerns combined eRE/eJAVAA test report. Neither proves the actual production release date.",
+    "actual_eRE_release_date": "UNKNOWN",
+    "actual_eJAVAA_release_date": "UNKNOWN",
+    "adjudication": "OPEN_UNTIL_BUILD_IDENTITIES_DEPLOYMENT_RECEIPTS_AND_REPORT_SCOPE_ARE_RECOVERED"
   }
 }
