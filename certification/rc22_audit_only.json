@@ -1,0 +1,48 @@
+{
+  "release": "RC22_META2028",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "main_merge_authorized": false,
+  "baselines": {
+    "rc21": "4ef2e3a03395accc23db8d46205333d68af16169",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "new_source_discovery": {
+    "cee_ac_26_110": "eRE/eJAVAA test report approval INDEX_ONLY",
+    "cee_ac_26_204": "JAVAA material disposal approval INDEX_ONLY",
+    "cee_ac_26_137": "2028 primaries and nominations manual approval INDEX_ONLY",
+    "signed_javaa_2028_operational_regulation": "NOT_RECOVERED",
+    "original_law39_signed_bytes": "NOT_RECOVERED_HTTP_403",
+    "full_CEE_2028_calendar": "NOT_RECOVERED",
+    "original_source_sha256_count": 0,
+    "full_calendar_event_denominator": null,
+    "full_amendment_denominator": null
+  },
+  "code": {
+    "disposable_git_rollback": "src/rc22_rollback.py",
+    "rollback_scope": "FIVE_SYNTHETIC_LOCAL_GIT_REPOS",
+    "real_producer_runtime": "NOT_TESTED",
+    "pinned_Hub_synthetic_validator": "PENDING_FINAL_CI",
+    "unit_tests": "PENDING_FINAL_CI",
+    "external_source_HTTP_live": "NOT_EXECUTED"
+  },
+  "independent_QA": {
+    "legal": "OPEN",
+    "security": "OPEN",
+    "privacy": "OPEN",
+    "evidence": "OPEN"
+  },
+  "safety": {
+    "main_writes": false,
+    "producer_writes": false,
+    "live_federation": false,
+    "public_real_case_publication": false,
+    "voter_record_access": false
+  },
+  "rollback": {
+    "exact_rc21": "4ef2e3a03395accc23db8d46205333d68af16169",
+    "requires_authorization": true,
+    "live_git_ref_mutations_not_tested": true
+  }
+}
