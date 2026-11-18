@@ -1,0 +1,91 @@
+{
+  "release": "RC20",
+  "classification": "SOURCE_DISCOVERY_AND_RECONCILIATION_NOT_BYTE_FREEZE",
+  "parent_rc19": "e163d8e5b91ce90b3197c1bc9807973ca19dd6b0",
+  "main_baseline": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+  "sources": [
+    {
+      "id": "cee_2028_statistical_guide",
+      "authority": "CEE",
+      "kind": "CANDIDATE_STATISTICAL_ORIENTATION_GUIDE_NOT_ELECTION_CALENDAR",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/2028-GUIA-ESTADISTICAS-ELECCIONES.pdf",
+      "approval_date": "2026-07-02",
+      "pages": 21,
+      "visual_review": "COVER_PAGE_VERIFIED",
+      "source_host": "ww2.ceepur.org",
+      "download_attempt": "FAILED",
+      "original_bytes_acquired": false,
+      "sha256": null
+    },
+    {
+      "id": "ley39_2026_sutra_original_pdf",
+      "authority": "OSL_SUTRA",
+      "kind": "OFFICIAL_SIGNED_LAW_DOCUMENT_LOCATOR",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.pdf",
+      "approval_date": "2026-03-10",
+      "retrieval": "HTTP_403",
+      "sha256": null,
+      "original_bytes_acquired": false
+    },
+    {
+      "id": "ley39_2026_sutra_doc",
+      "authority": "OSL_SUTRA",
+      "kind": "LEGISLATIVE_OFFICIAL_DOC_ALTERNATE_MANIFESTATION",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.doc",
+      "retrieval": "HTTP_403",
+      "sha256": null,
+      "original_bytes_acquired": false
+    },
+    {
+      "id": "ley39_2026_laws_index",
+      "authority": "OSL_SUTRA",
+      "kind": "OFFICIAL_METADATA_INDEX",
+      "url": "https://sutra.oslpr.org/prontuarios/leyes-aprobadas?page=5&per_page=50",
+      "signed_date": "2026-03-10",
+      "listed_effective_date": "2026-04-08",
+      "original_bytes_acquired": false,
+      "sha256": null
+    },
+    {
+      "id": "cee_javaa_page",
+      "authority": "CEE",
+      "kind": "CURRENT_PUBLIC_VOTING_GUIDANCE",
+      "url": "https://ww2.ceepur.org/Home/SolicituddeVoto",
+      "observed_absentee_application_window_days": 45,
+      "original_bytes_acquired": false,
+      "sha256": null
+    }
+  ],
+  "legal_conflict": {
+    "id": "ley39_effective_date",
+    "official_index_date": "2026-04-08",
+    "rc19_computed_date": "2026-04-09",
+    "claimed_clause": "30 days after signed 2026-03-10",
+    "resolution": "UNRESOLVED_ORIGINAL_SIGNED_STATUTE_AND_EFFECTIVITY_INTERPRETATION_REQUIRED",
+    "priority": "INDEX_DATE_OBSERVED_NOT_CERTIFIED_INTERPRETATION"
+  },
+  "guidance_conflict": {
+    "id": "absentee_public_guidance",
+    "cee_days": 45,
+    "compiled_law_days": 50,
+    "cee_citation": "9.35(4)",
+    "consolidated_citation": "9.36(5)",
+    "operational_javaa_2028_instructions": "NOT_LOCATED",
+    "actual_policy_or_voter_impact": "UNKNOWN",
+    "federal_ballot_transmission_45_day_rule": "DISTINCT_LEGAL_SCOPE"
+  },
+  "calendar": {
+    "complete_cee_hosted_original": "NOT_RECOVERED",
+    "original_full_calendar_sha256": null,
+    "complete_event_count": null,
+    "complete_amendment_count": null,
+    "statistical_guide_is_calendar": false
+  },
+  "closure": {
+    "records": 5,
+    "original_primary_pdf_hashes_verified": 0,
+    "fully_recovered_2028_javaa_instructions": 0,
+    "complete_2028_calendar_event_denominator": null,
+    "certification": "AUDIT_ONLY"
+  }
+}
