@@ -13,9 +13,9 @@
       "date": "2026-06-30",
       "meeting_date": "2026-06-24",
       "pages": 1,
-      "visual_status": "VISUALLY_INSPECTED",
-      "known_fact": "Unanimous approval of OSIPE eRE/eJAVAA testing report and instruction to take steps toward operation of new version; work schedule requested by PPD commissioner",
-      "missing": "actual OSIPE test report and annexes; build identifier; work schedule; deployment acceptance; independent security assessment"
+      "visual_status": "ORIGINAL_BYTES_ACQUIRED_AND_OCR_VERIFIED",
+      "known_fact": "The one-page agreement says the OSIPE test report was presented for approval; the Commission unanimously approved it and directed OSIPE to take pertinent steps to put the new eRE/eJAVAA version into operation, subject to providing the work schedule requested by the PPD electoral commissioner",
+      "missing": "underlying report/annexes; tested build identifier; requested OSIPE schedule; actual deployment and acceptance; independent security assessment"
     },
     {
       "id": "CEE-AC-26-149",
@@ -23,11 +23,10 @@
       "type": "commission_disagreement_certification",
       "date": "2026-08-27",
       "pages": 3,
-      "visual_status": "PAGES_1_TO_3_VISUALLY_INSPECTED",
+      "visual_status": "ORIGINAL_BYTES_ACQUIRED_AND_THREE_PAGES_OCR_VERIFIED",
       "raw_index_title": "CALENDARIO ELECTORAL 2028",
-      "raw_page1_subject": "CALENDARIO ELECTORAL 2026",
-      "known_fact": "Certification of disagreement concerning the 2028 calendar; PNP proposed 2028-09-20 dispatch start, circulated draft stated 2028-09-27; PPD and PIP positions differ",
-      "contradiction": "INDEX_TITLE_2028_VS_INTERNAL_SUBJECT_2026",
+      "raw_page1_subject": "CALENDARIO ELECTORAL 2028",
+      "known_fact": "Certification of disagreement concerning the 2028 calendar; the circulated calendar draft recommended 2028-09-27 and PNP proposed 2028-09-20; PPD and PIP stated separate objections",
       "identity": "NOT_THE_COMPLETE_CALENDAR"
     },
     {
@@ -55,17 +54,21 @@
       "id": "CEE-AC-25-031",
       "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-031.pdf",
       "type": "committee_evaluation_report_agreement",
-      "visual_status": "OFFICIAL_INDEX_FOUND_PDF_CACHE_MISS",
-      "known_fact": "Index title refers to evaluation committee reports for eRE, eJAVAA and SIEN",
-      "missing": "signed agreement and attached committee reports not inspected"
+      "visual_status": "ORIGINAL_BYTES_ACQUIRED_AND_OCR_VERIFIED",
+      "known_fact": "Commission unanimously adopted the special committee evaluation reports for eRE, eJAVAA and SIEN; OSIPE was instructed to have the relevant developers prepare new proposals incorporating the adopted reports for subsequent Commission consideration",
+      "missing": "the adopted committee reports themselves are not attached to the one-page agreement",
+      "date": "2025-05-01",
+      "pages": 1
     },
     {
       "id": "CEE-AC-25-009",
       "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-009.pdf",
       "type": "committee_creation_agreement",
-      "visual_status": "OFFICIAL_INDEX_FOUND_PDF_CACHE_MISS",
-      "known_fact": "Index title refers to creation of special committee to evaluate eRE, eJAVAA and SIEN",
-      "missing": "signed agreement and any scope/appointments not inspected"
+      "visual_status": "ORIGINAL_BYTES_ACQUIRED_AND_OCR_VERIFIED",
+      "known_fact": "Special committee unanimously created on 2025-02-05, composed of three representatives from each party, with 60 days to evaluate eRE, eJAVAA and SIEN and prepare a report for Commission consideration",
+      "missing": "signed agreement and any scope/appointments not inspected",
+      "date": "2025-02-06",
+      "pages": 1
     },
     {
       "id": "CEE-AC-26-113",
@@ -81,15 +84,23 @@
       "id": "LEY39_SUTRA_PDF",
       "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.pdf",
       "type": "enrolled_law_original",
-      "visual_status": "OFFICIAL_SUTRA_LINK_HTTP_403_IN_WEB_READER",
-      "missing": "original bytes, hash, effective-date clause"
+      "visual_status": "ORIGINAL_BYTES_ACQUIRED_52_PDF_PAGES_51_CONTENT_PAGES_PLUS_BLANK_LAST",
+      "missing": "original bytes, hash, effective-date clause",
+      "known_fact": "First page bears handwritten approval 2026-03-10; Section 69 on printed page 51 states the law takes effect 30 days after approval",
+      "sha256": "167bb21cc824ffcff256713cc4f3c640baa381b29c8f55c0074dbdd1df811f00",
+      "bytes": 2891957,
+      "pdf_pages": 52
     },
     {
       "id": "LEY39_SUTRA_DOC",
       "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.doc",
       "type": "enrolled_law_original_alternate",
-      "visual_status": "NOT_YET_ACQUIRED",
-      "missing": "original bytes, hash, effective-date clause"
+      "visual_status": "ORIGINAL_BYTES_ACQUIRED_AND_TEXT_EXTRACTED",
+      "missing": "original bytes, hash, effective-date clause",
+      "known_fact": "Word manifestation identifies Ley Núm. 39, dated 2026-03-10, and Section 69 provides 30 days after approval",
+      "sha256": "fb414ae1a184c81902d58d285c61034f24f378cd0900df9241ba8ed18904a7ae",
+      "bytes": 314368,
+      "pdf_pages": 51
     },
     {
       "id": "SENATE_ACTA_2026_03_12",
@@ -119,6 +130,13 @@
       "type": "official_2028_election_context_document",
       "visual_status": "SEARCH_RESULT_TEXT_INSPECTED",
       "known_fact": "CEE RFP says 2028 primaries are scheduled 2028-06-06 and general election 2028-11-07"
+    },
+    {
+      "id": "OGP_CIVIL_CODE_55_2020",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/55-2020.pdf",
+      "type": "official_compiled_civil_code",
+      "visual_status": "OFFICIAL_OGP_TEXT_INSPECTED",
+      "known_fact": "Article 29(a), 31 LPRA 5362, excludes the first day and includes the last when a period is counted in days from a specified date, unless the law provides otherwise"
     }
   ],
   "calendar_events": [
@@ -179,11 +197,15 @@
     "status": "OPEN_PARTIAL_NOT_COMPLETE"
   },
   "legal": {
-    "ley39_signed_date": "2026-03-10",
-    "signed_date_source": "Senate Acta 2026-03-12",
-    "effective_date": "UNRESOLVED",
-    "previous_index_date": "2026-04-08",
-    "prior_computed_date": "2026-04-09",
+    "ley39_signed_and_approved_date": "2026-03-10",
+    "law_source": "SUTRA original PDF and DOC first-page approval date; Senate Acta confirms Governor signed 2026-03-10",
+    "effectivity_clause": "Section 69: 30 days after approval",
+    "counting_rule": "Civil Code Article 29(a), 31 LPRA 5362: exclude first day, include last day",
+    "computed_effective_date": "2026-04-09",
+    "sutra_index_date": "2026-04-08",
+    "contradiction": "SUTRA_INDEX_2026-04-08_VS_STATUTORY_COUNT_2026-04-09",
+    "adjudication": "COMPUTED_2026-04-09_FROM_PRIMARY_LAW_AND_CIVIL_CODE_RULE",
+    "independent_legal_review": "OPEN",
     "raw_contradiction_preserved": true
   },
   "eRE_eJAVAA_release_gates": {
@@ -196,9 +218,25 @@
     "actual_consumer_validation": "OPEN"
   },
   "source_freeze": {
-    "raw_original_bytes_sha256_verified": 0,
-    "acquisition_workflow": "RC24 targeted allowlisted official-source acquisition; no bulk datasets",
-    "artifact_only": true
+    "round1": {
+      "retrieved_at_utc": "2026-11-18T22:00:42.294579Z",
+      "requested": 13,
+      "acquired": 13,
+      "blocked": 0,
+      "failed": 0,
+      "artifact_id": 14475041966,
+      "workflow_run_id": 44407273577,
+      "artifact_sha256": "60c90d6ed7245b8c219f55358c6c47976753b305c1b2b50b0f9589310e77a6c6",
+      "artifact_bytes": 15180837,
+      "retention_expires": "2027-02-16T22:00:30Z",
+      "all_13_member_hashes_verified_against_downloaded_zip": true
+    },
+    "round2": {
+      "official_ogp_civil_code_added": true,
+      "status": "PENDING_CI"
+    },
+    "retention_note": "Raw originals retained in GitHub Actions artifact with 90-day retention; source hashes and manifest are committed in Git. This is not an indefinite binary archive.",
+    "raw_original_bytes_sha256_verified": 13
   },
   "certification": "AUDIT_ONLY",
   "safety": {
