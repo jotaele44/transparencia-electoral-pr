@@ -76,6 +76,12 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
   self.assertEqual(x["actual_eRE_release_date"],"UNKNOWN")
   self.assertEqual(x["actual_eJAVAA_release_date"],"UNKNOWN")
   self.assertEqual(x["classification"],"POTENTIAL_TIME_AND_SCOPE_VARIANCE")
+ def test_mutable_html_byte_difference_not_promoted_to_content_difference(self):
+  x=self.x["manifestation_comparisons"][0]
+  self.assertNotEqual(x["round1"]["sha256"],x["round2"]["sha256"])
+  self.assertTrue(x["normalized_visible_text_equal"])
+  self.assertEqual(x["classification"],"BYTE_DIFFERENT_VISIBLE_TEXT_EQUAL")
+  self.assertIn("not proven equivalent",x["unresolved"])
  def test_acquisition_round_manifests_close(self):
   r1=json.loads((ROOT/"evidence/rc24_acquisition_round1.json").read_text())
   r2=json.loads((ROOT/"evidence/rc24_acquisition_round2.json").read_text())
