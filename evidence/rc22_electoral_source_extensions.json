@@ -1,0 +1,70 @@
+{
+  "release": "RC22",
+  "status": "AUDIT_ONLY",
+  "baseline": {
+    "rc21": "4ef2e3a03395accc23db8d46205333d68af16169",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "new_sources": [
+    {
+      "id": "cee_ac_26_110",
+      "title_raw": "APROBACIÓN INFORME DE PRUEBAS DEL SISTEMA DE eRE y eJavaa",
+      "authority": "CEE",
+      "index": "https://www.ceepur.org/acuerdos-de-comision/",
+      "source_state": "INDEXED_CEE_AGREEMENT",
+      "original_bytes_sha256": null,
+      "system_test_details": "NOT_RECOVERED",
+      "not_equivalent_to": "SIGNED_2028_JAVAA_OPERATIONAL_REGULATION"
+    },
+    {
+      "id": "cee_ac_26_204",
+      "title_raw": "REFERÉNDUM ELECTRÓNICO APROBACIÓN DECOMISO DE MATERIAL ELECTORAL DE LA JAVAA",
+      "authority": "CEE",
+      "index": "https://www.ceepur.org/acuerdos-de-comision/",
+      "source_state": "INDEXED_2026_DISPOSAL_DECISION",
+      "original_bytes_sha256": null,
+      "actual_execution_receipts": "NOT_RECOVERED",
+      "not_equivalent_to": "2024_ISABELA_SPECIFIC_DESTROYED_MATERIAL"
+    },
+    {
+      "id": "cee_ac_26_137",
+      "title_raw": "APROBACIÓN REGLAMENTO Y MANUAL DE PRIMARIAS Y MÉTODOS ALTERNOS DE NOMINACIÓN 2028",
+      "authority": "CEE",
+      "index": "https://www.ceepur.org/acuerdos-de-comision/",
+      "source_state": "INDEXED_APPROVAL",
+      "original_bytes_sha256": null,
+      "scope": "2028_PRIMARIES_AND_NOMINATION_NOT_JAVAA_GENERAL_ELECTION"
+    },
+    {
+      "id": "cee_rs_26_010",
+      "title_raw": "CALENDARIO ELECTORAL 2028",
+      "authority": "CEE",
+      "index": "https://www.ceepur.org/resoluciones-de-comision/",
+      "source_state": "SIGNATURE_DOCUMENT_PREVIOUSLY_INSPECTED_8_PAGES",
+      "original_bytes_sha256": null,
+      "scope": "LIMITED_2028_ADVANCE_MAILING_RESOLUTION_NOT_FULL_CALENDAR"
+    }
+  ],
+  "source_priority": [
+    "SIGNED_ORIGINAL_LEY39_2026",
+    "CURRENT_2028_JAVAA_APPROVED_REGULATION",
+    "CEE_HOSTED_COMPLETE_2028_ELECTION_CALENDAR",
+    "PRODUCER_RUNTIMES"
+  ],
+  "claims": {
+    "actual_signed_law_retrieved": false,
+    "actual_javaa_2028_instructions_retrieved": false,
+    "complete_calendar_retrieved": false,
+    "original_sha256_verified": 0,
+    "material_event_denominator": null,
+    "amendment_denominator": null,
+    "executed_cross_repo_runtime": false,
+    "original_pdfs_downloaded": 0
+  },
+  "legal_conflict": {
+    "SUTRA_index_effective_date": "2026-04-08",
+    "calendar_arithmetic_date": "2026-04-09",
+    "resolution": "OPEN"
+  },
+  "certification": "AUDIT_ONLY"
+}
