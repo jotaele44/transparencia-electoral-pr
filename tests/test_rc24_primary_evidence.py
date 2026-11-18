@@ -47,6 +47,8 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
   self.assertIn("three representatives",rows["CEE-AC-25-009"]["known_fact"])
   self.assertIn("unanimously adopted",rows["CEE-AC-25-031"]["known_fact"])
   self.assertIn("not attached",rows["CEE-AC-25-031"]["missing"])
+  self.assertIn("remained usable",rows["CEE-AC-25-037-APPROVED-MINUTES"]["known_fact"])
+  self.assertIn("do not substitute",rows["CEE-AC-25-037-APPROVED-MINUTES"]["scope_limit"])
  def test_source_ids_unique_and_urls_official(self):
   ids=[r["id"] for r in self.x["source_records"]]
   self.assertEqual(len(ids),len(set(ids)))
