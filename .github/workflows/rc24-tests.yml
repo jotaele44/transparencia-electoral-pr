@@ -1,0 +1,21 @@
+name: RC24 isolated evidence regressions
+on:
+  push:
+    branches:
+      - dev/rc24-primary-record-recovery
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rc24-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run complete repository test suite
+        run: python3 -m unittest discover -s tests -v
