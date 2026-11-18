@@ -20,8 +20,8 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
  def test_calendar_identity_contradiction_preserved(self):
   s={r["id"]:r for r in self.x["source_records"]}["CEE-AC-26-149"]
   self.assertEqual(s["raw_index_title"],"CALENDARIO ELECTORAL 2028")
-  self.assertEqual(s["raw_page1_subject"],"CALENDARIO ELECTORAL 2026")
-  self.assertEqual(s["contradiction"],"INDEX_TITLE_2028_VS_INTERNAL_SUBJECT_2026")
+  self.assertEqual(s["raw_page1_subject"],"CALENDARIO ELECTORAL 2028")
+  self.assertNotIn("contradiction",s)
   self.assertEqual(s["identity"],"NOT_THE_COMPLETE_CALENDAR")
  def test_eRE_schedule_not_eJAVAA_deployment(self):
   s={r["id"]:r for r in self.x["source_records"]}["CEE-AC-25-112"]
@@ -33,11 +33,20 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
   self.assertEqual(g["system_build_and_release_id"],"OPEN")
   self.assertEqual(g["actual_deployment_and_acceptance"],"OPEN")
   self.assertEqual(g["independent_cybersecurity_assessment"],"OPEN")
- def test_law_signing_not_effective_date(self):
+ def test_law_effectivity_uses_exclusive_first_day_rule(self):
   x=self.x["legal"]
-  self.assertEqual(x["ley39_signed_date"],"2026-03-10")
-  self.assertEqual(x["effective_date"],"UNRESOLVED")
+  self.assertEqual(x["ley39_signed_and_approved_date"],"2026-03-10")
+  self.assertEqual(x["effectivity_clause"],"Section 69: 30 days after approval")
+  self.assertIn("exclude first day",x["counting_rule"])
+  self.assertEqual(x["computed_effective_date"],"2026-04-09")
+  self.assertEqual(x["sutra_index_date"],"2026-04-08")
   self.assertTrue(x["raw_contradiction_preserved"])
+  self.assertEqual(x["independent_legal_review"],"OPEN")
+ def test_committee_evaluation_chain_is_not_the_report_itself(self):
+  rows={r["id"]:r for r in self.x["source_records"]}
+  self.assertIn("three representatives",rows["CEE-AC-25-009"]["known_fact"])
+  self.assertIn("unanimously adopted",rows["CEE-AC-25-031"]["known_fact"])
+  self.assertIn("not attached",rows["CEE-AC-25-031"]["missing"])
  def test_source_ids_unique_and_urls_official(self):
   ids=[r["id"] for r in self.x["source_records"]]
   self.assertEqual(len(ids),len(set(ids)))
