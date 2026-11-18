@@ -1,43 +1,27 @@
-STATUS: RC19_META2028_AUDIT_ONLY; SOFTWARE_AND_PINNED_HUB_TESTS_PASS; EVIDENCE_CERTIFICATION_OPEN
-REPOSITORY: jotaele44/transparencia-electoral-pr
-BRANCH: dev/rc19-legal-source-http
-PRESERVED_RC18: cceea9dea0dcb75edbac29d6307293234f719f59
+STATUS: RC20_AUDIT_ONLY; SOURCE_AND_INDEPENDENT_CERTIFICATION_BLOCKED
+REPO: jotaele44/transparencia-electoral-pr
+BRANCH: dev/rc20-2028-source-hardening
+PRESERVED_RC19: e163d8e5b91ce90b3197c1bc9807973ca19dd6b0
 PRESERVED_MAIN: b90b4e78f3e6cd66f5e78d508ad590a15e569eb0
-UNIT_AND_NEGATIVE_TESTS: 422/422 PASS; RUN 44047443193
-PINNED_PRODUCER_SCHEMA_COMPATIBILITY: PASS; RUN 44047443208
-PINNED_THEHUB_ACTUAL_VALIDATE_PACKAGE: PASS; RUN 44047443143
-CENTINELAS_PIN: 3b80bb5e5bae3df1d1a358ffc250d42887132991; signal schema and source-monitor export interface pass
-MONEYSWEEP_PIN: c26b5028fd42a653eacb2bca48fd3ec8589d2a0f; ready_for_hub_live_execution=false; source_monitors stream unsupported by pinned export manifest schema; DO NOT ACTIVATE
-SPIDERWEB_PIN: 9c37b42926e6d401e80598221162a4664f2202d0; source-monitor schema blob identical to pinned Hub; fixture pass
-THEHUB_PIN: b7a60e613fecb36448c719651625892b2bded565; source/observation/source-monitor runtime validator pass with negative corruption/count tests
-LEY_39_2026: official SUTRA record PS0717 found; enacted PDF URL resolves to HTTP 403; original bytes and SHA256 NOT ACQUIRED
-LEY_39_SECTION_45: former Article 9.35(5) 50-day absentee application deadline
-LEY_39_SECTION_49: renumbers former Article 9.35 to current Article 9.36; current citation 9.36(5)
-LEY_39_SECTION_69: effective 30 days after 2026-03-10 approval; computed 2026-04-09, legal date review OPEN
-CEE_JAVAA_PAGE: stale 45-day application statement and old Article 9.35(4) citation
-FEDERAL_UOCAVA: 52 USC 20302(a)(8) 45-day ballot transmission rule is distinct from PR 50-day application deadline
-CURRENT_JAVAA_2028_RULE_OR_MANUAL: NOT LOCATED IN BOUNDED CEE INDEX/SEARCH; 2024 regulation is historical scope only
-OFFICIAL_CEE_RS_26_010: signed 8-page 2028 resolution located; advance-mail start by 2028-09-20 and finish by 2028-10-03
-OFFICIAL_CEE_AC_26_149: 3-page disagreement record; title says 2026 while listing/substance concerns 2028; contradiction retained
-COMPLETE_CEE_HOSTED_2028_CALENDAR: NOT LOCATED
-FULL_EVENT_AND_AMENDMENT_DENOMINATORS: UNKNOWN
-ORIGINAL_PRIMARY_BYTES_ACQUIRED: 0
-ORIGINAL_PRIMARY_SHA256_VERIFIED: 0
-READ_ONLY_HTTP_ADAPTER: src/rc19_http.py; explicit call only, GET, exact host allowlist, HTTPS, redirects blocked, 10 MB, 30 sec, ETag/Last-Modified
-LIVE_CEE_OR_SUTRA_HTTP_POLL: NOT PERFORMED; adapter uses mocked responses only
-CROSS_REPO_RUNTIME: Centinelas/Spiderweb exporters not executed; TheHub pinned validator executed; MoneySweep blocked by declared readiness/schema
-ROLLBACK_TEST: OPEN
-INDEPENDENT_LEGAL_SECURITY_PRIVACY_EVIDENCE_QA: NOT PERFORMED
-NO_REAL_VOTER_DATA: TRUE
-NO_PRODUCER_REPOSITORY_WRITES: TRUE
-NO_MAIN_WRITES: TRUE
-NO_PRODUCTION_ACTIVATION_OR_ALERTS: TRUE
-AUDIT_LEDGER: certification/rc19_audit_only.json
-PRIMARY_SOURCE_REGISTER: evidence/rc19_primary_source_register.json
-CROSS_REPO_AUDIT: evidence/rc19_cross_repo_contract_audit.json
-HTTP_CONTRACT: contracts/rc19_http_readonly_contract.json
-LEGAL_REPORT: docs/RC19_LEGAL_SOURCE_AUDIT.md
-TEST_COMMAND: python3 -m unittest discover -s tests -v
-ROLLBACK: Explicit authorization and lease check required; restore RC18 exact HEAD cceea9dea0dcb75edbac29d6307293234f719f59; NEVER MODIFY MAIN.
-RELEASE: BLOCKED; do not merge or deploy.
-NEXT: acquire official signed Ley39 PDF bytes; recover operative JAVAA 2028 manual; recover full official calendar and amendments; run approved live read-only network acquisition; test pinned Centinelas/Spiderweb runtimes; resolve MoneySweep schema/readiness through its own authorized workflow; test rollback; independent QA.
+CEE_2028_STATISTICAL_ORIENTATION_GUIDE: DISTINCT_CEE_PRIMARY_DOCUMENT; 21 pages, cover approved 2026-07-02; NOT FULL 2028 CALENDAR
+CEE_GUIDE: https://ww2.ceepur.org/sites/ComisionEE/es-pr/Documents/2028-GUIA-ESTADISTICAS-ELECCIONES.pdf
+CEE_GUIDE_ORIGINAL_BYTES: TARGETED_DOWNLOAD_FAILED; SHA256 NULL
+SIGNED_LEY39_2026_PDF_AND_DOC: SUTRA official links 403; SHA256 NULL
+LAW39_EFFECTIVE_DATE: SUTRA_INDEX_2026-04-08 vs RC19_COMPUTED_2026-04-09; CONFLICT OPEN
+CEE_2028_JAVAA_OPERATIVE_INSTRUCTIONS: NOT RECOVERED
+CEE_PUBLIC_ABSENTEE_APPLICATION_45_DAYS_VS_OGP_CURRENT_LAW_50_DAYS: TEXT DIFFERENCE NOT ENFORCEMENT FINDING
+FEDERAL_UOCAVA_45_DAYS: BALLOT TRANSMISSION; DIFFERENT SCOPE FROM APPLICATION
+COMPLETE_CEE_2028_CALENDAR: NOT ACQUIRED
+FULL_CALENDAR_EVENT_AND_AMENDMENT_DENOMINATORS: UNKNOWN
+ORIGINAL_SOURCE_PDF_SHA256_VERIFIED: ZERO
+AUTHORITY_LEDGER: evidence/rc20_authority_ledger.json
+SOFTWARE: src/rc20_authority.py (pure classification); inherited RC19 HTTP mock tests
+INDEPENDENT_QA: NOT PERFORMED
+REAL_CENTINELAS_SPIDERWEB_MONEYSWEEP_RUNTIME: NOT EXECUTED
+CROSS_REPO_ROLLBACK: NOT EXECUTED
+AUDIT: certification/rc20_audit_only.json
+TEST: python3 -m unittest discover -s tests -v
+PINNED_THEHUB: existing RC19 synthetic package tests
+NO_PRODUCTION_WRITES_OR_MAIN_MERGE_OR_PUBLIC_UNREVIEWED_FINDINGS
+ROLLBACK: exact RC19 SHA only with separate authorization and lease check; NEVER MODIFY MAIN
+NEXT: obtain signed Ley39 original; independent legal effective-date reconciliation; collect operative JAVAA; acquire CEE calendar & hashes; real pinned consumer tests and rollback; independent QA
