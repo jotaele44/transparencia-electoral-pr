@@ -1,0 +1,146 @@
+{
+  "release": "RC21",
+  "classification": "DISCOVERY_ONLY_ORIGINAL_BYTE_FREEZE_OPEN",
+  "baseline": {
+    "rc20": "8775499abea221afdf73e76dbf831547d12faeff",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "sources": [
+    {
+      "id": "sutra_ley39_2026_record",
+      "authority": "OSL_SUTRA",
+      "type": "OFFICIAL_LEGISLATIVE_RECORD",
+      "url": "https://sutra.oslpr.org/prontuarios/leyes-aprobadas/158328",
+      "status": "LIVE_INDEX_RETRIEVED",
+      "law": "39-2026",
+      "bill": "PS0717",
+      "signed_date": "2026-03-10",
+      "file_original_bytes": false,
+      "sha256": null
+    },
+    {
+      "id": "sutra_ley39_2026_enacted_pdf",
+      "authority": "OSL_SUTRA",
+      "type": "OFFICIAL_PDF_MANIFESTATION",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.pdf",
+      "retrieval": "HTTP_403_PREVIOUS; CURRENT_CONTAINER_CONNECTION_ERROR",
+      "file_original_bytes": false,
+      "sha256": null
+    },
+    {
+      "id": "sutra_ley39_2026_enacted_doc",
+      "authority": "OSL_SUTRA",
+      "type": "OFFICIAL_DOC_MANIFESTATION",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.doc",
+      "retrieval": "HTTP_403_PREVIOUS",
+      "file_original_bytes": false,
+      "sha256": null
+    },
+    {
+      "id": "sutra_ley39_2026_laws_index",
+      "authority": "OSL_SUTRA",
+      "type": "OFFICIAL_EFFECTIVE_DATE_METADATA",
+      "url": "https://sutra.oslpr.org/prontuarios/leyes-aprobadas?page=5&per_page=50",
+      "indexed_effective_date": "2026-04-08",
+      "file_original_bytes": false,
+      "sha256": null
+    },
+    {
+      "id": "ogp_law58_code_2026_05_07",
+      "authority": "OGP",
+      "type": "OFFICIAL_CONSOLIDATED_CODE_SNAPSHOT",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf",
+      "revision": "2026-05-07",
+      "original_bytes": false,
+      "sha256": null,
+      "identity": "SOURCE_VERSION_NOT_EQUIVALENT_TO_NOVEMBER"
+    },
+    {
+      "id": "ogp_law58_code_2026_06_11",
+      "authority": "OGP",
+      "type": "OFFICIAL_CONSOLIDATED_CODE_SNAPSHOT",
+      "url": "https://bvirtualogp.pr.gov/ogp/BVirtual/LeyesOrganicas/pdf/58-2020.pdf",
+      "revision": "2026-06-11",
+      "original_bytes": false,
+      "sha256": null,
+      "identity": "SOURCE_VERSION_NOT_EQUIVALENT_TO_NOVEMBER"
+    },
+    {
+      "id": "ogp_law58_code_2026_11_04",
+      "authority": "OGP",
+      "type": "OFFICIAL_CONSOLIDATED_CODE_SNAPSHOT",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/58-2020.pdf?ID=7632",
+      "revision": "2026-11-04",
+      "original_bytes": false,
+      "sha256": null,
+      "notes": "Source text says earlier 2026-10-13 manifestation had correction issues",
+      "identity": "CURRENT_METADATA_VERSION_NOT_BYTES_VERIFIED"
+    },
+    {
+      "id": "cee_javaa_public_guidance",
+      "authority": "CEE",
+      "type": "OFFICIAL_PUBLIC_VOTING_GUIDANCE",
+      "url": "https://ww2.ceepur.org/Home/SolicituddeVoto",
+      "absentee_application_days": 45,
+      "article": "9.35(4)",
+      "original_bytes": false,
+      "sha256": null
+    },
+    {
+      "id": "cee_2024_javaa_historical_regulation",
+      "authority": "CEE",
+      "type": "HISTORICAL_SCOPE_ONLY",
+      "url": "https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Documents/Reglamento%20de%20Voto%20Ausente%20y%20Voto%20Adelantado%20de%20Primarias%202024%20y%20Elecciones%20Generales%202024.pdf",
+      "status": "DOES_NOT_ESTABLISH_2028_OPERATIVE_POLICY",
+      "original_bytes": false,
+      "sha256": null
+    },
+    {
+      "id": "cee_2028_calendar_candidate",
+      "authority": "CEE_TITLED_PIP_HOSTED",
+      "type": "SECONDARY_HOSTED_CALENDAR_PDF",
+      "url": "https://www-static.comisionadoelectoralpip.com/wp-content/uploads/2026/10/Calendario-Electoral-Revisado-29-09-2026.pdf",
+      "revision": "2026-09-29",
+      "retrieval": "WEB_TEXT_ONLY; CURRENT_CONTAINER_CONNECTION_ERROR",
+      "original_bytes": false,
+      "sha256": null,
+      "authoritative_completeness": "UNKNOWN"
+    }
+  ],
+  "legal_disputes": [
+    {
+      "id": "effective_date",
+      "claim_a": "SUTRA 2026-04-08",
+      "claim_b": "RC19 date arithmetic 2026-04-09",
+      "status": "OPEN_SUTRA_ORIGINAL_FILE_UNAVAILABLE",
+      "rule": "DO_NOT_REPLACE_ORIGINAL_LEGAL_WORDING_WITH_ARITHMETIC"
+    },
+    {
+      "id": "application_versus_transmission",
+      "claim_a": "CEE public absentee application 45 days",
+      "claim_b": "2026-11-04 OGP code absentee application 50 days",
+      "status": "PUBLICATION_DIFFERENCE_NOT_VIOLATION",
+      "federal_uocava_transmission_rule": "SEPARATE_POPULATION_AND_OBLIGATION"
+    },
+    {
+      "id": "version_identity",
+      "claim_a": "OGP May 2026 compilation",
+      "claim_b": "OGP November 2026 compilation",
+      "status": "DIFFERENT_DATED_SOURCE_MANIFESTATIONS; BYTE_RELATION_UNKNOWN"
+    }
+  ],
+  "denominators": {
+    "discovered_source_manifestations": 10,
+    "full_legislative_version_denominator": null,
+    "full_cee_calendar_event_denominator": null,
+    "full_cee_amendment_denominator": null,
+    "original_sha256_verified": 0,
+    "certification": "AUDIT_ONLY"
+  },
+  "acquisition": {
+    "method": "TARGETED_OFFICIAL_DOC_LOCATORS_ONLY",
+    "bulk_downloads": 0,
+    "targeted_originals_recovered": 0,
+    "live_http_source_monitor_activated": false
+  }
+}
