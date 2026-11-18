@@ -290,5 +290,23 @@
     "actual_eRE_release_date": "UNKNOWN",
     "actual_eJAVAA_release_date": "UNKNOWN",
     "adjudication": "OPEN_UNTIL_BUILD_IDENTITIES_DEPLOYMENT_RECEIPTS_AND_REPORT_SCOPE_ARE_RECOVERED"
-  }
+  },
+  "manifestation_comparisons": [
+    {
+      "source_id": "CEE_JAVAA_PUBLIC_GUIDANCE",
+      "round1": {
+        "bytes": 45288,
+        "sha256": "2e611a70dcc5014de26239656f0c057680a6e53f460c949d296652366b6bbd12"
+      },
+      "round2": {
+        "bytes": 45288,
+        "sha256": "1a1f03ed63f0a27f69acb175fff833c72c4b76b6c8c8f3a6c41c34e8342c6c5d"
+      },
+      "comparison_method": "Remove script/style blocks, strip HTML tags, collapse whitespace, hash resulting visible text",
+      "normalized_visible_text_sha256": "f26adfb4d4cccbf1c177b3843c400677572c473de6aaf0e076547593698251eb",
+      "normalized_visible_text_equal": true,
+      "classification": "BYTE_DIFFERENT_VISIBLE_TEXT_EQUAL",
+      "unresolved": "HTML attributes, scripts, DOM semantics and hidden content not proven equivalent"
+    }
+  ]
 }
