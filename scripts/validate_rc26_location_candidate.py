@@ -6,6 +6,7 @@ SHA pins; evaluates candidate administrative location in memory only.
 import argparse,importlib.util,json,subprocess,sys
 from pathlib import Path
 from jsonschema import Draft7Validator
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"src"))
 from rc26_location_contract import candidate_observation_schema,candidate_receipt
 
 PINS={"centinelas":"3b80bb5e5bae3df1d1a358ffc250d42887132991",
