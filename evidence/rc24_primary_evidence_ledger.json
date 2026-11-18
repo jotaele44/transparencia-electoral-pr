@@ -135,8 +135,9 @@
       "id": "OGP_CIVIL_CODE_55_2020",
       "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/55-2020.pdf",
       "type": "official_compiled_civil_code",
-      "visual_status": "OFFICIAL_OGP_TEXT_INSPECTED",
-      "known_fact": "Article 29(a), 31 LPRA 5362, excludes the first day and includes the last when a period is counted in days from a specified date, unless the law provides otherwise"
+      "visual_status": "OFFICIAL_OGP_WEB_TEXT_INSPECTED_CI_ORIGINAL_BYTES_FAILED",
+      "known_fact": "Article 29(a), 31 LPRA 5362, excludes first day and includes last day for periods counted in days from a specified date; official OGP text visually/textually inspected, original bytes not acquired in RC24 CI round 2",
+      "acquisition_status": "FAILED_CONNECTION_REFUSED_NO_HASH"
     },
     {
       "id": "CEE-AC-25-037-APPROVED-MINUTES",
@@ -144,9 +145,12 @@
       "type": "approved_commission_minutes_with_annexes",
       "approval_date": "2025-05-08",
       "meeting_date": "2025-04-30",
-      "visual_status": "OFFICIAL_WEB_TEXT_INSPECTED_ORIGINAL_BYTES_PENDING_ROUND2",
-      "known_fact": "Approved 2025-04-30 minutes record OSIPE director's explanation of eRE/eJAVAA/SIEN; committee recommendations were discussed with providers; OSIPE stated eRE/eJAVAA platforms remained usable while improvements were developed; new database build and sequential JIP installation were described as taking approximately two weeks after Registry cleanup; Commission unanimously adopted committee reports and requested new developer proposals",
-      "scope_limit": "MINUTES SUMMARIZE COMMITTEE REPORTS BUT DO NOT SUBSTITUTE FOR THE UNDERLYING COMMITTEE REPORTS OR THE 2026 OSIPE TEST REPORT"
+      "visual_status": "ORIGINAL_BYTES_ACQUIRED_39_PAGES_AND_WEB_TEXT_INSPECTED",
+      "known_fact": "Approved 2025-04-30 minutes record OSIPE director's explanation of eRE/eJAVAA/SIEN; committee recommendations were discussed with providers; OSIPE stated eRE/eJAVAA platforms remained usable while improvements were developed; new database build and sequential JIP installation were described as taking approximately two weeks after Registry cleanup; Commission unanimously adopted committee reports and requested new developer proposals; approved 2025-05-08 minute notes modification to page 25 of 2025-04-30 minutes; final approved version is available but preapproval draft/modification diff not recovered",
+      "scope_limit": "MINUTES SUMMARIZE COMMITTEE REPORTS BUT DO NOT SUBSTITUTE FOR THE UNDERLYING COMMITTEE REPORTS OR THE 2026 OSIPE TEST REPORT",
+      "sha256": "24f00626145b46ecab6d0604ed4bd3fa1f74de53c3e6e68143cbe5b5311371a1",
+      "bytes": 8600497,
+      "pdf_pages": 39
     }
   ],
   "calendar_events": [
@@ -242,12 +246,24 @@
       "all_13_member_hashes_verified_against_downloaded_zip": true
     },
     "round2": {
-      "official_ogp_civil_code_added": true,
-      "cee_ac_25_037_approved_minutes_added": true,
-      "status": "PENDING_CI"
+      "retrieved_at_utc": "2026-11-18T22:11:48.367531Z",
+      "workflow_run_id": 44408980803,
+      "workflow_commit": "1b96ecf4215d1d82020d942af7aae308b7bc4db6",
+      "requested": 15,
+      "acquired": 14,
+      "blocked": 0,
+      "failed": 1,
+      "failed_source": "OGP-CIVIL-CODE-55-2020",
+      "failure": "URLError: connection refused",
+      "artifact_id": 14475213513,
+      "artifact_sha256": "553be37c5b5931b1c0e6ff92c652d102c5527772aadf4a4dac32e429fccf95cf",
+      "artifact_bytes": 23556527,
+      "retention_expires": "2027-02-16T22:10:33Z",
+      "all_14_acquired_member_hashes_verified_against_downloaded_zip": true,
+      "includes": "CEE-AC-25-037 approved minutes and 13 previously acquired records"
     },
     "retention_note": "Raw originals retained in GitHub Actions artifact with 90-day retention; source hashes and manifest are committed in Git. This is not an indefinite binary archive.",
-    "raw_original_bytes_sha256_verified": 13
+    "raw_original_bytes_sha256_verified": 14
   },
   "certification": "AUDIT_ONLY",
   "safety": {
