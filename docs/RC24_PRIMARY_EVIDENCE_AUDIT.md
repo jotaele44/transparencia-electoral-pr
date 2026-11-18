@@ -1,7 +1,7 @@
 # RC24 — Primary-source recovery: eJAVAA, Ley 39-2026 and 2028 calendar
 
 ## Baselines
-RC23 `8d2d4b91b80a95d1517f4f5a2008663417f5f4b` (verify against GitHub branch before use); main `b90b4e78f3e6cd66f5f78d508ad590a15e569eb0`. RC24 isolated branch only.
+RC23 `8d2d4b91b80a95d1517f4f5a2008663410d5b513` (verify against GitHub branch before use); main `b90b4e78f3e6cd66f5f78d508ad590a15e569eb0`. RC24 isolated branch only.
 
 ## New calendar primary evidence
 CEE-AC-26-149 (27 Aug 2026) is a certification of disagreement. The public index title says "CALENDARIO ELECTORAL 2028"; page 1 internally says "ASUNTO: CALENDARIO ELECTORAL 2026", while the body debates 2028 dispatch dates. Preserve this NAME contradiction. It is not itself a complete calendar.
