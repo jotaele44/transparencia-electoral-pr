@@ -1,0 +1,147 @@
+{
+  "release": "RC24",
+  "acquisition_round": 2,
+  "workflow_run_id": 44408980803,
+  "workflow_commit": "1b96ecf4215d1d82020d942af7aae308b7bc4db6",
+  "retrieved_at_utc": "2026-11-18T22:11:48.367531Z",
+  "artifact": {
+    "id": 14475213513,
+    "name": "rc24-official-primary-source-snapshot",
+    "bytes": 23556527,
+    "sha256": "553be37c5b5931b1c0e6ff92c652d102c5527772aadf4a4dac32e429fccf95cf",
+    "retention_expires": "2027-02-16T22:10:33Z",
+    "url": "https://github.com/jotaele44/transparencia-electoral-pr/actions/runs/44408980803/artifacts/14475213513"
+  },
+  "counts": {
+    "requested": 15,
+    "acquired": 14,
+    "blocked": 0,
+    "failed": 1,
+    "acquired_member_hashes_verified_against_zip": 14
+  },
+  "sources": [
+    {
+      "id": "CEE-AC-26-110",
+      "bytes": 251983,
+      "sha256": "a07cd66e5e3cdf471902faa07489c0e2329f7be2b7126046bf601aecd95ab962",
+      "pdf_pages": 1,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-AC-26-149",
+      "bytes": 573732,
+      "sha256": "83e5dbd409845c5f17d053f9a78e40daccc020e8cd3f6dbbe7e34058cda9330d",
+      "pdf_pages": 3,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-RS-26-010",
+      "bytes": 5120451,
+      "sha256": "6ace06f855cd897c4671af81c6628388ef8e445c7da3ad6e0f491682f9c66bc2",
+      "pdf_pages": 8,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-AC-25-112",
+      "bytes": 5387300,
+      "sha256": "7ff9ac5c3a33810d7fb94e04a811c0f55b39aceb9db342844df6a3b45960a408",
+      "pdf_pages": 21,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-AC-25-031",
+      "bytes": 247657,
+      "sha256": "2935f7527def929c9d5e3633f42918dea065341487f0d817ef1ab8bc407f5bd4",
+      "pdf_pages": 1,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-AC-25-009",
+      "bytes": 281129,
+      "sha256": "527e633ab0e770e9eefd95b6e57d4540911ff4578d4933fb0789e04255816113",
+      "pdf_pages": 1,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-AC-25-037-APPROVED-MINUTES",
+      "bytes": 8600497,
+      "sha256": "24f00626145b46ecab6d0604ed4bd3fa1f74de53c3e6e68143cbe5b5311371a1",
+      "pdf_pages": 39,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-AC-26-113",
+      "bytes": 214823,
+      "sha256": "04ed057936798c9bb75529d08e0397b1f494a4ff23f170c2e719f2c0c21c3718",
+      "pdf_pages": 1,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "SENATE-ACTA-2026-03-12",
+      "bytes": 405276,
+      "sha256": "6d8552395adb22cd319b0f8b38c8adb149416ed5384e3f8ab556743c100a3010",
+      "pdf_pages": 52,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "LEY39-SUTRA-PDF",
+      "bytes": 2891957,
+      "sha256": "167bb21cc824ffcff256713cc4f3c640baa381b29c8f55c0074dbdd1df811f00",
+      "pdf_pages": 52,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "LEY39-SUTRA-DOC",
+      "bytes": 314368,
+      "sha256": "fb414ae1a184c81902d58d285c61034f24f378cd0900df9241ba8ed18904a7ae",
+      "pdf_pages": null,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-2028-REGULATIONS-INDEX",
+      "bytes": 8005,
+      "sha256": "d82d71ed4fc1f94b68ed1151e7b84a8455a51ca69bb740fad37cd0322f24f20a",
+      "pdf_pages": null,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-JAVAA-PUBLIC-GUIDANCE",
+      "bytes": 45288,
+      "sha256": "1a1f03ed63f0a27f69acb175fff833c72c4b76b6c8c8f3a6c41c34e8342c6c5d",
+      "pdf_pages": null,
+      "status": "ACQUIRED",
+      "http_status": 200
+    },
+    {
+      "id": "CEE-2028-RFP-CALENDAR-CONTEXT",
+      "bytes": 1464935,
+      "sha256": "43567daaac711be2c2bb0494c45e46e7abfd033be4df9cce4c65f2119599250f",
+      "pdf_pages": 105,
+      "status": "ACQUIRED",
+      "http_status": 200
+    }
+  ],
+  "failed": [
+    {
+      "id": "OGP-CIVIL-CODE-55-2020",
+      "url": "https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/55-2020.pdf",
+      "status": "FAILED",
+      "http_status": null,
+      "sha256": null,
+      "error": "URLError: connection refused",
+      "independent_web_text_ref": "turn320876view0"
+    }
+  ]
+}
