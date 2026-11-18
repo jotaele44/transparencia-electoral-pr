@@ -308,5 +308,61 @@
       "classification": "BYTE_DIFFERENT_VISIBLE_TEXT_EQUAL",
       "unresolved": "HTML attributes, scripts, DOM semantics and hidden content not proven equivalent"
     }
+  ],
+  "cross_repo_validation": {
+    "run_id": 44411294623,
+    "commit": "f5c1615002008ae4a4670b94690878d430493761",
+    "conclusion": "SUCCESS_WITH_DOCUMENTED_SCHEMA_BLOCKER",
+    "pins": {
+      "centinelas": "3b80bb5e5bae3df1d1a358ffc250d42887132991",
+      "spiderweb": "9c37b42926e6d401e80598221162a4664f2202d0",
+      "thehub": "b7a60e613fecb36448c719651625892b2bded565",
+      "shared_helpers": "0f62e4bdde10b5ac82787a329d6f15481ab9c7f0"
+    },
+    "tests": {
+      "centinelas_full_cli": "EXECUTED_SYNTHETIC",
+      "centinelas_municipality_location": "PINNED_HUB_REJECTED_LOCATION_WITHOUT_LAT_LON",
+      "centinelas_no_location_variant": "PINNED_HUB_PASS",
+      "spiderweb_full_cli": "PINNED_HUB_PASS_SYNTHETIC",
+      "centinelas_synthetic_production_guard": "PASS_REJECTED",
+      "spiderweb_synthetic_production_guard": "PASS_REJECTED",
+      "hub_corruption_detection": "PASS_BOTH_PACKAGES",
+      "disposable_snapshot_rollback": "PASS_BOTH_PACKAGES"
+    },
+    "counts": {
+      "centinelas_source_rows": 1,
+      "centinelas_observation_rows": 1,
+      "centinelas_source_monitor_rows": 1,
+      "spiderweb_source_rows": 1,
+      "spiderweb_entities_minimum": 2,
+      "spiderweb_relationship_rows": 1
+    },
+    "boundaries": {
+      "synthetic_only": true,
+      "empty_spiderweb_source_registries_in_disposable_copy": true,
+      "live_polling": false,
+      "real_voter_data": false,
+      "producer_repo_writes": false,
+      "hub_repo_writes": false,
+      "production_activation": false,
+      "full_federation_runtime": false,
+      "moneysweep": "NOT_TESTED_PINNED_READINESS_BLOCKED"
+    }
+  },
+  "schema_conflicts": [
+    {
+      "id": "CENTINELAS_LOCATION_VS_HUB_SCHEMA",
+      "producer": "centinelas-pr",
+      "producer_commit": "3b80bb5e5bae3df1d1a358ffc250d42887132991",
+      "consumer": "thehub-pr",
+      "consumer_commit": "b7a60e613fecb36448c719651625892b2bded565",
+      "producer_behavior": "Centinelas exporter emits observation.location={municipality:<name>} when municipality exists but has no coordinates",
+      "consumer_behavior": "Pinned TheHub schema requires location.lat and location.lon whenever location object is present",
+      "observed_result": "Hub rejects the actual synthetic Centinelas package with two required-property errors; same exporter package without location passes",
+      "classification": "SCHEMA_CONTRACT_CONFLICT",
+      "status": "OPEN_BLOCKER",
+      "prohibited_fix": "DO_NOT_SYNTHESIZE_CENTROIDS_OR_COORDINATES; DO_NOT_MODIFY_UPSTREAM_REPOS_WITHOUT_AUTHORIZATION",
+      "decision_required": "Either define an explicit municipality-only administrative location contract in Hub schemas/consumer, or change producer to emit a separate non-geometric administrative-location field; preserve geospatial coordinates as unknown"
+    }
   ]
 }
