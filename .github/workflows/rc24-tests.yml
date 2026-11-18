@@ -1,8 +1,8 @@
-name: RC24 isolated evidence regressions
+name: RC25 isolated evidence regressions
 on:
   push:
     branches:
-      - dev/rc24-primary-record-recovery
+      - dev/rc25-primary-date-adjudication
   workflow_dispatch:
 permissions:
   contents: read
