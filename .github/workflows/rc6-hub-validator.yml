@@ -1,4 +1,4 @@
-name: RC20 META2028 pinned Hub integration
+name: RC21 META2028 pinned Hub integration
 on:
   push:
     branches:
@@ -17,6 +17,7 @@ on:
       - dev/rc18-source-legal-diff
       - dev/rc19-legal-source-http
       - dev/rc20-2028-source-hardening
+      - dev/rc21-legal-calendar-evidence
   workflow_dispatch:
 permissions:
   contents: read
