@@ -1,0 +1,58 @@
+{
+  "release": "RC21_META2028",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "merge_authorized": false,
+  "baseline": {
+    "rc20": "8775499abea221afdf73e76dbf831547d12faeff",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "branch": "dev/rc21-legal-calendar-evidence"
+  },
+  "verified_sources": {
+    "sutra_enacted_record": "FOUND",
+    "sutra_original_pdf": "UNAVAILABLE_HTTP403_AND_CONTAINER_CONNECTION_ERROR",
+    "sutra_original_doc": "UNAVAILABLE_HTTP403",
+    "ogp_compilations": [
+      "2026-05-07",
+      "2026-06-11",
+      "2026-11-04"
+    ],
+    "dated_source_manifestations_distinct": true,
+    "official_sutra_effective_metadata_date": "2026-04-08",
+    "computed_effective_date": "2026-04-09",
+    "date_adjudication": "OPEN",
+    "javaa_2028_signed_instructions": "NOT_LOCATED",
+    "cee_hosted_complete_calendar": "NOT_LOCATED",
+    "secondary_calendar_text": "FOUND_NOT_ORIGINAL_BYTES_VERIFIED",
+    "original_source_sha256_verified": 0,
+    "full_event_denominator": null,
+    "full_amendment_denominator": null
+  },
+  "software": {
+    "legal_version_classifier": "src/rc21_legal_versions.py",
+    "calendar_denominator_gate": "src/rc21_legal_versions.py",
+    "inherited_http_mock_suite": "RC19",
+    "exact_head_ci": "PENDING",
+    "hub_synthetic_validator": "PENDING",
+    "producer_runtime": "NOT_EXECUTED",
+    "cross_repo_rollback": "NOT_EXECUTED",
+    "independent_security_qa": "NOT_PERFORMED",
+    "independent_legal_qa": "NOT_PERFORMED",
+    "independent_privacy_qa": "NOT_PERFORMED",
+    "independent_evidence_qa": "NOT_PERFORMED"
+  },
+  "limits": {
+    "production_live": false,
+    "public_real_election_findings": false,
+    "source_auto_poll": false,
+    "real_voter_data_processed": false,
+    "main_changed": false,
+    "other_repos_changed": false
+  },
+  "rollback": {
+    "baseline": "8775499abea221afdf73e76dbf831547d12faeff",
+    "authorization_required": true,
+    "lease_check_required": true
+  }
+}
