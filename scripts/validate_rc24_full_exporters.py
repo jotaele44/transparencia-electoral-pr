@@ -88,7 +88,7 @@ def main():
   signal_no_location=dict(signal);signal_no_location["signal_id"]="rc24-synthetic-signal-no-location"
   signal_no_location["matter_id"]="rc24-synthetic-matter-no-location";signal_no_location["municipalities"]=[]
   c_ledger_no_location=w/"centinelas-signals-no-location.jsonl"
-  c_ledger_no_location.write_text(json.dumps(signal_no_location)+"\\n",encoding="utf-8")
+  c_ledger_no_location.write_text(json.dumps(signal_no_location)+"\n",encoding="utf-8")
   c_out_valid=w/"centinelas-output-no-location"
   run([sys.executable,"scripts/federation_export.py","--ledger",str(c_ledger_no_location),"--sources",str(c_registry),
       "--out",str(c_out_valid),"--mode","test"],c,env,0)
