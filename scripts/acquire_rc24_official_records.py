@@ -19,6 +19,7 @@ SOURCES = [
  ("CEE-AC-25-112","https://www.ceepur.org/acuerdos-de-comision/docs/ACUERDO-CEE-AC-25-112-APROBACION-DE-PROPUESTA-Y-CALENDARIO-DE-EJECUCION-PROPUESTO-PARA-MEJORAS-AL-MODULO-eRE.pdf","pdf"),
  ("CEE-AC-25-031","https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-031.pdf","pdf"),
  ("CEE-AC-25-009","https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-009.pdf","pdf"),
+ ("CEE-AC-25-037-APPROVED-MINUTES","https://ww2.ceepur.org/sites/ComisionEE/es-pr/Secretaria/Acuerdos/20250508%20ACUERDO%20CEE-AC-25-037%20MINUTAS%202%20Y%2030%20DE%20ABRIL%20DE%202025.pdf","pdf"),
  ("CEE-AC-26-113","https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-113.pdf","pdf"),
  ("SENATE-ACTA-2026-03-12","https://senado.pr.gov/document_vault/actas_senado/0312.26.pdf","pdf"),
  ("LEY39-SUTRA-PDF","https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.pdf","pdf"),
