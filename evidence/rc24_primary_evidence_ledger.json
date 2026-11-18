@@ -1,0 +1,211 @@
+{
+  "release": "RC24_META2028_PRIMARY_RECORD_RECOVERY",
+  "classification": "PARTIAL_PRIMARY_EVIDENCE_RECOVERY_AUDIT_ONLY",
+  "baselines": {
+    "rc23": "8d2d4b91b80a95d1517f4f5a2008663417f5f4b",
+    "main": "b90b4e78f3e6cd66f5f78d508ad590a15e569eb0"
+  },
+  "source_records": [
+    {
+      "id": "CEE-AC-26-110",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-110.pdf",
+      "type": "commission_agreement",
+      "date": "2026-06-30",
+      "meeting_date": "2026-06-24",
+      "pages": 1,
+      "visual_status": "VISUALLY_INSPECTED",
+      "known_fact": "Unanimous approval of OSIPE eRE/eJAVAA testing report and instruction to take steps toward operation of new version; work schedule requested by PPD commissioner",
+      "missing": "actual OSIPE test report and annexes; build identifier; work schedule; deployment acceptance; independent security assessment"
+    },
+    {
+      "id": "CEE-AC-26-149",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-149.pdf",
+      "type": "commission_disagreement_certification",
+      "date": "2026-08-27",
+      "pages": 3,
+      "visual_status": "PAGES_1_TO_3_VISUALLY_INSPECTED",
+      "raw_index_title": "CALENDARIO ELECTORAL 2028",
+      "raw_page1_subject": "CALENDARIO ELECTORAL 2026",
+      "known_fact": "Certification of disagreement concerning the 2028 calendar; PNP proposed 2028-09-20 dispatch start, circulated draft stated 2028-09-27; PPD and PIP positions differ",
+      "contradiction": "INDEX_TITLE_2028_VS_INTERNAL_SUBJECT_2026",
+      "identity": "NOT_THE_COMPLETE_CALENDAR"
+    },
+    {
+      "id": "CEE-RS-26-010",
+      "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "type": "signed_commission_resolution",
+      "date": "2026-09-08",
+      "pages": 8,
+      "visual_status": "ALL_8_PAGES_VISUALLY_INSPECTED",
+      "known_fact": "Resolves 2028 mail advance-vote ballot dispatch disagreement; dispatch starts as soon as ballots are available but no later than 2028-09-20, and ends no later than 2028-10-03; application period 2027-06-01 through 2028-09-18; UOCAVA 45-day rule treated separately",
+      "identity": "RESOLUTION_REFERENCES_CEE_AC_26_149_AND_IS_NOT_PROOF_OF_COMPLETE_CALENDAR_EVENT_DENOMINATOR"
+    },
+    {
+      "id": "CEE-AC-25-112",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/ACUERDO-CEE-AC-25-112-APROBACION-DE-PROPUESTA-Y-CALENDARIO-DE-EJECUCION-PROPUESTO-PARA-MEJORAS-AL-MODULO-eRE.pdf",
+      "type": "commission_approval_plus_vendor_proposal",
+      "date": "2025-10-29",
+      "pages": 21,
+      "visual_status": "SELECTED_PAGES_VISUALLY_INSPECTED",
+      "known_fact": "Commission approved contractor Miguel Gil's eRE improvements proposal and proposed schedule; 107-day eRE improvement schedule from 2026-01-05 to 2026-06-02; tests scheduled 2026-05-22 to 2026-05-28; acceptance 2026-05-29; eRE release scheduled 2026-06-02",
+      "scope_limit": "THIS IS AN eRE IMPROVEMENT SCHEDULE, NOT PROOF OF eJAVAA DEPLOYMENT OR THE OSIPE WORK SCHEDULE REQUESTED BY CEE-AC-26-110",
+      "additional": "Proposal contents identify a separate eJAVAA Phase 2 scope; do not infer that the eRE milestone table applies to eJAVAA"
+    },
+    {
+      "id": "CEE-AC-25-031",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-031.pdf",
+      "type": "committee_evaluation_report_agreement",
+      "visual_status": "OFFICIAL_INDEX_FOUND_PDF_CACHE_MISS",
+      "known_fact": "Index title refers to evaluation committee reports for eRE, eJAVAA and SIEN",
+      "missing": "signed agreement and attached committee reports not inspected"
+    },
+    {
+      "id": "CEE-AC-25-009",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-009.pdf",
+      "type": "committee_creation_agreement",
+      "visual_status": "OFFICIAL_INDEX_FOUND_PDF_CACHE_MISS",
+      "known_fact": "Index title refers to creation of special committee to evaluate eRE, eJAVAA and SIEN",
+      "missing": "signed agreement and any scope/appointments not inspected"
+    },
+    {
+      "id": "CEE-AC-26-113",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-113.pdf",
+      "type": "minutes_approval_agreement",
+      "date": "2026-07",
+      "pages": 1,
+      "visual_status": "PDF_METADATA_ONLY",
+      "known_fact": "Approval of minutes for ordinary Commission meetings on 2026-06-24 and 2026-07-02",
+      "missing": "actual approved minutes not included in one-page agreement"
+    },
+    {
+      "id": "LEY39_SUTRA_PDF",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.pdf",
+      "type": "enrolled_law_original",
+      "visual_status": "OFFICIAL_SUTRA_LINK_HTTP_403_IN_WEB_READER",
+      "missing": "original bytes, hash, effective-date clause"
+    },
+    {
+      "id": "LEY39_SUTRA_DOC",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.doc",
+      "type": "enrolled_law_original_alternate",
+      "visual_status": "NOT_YET_ACQUIRED",
+      "missing": "original bytes, hash, effective-date clause"
+    },
+    {
+      "id": "SENATE_ACTA_2026_03_12",
+      "url": "https://senado.pr.gov/document_vault/actas_senado/0312.26.pdf",
+      "type": "legislative_journal",
+      "date": "2026-03-12",
+      "visual_status": "TEXT_AND_PAGES_INSPECTED",
+      "known_fact": "Senate journal states Ley 39-2026 was signed by the Governor on 2026-03-10 and identifies PS717; this establishes signing date, not effective date"
+    },
+    {
+      "id": "CEE_2028_REGULATIONS_INDEX",
+      "url": "https://www.ceepur.org/reglamentos/",
+      "type": "official_regulations_index",
+      "visual_status": "CURRENT_INDEX_INSPECTED_2026-11-18",
+      "known_fact": "Published 2028 primaries regulation dated 2026-08-21 and candidate-filing regulation dated 2026-08-13 appear; no separate 2028 general JAVAA regulation identified in this bounded index snapshot"
+    },
+    {
+      "id": "CEE_JAVAA_PUBLIC_PAGE",
+      "url": "https://ww2.ceepur.org/Home/SolicituddeVoto",
+      "type": "official_operational_guidance_page",
+      "visual_status": "CURRENT_PAGE_INSPECTED_2026-11-18",
+      "known_fact": "Page describes JAVAA structure and current 45-day absentee / 50-day advance-vote application rules; not a signed 2028 JAVAA regulation"
+    },
+    {
+      "id": "CEE_2028_RFP_SYSTEM_OVERVIEW",
+      "url": "https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/us/RFP-Opscan-2028-EN-FINAL.pdf",
+      "type": "official_2028_election_context_document",
+      "visual_status": "SEARCH_RESULT_TEXT_INSPECTED",
+      "known_fact": "CEE RFP says 2028 primaries are scheduled 2028-06-06 and general election 2028-11-07"
+    }
+  ],
+  "calendar_events": [
+    {
+      "event_id": "PR2028_PRIMARY",
+      "date": "2028-06-06",
+      "event": "2028 primary election",
+      "basis": "CEE official RFP and statutory first-Sunday-of-June rule",
+      "classification": "FACT"
+    },
+    {
+      "event_id": "PR2028_ADVANCE_APPLICATION_OPEN",
+      "date": "2027-06-01",
+      "event": "Advance-vote application period opens",
+      "basis": "CEE-RS-26-010",
+      "classification": "FACT"
+    },
+    {
+      "event_id": "PR2028_ADVANCE_APPLICATION_DEADLINE",
+      "date": "2028-09-18",
+      "event": "Advance-vote application deadline (50 days before general election)",
+      "basis": "CEE-RS-26-010",
+      "classification": "FACT"
+    },
+    {
+      "event_id": "PR2028_UOCAVA_45_DAY_DATE",
+      "date": "2028-09-23",
+      "event": "45-day UOCAVA federal ballot transmission deadline for qualifying applications",
+      "basis": "45 days before 2028-11-07; resolution quotes federal rule",
+      "classification": "COMPUTED_FROM_FACT"
+    },
+    {
+      "event_id": "PR2028_ADVANCE_MAIL_DISPATCH_START_LIMIT",
+      "date": "2028-09-20",
+      "event": "Advance-by-mail dispatch must begin when ballots available, no later than this date",
+      "basis": "CEE-RS-26-010",
+      "classification": "FACT"
+    },
+    {
+      "event_id": "PR2028_ADVANCE_MAIL_DISPATCH_END_LIMIT",
+      "date": "2028-10-03",
+      "event": "Advance-by-mail dispatch must conclude no later than this date",
+      "basis": "CEE-RS-26-010",
+      "classification": "FACT"
+    },
+    {
+      "event_id": "PR2028_GENERAL",
+      "date": "2028-11-07",
+      "event": "General election",
+      "basis": "CEE official RFP",
+      "classification": "FACT"
+    }
+  ],
+  "calendar_denominators": {
+    "identified_event_rows": 7,
+    "complete_official_calendar_rows": null,
+    "complete_amendment_denominator": null,
+    "status": "OPEN_PARTIAL_NOT_COMPLETE"
+  },
+  "legal": {
+    "ley39_signed_date": "2026-03-10",
+    "signed_date_source": "Senate Acta 2026-03-12",
+    "effective_date": "UNRESOLVED",
+    "previous_index_date": "2026-04-08",
+    "prior_computed_date": "2026-04-09",
+    "raw_contradiction_preserved": true
+  },
+  "eRE_eJAVAA_release_gates": {
+    "osiPE_original_test_report": "OPEN",
+    "osiPE_test_annexes": "OPEN",
+    "system_build_and_release_id": "OPEN",
+    "osiPE_requested_implementation_schedule": "OPEN",
+    "actual_deployment_and_acceptance": "OPEN",
+    "independent_cybersecurity_assessment": "OPEN",
+    "actual_consumer_validation": "OPEN"
+  },
+  "source_freeze": {
+    "raw_original_bytes_sha256_verified": 0,
+    "acquisition_workflow": "RC24 targeted allowlisted official-source acquisition; no bulk datasets",
+    "artifact_only": true
+  },
+  "certification": "AUDIT_ONLY",
+  "safety": {
+    "main_unchanged": true,
+    "production_unchanged": true,
+    "real_voter_data_processed": false,
+    "autonomous_enforcement": false,
+    "public_unreviewed_allegations": false
+  }
+}
