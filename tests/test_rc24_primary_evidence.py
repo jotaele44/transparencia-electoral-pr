@@ -55,7 +55,7 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
    self.assertIn(r["url"].split("/")[2],("www.ceepur.org","ceepur.org","ww2.ceepur.org","sutra.oslpr.org","senado.pr.gov","bvirtualogp.pr.gov"))
  def test_no_false_hashes_or_certification(self):
   self.assertEqual(self.x["source_freeze"]["raw_original_bytes_sha256_verified"],13)
-  self.assertEqual(self.x["source_freeze"]["round1"]["counts"]["acquired"],13)
+  self.assertEqual(self.x["source_freeze"]["round1"]["acquired"],13)
   self.assertEqual(self.x["certification"],"AUDIT_ONLY")
   self.assertFalse(self.x["safety"]["real_voter_data_processed"])
   self.assertFalse(self.x["safety"]["autonomous_enforcement"])
