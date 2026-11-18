@@ -1,0 +1,52 @@
+{
+  "release": "RC20",
+  "state": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "merge_authorized": false,
+  "baseline": {
+    "rc19": "e163d8e5b91ce90b3197c1bc9807973ca19dd6b0",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "source_findings": {
+    "guide": "Official CEE 21-page 2028 statistical orientation, approved July 2, 2026, not complete calendar",
+    "guide_original_sha256": null,
+    "original_ley39_pdf": "SUTRA HTTP403",
+    "original_ley39_doc": "SUTRA HTTP403",
+    "law_effective_index_date": "2026-04-08",
+    "rc19_computed_effective_date": "2026-04-09",
+    "effective_date_status": "CONTRADICTION_UNRESOLVED",
+    "operative_javaa_2028": "NOT_LOCATED",
+    "public_guidance_vs_law": "45_VS_50_DAYS_NO_COMPLIANCE_FINDING",
+    "full_cee_calendar": "UNRECOVERED",
+    "authoritative_full_event_denominator": null,
+    "verified_original_pdf_sha256_count": 0
+  },
+  "software": {
+    "new_module": "src/rc20_authority.py",
+    "http_adapter": "RC19_REUSED",
+    "http_failure_tests": "OFFLINE_MOCKED_ONLY",
+    "pinned_hub": "PENDING_CI",
+    "real_Centinelas_runtime": "NOT_EXECUTED",
+    "real_Spiderweb_runtime": "NOT_EXECUTED",
+    "real_MoneySweep_runtime": "BLOCKED_BY_PINNED_CONTRACT",
+    "cross_repo_rollback": "NOT_EXECUTED",
+    "independent_security_qa": "OPEN",
+    "independent_legal_qa": "OPEN",
+    "independent_privacy_qa": "OPEN",
+    "independent_evidence_qa": "OPEN"
+  },
+  "safety": {
+    "live_polling": false,
+    "live_federation": false,
+    "public_findings": false,
+    "real_voter_data": false,
+    "main_writes": false,
+    "producer_writes": false
+  },
+  "rollback": {
+    "target_rc19": "e163d8e5b91ce90b3197c1bc9807973ca19dd6b0",
+    "requires_authorization": true,
+    "lease_check_required": true
+  }
+}
