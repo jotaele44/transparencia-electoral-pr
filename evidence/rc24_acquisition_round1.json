@@ -1,0 +1,141 @@
+{
+  "release": "RC24",
+  "acquisition_round": 1,
+  "workflow_run_id": 44407273577,
+  "workflow_run_commit": "e4e0dbbe86be95847bc9a38050fb64b6df6e1f31",
+  "retrieved_at_utc": "2026-11-18T22:00:42.294579Z",
+  "artifact": {
+    "id": 14475041966,
+    "name": "rc24-official-primary-source-snapshot",
+    "bytes": 15180837,
+    "sha256": "60c90d6ed7245b8c219f55358c6c47976753b305c1b2b50b0f9589310e77a6c6",
+    "retention_expires": "2027-02-16T22:00:30Z",
+    "url": "https://github.com/jotaele44/transparencia-electoral-pr/actions/runs/44407273577/artifacts/14475041966"
+  },
+  "counts": {
+    "requested": 13,
+    "acquired": 13,
+    "blocked": 0,
+    "failed": 0,
+    "member_hashes_verified_against_downloaded_zip": 13
+  },
+  "sources": [
+    {
+      "id": "CEE-AC-26-110",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-110.pdf",
+      "http_status": 200,
+      "bytes": 251983,
+      "sha256": "a07cd66e5e3cdf471902faa07489c0e2329f7be2b7126046bf601aecd95ab962",
+      "pdf_pages": 1,
+      "retrieved_at_utc": "2026-11-18T22:00:37.632424Z"
+    },
+    {
+      "id": "CEE-AC-26-149",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-149.pdf",
+      "http_status": 200,
+      "bytes": 573732,
+      "sha256": "83e5dbd409845c5f17d053f9a78e40daccc020e8cd3f6dbbe7e34058cda9330d",
+      "pdf_pages": 3,
+      "retrieved_at_utc": "2026-11-18T22:00:38.260284Z"
+    },
+    {
+      "id": "CEE-RS-26-010",
+      "url": "https://www.ceepur.org/resoluciones-de-comision/2026/CEE-RS-26-010.pdf",
+      "http_status": 200,
+      "bytes": 5120451,
+      "sha256": "6ace06f855cd897c4671af81c6628388ef8e445c7da3ad6e0f491682f9c66bc2",
+      "pdf_pages": 8,
+      "retrieved_at_utc": "2026-11-18T22:00:38.600429Z"
+    },
+    {
+      "id": "CEE-AC-25-112",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/ACUERDO-CEE-AC-25-112-APROBACION-DE-PROPUESTA-Y-CALENDARIO-DE-EJECUCION-PROPUESTO-PARA-MEJORAS-AL-MODULO-eRE.pdf",
+      "http_status": 200,
+      "bytes": 5387300,
+      "sha256": "7ff9ac5c3a33810d7fb94e04a811c0f55b39aceb9db342844df6a3b45960a408",
+      "pdf_pages": 21,
+      "retrieved_at_utc": "2026-11-18T22:00:39.069513Z"
+    },
+    {
+      "id": "CEE-AC-25-031",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-031.pdf",
+      "http_status": 200,
+      "bytes": 247657,
+      "sha256": "2935f7527def929c9d5e3633f42918dea065341487f0d817ef1ab8bc407f5bd4",
+      "pdf_pages": 1,
+      "retrieved_at_utc": "2026-11-18T22:00:39.451706Z"
+    },
+    {
+      "id": "CEE-AC-25-009",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2025/CEE-AC-25-009.pdf",
+      "http_status": 200,
+      "bytes": 281129,
+      "sha256": "527e633ab0e770e9eefd95b6e57d4540911ff4578d4933fb0789e04255816113",
+      "pdf_pages": 1,
+      "retrieved_at_utc": "2026-11-18T22:00:39.839646Z"
+    },
+    {
+      "id": "CEE-AC-26-113",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-113.pdf",
+      "http_status": 200,
+      "bytes": 214823,
+      "sha256": "04ed057936798c9bb75529d08e0397b1f494a4ff23f170c2e719f2c0c21c3718",
+      "pdf_pages": 1,
+      "retrieved_at_utc": "2026-11-18T22:00:40.079640Z"
+    },
+    {
+      "id": "SENATE-ACTA-2026-03-12",
+      "url": "https://senado.pr.gov/document_vault/actas_senado/0312.26.pdf",
+      "http_status": 200,
+      "bytes": 405276,
+      "sha256": "6d8552395adb22cd319b0f8b38c8adb149416ed5384e3f8ab556743c100a3010",
+      "pdf_pages": 52,
+      "retrieved_at_utc": "2026-11-18T22:00:40.327946Z"
+    },
+    {
+      "id": "LEY39-SUTRA-PDF",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.pdf",
+      "http_status": 200,
+      "bytes": 2891957,
+      "sha256": "167bb21cc824ffcff256713cc4f3c640baa381b29c8f55c0074dbdd1df811f00",
+      "pdf_pages": 52,
+      "retrieved_at_utc": "2026-11-18T22:00:40.606972Z"
+    },
+    {
+      "id": "LEY39-SUTRA-DOC",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.doc",
+      "http_status": 200,
+      "bytes": 314368,
+      "sha256": "fb414ae1a184c81902d58d285c61034f24f378cd0900df9241ba8ed18904a7ae",
+      "pdf_pages": null,
+      "retrieved_at_utc": "2026-11-18T22:00:41.128630Z"
+    },
+    {
+      "id": "CEE-2028-REGULATIONS-INDEX",
+      "url": "https://www.ceepur.org/reglamentos/",
+      "http_status": 200,
+      "bytes": 8005,
+      "sha256": "d82d71ed4fc1f94b68ed1151e7b84a8455a51ca69bb740fad37cd0322f24f20a",
+      "pdf_pages": null,
+      "retrieved_at_utc": "2026-11-18T22:00:41.591727Z"
+    },
+    {
+      "id": "CEE-JAVAA-PUBLIC-GUIDANCE",
+      "url": "https://ww2.ceepur.org/Home/SolicituddeVoto",
+      "http_status": 200,
+      "bytes": 45288,
+      "sha256": "2e611a70dcc5014de26239656f0c057680a6e53f460c949d296652366b6bbd12",
+      "pdf_pages": null,
+      "retrieved_at_utc": "2026-11-18T22:00:41.703625Z"
+    },
+    {
+      "id": "CEE-2028-RFP-CALENDAR-CONTEXT",
+      "url": "https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/us/RFP-Opscan-2028-EN-FINAL.pdf",
+      "http_status": 200,
+      "bytes": 1464935,
+      "sha256": "43567daaac711be2c2bb0494c45e46e7abfd033be4df9cce4c65f2119599250f",
+      "pdf_pages": 105,
+      "retrieved_at_utc": "2026-11-18T22:00:41.950382Z"
+    }
+  ]
+}
