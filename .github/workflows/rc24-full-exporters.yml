@@ -1,8 +1,5 @@
 name: RC24 full pinned exporter and consumer isolation
 on:
-  push:
-    branches:
-      - dev/rc24-primary-record-recovery
   workflow_dispatch:
 permissions:
   contents: read
