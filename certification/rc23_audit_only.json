@@ -1,0 +1,62 @@
+{
+  "release": "RC23_META2028",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "main_merge_authorized": false,
+  "baselines": {
+    "rc22": "5bd3482fa4711327e2d96cce531aeadc822c2697",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "primary": {
+    "id": "CEE-AC-26-110",
+    "date": "2026-06-30",
+    "meeting": "2026-06-24",
+    "visually_inspected": true,
+    "signed_pdf_url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-110.pdf",
+    "unanimous_approval_test_report": true,
+    "authorized_steps_toward_operation": true,
+    "osiPE_work_schedule_requested": true,
+    "original_test_report_recovered": false,
+    "work_schedule_recovered": false,
+    "actual_deployment_receipt_recovered": false,
+    "independent_security_QA_recovered": false,
+    "system_version_bound": false,
+    "original_pdf_sha256": null
+  },
+  "additional": {
+    "cee_ac_26_204": "OFFICIAL_INDEX_AND_PDF_METADATA_ONLY",
+    "ley39_original": "UNAVAILABLE",
+    "javaa_2028_regulation": "UNRECOVERED",
+    "full_2028_calendar": "UNRECOVERED",
+    "original_primary_sha256_count": 0,
+    "full_event_denominator": null
+  },
+  "testing": {
+    "unit": "PENDING_FINAL_CI",
+    "pinned_hub": "PENDING_FINAL_CI",
+    "pinned_producer_function_smoke": "PENDING_FINAL_CI",
+    "real_full_producer_export": "NOT_EXECUTED",
+    "actual_federation_rollback": "NOT_EXECUTED",
+    "disposable_rollback": "RC22_REUSED",
+    "moneysweep_source_monitors": "PINNED_UNSUPPORTED"
+  },
+  "independent_QA": {
+    "legal": "OPEN",
+    "security": "OPEN",
+    "privacy": "OPEN",
+    "evidence": "OPEN"
+  },
+  "safety": {
+    "main_mutated": false,
+    "producer_repositories_mutated": false,
+    "production_activated": false,
+    "real_voter_data_processed": false,
+    "public_alarms_issued": false
+  },
+  "rollback": {
+    "baseline": "5bd3482fa4711327e2d96cce531aeadc822c2697",
+    "explicit_authorization": true,
+    "lease_check": true
+  }
+}
