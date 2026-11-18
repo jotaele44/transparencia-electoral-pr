@@ -2,7 +2,7 @@
   "release": "RC24_META2028_PRIMARY_RECORD_RECOVERY",
   "classification": "PARTIAL_PRIMARY_EVIDENCE_RECOVERY_AUDIT_ONLY",
   "baselines": {
-    "rc23": "8d2d4b91b80a95d1517f4f5a2008663417f5f4b",
+    "rc23": "8d2d4b91b80a95d1517f4f5a2008663410d5b513",
     "main": "b90b4e78f3e6cd66f5f78d508ad590a15e569eb0"
   },
   "source_records": [
