@@ -1,0 +1,82 @@
+{
+  "release": "RC25_META2028",
+  "state": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "main_merge_authorized": false,
+  "baseline": {
+    "rc23": "8d2d4b91b80a95d1517f4f5a2008663410d5b513",
+    "reused_rc24": "edc54ab9a2ba7cea1a64e61bdb90b44839e0e647",
+    "main": "b90b4e78f3e6cd66f5f78d508ad590a15e569eb0"
+  },
+  "evidence_reuse": {
+    "rc24_round2_source_manifest": "evidence/rc24_acquisition_round2.json",
+    "round2_originals_acquired": 14,
+    "round2_requested": 15,
+    "round2_failed": 1,
+    "round2_artifact_id": 14475213513,
+    "round2_run_id": 44408980803,
+    "round2_member_hash_checks": "VERIFIED_IN_PRIOR_RC24_ACQUISITION_RECEIPT_NOT_CURRENT_RUN",
+    "current_run_original_bytes_rehashed": false,
+    "signed_law_pdf_sha256": "167bb21cc824ffcff256713cc4f3c640baa381b29c8f55c0074dbdd1df811f00",
+    "signed_law_doc_sha256": "fb414ae1a184c81902d58d285c61034f24f378cd0900df9241ba8ed18904a7ae",
+    "artifact_retention_end": "2027-02-16T22:10:33Z",
+    "permanent_offdevice_archival": "NOT_VERIFIED"
+  },
+  "date_contradictions": [
+    {
+      "id": "PRIMARY_2028_RFP",
+      "source": "CEE RFP March 31 2026 p47",
+      "raw_date": "2028-06-06",
+      "raw_weekday": "TUESDAY",
+      "code_rule": "FIRST_SUNDAY_JUNE",
+      "statutory_computed_date": "2028-06-04",
+      "statutory_weekday": "SUNDAY",
+      "resolution": "SOURCE_STATEMENT_CONFLICT_NOT_OPERATIVE_DATE_VERIFIED",
+      "official_complete_calendar_source": "OPEN"
+    },
+    {
+      "id": "LEY39_EFFECTIVE",
+      "source": "Original signed Ley39 Sec69 + Civil Code Art29(a) web text versus SUTRA index",
+      "raw_index": "2026-04-08",
+      "computed_date": "2026-04-09",
+      "status": "QUALIFIED_LEGAL_REVIEW_OPEN"
+    }
+  ],
+  "new_checks": {
+    "date_candidate_engine": "src/rc25_primary_calendar.py",
+    "raw_rfp_and_legal_separate": true,
+    "source_manifest_integrity_metadata": "CLOSED_14_ROWS_NOT_REHASHED_CURRENT_RUN",
+    "new_unit_and_negative_tests": "tests/test_rc25_primary_calendar.py",
+    "exact_head_ci": "PENDING",
+    "full_producer_CI": "PENDING"
+  },
+  "carry_forward": {
+    "osiPE_original_test_report": "OPEN",
+    "osiPE_requested_schedule": "OPEN",
+    "tested_build_identifier": "OPEN",
+    "verified_deployment": "OPEN",
+    "independent_security_QA": "OPEN",
+    "signed_2028_javaa_regulation": "OPEN",
+    "full_CEE_2028_calendar": "OPEN",
+    "complete_event_denominator": null,
+    "amendment_denominator": null,
+    "centinelas_location_versus_hub_schema": "OPEN_BLOCKER",
+    "moneysweep_source_monitor_stream": "BLOCKED_BY_PINNED_CONTRACT",
+    "real_federation_runtime": "NOT_EXECUTED",
+    "real_cross_repo_rollback": "NOT_EXECUTED",
+    "independent_legal_security_privacy_evidence_QA": "OPEN"
+  },
+  "safety": {
+    "production_writes": 0,
+    "main_writes": 0,
+    "upstream_producer_writes": 0,
+    "external_alerts": 0,
+    "real_voter_records": 0
+  },
+  "rollback": {
+    "exact_rc24_commit": "edc54ab9a2ba7cea1a64e61bdb90b44839e0e647",
+    "requires_authorization": true,
+    "lease_checked": false
+  }
+}
