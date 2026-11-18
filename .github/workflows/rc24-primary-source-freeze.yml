@@ -1,8 +1,5 @@
 name: RC24 targeted official primary source freeze
 on:
-  push:
-    branches:
-      - dev/rc24-primary-record-recovery
   workflow_dispatch:
 permissions:
   contents: read
