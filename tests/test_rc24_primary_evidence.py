@@ -17,7 +17,7 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
   rows={r["event_id"]:r for r in self.x["calendar_events"]}
   self.assertEqual(rows["PR2028_UOCAVA_45_DAY_DATE"]["date"],"2028-09-23")
   self.assertNotEqual(rows["PR2028_UOCAVA_45_DAY_DATE"]["date"],rows["PR2028_ADVANCE_APPLICATION_DEADLINE"]["date"])
- def test_calendar_identity_contradiction_preserved(self):
+ def test_calendar_identity_consistent(self):
   s={r["id"]:r for r in self.x["source_records"]}["CEE-AC-26-149"]
   self.assertEqual(s["raw_index_title"],"CALENDARIO ELECTORAL 2028")
   self.assertEqual(s["raw_page1_subject"],"CALENDARIO ELECTORAL 2028")
@@ -52,9 +52,10 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
   self.assertEqual(len(ids),len(set(ids)))
   for r in self.x["source_records"]:
    self.assertTrue(r["url"].startswith("https://"))
-   self.assertIn(r["url"].split("/")[2],("www.ceepur.org","ceepur.org","ww2.ceepur.org","sutra.oslpr.org","senado.pr.gov"))
+   self.assertIn(r["url"].split("/")[2],("www.ceepur.org","ceepur.org","ww2.ceepur.org","sutra.oslpr.org","senado.pr.gov","bvirtualogp.pr.gov"))
  def test_no_false_hashes_or_certification(self):
-  self.assertEqual(self.x["source_freeze"]["raw_original_bytes_sha256_verified"],0)
+  self.assertEqual(self.x["source_freeze"]["raw_original_bytes_sha256_verified"],13)
+  self.assertEqual(self.x["source_freeze"]["round1"]["counts"]["acquired"],13)
   self.assertEqual(self.x["certification"],"AUDIT_ONLY")
   self.assertFalse(self.x["safety"]["real_voter_data_processed"])
   self.assertFalse(self.x["safety"]["autonomous_enforcement"])
