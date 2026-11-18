@@ -130,6 +130,7 @@ def main():
       "--mode","production","--no-ppp-geometry"],s_copy,env,1)
   if "synthetic rows are not allowed" not in (prod.stdout+prod.stderr):
    raise AssertionError("Spiderweb production mode did not reject synthetic-only input")
- print("RC24_FULL_EXPORTER_SCOPE: Centinelas CLI executed; municipality-only location rejected by pinned Hub schema (lat/lon required); no-location fixture passed; Spiderweb CLI + Hub validation tested")\n print("RC24_FAILURE_GATES_PASS: synthetic production rejection; Hub corruption detection and snapshot rollback")
+ print("RC24_FULL_EXPORTER_SCOPE: Centinelas CLI executed; municipality-only location rejected by pinned Hub schema (lat/lon required); no-location fixture passed; Spiderweb CLI + Hub validation tested")
+ print("RC24_FAILURE_GATES_PASS: synthetic production rejection; Hub corruption detection and snapshot rollback")
  print("RC24_BOUNDARY: MoneySweep excluded; no live polling, real voter data, production writes, deployment or autonomous enforcement")
 if __name__=="__main__":main()
