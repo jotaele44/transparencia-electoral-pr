@@ -1,0 +1,119 @@
+{
+  "release": "RC23",
+  "classification": "PRIMARY_AGREEMENT_CONTENT_VISUALLY_VERIFIED_NO_SOURCE_BYTES",
+  "baseline": {
+    "rc22": "5bd3482fa4711327e2d96cce531aeadc822c2697",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0"
+  },
+  "primary": [
+    {
+      "id": "cee_ac_26_110",
+      "authority": "CEE",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-110.pdf",
+      "document_date": "2026-06-30",
+      "meeting_date": "2026-06-24",
+      "pages": 1,
+      "review": "OFFICIAL_ORIGINAL_DOCUMENT_VISUALLY_INSPECTED",
+      "signed_visible": true,
+      "raw_subject": "APROBACIÓN INFORME DE PRUEBAS DEL SISTEMA DE eRE y eJavaa",
+      "operative_action": "UNANIMOUS_TEST_REPORT_APPROVAL_AND_OSIPE_DIRECTED_TO_TAKE_STEPS_TO_PUT_NEW_eRE_eJAVAA_VERSION_IN_OPERATION",
+      "conditional_requirement": "PROVIDE_WORK_SCHEDULE_REQUESTED_BY_PPD_ELECTORAL_COMMISSIONER",
+      "test_report_title": "INFORME DE PRUEBAS DEL SISTEMA DE eRE y eJavaa – INFORME PRESENTADO POR EL COMPONENTE DE OSIPE",
+      "source_doc_contains_test_report": false,
+      "source_doc_contains_test_results": false,
+      "source_doc_contains_system_version_identifier": false,
+      "source_doc_contains_actual_deployment_receipt": false,
+      "source_doc_contains_work_schedule": false,
+      "source_doc_contains_independent_cybersecurity_validation": false,
+      "original_bytes_acquired": false,
+      "sha256": null,
+      "raw_evidence_claim": "Authorization not independently verified execution"
+    },
+    {
+      "id": "cee_ac_26_204",
+      "authority": "CEE",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-204.pdf",
+      "pages": 3,
+      "review": "INDEX_AND_PDF_METADATA_ONLY_PAGE_SCREENSHOTS_CACHE_MISS",
+      "title": "REFERÉNDUM ELECTRÓNICO APROBACIÓN DECOMISO DE MATERIAL ELECTORAL DE LA JAVAA",
+      "signed_content_verified": false,
+      "actual_material_inventory": false,
+      "actual_destruction_executed": false,
+      "original_bytes_acquired": false,
+      "sha256": null
+    },
+    {
+      "id": "ley39_2026_original",
+      "authority": "SUTRA_OSL",
+      "url": "https://sutra.oslpr.org/SutraFilesGen/158328/0039s0717.pdf",
+      "review": "OFFICIAL_RECORD_INDEX_PDF_UNAVAILABLE_HTTP403",
+      "original_bytes_acquired": false,
+      "sha256": null
+    },
+    {
+      "id": "cee_2028_full_calendar",
+      "authority": "CEE",
+      "url": null,
+      "review": "COMPLETE_OFFICIAL_CEE_HOSTED_ORIGINAL_NOT_LOCATED",
+      "original_bytes_acquired": false,
+      "sha256": null
+    }
+  ],
+  "required_ejavaa_release_evidence": [
+    {
+      "key": "source_test_report",
+      "source_id": "cee_ac_26_110",
+      "required": "ORIGINAL_OSIPE_TEST_REPORT_AND_ANNEXES",
+      "state": "OPEN"
+    },
+    {
+      "key": "system_version",
+      "source_id": "cee_ac_26_110",
+      "required": "AUTHORITATIVE_BUILD_ID_AND_RELEASE_SIGNATURE",
+      "state": "OPEN"
+    },
+    {
+      "key": "implementation_schedule",
+      "source_id": "cee_ac_26_110",
+      "required": "OSIPES_REQUESTED_WORK_SCHEDULE",
+      "state": "OPEN"
+    },
+    {
+      "key": "deployment_receipt",
+      "source_id": "cee_ac_26_110",
+      "required": "VERSION_BOUND_DEPLOYMENT_AND_ACCEPTANCE_RECEIPTS",
+      "state": "OPEN"
+    },
+    {
+      "key": "security_qa",
+      "source_id": "cee_ac_26_110",
+      "required": "INDEPENDENT_SECURITY_AND_PRIVACY_TEST_RESULTS",
+      "state": "OPEN"
+    },
+    {
+      "key": "consumer_operability",
+      "source_id": "cee_ac_26_110",
+      "required": "READ_ONLY_REAL_CONSUMER_ACCEPTANCE_WITH_ROLLBACK",
+      "state": "OPEN"
+    }
+  ],
+  "legal": {
+    "sutra_effective_date": "2026-04-08",
+    "prior_computed_effective_date": "2026-04-09",
+    "effectivity_adjudicated": false,
+    "javaa_2028_operative_manual": "UNRECOVERED",
+    "cee_public_absentee_application_days": 45,
+    "ogp_current_application_days": 50,
+    "actual_administration": "UNKNOWN",
+    "full_calendar_denominator": null,
+    "amendment_denominator": null
+  },
+  "closure": {
+    "primary_rows": 4,
+    "required_release_gate_rows": 6,
+    "required_release_gates_passed": 0,
+    "original_source_bytes_sha256_verified": 0,
+    "real_source_actuation_receipts": 0,
+    "certification": "AUDIT_ONLY"
+  }
+}
