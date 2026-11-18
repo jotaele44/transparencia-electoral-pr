@@ -1,0 +1,76 @@
+{
+  "release": "RC26_META2028",
+  "classification": "AUDIT_ONLY",
+  "certified": false,
+  "production_authorized": false,
+  "main_merge_authorized": false,
+  "baseline": {
+    "rc25": "6dfb162aa5ba7553d655e1953f4230b28bfcddce",
+    "main": "b90b4e78f3e6cd66f5e78d508ad590a15e569eb0",
+    "branch": "dev/rc26-source-readback-schema"
+  },
+  "source_readback": {
+    "source_artifact_id": 14475213513,
+    "source_run_id": 44408980803,
+    "source_acquisition_utc": "2026-11-18T22:11:48.367531Z",
+    "independent_local_readback_utc": "2026-11-18T23:30:23.829819+00:00",
+    "archive_size_bytes": 23556527,
+    "archive_sha256": "553be37c5b5931b1c0e6ff92c652d102c5527772aadf4a4dac32e429fccf95cf",
+    "requested": 15,
+    "originals_rehashed_in_RC26_local_container": 14,
+    "verified_file_sizes": 14,
+    "failed_originals": 1,
+    "failed_source": "OGP-CIVIL-CODE-55-2020",
+    "unlisted_archive_members": 0,
+    "missing_originals_in_archive": 0,
+    "archive_retention_end": "2027-02-16T22:10:33Z",
+    "local_container_archive_available": true,
+    "offdevice_permanent_copy": "NOT_PERFORMED_DESTINATION_NOT_AUTHORIZED",
+    "offdevice_restore": "NOT_TESTED",
+    "metadata_commit_only": true
+  },
+  "location_contract": {
+    "issue": "Centinelas observation.location={municipality:...} rejected by pinned Hub requiring lat and lon",
+    "pinned_cent": "3b80bb5e5bae3df1d1a358ffc250d42887132991",
+    "pinned_hub": "b7a60e613fecb36448c719651625892b2bded565",
+    "candidate": "Allow mutually exclusive WGS84 lat+lon or nongeometric municipality-only in Hub schema; preserve raw municipality and correlation, do not infer points",
+    "schema_change_upstream": "NOT_PERFORMED",
+    "candidate_test": "PENDING_FINAL_CI",
+    "canonical_identity": "NOT_PROVEN",
+    "municipality_geometry": "UNRESOLVED",
+    "production_activation": false
+  },
+  "carry_forward": {
+    "osiPE_test_report": "OPEN",
+    "osiPE_schedule": "OPEN",
+    "eRE_eJAVAA_build_release_deployment": "OPEN",
+    "independent_eRE_eJAVAA_cybersecurity": "OPEN",
+    "signed_2028_javaa_rules": "OPEN",
+    "full_cee_calendar": "OPEN",
+    "event_denominator": null,
+    "amendment_denominator": null,
+    "primary_date_conflict": "RAW_RFP_2028_06_06_TUESDAY_VS_FIRST_SUNDAY_CODE_2028_06_04_OPEN",
+    "ley39_effectivity": "INDEX_2026_04_08_VS_ORIGINAL_CLAUSE_COMPUTED_2026_04_09_OPEN",
+    "moneySweep": "PINNED_SOURCE_MONITOR_CONTRACT_BLOCKED",
+    "real_federation_rollback": "NOT_TESTED"
+  },
+  "testing": {
+    "unit_suite": "PENDING_FINAL_EXACT_HEAD_CI",
+    "pinned_full_exporters": "PENDING_FINAL_EXACT_HEAD_CI",
+    "pinned_candidate_schema": "PENDING_FINAL_EXACT_HEAD_CI",
+    "independent_legal_security_privacy_evidence_QA": "NOT_PERFORMED"
+  },
+  "safety": {
+    "production_writes": 0,
+    "main_writes": 0,
+    "upstream_repo_writes": 0,
+    "source_polled": 0,
+    "real_voter_records": 0,
+    "public_unreviewed_findings": 0
+  },
+  "rollback": {
+    "source_rc25": "6dfb162aa5ba7553d655e1953f4230b28bfcddce",
+    "requires_explicit_authorization": true,
+    "lease_check_required": true
+  }
+}
