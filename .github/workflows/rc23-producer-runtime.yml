@@ -1,0 +1,42 @@
+name: RC23 exact-pinned producer function smoke
+on:
+  push:
+    branches:
+      - dev/rc23-ejavaa-release-evidence
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  isolated-producer-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/centinelas-pr
+          ref: 3b80bb5e5bae3df1d1a358ffc250d42887132991
+          path: producers/centinelas
+          persist-credentials: false
+          sparse-checkout: |
+            federation.json
+            scripts/federation_export.py
+            scripts/prii_export_utils.py
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@v4
+        with:
+          repository: jotaele44/spiderweb-pr
+          ref: 9c37b42926e6d401e80598221162a4664f2202d0
+          path: producers/spiderweb
+          persist-credentials: false
+          sparse-checkout: |
+            federation.json
+            federation/envelope.py
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Execute pinned pure producer functions with synthetic evidence
+        run: python3 scripts/validate_rc23_pinned_producer_runtime.py producers/centinelas producers/spiderweb
