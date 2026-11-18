@@ -1,0 +1,17 @@
+# RC25 — Independent bounded review of RC24 primary-record recovery
+
+Baseline preserved: RC23 preserved: `8d2d4b91b80a95d1517f4f5a2008663410d5b513` exactly. RC24 preserved at `edc54ab9a2ba7cea1a64e61bdb90b44839e0e647`. Protected main `b90b4e78f3e6cd66f5e78d508ad590a15e569eb0`.
+
+## Reuse instead of duplicate acquisition
+RC24's round-two original-source artifact (GitHub Actions run 44408980803, artifact 14475213513) lists 14/15 requested originals, 1 failed (OGP Civil Code PDF). Each of 14 acquired files has an SHA-256 and byte count and RC24 acquisition verification compared member hashes with the downloaded ZIP. This RC25 review **did not independently rehash the original bytes**: it verifies the committed manifestation manifest row conservation and negative failure cases. Important original Ley39 PDF SHA-256 `167bb21cc824ffcff256713cc4f3c640baa381b29c8f55c0074dbdd1df811f00`; DOC `fb414ae1a184c81902d58d285c61034f24f378cd0900df9241ba8ed18904a7ae`. Neither is same byte manifestation. The original bytes are retained in a time-limited GitHub Actions artifact, not an indefinitely archived evidence vault. Retention expires February 16, 2027 unless separately preserved on an authorized destination. No off-device production/evidence write has been authorized here.
+
+## Material new source-date correction
+The RC24 calendar ledger previously marked June 6, 2028, as a `FACT` 2028 primary date based on the CEE March 2026 RFP. That primary-source RFP indeed states June 6 on printed p47 and simultaneously quotes first-Sunday-of-June. June 6, 2028 is a **Tuesday**. The OGP November 2026 consolidated Electoral Code Article 7.12 states the first Sunday of June and the computed first Sunday is **June 4, 2028**. RC25 preserves the original raw June 6 RFP date, but reclassifies the event as `RAW_CEE_RFP_STATEMENT_CONFLICTS_WITH_CURRENT_CODE` and records the statutorily derived candidate separately, both with noncertified operative-date status. This does not prove there is no subsequent law setting a different date; a complete signed 2028 CEE calendar and amendment chain must be acquired to certify the operative event.
+
+The separate Ley39 original Sec69 approved March 10 and rule Art29(a) support an April 9 computation, while the official SUTRA metadata says April 8. The contradiction remains legally OPEN; RC25 has not independently performed qualified legal review.
+
+## Real pinned producer findings already reused
+RC24 executed the actual pinned Centinelas and Spiderweb full exporter CLIs on synthetic data. Spiderweb passed the pinned TheHub package validator. Centinelas passed only when no municipality-only location object was emitted; with `location: {municipality: ...}`, TheHub rejected the row because it requires lat/lon. This is an OPEN schema mismatch; do not forge centroid coordinates or silently discard the administrative location. Full real production federation, MoneySweep source monitor stream, and actual cross-repository rollback remain untested. RC25 re-runs inherited CLI QA against exact HEAD using disposable working copies without upstream writes.
+
+## Release and evidence gates
+Original OSIPE eRE/eJAVAA test report and annexes, requested OSIPE work schedule, actual build/release identity, deployment receipts, independent cybersecurity testing, signed 2028 JAVAA manual and complete CEE calendar still OPEN. Complete event and amendment denominators unknown. Independent legal/evidence/security/privacy review OPEN. No public electoral result claim, production write or main merge. Release AUDIT_ONLY.
