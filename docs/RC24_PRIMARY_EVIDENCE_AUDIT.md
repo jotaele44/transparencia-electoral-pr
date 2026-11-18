@@ -30,3 +30,14 @@ The RC24 acquisition script downloads only allowlisted official primary document
 
 ## Remaining hard gates
 Original OSIPE report/annexes; OSIPE requested work schedule; tested eRE/eJAVAA build ID; actual deployment and acceptance; independent cybersecurity assessment; signed Ley39 bytes/effectivity clause; signed 2028 JAVAA rules; complete calendar and amendment denominator; actual full pinned exporters and consumer failure/rollback tests; independent legal/security/privacy/evidence QA. Production remains blocked.
+
+
+## Exact pinned full-exporter / consumer execution
+Run 44411294623 on 18 November 2026 checked out exact Centinelas, Spiderweb, TheHub and shared-helper commits and executed both producer CLI exporters using synthetic-only fixtures in disposable directories. The actual pinned TheHub package validator was applied to their outputs. No source fetchers or real voter data were used.
+
+- Centinelas full CLI produced 1 source, 1 observation and 1 source-monitor row. When its signal contains a municipality, the producer emits `location: {municipality: ...}`. The pinned TheHub validator rejects that observation because a present location object requires `lat` and `lon`. A separate Centinelas fixture with no location object passes. This is a real producer-consumer schema conflict. No coordinates or municipality centroid were invented.
+- Spiderweb full CLI produced a synthetic package with 1 source, at least 2 entities and 1 relationship; the pinned TheHub validator accepted it. Its source registries were replaced with empty fixtures in a disposable copy, so this did not validate live source registry contents.
+- Both production-mode exporters rejected synthetic-only input. TheHub detected deliberate source-row corruption in both compatible packages; restoring the saved package snapshot returned validation to PASS.
+- This is full CLI producer and package-consumer validation on synthetic fixtures, not a live Federation runtime, live polling, deployment, or real-world electoral data validation. MoneySweep remains excluded because its pinned readiness/stream contract is blocked. Actual multi-repository runtime rollback remains untested.
+
+The Centinelas municipality-only location conflict is an OPEN blocker. Resolve the schema contract explicitly in the producer/consumer design; do not synthesize lat/lon, municipality centroids, or silently discard the administrative location. No upstream repository was modified.
