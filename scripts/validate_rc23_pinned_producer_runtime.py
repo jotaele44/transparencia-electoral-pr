@@ -25,9 +25,12 @@ def check_pin(name,path):
  head=subprocess.check_output(["git","-C",str(path),"rev-parse","HEAD"],text=True).strip()
  if head!=PINS[name]:raise AssertionError(f"{name}: unpinned HEAD {head}")
 def main():
- if len(sys.argv)!=3:raise SystemExit("usage: validate_rc23_pinned_producer_runtime.py <centinelas> <spiderweb>")
- c=Path(sys.argv[1]).resolve();s=Path(sys.argv[2]).resolve()
+ if len(sys.argv)!=4:raise SystemExit("usage: validate_rc23_pinned_producer_runtime.py <centinelas> <spiderweb> <pinned-utils-repo>")
+ c=Path(sys.argv[1]).resolve();s=Path(sys.argv[2]).resolve();helpers=Path(sys.argv[3]).resolve()
  check_pin("centinelas",c);check_pin("spiderweb",s)
+ helper_head=subprocess.check_output(["git","-C",str(helpers),"rev-parse","HEAD"],text=True).strip()
+ if helper_head!="0f62e4bdde10b5ac82787a329d6f15481ab9c7f0":raise AssertionError("pinned prii-export-utils helper repo commit mismatch")
+ sys.path.insert(0,str(helpers/"packages/prii_export_utils/src"))
  sys.path.insert(0,str(c/"scripts"))
  cent=load_module("centinelas_exact_producer",c/"scripts/federation_export.py")
  signal={"is_synthetic":True,"signal_id":"synthetic-meta23","matter_id":"synthetic-matter",
