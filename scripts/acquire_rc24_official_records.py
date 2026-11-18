@@ -26,8 +26,9 @@ SOURCES = [
  ("CEE-2028-REGULATIONS-INDEX","https://www.ceepur.org/reglamentos/","html"),
  ("CEE-JAVAA-PUBLIC-GUIDANCE","https://ww2.ceepur.org/Home/SolicituddeVoto","html"),
  ("CEE-2028-RFP-CALENDAR-CONTEXT","https://www.ceepur.org/subastas/docs/2026/RFP-Escrutinio/us/RFP-Opscan-2028-EN-FINAL.pdf","pdf"),
+ ("OGP-CIVIL-CODE-55-2020","https://bvirtualogp.pr.gov/ogp/Bvirtual/leyesreferencia/PDF/55-2020.pdf","pdf"),
 ]
-ALLOWED={"ceepur.org","www.ceepur.org","ww2.ceepur.org","senado.pr.gov","sutra.oslpr.org"}
+ALLOWED={"ceepur.org","www.ceepur.org","ww2.ceepur.org","senado.pr.gov","sutra.oslpr.org","bvirtualogp.pr.gov"}
 MAX_BYTES=50*1024*1024
 OUT=Path("artifacts/rc24")
 def now(): return datetime.now(timezone.utc).isoformat().replace("+00:00","Z")
