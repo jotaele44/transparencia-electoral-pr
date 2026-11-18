@@ -12,6 +12,11 @@ class RC20Authority(unittest.TestCase):
  def test_original_bytes_not_recovered(self):
   self.assertEqual(self.d["closure"]["original_primary_pdf_hashes_verified"],0)
   self.assertTrue(all(s.get("sha256") is None for s in self.d["sources"]))
+ def test_signed_guide_approval_is_distinct_source(self):
+  b=self.d['guide_approval_binding']
+  self.assertEqual(b['agreement'],'cee_ac_26_112')
+  self.assertEqual(b['guide'],'cee_2028_statistical_guide')
+  self.assertFalse(b['same_original_file'])
  def test_pdf_and_doc_distinct_originals(self):
   self.assertNotEqual(self.d["sources"][1]["url"],self.d["sources"][2]["url"])
  def test_date_conflict_retained(self):
@@ -29,8 +34,8 @@ class RC20Authority(unittest.TestCase):
   self.assertIsNone(self.d["calendar"]["complete_event_count"])
   self.assertEqual(self.d["sources"][4]["observed_absentee_application_window_days"],45)
  def test_source_count_conserves(self):
-  x=count_source_rows(self.d["sources"]);self.assertEqual(x["input_rows"],5)
-  self.assertEqual(x["unique_ids"],5);self.assertTrue(x["conserved"])
+  x=count_source_rows(self.d["sources"]);self.assertEqual(x["input_rows"],6)
+  self.assertEqual(x["unique_ids"],6);self.assertTrue(x["conserved"])
  def test_duplicate_rejected_to_unresolved(self):
   x=count_source_rows([{"id":"same"},{"id":"same"},{}])
   self.assertEqual((x["unique_ids"],len(x["unresolved_indices"])),(1,2))
