@@ -82,6 +82,19 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
   self.assertTrue(x["normalized_visible_text_equal"])
   self.assertEqual(x["classification"],"BYTE_DIFFERENT_VISIBLE_TEXT_EQUAL")
   self.assertIn("not proven equivalent",x["unresolved"])
+ def test_pinned_full_exporter_consumer_receipt_and_schema_blocker(self):
+  x=self.x["cross_repo_validation"]
+  self.assertEqual(x["conclusion"],"SUCCESS_WITH_DOCUMENTED_SCHEMA_BLOCKER")
+  self.assertEqual(x["tests"]["centinelas_municipality_location"],"PINNED_HUB_REJECTED_LOCATION_WITHOUT_LAT_LON")
+  self.assertEqual(x["tests"]["centinelas_no_location_variant"],"PINNED_HUB_PASS")
+  self.assertEqual(x["tests"]["spiderweb_full_cli"],"PINNED_HUB_PASS_SYNTHETIC")
+  self.assertEqual(x["tests"]["hub_corruption_detection"],"PASS_BOTH_PACKAGES")
+  self.assertEqual(x["tests"]["disposable_snapshot_rollback"],"PASS_BOTH_PACKAGES")
+  self.assertFalse(x["boundaries"]["real_voter_data"])
+  self.assertFalse(x["boundaries"]["production_activation"])
+  gap=self.x["schema_conflicts"][0]
+  self.assertEqual(gap["status"],"OPEN_BLOCKER")
+  self.assertIn("DO_NOT_SYNTHESIZE",gap["prohibited_fix"])
  def test_acquisition_round_manifests_close(self):
   r1=json.loads((ROOT/"evidence/rc24_acquisition_round1.json").read_text())
   r2=json.loads((ROOT/"evidence/rc24_acquisition_round2.json").read_text())
