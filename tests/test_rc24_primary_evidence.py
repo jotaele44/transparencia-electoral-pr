@@ -39,6 +39,8 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
   self.assertEqual(x["effectivity_clause"],"Section 69: 30 days after approval")
   self.assertIn("exclude first day",x["counting_rule"])
   self.assertEqual(x["computed_effective_date"],"2026-04-09")
+  from datetime import date,timedelta
+  self.assertEqual(date(2026,3,10)+timedelta(days=30),date(2026,4,9))
   self.assertEqual(x["sutra_index_date"],"2026-04-08")
   self.assertTrue(x["raw_contradiction_preserved"])
   self.assertEqual(x["independent_legal_review"],"OPEN")
@@ -56,9 +58,23 @@ class RC24PrimaryEvidenceTests(unittest.TestCase):
    self.assertTrue(r["url"].startswith("https://"))
    self.assertIn(r["url"].split("/")[2],("www.ceepur.org","ceepur.org","ww2.ceepur.org","sutra.oslpr.org","senado.pr.gov","bvirtualogp.pr.gov"))
  def test_no_false_hashes_or_certification(self):
-  self.assertEqual(self.x["source_freeze"]["raw_original_bytes_sha256_verified"],13)
+  self.assertEqual(self.x["source_freeze"]["raw_original_bytes_sha256_verified"],14)
+  self.assertEqual(self.x["source_freeze"]["round1"]["acquired"],13)
+  self.assertEqual(self.x["source_freeze"]["round2"]["acquired"],14)
+  self.assertEqual(self.x["source_freeze"]["round2"]["failed"],1)
+  self.assertIsNone(next(r for r in self.x["source_records"] if r["id"]=="OGP_CIVIL_CODE_55_2020").get("sha256"))
   self.assertEqual(self.x["source_freeze"]["round1"]["acquired"],13)
   self.assertEqual(self.x["certification"],"AUDIT_ONLY")
   self.assertFalse(self.x["safety"]["real_voter_data_processed"])
   self.assertFalse(self.x["safety"]["autonomous_enforcement"])
+ def test_acquisition_round_manifests_close(self):
+  r1=json.loads((ROOT/"evidence/rc24_acquisition_round1.json").read_text())
+  r2=json.loads((ROOT/"evidence/rc24_acquisition_round2.json").read_text())
+  self.assertEqual((r1["counts"]["requested"],r1["counts"]["acquired"]),(13,13))
+  self.assertEqual((r2["counts"]["requested"],r2["counts"]["acquired"],r2["counts"]["failed"]),(15,14,1))
+  failed=next(r for r in r2["failed"] if r["id"]=="OGP-CIVIL-CODE-55-2020")
+  self.assertIsNone(failed["sha256"])
+  self.assertTrue(all(len(r["sha256"])==64 for r in r2["sources"]))
+  law={r["id"]:r for r in r2["sources"]}
+  self.assertNotEqual(law["LEY39-SUTRA-PDF"]["sha256"],law["LEY39-SUTRA-DOC"]["sha256"])
 if __name__=="__main__":unittest.main()
