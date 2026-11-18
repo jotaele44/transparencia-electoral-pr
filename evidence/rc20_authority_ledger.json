@@ -54,6 +54,18 @@
       "observed_absentee_application_window_days": 45,
       "original_bytes_acquired": false,
       "sha256": null
+    },
+    {
+      "id": "cee_ac_26_112",
+      "authority": "CEE",
+      "kind": "OFFICIAL_SIGNED_APPROVAL_OF_STATISTICAL_GUIDE",
+      "url": "https://www.ceepur.org/acuerdos-de-comision/docs/2026/CEE-AC-26-112.pdf",
+      "agreement_date": "2026-07-02",
+      "action": "UNANIMOUS_APPROVAL_WITHOUT_AMENDMENTS",
+      "source_identity": "SEPARATE_ONE_PAGE_APPROVAL_NOT_THE_21_PAGE_GUIDE",
+      "visual_review": "ORIGINAL_ONE_PAGE_SIGNED_AGREEMENT_SCREENSHOT",
+      "original_bytes_acquired": false,
+      "sha256": null
     }
   ],
   "legal_conflict": {
@@ -82,10 +94,16 @@
     "statistical_guide_is_calendar": false
   },
   "closure": {
-    "records": 5,
+    "records": 6,
     "original_primary_pdf_hashes_verified": 0,
     "fully_recovered_2028_javaa_instructions": 0,
     "complete_2028_calendar_event_denominator": null,
     "certification": "AUDIT_ONLY"
+  },
+  "guide_approval_binding": {
+    "agreement": "cee_ac_26_112",
+    "guide": "cee_2028_statistical_guide",
+    "relationship": "TITLE_DATE_AND_AUTHORITY_CORROBORATED_NOT_BYTE_ATTESTED",
+    "same_original_file": false
   }
 }
