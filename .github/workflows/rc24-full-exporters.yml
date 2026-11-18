@@ -1,5 +1,8 @@
-name: RC24 full pinned exporter and consumer isolation
+name: RC25 full pinned exporter and consumer isolation
 on:
+  push:
+    branches:
+      - dev/rc25-primary-date-adjudication
   workflow_dispatch:
 permissions:
   contents: read
